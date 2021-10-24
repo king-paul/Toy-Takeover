@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     // Private variables
     private Rigidbody rigidBody;
     private CharacterController controller;
+    private PlayerController player;
     private float moveSpeed;
 
     Vector3 forwardVector, sidewaysVector;
@@ -53,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded;
 
     private bool usingJetpack;
-    private float curFuel;
     private float barWidth;
 
     float MAX_WIDTH;
@@ -61,6 +61,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Get the PlayerController script
+        player = GetComponent<PlayerController>();
+
         // Initialize Rigid body and camera variables
         rigidBody = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();
@@ -68,12 +71,11 @@ public class PlayerMovement : MonoBehaviour
         rotateY = startingAngle;
 
         // Initialize jetpack variables
-        curFuel = startingFuel;
         usingJetpack = false;
 
         // Initialize GUI
         MAX_WIDTH = fuelBar.rect.width;
-        barWidth = MAX_WIDTH / maxFuel * curFuel;
+        barWidth = MAX_WIDTH / maxFuel * player.CurrentFuel;
         fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
     }
 
@@ -124,19 +126,19 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateVerticalPosition()
     {
-        if (controller.isGrounded || curFuel <= 0)
+        if (controller.isGrounded || player.CurrentFuel <= 0)
         {
             usingJetpack = false;
             //Debug.Log("Jetpack is off");
         }
 
         // get input from player
-        if (Input.GetButton("Jump") || Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1))
         {
             // if there is jetpack fuel left, use the jetpack
-            if (curFuel > 0f)
+            if (player.CurrentFuel > 0f)
             {
-                curFuel -= Time.deltaTime; // reduce the fuel based on the deltatime
+                player.DrainFuel(); // reduce the fuel based on drain speed
                 verticalVelocity = lift;
                 usingJetpack = true;
             }
@@ -146,8 +148,13 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if(Input.GetButton("Jump") && controller.isGrounded) // space bar makes player jump
+        {
+            verticalVelocity = jumpPower;
+        }
+
         // Release the jetpack when player releases the hump button
-        if((Input.GetButtonUp("Jump") || Input.GetMouseButtonUp(1)) && usingJetpack)
+        if ((Input.GetButtonUp("Jump") || Input.GetMouseButtonUp(1)) && usingJetpack)
         {
             verticalVelocity = -weight;
         }
@@ -166,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
     void UpdateGUI()
     {
         // update the jetpack fuel bar
-        barWidth = MAX_WIDTH / maxFuel * curFuel;
+        barWidth = MAX_WIDTH / maxFuel * player.CurrentFuel;
         fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
     }
 
