@@ -270,18 +270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8537989894274617262, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: baa19827d27372448ad27eece3a49015, type: 2}
     - target: {fileID: 8537989895921377964, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: fuelBar
       value: 
       objectReference: {fileID: 1806437616}
-    - target: {fileID: 8537989895921377972, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
-      propertyPath: gunType
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
 --- !u!1 &349322028

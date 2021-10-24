@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class ProjectileController : MonoBehaviour
 {
     private Transform camera;
     public Transform[] boundaries;

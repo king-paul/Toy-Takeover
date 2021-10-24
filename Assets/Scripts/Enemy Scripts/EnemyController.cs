@@ -10,13 +10,17 @@ public class EnemyController : MonoBehaviour
 
     // variables
     Transform player;
-    NavMeshAgent agent;    
+    NavMeshAgent agent;
+    Rigidbody rigidbody;
     float distance;
     EnemyState state;
 
     [SerializeField]
     float maxHealth = 30;
     float curHealth;
+
+    [SerializeField]
+    bool flyingEnemy = false;
 
     Material material;
 
@@ -27,7 +31,10 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
-        agent = GetComponent<NavMeshAgent>();
+
+        if(!flyingEnemy)
+            agent = GetComponent<NavMeshAgent>();  
+        
         state = EnemyState.Follow;
         curHealth = maxHealth;
 
@@ -47,10 +54,12 @@ public class EnemyController : MonoBehaviour
 
         if (state == EnemyState.Follow)
         {
-            agent.destination = player.position;
+            if (!flyingEnemy)                
+                agent.destination = player.position;
         }
         else {
-            agent.destination = transform.position;
+            if (!flyingEnemy)
+                agent.destination = transform.position;
         }
     }
 
