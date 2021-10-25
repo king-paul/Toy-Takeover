@@ -112,6 +112,12 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // projectile hits player
+        //if(hit.gameObject.CompareTag("Projectile"))
+        //{
+        //    currentHealth -= 10f;
+        //}
+
     }
 
     void ResetHit()

@@ -83,6 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  maxHealth: 30
+  flyingEnemy: 0
 --- !u!114 &4283558823875897926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +101,6 @@ MonoBehaviour:
   gun: {fileID: 1092207982186743846}
   gunEnd: {fileID: 7474806691942004169}
   projectile: {fileID: 626429588367930485, guid: 5f5e8098c8afcf242b04a4123ff1de7b, type: 3}
-  player: {fileID: 0}
   viewDistance: 30
   firingDelay: 0.25
   viewAngle: 45

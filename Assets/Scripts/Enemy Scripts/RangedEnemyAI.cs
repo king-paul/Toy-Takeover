@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangedEnemyController : MonoBehaviour
+[RequireComponent(typeof(EnemyController))]
+public class RangedEnemyAI : MonoBehaviour
 {
     public Transform gun;
     public Transform gunEnd;
     public Transform projectile;
-    public Transform player;
+    [Range(1, 200)]
     public float viewDistance = 100f;
-    public float firingDelay = 10f;
+    [Range(0, 2)]
+    public float firingDelay = 0.25f;
 
-    [SerializeField]
+    [SerializeField][Range(1, 100)]
     float viewAngle = 45f;
-    [SerializeField]
+    [SerializeField][Range(1, 100)]
     float turnSpeed = 10f;
-    [SerializeField]
+    [SerializeField][Range(1, 100)]
     float aimSpeed = 30f;
 
+    private Transform player;
     private RaycastHit rayToPlayer;
     private RaycastHit gunRay;
     private bool firing;
@@ -32,6 +35,7 @@ public class RangedEnemyController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<EnemyController>();
+        player = GameObject.FindWithTag("Player").transform;
         timer = 0;
     }
 

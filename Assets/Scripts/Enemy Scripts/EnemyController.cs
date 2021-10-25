@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 public enum EnemyState { Follow, Attack, Aim };
+
+[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
 {
     // public variables
@@ -38,7 +40,9 @@ public class EnemyController : MonoBehaviour
         state = EnemyState.Follow;
         curHealth = maxHealth;
 
-        material = GetComponent<Renderer>().material;
+        //material = GetComponent<Renderer>().material;
+        //if(material == null)
+            material = GetComponentInChildren<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -70,7 +74,7 @@ public class EnemyController : MonoBehaviour
             // flash enemy red
             StartCoroutine(FlashColor());
 
-            curHealth -= 5;
+            curHealth -= 10;
 
             //Debug.Log("Enemy hit by projectile");
         }
@@ -78,8 +82,9 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator FlashColor()
     {
+        material = GetComponentInChildren<Renderer>().material;
         material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        GetComponent<Renderer>().material.color = Color.white;
+        GetComponent<Renderer>().material.color = new Color(120, 0, 0, 255);
     }
 }
