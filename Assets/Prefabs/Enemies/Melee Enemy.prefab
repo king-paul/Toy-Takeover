@@ -126,7 +126,7 @@ Transform:
   m_GameObject: {fileID: 8922432861276067955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.41, y: 1.05, z: 8.7}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4472093688651698871}
   m_Father: {fileID: 0}
@@ -231,6 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitColor: {r: 1, g: 0, b: 0, a: 1}
   maxHealth: 30
+  flyingEnemy: 0
 --- !u!114 &5231865332751422528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,3 +246,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 1.1
   destroyOnContact: 0
+  damagePerAttack: 10

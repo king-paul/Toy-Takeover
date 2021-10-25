@@ -163,14 +163,4 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("Y Velocity: " + (Vector3.up * verticalVelocity * Time.deltaTime).y);
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        /*
-        if(hit.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            Debug.Log("Collision with ground");
-        }*/
-
-    }
-
 }
