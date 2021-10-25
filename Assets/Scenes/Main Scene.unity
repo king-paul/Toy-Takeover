@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.65
+      value: 4.77
       objectReference: {fileID: 0}
     - target: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.z
@@ -177,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 8537989894274617258, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8537989894274617258, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
@@ -3721,6 +3725,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!224 &1076706837 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 55840218594789179, guid: a9ce87e8f02b7e8428e0cc427d2a742c, type: 3}
+  m_PrefabInstance: {fileID: 796321546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1104313799
 Mesh:
   m_ObjectHideFlags: 0
@@ -4869,6 +4878,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1353979938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 147507568567911144, guid: a9ce87e8f02b7e8428e0cc427d2a742c, type: 3}
+  m_PrefabInstance: {fileID: 796321546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1371645705
 Mesh:
   m_ObjectHideFlags: 0
@@ -5033,6 +5053,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1389731332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6937597845255981454, guid: a9ce87e8f02b7e8428e0cc427d2a742c, type: 3}
+  m_PrefabInstance: {fileID: 796321546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1436748699
 Mesh:
   m_ObjectHideFlags: 0
@@ -5580,6 +5611,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: fuelBar
+      value: 
+      objectReference: {fileID: 1076706837}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 1353979938}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 1389731332}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
 --- !u!43 &1527848322

@@ -51,7 +51,9 @@ public class PlayerMovement : MonoBehaviour
     private float rotateX, rotateY;
     private float verticalVelocity;
 
-    private bool usingJetpack;    
+    private bool onGround;
+    private bool usingJetpack;
+    private Transform grounded;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         // Get the PlayerController and GameManger scripts
         player = GetComponent<PlayerController>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        grounded = transform.Find("Grounded");
 
         // Initialize Rigid body and camera variables
         rigidBody = GetComponent<Rigidbody>();
@@ -80,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             UpdateHorizontalPosition();
             UpdateVerticalPosition();
         }
+        
     }
 
     void UpdateFaceDirection()
@@ -135,13 +139,13 @@ public class PlayerMovement : MonoBehaviour
                 verticalVelocity = lift;
                 usingJetpack = true;
             }
-            else if (controller.isGrounded)// otherwise jump if on ground
+            else if (isOnGround())// otherwise jump if on ground
             {
                 verticalVelocity = jumpPower;
             }
         }
 
-        if(Input.GetButton("Jump") && controller.isGrounded) // space bar makes player jump
+        if(Input.GetButton("Jump") && isOnGround()) // space bar makes player jump
         {
             verticalVelocity = jumpPower;
         }
@@ -161,6 +165,29 @@ public class PlayerMovement : MonoBehaviour
         // Move the player vertically
         controller.Move(Vector3.up * verticalVelocity * Time.deltaTime);
         //Debug.Log("Y Velocity: " + (Vector3.up * verticalVelocity * Time.deltaTime).y);
+    }
+
+    bool isOnGround()
+    {
+        RaycastHit hit;
+        float distance = 0;
+
+        Debug.DrawRay(grounded.position, Vector3.down);
+
+        if (Physics.Raycast(grounded.position, Vector3.down, out hit, LayerMask.NameToLayer("Level")))
+        {
+            distance = transform.position.y - hit.point.y;
+
+            if (distance <= 1.2) 
+            {
+                //Debug.Log("Player is on ground");
+                return true;
+            }
+        }
+
+        //Debug.Log("Player is off ground");
+
+        return false;
     }
 
 }
