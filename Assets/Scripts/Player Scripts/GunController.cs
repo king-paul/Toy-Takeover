@@ -29,20 +29,27 @@ public class GunController : MonoBehaviour
     private Vector3 rayOrigin;
     private float nextFire;
 
+    private GameManager game;
+
     // Start is called before the first frame update
     void Start()
     {
         fpsCam = GetComponentInChildren<Camera>();
         laserLine = GetComponentInChildren<LineRenderer>();
         shotDuration = new WaitForSeconds(0.05f);
+
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
-    {        
+    {
         // draw debug line on scene view
         //Debug.DrawRay(rayOrigin, fpsCam.transform.forward * weaponRange, Color.green);
-        
+
+        if (game.State != GameState.Running)
+            return;
+
         switch (gunType)
         {
             case GunType.SingleShot:                

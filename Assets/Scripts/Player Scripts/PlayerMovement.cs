@@ -40,29 +40,25 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("The speed in which the character falls while there is still jetpack fuel")]
     float weight = 9.8f;
 
-    public RectTransform fuelBar;
-
     // Private variables
     private Rigidbody rigidBody;
     private CharacterController controller;
     private PlayerController player;
+    private GameManager game;
     private float moveSpeed;
 
     Vector3 forwardVector, sidewaysVector;
     private float rotateX, rotateY;
     private float verticalVelocity;
-    private bool grounded;
 
-    private bool usingJetpack;
-    private float barWidth;
-
-    float MAX_WIDTH;
+    private bool usingJetpack;    
 
     // Start is called before the first frame update
     void Start()
     {
-        // Get the PlayerController script
+        // Get the PlayerController and GameManger scripts
         player = GetComponent<PlayerController>();
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         // Initialize Rigid body and camera variables
         rigidBody = GetComponent<Rigidbody>();
@@ -71,22 +67,19 @@ public class PlayerMovement : MonoBehaviour
         rotateY = startingAngle;
 
         // Initialize jetpack variables
-        usingJetpack = false;
-
-        // Initialize GUI
-        MAX_WIDTH = fuelBar.rect.width;
-        barWidth = MAX_WIDTH / maxFuel * player.CurrentFuel;
-        fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
+        usingJetpack = false;        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Physics.gravity = new Vector3(0, -gravity, 0);
-        UpdateFaceDirection();
-        UpdateHorizontalPosition();
-        UpdateVerticalPosition();
-        UpdateGUI();
+        if (game.State == GameState.Running)
+        {
+            Physics.gravity = new Vector3(0, -gravity, 0);
+            UpdateFaceDirection();
+            UpdateHorizontalPosition();
+            UpdateVerticalPosition();
+        }
     }
 
     void UpdateFaceDirection()
@@ -126,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateVerticalPosition()
     {
-        if (controller.isGrounded || player.CurrentFuel <= 0)
+        if (controller.isGrounded || player.Fuel <= 0)
         {
             usingJetpack = false;
             //Debug.Log("Jetpack is off");
@@ -136,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             // if there is jetpack fuel left, use the jetpack
-            if (player.CurrentFuel > 0f)
+            if (player.Fuel > 0f)
             {
                 player.DrainFuel(); // reduce the fuel based on drain speed
                 verticalVelocity = lift;
@@ -168,13 +161,6 @@ public class PlayerMovement : MonoBehaviour
         // Move the player vertically
         controller.Move(Vector3.up * verticalVelocity * Time.deltaTime);
         //Debug.Log("Y Velocity: " + (Vector3.up * verticalVelocity * Time.deltaTime).y);
-    }
-
-    void UpdateGUI()
-    {
-        // update the jetpack fuel bar
-        barWidth = MAX_WIDTH / maxFuel * player.CurrentFuel;
-        fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
