@@ -42,6 +42,9 @@ public class RangedEnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (game.State != GameState.Running)
+            //return;
+
         //Get the direction from the enemy to the player and normalize it
         directionToTarget = (player.position - transform.position).normalized;
 

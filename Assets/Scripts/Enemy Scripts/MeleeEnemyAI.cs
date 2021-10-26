@@ -26,6 +26,9 @@ public class MeleeEnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (game.State != GameState.Running)
+            //return;
+
         if (controller.State == EnemyState.Follow)
         {
             if (controller.Distance <= attackRange)

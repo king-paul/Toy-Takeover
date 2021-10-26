@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public enum GameState { Init, Running, Win, Loss};
+public enum GameState { Init, Running, Paused, Win, Loss};
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     [Header("Heads Up Display")]
     public TextMeshProUGUI healthText;
     public RectTransform fuelBar;
-    public TextMeshProUGUI gameOverText;
+    public GameObject gameOverText;
+    public GameObject pauseText;
 
     //public GameObject[] walls;
 
@@ -47,6 +48,24 @@ public class GameManager : MonoBehaviour
         // update the jetpack fuel bar
         barWidth = MAX_WIDTH / player.maxFuel * player.Fuel;
         fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
+
+        // get input
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (state == GameState.Running)
+            {
+                pauseText.SetActive(true);
+                Time.timeScale = 0;
+                state = GameState.Paused;                
+            }
+            else if (state == GameState.Paused)
+            {
+                pauseText.SetActive(false);
+                Time.timeScale = 1;
+                state = GameState.Running;
+            }
+        }
+
     }
 
     public void Die()

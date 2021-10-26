@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2109182396}
   - component: {fileID: 2109182395}
   - component: {fileID: 635419912}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Mesh
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 506122213103200055}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Firing Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4257160977049515505}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8537989894274617258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8537989894881865668}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 8537989894881865666}
   - component: {fileID: 8537989894881865669}
   - component: {fileID: 7872020813417177758}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: First Person Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}

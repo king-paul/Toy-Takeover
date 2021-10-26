@@ -20,7 +20,7 @@ public class GunController : MonoBehaviour
     [SerializeField]
     float weaponRange = 50f;
     [SerializeField]
-    GunType gunType;
+    GunType gunType = GunType.SingleShot;
 
     private Camera fpsCam;
     private WaitForSeconds shotDuration;

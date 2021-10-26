@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    private Transform camera;
     public float travelSpeed = 1000;
     [SerializeField]
     float damage = 20f;
@@ -19,9 +18,6 @@ public class ProjectileController : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
-        camera = GameObject.FindWithTag("MainCamera").transform;
-
-        //Debug.Log("Firing in direction: " + camera.forward);
     }
 
     // Update is called once per frame
@@ -39,7 +35,8 @@ public class ProjectileController : MonoBehaviour
             player.TakeDamage(damage);
         }
 
-        GameObject.Destroy(this.gameObject);
+        if(other.gameObject.layer != 2) // Ignore Raycast layer
+            GameObject.Destroy(this.gameObject);
     }
 
 }
