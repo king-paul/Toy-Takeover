@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     private GameManager game;
     private GunController gun;
 
+    private int weaponNum = 0;
+    private int prevWeaponNum;
+
     // properties
     public float Health { get => currentHealth; }
     public float Fuel { get => currentFuel; }
@@ -35,6 +38,11 @@ public class PlayerController : MonoBehaviour
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
+    private void Start()
+    {
+        weapons[weaponNum].SetActive(true);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -42,6 +50,21 @@ public class PlayerController : MonoBehaviour
         {
             game.Die();
         }
+
+        // get mouse scroll from player
+        if(Input.mouseScrollDelta.y != 0)
+        {
+            prevWeaponNum = weaponNum;
+
+            if (Input.mouseScrollDelta.y == -1)
+                ++weaponNum;                
+
+            if (Input.mouseScrollDelta.y == 1)
+                --weaponNum;
+                
+            SwitchWeapons();
+        }
+        
     }
 
     public void AddJetpackFuel(float amount)
@@ -82,6 +105,21 @@ public class PlayerController : MonoBehaviour
     {
         currentFuel -= fuelDrainSpeed * Time.deltaTime;
     }
+
+    private void SwitchWeapons()
+    {
+        if (weaponNum < 0)
+            weaponNum = weapons.Length - 1;
+
+        if (weaponNum >= weapons.Length)
+            weaponNum = 0;
+
+        // switch weapon models
+        weapons[prevWeaponNum].SetActive(false);
+        weapons[weaponNum].SetActive(true);        
+
+        Debug.Log("Selected weapon " + weaponNum);
+    }
    
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -117,7 +155,6 @@ public class PlayerController : MonoBehaviour
         //{
         //    currentHealth -= 10f;
         //}
-
     }
 
     void ResetHit()
