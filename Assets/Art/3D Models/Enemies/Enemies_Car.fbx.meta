@@ -2,7 +2,82 @@ fileFormatVersion: 2
 guid: c30bbf7ed5a88774b9878ba96f738937
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -755013324460386009
+    second: Car_Body|Car_BodyAction
+  - first:
+      74: -434322025588655392
+    second: Car_Body|Wheel_BLAction
+  - first:
+      74: 4427868989527279742
+    second: Car_Body|Wheel_BRAction
+  - first:
+      74: 5083745412547475802
+    second: Car_Body|Wheel_FLAction
+  - first:
+      74: 4715451748863733809
+    second: Car_Body|Wheel_FRAction
+  - first:
+      74: 1093719671392988980
+    second: Wheel_FL|Car_BodyAction
+  - first:
+      74: -5957219147013912597
+    second: Wheel_FL|Wheel_BLAction
+  - first:
+      74: 3768775166107718628
+    second: Wheel_FL|Wheel_BRAction
+  - first:
+      74: 5859455873492065211
+    second: Wheel_FL|Wheel_FLAction
+  - first:
+      74: -6733911901170341775
+    second: Wheel_FL|Wheel_FRAction
+  - first:
+      74: 4760443569230500417
+    second: Wheel_BL|Car_BodyAction
+  - first:
+      74: 8286344302878238489
+    second: Wheel_BL|Wheel_BLAction
+  - first:
+      74: 9035484684982228551
+    second: Wheel_BL|Wheel_BRAction
+  - first:
+      74: -1186409458935050017
+    second: Wheel_BL|Wheel_FLAction
+  - first:
+      74: -7586320388906644536
+    second: Wheel_BL|Wheel_FRAction
+  - first:
+      74: -2315314654818148759
+    second: Wheel_FR|Car_BodyAction
+  - first:
+      74: -6598063272698672880
+    second: Wheel_FR|Wheel_BLAction
+  - first:
+      74: 6129487694274465623
+    second: Wheel_FR|Wheel_BRAction
+  - first:
+      74: -6575506924569751909
+    second: Wheel_FR|Wheel_FLAction
+  - first:
+      74: 4401400644807881888
+    second: Wheel_FR|Wheel_FRAction
+  - first:
+      74: 8896788384651516972
+    second: Wheel_BR|Car_BodyAction
+  - first:
+      74: -5120529637525201700
+    second: Wheel_BR|Wheel_BLAction
+  - first:
+      74: 8593715879743007514
+    second: Wheel_BR|Wheel_BRAction
+  - first:
+      74: -7813657431210149118
+    second: Wheel_BR|Wheel_FLAction
+  - first:
+      74: 2049335161707323867
+    second: Wheel_BR|Wheel_FRAction
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -30,7 +105,123 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Wheel_BR|Wheel_BLAction
+      takeName: Wheel_BR|Wheel_BLAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Wheel_BR|Wheel_BRAction
+      takeName: Wheel_BR|Wheel_BRAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Wheel_BR|Wheel_FLAction
+      takeName: Wheel_BR|Wheel_FLAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Wheel_BR|Wheel_FRAction
+      takeName: Wheel_BR|Wheel_FRAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
