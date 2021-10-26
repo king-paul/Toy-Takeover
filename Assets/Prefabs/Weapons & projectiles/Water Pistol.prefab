@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5442674306830118971}
   m_Layer: 0
-  m_Name: Weapon_MachineGun_Blockout
+  m_Name: Water Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4666736223068449409}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62.349995, y: -25.4, z: -55.623}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 5159904658330606861}
