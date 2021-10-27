@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6868628885064050389}
   - component: {fileID: 7565376676489980272}
+  - component: {fileID: -8468204908855741192}
   - component: {fileID: 5699702565535817146}
   - component: {fileID: 8980764538524184259}
   m_Layer: 0
@@ -41,6 +42,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6060038844819618927}
   m_Mesh: {fileID: 4538458408240807350, guid: 8e686b8d439ab7a4c91818c1d0d94218, type: 3}
+--- !u!65 &-8468204908855741192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060038844819618927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9339186, y: 0.8560855, z: 0.08384964}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &5699702565535817146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95,6 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41a2ff739e4a794283def606640b3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollect:
-    m_PersistentCalls:
-      m_Calls: []
+  statChanged: 2
+  increaseAmount: 10

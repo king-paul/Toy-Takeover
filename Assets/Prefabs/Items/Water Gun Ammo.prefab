@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4137077965206471111}
   - component: {fileID: 2201465496734971149}
   - component: {fileID: 7753721013106527346}
+  - component: {fileID: 6300348361250108437}
   m_Layer: 0
   m_Name: Water Gun Ammo
   m_TagString: Untagged
@@ -95,6 +96,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41a2ff739e4a794283def606640b3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollect:
-    m_PersistentCalls:
-      m_Calls: []
+  statChanged: 4
+  increaseAmount: 10
+--- !u!136 &6300348361250108437
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400206034586899672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.13746333
+  m_Height: 0.5799115
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.045132756, z: 0}

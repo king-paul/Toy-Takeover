@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3494049469379154786}
   - component: {fileID: 563654670312250567}
   - component: {fileID: 2321174213976877069}
+  - component: {fileID: 7942066802101706452}
   - component: {fileID: 6431939424824853973}
   m_Layer: 0
   m_Name: Laser Ammo
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &7942066802101706452
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4266751450153798104}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.26453283
+  m_Height: 1.02
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6431939424824853973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41a2ff739e4a794283def606640b3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollect:
-    m_PersistentCalls:
-      m_Calls: []
+  statChanged: 5
+  increaseAmount: 10

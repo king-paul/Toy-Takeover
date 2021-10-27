@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed82ff51f49f2049bd175b20814a840, type: 3}
-  m_Name: Crossbow
+  m_Script: {fileID: 11500000, guid: c0dddb8583874924bb2f776fbfbbf937, type: 3}
+  m_Name: Laser Gun
   m_EditorClassIdentifier: 
-  maxAmmo: 100
-  damagePerHit: 10
-  projectilePrefab: {fileID: 4999541130276871272, guid: 5f5e8098c8afcf242b04a4123ff1de7b, type: 3}
-  rapidFire: 0
-  shotDelayTime: 0.25
+  maxAmmo: 1000
+  startingAmmo: 500
+  damagePerHit: 2
+  laserMaterial: {fileID: 0}
+  laserRange: 50
+  damageRate: 1
