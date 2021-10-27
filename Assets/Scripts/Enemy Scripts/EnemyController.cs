@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
 {
     // public variables
     public Color hitColor = Color.red;
+    public ParticleSystem damageParticles;
 
     // variables
     Transform player;
@@ -40,8 +41,8 @@ public class EnemyController : MonoBehaviour
         state = EnemyState.Follow;
         curHealth = maxHealth;
 
-        //material = GetComponent<Renderer>().material;
-        //if(material == null)
+        material = GetComponent<Renderer>().material;
+        if(material == null)
             material = GetComponentInChildren<Renderer>().material;
     }
 
@@ -75,7 +76,7 @@ public class EnemyController : MonoBehaviour
         if(other.gameObject.tag == "Projectile")
         {
             // flash enemy red
-            StartCoroutine(FlashColor());
+            StartCoroutine(FlashColor());            
 
             curHealth -= 10;
 
@@ -86,8 +87,8 @@ public class EnemyController : MonoBehaviour
     IEnumerator FlashColor()
     {
         material = GetComponentInChildren<Renderer>().material;
-        material.color = Color.red;
+        material.color = hitColor;
         yield return new WaitForSeconds(0.1f);
-        GetComponent<Renderer>().material.color = new Color(120, 0, 0, 255);
+        GetComponent<Renderer>().material.color = Color.white;
     }
 }

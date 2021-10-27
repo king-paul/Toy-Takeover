@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7862379864335655932}
   - component: {fileID: 5402137699206944566}
   - component: {fileID: 6452454132461134404}
+  - component: {fileID: 392924489445425748}
   m_Layer: 0
   m_Name: Health Pickup
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5906686336828864227}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,6 +97,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41a2ff739e4a794283def606640b3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollect:
-    m_PersistentCalls:
-      m_Calls: []
+  statChanged: 0
+  increaseAmount: 20
+--- !u!65 &392924489445425748
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5906686336828864227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.53898114, y: 0.7881538, z: 0.53898084}
+  m_Center: {x: 0, y: 0, z: 0}

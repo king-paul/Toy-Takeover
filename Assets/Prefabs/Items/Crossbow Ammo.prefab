@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8647377115128655145}
   - component: {fileID: 5741663184500744844}
   - component: {fileID: 7514972271674005062}
+  - component: {fileID: 5622789029301588931}
   - component: {fileID: 7409148641081786143}
   m_Layer: 0
   m_Name: Crossbow Ammo
@@ -86,6 +87,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5622789029301588931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307583335537162131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2932235, y: 0.4671706, z: 0.16245091}
+  m_Center: {x: 0, y: 0, z: -0.0076104105}
 --- !u!114 &7409148641081786143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41a2ff739e4a794283def606640b3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollect:
-    m_PersistentCalls:
-      m_Calls: []
+  statChanged: 3
+  increaseAmount: 10

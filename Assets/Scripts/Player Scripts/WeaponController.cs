@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    //public GameObject bulletPrefab;
-    //public GameObject gluePrefab;
     public Transform firingPoint;
     public Weapon weaponObject;
 
@@ -15,14 +13,27 @@ public class WeaponController : MonoBehaviour
     private float nextFire;
 
     private GameManager game;
+    private int curAmmo;
 
+    // public functions and properties
+    public int Ammo { get => curAmmo; }
+
+    public void AddAmmo(int amount) 
+    { 
+        curAmmo += amount;
+
+        if (curAmmo > weaponObject.maxAmmo)
+            curAmmo = weaponObject.maxAmmo;
+    }
+
+    #region unity functions
     // Start is called before the first frame update
     void Start()
     {
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
         fpsCam = GetComponentInParent<Camera>();
         laserLine = GetComponentInChildren<LineRenderer>();
-
-        game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        curAmmo = weaponObject.startingAmmo;
     }
 
     // Update is called once per frame
@@ -43,6 +54,7 @@ public class WeaponController : MonoBehaviour
             {
                 nextFire = Time.time + weapon.shotDelayTime;
                 Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                curAmmo--;
             }
 
             // handle machine gun weapon
@@ -50,20 +62,31 @@ public class WeaponController : MonoBehaviour
             {
                 nextFire = Time.time + weapon.shotDelayTime;
                 Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                curAmmo--;
             }
         }
 
         // handle laser weapon
         if (weaponObject.GetType() == typeof(LaserWeapon))
         {
-            if (Input.GetButton("Fire1"))            
-                FireRaycast();            
+            if (Input.GetButton("Fire1"))
+            {
+                FireRaycast();
+                curAmmo--;
 
-            if (Input.GetButtonUp("Fire1"))            
-                laserLine.enabled = false;            
+                //if (Time.time > nextFire)
+                //{
+                //    curAmmo--;
+                //    nextFire = Time.time + weapon.shotDelayTime;
+                //}
+            }
+
+            if (Input.GetButtonUp("Fire1"))
+                laserLine.enabled = false;
         }
 
     }
+    #endregion
 
     void FireRaycast()
     {

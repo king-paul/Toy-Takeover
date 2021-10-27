@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3554588997601417491}
   - component: {fileID: 3554588997601417501}
   - component: {fileID: 3554588997601417490}
+  - component: {fileID: 1696386087307536471}
   m_Layer: 0
   m_Name: Jetpack Fuel
   m_TagString: Item
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3554588997601417503}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 28.84, y: 4.25, z: -28.26}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4543209575101908627}
@@ -86,21 +87,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41a2ff739e4a794283def606640b3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onCollect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5453762235983606453, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: AddJetpackFuel
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 2
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  statChanged: 1
+  increaseAmount: 2
+--- !u!65 &1696386087307536471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3554588997601417503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.64400905, y: 0.8174598, z: 0.27554387}
+  m_Center: {x: 0.004048407, y: 0.0057042837, z: 0.008556575}
 --- !u!1 &3767095771693456425
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +113,6 @@ GameObject:
   - component: {fileID: 4543209575101908627}
   - component: {fileID: 622449599521835318}
   - component: {fileID: 3406856385391345148}
-  - component: {fileID: 1578861950519236482}
   m_Layer: 0
   m_Name: Pickup_Fuel
   m_TagString: Untagged
@@ -184,16 +184,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1578861950519236482
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3767095771693456425}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.64172107, y: 0.76282364, z: 0.22914205}
-  m_Center: {x: 0, y: 0, z: 0}

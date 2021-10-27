@@ -45,5 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 0}
   fuelBar: {fileID: 0}
+  currentAmmoText: {fileID: 0}
+  maxAmmoText: {fileID: 0}
+  armourText: {fileID: 0}
   gameOverText: {fileID: 0}
   pauseText: {fileID: 0}
