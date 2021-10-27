@@ -17,4 +17,4 @@ MonoBehaviour:
   damagePerHit: 2
   laserMaterial: {fileID: 0}
   laserRange: 50
-  damageRate: 1
+  shotDelay: 0.1

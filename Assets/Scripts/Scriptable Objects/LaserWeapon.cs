@@ -7,5 +7,7 @@ public class LaserWeapon : Weapon
 {
     public Material laserMaterial;
     public float laserRange = 50;
-    public float damageRate = 1;
+
+    [Range(0, 1)]
+    public float shotDelay = 0.2f;
 }

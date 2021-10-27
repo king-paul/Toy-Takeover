@@ -53,35 +53,44 @@ public class WeaponController : MonoBehaviour
             if (!weapon.rapidFire && Input.GetButtonDown("Fire1") && Time.time > nextFire)
             {
                 nextFire = Time.time + weapon.shotDelayTime;
-                Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
-                curAmmo--;
+
+                if (curAmmo > 0)
+                {
+                    Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                    curAmmo--;
+                }
             }
 
             // handle machine gun weapon
             else if (weapon.rapidFire && Input.GetButton("Fire1") && Time.time > nextFire)
             {
                 nextFire = Time.time + weapon.shotDelayTime;
-                Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
-                curAmmo--;
+
+                if (curAmmo > 0)
+                {
+                    Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                    curAmmo--;
+                }
+                    
             }
         }
 
         // handle laser weapon
         if (weaponObject.GetType() == typeof(LaserWeapon))
         {
-            if (Input.GetButton("Fire1"))
+            LaserWeapon weapon = (LaserWeapon) weaponObject;
+
+            if (Input.GetButton("Fire1") && curAmmo > 0)
             {
-                FireRaycast();
-                curAmmo--;
+                FireRaycast();                
 
-                //if (Time.time > nextFire)
-                //{
-                //    curAmmo--;
-                //    nextFire = Time.time + weapon.shotDelayTime;
-                //}
+                if (Time.time > nextFire)
+                {
+                    curAmmo--;
+                    nextFire = Time.time + weapon.shotDelay;
+                }
             }
-
-            if (Input.GetButtonUp("Fire1"))
+            else
                 laserLine.enabled = false;
         }
 
