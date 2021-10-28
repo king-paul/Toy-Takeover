@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MeleeEnemyAI : MonoBehaviour
 {
-    [SerializeField][Range(0, 2)]
-    float attackRange = 1.1f;
+    [SerializeField][Range(1, 4)]
+    float attackRange = 1.4f;
     //[SerializeField]
     //[Tooltip("Destroy the game object when it collides tithe the player")]
     //bool destroyOnContact = false;
@@ -36,7 +36,9 @@ public class MeleeEnemyAI : MonoBehaviour
                 controller.State = EnemyState.Attack;
                 Invoke("AttackPlayer", 1.0f);
                 return;
-            } 
+            }
+
+            Debug.Log("Distance from player: " + controller.Distance);
 
         }
 
@@ -58,13 +60,4 @@ public class MeleeEnemyAI : MonoBehaviour
             Invoke("AttackPlayer", 1.0f);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        /*if (destroyOnContact && other.gameObject.tag == "Player")
-        {
-            GameObject.Destroy(this.gameObject);
-
-            // damage the player
-        }*/
-    }
 }

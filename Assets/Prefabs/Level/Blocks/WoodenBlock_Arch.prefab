@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2287934148987471503}
   - component: {fileID: 4045543862271390277}
   - component: {fileID: 7586361733490315317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WoodenBlock_Arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -124,6 +124,16 @@ public class WeaponController : MonoBehaviour
 
     void HandleRaycastHit(GameObject obj)
     {
+        if(obj.tag == "Enemy")
+        {
+            EnemyController enemy = obj.GetComponent<EnemyController>();
 
+            if (Time.time > nextFire)
+            {
+                enemy.TakeDamage(weaponObject.damagePerHit);
+                Debug.Log("The raycast has hit an enemy and dealt " + 
+                    weaponObject.damagePerHit + " damage");
+            }
+        }
     }
 }

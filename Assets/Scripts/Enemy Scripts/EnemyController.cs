@@ -27,8 +27,10 @@ public class EnemyController : MonoBehaviour
 
     Material material;
 
+    // properties and public functions
     public EnemyState State { get => state; set => state = value; }
     public float Distance { get => (player.position - transform.position).magnitude; }
+    public void TakeDamage(float amount){ curHealth -= amount; }
 
     // Start is called before the first frame update
     void Start()

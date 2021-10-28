@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public float fallOffDamage = 10f;
 
     // private variables
-    [SerializeField]
+    //[SerializeField]
     private float currentHealth = 100;
     private float currentArmour = 0;
     private float currentFuel = 0;
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
     // Awake is called as soon s the script is run
     void Awake()
     {
-        //currentHealth = maxHealth;
+        currentHealth = maxHealth;
         hitFloor = false;
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
     }

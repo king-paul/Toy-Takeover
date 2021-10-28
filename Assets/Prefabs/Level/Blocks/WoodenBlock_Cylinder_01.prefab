@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2697983773277062794}
   - component: {fileID: 186299856860639808}
   - component: {fileID: 9035167846859617092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WoodenBlock_Cylinder_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

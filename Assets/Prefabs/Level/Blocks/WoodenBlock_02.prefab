@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1546659990407767687}
   - component: {fileID: 3644010615095202381}
   - component: {fileID: -4025848515965532766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WoodenBlock_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
