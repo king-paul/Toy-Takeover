@@ -5850,6 +5850,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: waves.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: fuelBar
       value: 
       objectReference: {fileID: 1076706837}
@@ -5879,6 +5883,28 @@ PrefabInstance:
       objectReference: {fileID: 985352064}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+--- !u!1 &1513658133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604101679903821006, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+  m_PrefabInstance: {fileID: 1513658132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1513658134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513658133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111852440ca64cd429e17131d3f67086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 1353979938}
+  fuelBar: {fileID: 1076706837}
+  currentAmmoText: {fileID: 1410130923}
+  maxAmmoText: {fileID: 891402102}
+  armourText: {fileID: 985352064}
 --- !u!43 &1527848322
 Mesh:
   m_ObjectHideFlags: 0

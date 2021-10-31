@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd09b0b4c1b8b5444a29f7353cb15db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waves:
+  - {fileID: 11400000, guid: fd5459befcd08e24bbdbce4ee72cd3f2, type: 2}
   healthText: {fileID: 0}
   fuelBar: {fileID: 0}
   currentAmmoText: {fileID: 0}
