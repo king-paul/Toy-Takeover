@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4100582860578398810}
   - component: {fileID: 1101105883378331135}
   - component: {fileID: 2928217985804622133}
+  - component: {fileID: 7743379554388506190}
   m_Layer: 0
   m_Name: Environment_Ramp_Long_001
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7743379554388506190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3721067092911651040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24.03157, y: 0.5, z: 3}
+  m_Center: {x: -0.0000014305115, y: 0.25, z: 0}
