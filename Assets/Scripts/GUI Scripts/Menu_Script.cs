@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuScript : MonoBehaviour
+public class Menu_Script: MonoBehaviour
 {
-    //Opens the level defined by the string
     public void OpenLevel(string scene)
     {
+        //Opens the level defined by the string
         SceneManager.LoadScene(scene);
     }
 
-    //Opens the URL defined in the string in a web browser
     public void OpenURL(string url)
     {
+        //Opens the URL defined in the string in a web browser
         Application.OpenURL(url);
     }
 
-    //Closes the game task
     public void GameQuit()
     {
+        //Closes the game task
         Application.Quit();
         //Enables quitting when playing in the Unity editor
 #if UNITY_EDITOR
