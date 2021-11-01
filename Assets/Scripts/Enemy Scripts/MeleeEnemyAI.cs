@@ -38,7 +38,7 @@ public class MeleeEnemyAI : MonoBehaviour
                 return;
             }
 
-            Debug.Log("Distance from player: " + controller.Distance);
+            //Debug.Log("Distance from player: " + controller.Distance);
 
         }
 

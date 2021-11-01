@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 1923666235592500154}
   - component: {fileID: 5231865332751422528}
   m_Layer: 0
-  m_Name: Melee Enemy
+  m_Name: Grunt
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,6 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitColor: {r: 1, g: 0, b: 0, a: 1}
+  damageParticles: {fileID: 0}
   maxHealth: 30
   flyingEnemy: 0
 --- !u!114 &5231865332751422528
@@ -760,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfd51e4b4843f340b14c0ac91ad89ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 1.1
+  attackRange: 1.4
   damagePerAttack: 10
 --- !u!1 &8978456818100710269
 GameObject:
@@ -843,7 +844,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: e463ae5c3c39f664f93be6f0bce72b68, type: 3}
+  - {fileID: 2100000, guid: ec8f961a66773a544a89de4d49b0d1e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
