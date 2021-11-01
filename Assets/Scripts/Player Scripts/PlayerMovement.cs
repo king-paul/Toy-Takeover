@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
 
     Vector3 forwardVector, sidewaysVector;
+    Vector3 movementVector;
     private float rotateX, rotateY;
     private float verticalVelocity;
 
@@ -70,7 +71,8 @@ public class PlayerMovement : MonoBehaviour
         rotateY = startingAngle;
 
         // Initialize jetpack variables
-        usingJetpack = false;        
+        usingJetpack = false;
+        movementVector = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -104,26 +106,19 @@ public class PlayerMovement : MonoBehaviour
         else
             moveSpeed = runSpeed;
 
-        forwardVector = transform.forward * Input.GetAxis("Vertical") * moveSpeed;
-        sidewaysVector = transform.right * Input.GetAxis("Horizontal") * moveSpeed;
+        forwardVector = transform.forward * Input.GetAxis("Vertical");
+        sidewaysVector = transform.right * Input.GetAxis("Horizontal");
+        movementVector = (forwardVector + sidewaysVector).normalized * runSpeed;
 
-        // move player forward and back
-        if (Input.GetAxis("Vertical") != 0)
-        {
-            controller.Move(forwardVector * Time.deltaTime);
-        }
+        //Debug.Log("Horizontal Input: " + Input.GetAxis("Horizontal"));
+        //Debug.Log("Vertical Input: " + Input.GetAxis("Horizontal"));        
 
-        // move player sideways
-        if (Input.GetAxis("Horizontal") != 0)
-        {
-            controller.Move(sidewaysVector * Time.deltaTime);
-        }
-
+        controller.Move(movementVector * Time.deltaTime);      
     }
 
     void UpdateVerticalPosition()
     {
-        if (controller.isGrounded || player.Fuel <= 0)
+        if (isOnGround() || player.Fuel <= 0)
         {
             usingJetpack = false;
             //Debug.Log("Jetpack is off");
@@ -157,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Apply gravity, pulling the player down if they are above the ground
-        if (!controller.isGrounded && !usingJetpack)
+        if (!isOnGround() && !usingJetpack)
         {
             verticalVelocity += Physics.gravity.y * Time.deltaTime;
         }
