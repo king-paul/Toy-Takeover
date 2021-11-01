@@ -11,13 +11,6 @@ public class EnemyController : MonoBehaviour
     public Color hitColor = Color.red;
     public ParticleSystem damageParticles;
 
-    // variables
-    Transform player;
-    NavMeshAgent agent;
-    Rigidbody rigidbody;
-    float distance;
-    EnemyState state;
-
     [SerializeField]
     float maxHealth = 30;
     float curHealth;
@@ -25,7 +18,14 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     bool flyingEnemy = false;
 
+    // private variables
+    Transform player;
+    NavMeshAgent agent;
+    Rigidbody rigidbody;
+    private float distance;
+    EnemyState state;
     Material material;
+    GameManager game;
 
     // properties and public functions
     public EnemyState State { get => state; set => state = value; }
@@ -35,6 +35,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.FindWithTag("Player").transform;
 
         if(!flyingEnemy)
@@ -58,6 +59,7 @@ public class EnemyController : MonoBehaviour
 
         if (curHealth <= 0)
         {
+            game.KillEnemy();
             GameObject.Destroy(this.gameObject);
             return;
         }

@@ -63,7 +63,7 @@ public class RangedEnemyAI : MonoBehaviour
                     //Debug.Log("Enemy can see player");
 
                     controller.State = EnemyState.Attack;
-                    Debug.Log("Switching to attack state");
+                    //Debug.Log("Switching to attack state");
                 }
                 break;
 

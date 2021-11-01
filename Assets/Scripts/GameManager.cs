@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [Header("Pause and Game Over Text")]
     public GameObject gameOverText;
     public GameObject pauseText;
+    public GameObject winText;
     
     [Header("Enemy Spawning")]
     public bool spawnEnemies = false;
@@ -20,24 +21,27 @@ public class GameManager : MonoBehaviour
     [Tooltip("Place enemy wave scriptable objects here")]
     public EnemyWave[] waves;
 
-    //public GameObject[] walls;
-
     GameState state;
     PlayerController player;
 
     // gui variables
     private float barWidth;
-    float MAX_WIDTH;
+    float MAX_WIDTH;    
+    float waveTime = 0f;
+    float previousElapsedTime = 0f;
 
     private int waveNumber = 1;
     private int enemiesLeft = 0;
     private int enemiesSpawned = 0;
-    int enemiesRemaining;
+    private int enemiesInScene = 0;
 
     // public properties and functions
     public GameState State { get => state; set => state = value; }
-    public int EnemiesLeft { get => enemiesRemaining; set => enemiesRemaining = value; }
-    public void KillEnemy() { enemiesRemaining--;  }
+    public int EnemiesLeft { get => enemiesLeft; set => enemiesLeft = value; }
+    public int WaveNumber { get => waveNumber; }
+    public void KillEnemy() {
+        enemiesInScene--;
+        enemiesLeft--;  }
     public void Die()
     {
         gameOverText.gameObject.SetActive(true);
@@ -53,15 +57,22 @@ public class GameManager : MonoBehaviour
         state = GameState.Running;
 
         // ensure that each hasSpawn variable is set to false by default
-        foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
-            spawn.hasSpawned = false;
+        if (spawnEnemies)
+        {
+            enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
+            foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
+                spawn.hasSpawned = false;
+        }
+
+        waveTime = 0;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         HandleInput();
-        if(spawnEnemies)
+        if(spawnEnemies && waveNumber <= waves.Length && state == GameState.Running)
             UpdateEnemySpawns();
     }
 
@@ -89,6 +100,15 @@ public class GameManager : MonoBehaviour
     // and instantiates them. Also updates the wave number when there are not enemies left
     void UpdateEnemySpawns()
     {
+        waveTime = Time.time - previousElapsedTime;
+
+        // Check that all enemies have been spawned and there are none left in the wave
+        if (enemiesSpawned == waves[waveNumber - 1].enemiesInWave.Length && enemiesLeft == 0)
+        {
+            NextWave();
+            return;
+        }
+
         foreach (EnemySpawn spawn in waves[waveNumber-1].enemiesInWave)
         {
             GameObject enemy = enemies[(int)spawn.enemy];
@@ -96,25 +116,39 @@ public class GameManager : MonoBehaviour
 
             // check that the enemy has not already been spawned and
             // the time has been reached
-            if (!spawn.hasSpawned && Time.time >= spawn.timePeriod)
+            if (!spawn.hasSpawned && waveTime >= spawn.timePeriod)
             {
                 Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
                 spawn.hasSpawned = true;
                 enemiesSpawned++;
-                enemiesLeft++;
+                enemiesInScene++;
 
                 Debug.Log("Enemies Spawned: " + enemiesSpawned +
-                          ", Enemies in Scene " + enemiesLeft);
+                          ", Enemies in Scene " + enemiesInScene);
             }
         }
 
-        // Check that all enemies have been spawned and there are none left in the wave
-        if (enemiesSpawned == waves[waveNumber-1].enemiesInWave.Length && enemiesLeft == 0)
-        {
-            waveNumber++;
-            enemiesSpawned = 0;
-        }
+    }
 
+    void NextWave()
+    {
+        waveNumber++;
+        enemiesSpawned = 0;        
+        previousElapsedTime = Time.time;
+
+        if (waveNumber > waves.Length)
+        {
+            winText.SetActive(true);
+            Time.timeScale = 0;
+            state = GameState.Win;
+        }
+        else
+        {
+            enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
+            // reset hasSpawned values
+            foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
+                spawn.hasSpawned = false;
+        }
     }
 
 }

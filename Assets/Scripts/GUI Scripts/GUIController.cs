@@ -11,9 +11,16 @@ public class GUIController : MonoBehaviour
     public RectTransform fuelBar;
     public TextMeshProUGUI currentAmmoText;
     public TextMeshProUGUI maxAmmoText;
-    public TextMeshProUGUI armourText;    
+    public TextMeshProUGUI armourText;
 
+    [Header("Wave Information")]
+    public TextMeshProUGUI waveNumber;
+    public TextMeshProUGUI enemiesLeft;
+    public TextMeshProUGUI timeText;
+
+    GameManager game;
     PlayerController player;
+
     // gui variables
     private float barWidth;
     float MAX_WIDTH;
@@ -21,7 +28,8 @@ public class GUIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        game = GetComponent<GameManager>();
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();        
 
         // Initialize jetpack fuel bar
         MAX_WIDTH = fuelBar.rect.width;
@@ -40,5 +48,10 @@ public class GUIController : MonoBehaviour
         currentAmmoText.text = player.Ammo.ToString();
         maxAmmoText.text = player.MaxAmmo.ToString();
         armourText.text = player.Armour.ToString();
+
+        // left hand side
+        waveNumber.text = game.WaveNumber.ToString();
+        enemiesLeft.text = game.EnemiesLeft.ToString();
+        timeText.text = ((int)Time.time).ToString();
     }
 }
