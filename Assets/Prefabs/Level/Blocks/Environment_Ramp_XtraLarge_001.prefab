@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7960242122458365907}
   - component: {fileID: 6473833876055945334}
   - component: {fileID: 9093711946404103356}
+  - component: {fileID: 5055063378823942635}
   m_Layer: 0
   m_Name: Environment_Ramp_XtraLarge_001
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5055063378823942635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7292355451818812777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 25, y: 0.5, z: 12.5}
+  m_Center: {x: 0, y: 0.25, z: 0}

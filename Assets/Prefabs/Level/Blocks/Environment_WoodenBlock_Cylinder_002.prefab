@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2369904093329075710}
   - component: {fileID: 1678801020652659291}
   - component: {fileID: 3506258931632592529}
+  - component: {fileID: 727207377760203735}
   m_Layer: 0
   m_Name: Environment_WoodenBlock_Cylinder_002
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &727207377760203735
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145843074659252036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4250223879119046145, guid: 7298e77c89145694db4d09fae4726f60, type: 3}
