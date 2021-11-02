@@ -151,17 +151,32 @@ public class PlayerController : MonoBehaviour
 
                 Invoke("ResetHit", 0.5f); // prevents more than one collision
 
+                GetComponent<CharacterController>().enabled = false;
                 transform.position = spawnPoint.position;
                 transform.rotation = spawnPoint.rotation;
+                GetComponent<CharacterController>().enabled = true;
             }
         }
 
-        // projectile hits player
-        //if(hit.gameObject.CompareTag("Projectile"))
-        //{
-        //    currentHealth -= 10f;
-        //}
     }
+
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("KillZone") && !hitFloor)
+        {
+            currentHealth -= fallOffDamage;
+            hitFloor = true;
+
+            Invoke("ResetHit", 0.5f); // prevents more than one collision
+
+            GetComponent<CharacterController>().enabled = false;
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
+            GetComponent<CharacterController>().enabled = true;
+        }
+    }*/
+
     #endregion
 
     #region private functions
