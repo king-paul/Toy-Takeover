@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0bf883c296402347b5346197ee6df63, type: 3}
+  m_Name: Wave2_Main
+  m_EditorClassIdentifier: 
+  enemiesInWave:
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 0
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 1
+    timePeriod: 0
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 2
+    timePeriod: 0
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 3
+    timePeriod: 0
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 4
+    timePeriod: 0
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 5
+    timePeriod: 0
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 1
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 1
+    timePeriod: 1
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 2
+    timePeriod: 1
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 3
+    timePeriod: 1
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 4
+    timePeriod: 1
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 5
+    timePeriod: 1
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 1
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 2
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 3
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 4
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 5
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 3
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 1
+    timePeriod: 3
+    hasSpawned: 1
+  - enemy: 1
+    spawnPoint: 2
+    timePeriod: 3
+    hasSpawned: 1
+  - enemy: 1
+    spawnPoint: 3
+    timePeriod: 3
+    hasSpawned: 1
+  - enemy: 1
+    spawnPoint: 4
+    timePeriod: 3
+    hasSpawned: 1
+  - enemy: 1
+    spawnPoint: 5
+    timePeriod: 3
+    hasSpawned: 1

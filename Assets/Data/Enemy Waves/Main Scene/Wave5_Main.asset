@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0bf883c296402347b5346197ee6df63, type: 3}
+  m_Name: Wave5_Main
+  m_EditorClassIdentifier: 
+  enemiesInWave:
+  - enemy: 0
+    spawnPoint: 5
+    timePeriod: 0
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 4
+    timePeriod: 1
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 3
+    timePeriod: 2
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 2
+    timePeriod: 3
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 1
+    timePeriod: 4
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 0
+    timePeriod: 5
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 6
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 1
+    timePeriod: 7
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 2
+    timePeriod: 8
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 3
+    timePeriod: 9
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 4
+    timePeriod: 10
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 5
+    timePeriod: 11
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 5
+    timePeriod: 12
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 4
+    timePeriod: 13
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 3
+    timePeriod: 14
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 2
+    timePeriod: 15
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 1
+    timePeriod: 16
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 0
+    timePeriod: 17
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 18
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 1
+    timePeriod: 19
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 2
+    timePeriod: 20
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 3
+    timePeriod: 21
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 4
+    timePeriod: 22
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 5
+    timePeriod: 23
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 5
+    timePeriod: 24
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 4
+    timePeriod: 25
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 3
+    timePeriod: 26
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 2
+    timePeriod: 27
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 1
+    timePeriod: 28
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 0
+    timePeriod: 29
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 30
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 1
+    timePeriod: 30
+    hasSpawned: 0

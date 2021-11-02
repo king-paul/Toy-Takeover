@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitColor: {r: 1, g: 0, b: 0, a: 1}
   damageParticles: {fileID: 0}
-  maxHealth: 30
+  maxHealth: 60
   flyingEnemy: 0
 --- !u!114 &4283558823875897926
 MonoBehaviour:
