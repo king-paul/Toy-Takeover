@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statChanged: 3
-  increaseAmount: 10
+  increaseAmount: 50
 --- !u!108 &6990626877340065214
 Light:
   m_ObjectHideFlags: 0

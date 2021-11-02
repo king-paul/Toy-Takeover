@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statChanged: 4
-  increaseAmount: 10
+  increaseAmount: 50
 --- !u!136 &6300348361250108437
 CapsuleCollider:
   m_ObjectHideFlags: 0
