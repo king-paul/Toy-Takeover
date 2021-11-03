@@ -615,6 +615,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5373801838531647799, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373801838531647799, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.356
+      objectReference: {fileID: 0}
     - target: {fileID: 5453762235983606453, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: spawnPoint
       value: 
@@ -1606,7 +1614,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 110388068}
-  - component: {fileID: 110388067}
   m_Layer: 0
   m_Name: Player Spawnpoint
   m_TagString: Spawnpoint
@@ -1614,19 +1621,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &110388067
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110388066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!4 &110388068
 Transform:
   m_ObjectHideFlags: 0
