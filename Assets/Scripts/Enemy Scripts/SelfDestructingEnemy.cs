@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class SelfDestructingEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // destroys the enemy when colliding with the player
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
+        if (other.gameObject.tag == "Player")
+        {
+            GameObject.Destroy(this.gameObject);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            // damage the player
+        }
     }
 }

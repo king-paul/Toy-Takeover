@@ -9,7 +9,10 @@ public class EnemyController : MonoBehaviour
 {
     // public variables
     public Color hitColor = Color.red;
-    public ParticleSystem damageParticles;
+
+    [Header("Damage Particles")]
+    public ParticleSystem projectileDamageParticles;
+    public ParticleSystem laserDamageParticles;
 
     [SerializeField]
     float maxHealth = 30;
@@ -80,9 +83,10 @@ public class EnemyController : MonoBehaviour
         if(other.gameObject.tag == "Projectile")
         {
             // flash enemy red
-            StartCoroutine(FlashColor());            
+            //StartCoroutine(FlashColor());
+            PlayDamageParticles();
 
-            curHealth -= 10;
+            curHealth -= 10;            
 
             //Debug.Log("Enemy hit by projectile");
         }
@@ -95,4 +99,17 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         GetComponent<Renderer>().material.color = Color.white;
     }
+
+    public void PlayDamageParticles()
+    {
+        projectileDamageParticles.gameObject.SetActive(true);
+        projectileDamageParticles.Play();
+    }
+
+    public void PlayLaserParticles()
+    {
+        laserDamageParticles.gameObject.SetActive(true);
+        laserDamageParticles.Play();
+    }
+
 }

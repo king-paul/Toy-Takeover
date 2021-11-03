@@ -97,7 +97,7 @@ public class GunController : MonoBehaviour
         if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
         {
             laserLine.SetPosition(1, hit.point);
-            //HandleHit();
+            
         }
         else
         {
@@ -113,8 +113,4 @@ public class GunController : MonoBehaviour
         laserLine.enabled = false;
     }
 
-    void HandleHit()
-    {
-
-    }
 }
