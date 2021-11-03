@@ -7,10 +7,10 @@ public enum GameState { Init, Running, Paused, Win, Loss};
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Pause and Game Over Text")]
-    public GameObject gameOverText;
-    public GameObject pauseText;
-    public GameObject winText;
+    //[Header("Pause and Game Over Text")]
+    //public GameObject gameOverText;
+    //public GameObject pauseText;
+    //public GameObject winText;
     
     [Header("Enemy Spawning")]
     public bool spawnEnemies = false;
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public EnemyWave[] waves;
 
     GameState state;
-    PlayerController player;
+    GUIController gui;
 
     // gui variables
     private float barWidth;
@@ -42,18 +42,21 @@ public class GameManager : MonoBehaviour
     public void KillEnemy() {
         enemiesInScene--;
         enemiesLeft--;  }
+
     public void Die()
     {
-        gameOverText.gameObject.SetActive(true);
+        gui.ShowGameOver();        
         state = GameState.Loss;
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
-        player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        gui = GetComponent<GUIController>();
         state = GameState.Running;
 
         // ensure that each hasSpawn variable is set to false by default
@@ -64,8 +67,7 @@ public class GameManager : MonoBehaviour
                 spawn.hasSpawned = false;
         }
 
-        waveTime = 0;
-        
+        waveTime = 0;        
     }
 
     // Update is called once per frame
@@ -82,17 +84,19 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (state == GameState.Running)
-            {
-                pauseText.SetActive(true);
+            {                
                 Time.timeScale = 0;
+                Cursor.lockState = CursorLockMode.None;
                 state = GameState.Paused;
             }
             else if (state == GameState.Paused)
             {
-                pauseText.SetActive(false);
                 Time.timeScale = 1;
+                Cursor.lockState = CursorLockMode.Locked;
                 state = GameState.Running;
             }
+
+            gui.TogglePauseMenu();
         }
     }
 
@@ -123,8 +127,8 @@ public class GameManager : MonoBehaviour
                 enemiesSpawned++;
                 enemiesInScene++;
 
-                Debug.Log("Enemies Spawned: " + enemiesSpawned +
-                          ", Enemies in Scene " + enemiesInScene);
+                //Debug.Log("Enemies Spawned: " + enemiesSpawned +
+                          //", Enemies in Scene " + enemiesInScene);
             }
         }
 
@@ -138,9 +142,10 @@ public class GameManager : MonoBehaviour
 
         if (waveNumber > waves.Length)
         {
-            winText.SetActive(true);
-            Time.timeScale = 0;
+            gui.ShowLevelComplete();            
             state = GameState.Win;
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
