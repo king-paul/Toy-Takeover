@@ -74,7 +74,22 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage(float amount)
     {
-        currentHealth -= amount;
+        // if the player has armour damage the armour
+        // otherwise damage the health
+        if (currentArmour > 0)
+        {
+            currentArmour -= amount;
+
+            // if the damage taken is greater than the current armour
+            // deal remaining damage to health
+            if (currentArmour < 0)
+            {
+                currentHealth += currentArmour;
+                currentArmour = 0;
+            }
+        }
+        else
+            currentHealth -= amount;
 
         if (currentHealth < 0)
             currentHealth = 0;
