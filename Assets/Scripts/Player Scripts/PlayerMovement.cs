@@ -13,15 +13,22 @@ public class PlayerMovement : MonoBehaviour
     // Basic movement
     [Header("Basic Movement")]
     [SerializeField] [Range(0, 50)]
-    float runSpeed = 20;
-    [SerializeField][Range(0, 10)]
-    float rotationSpeed = 2;
+    float runSpeed = 20;    
     [SerializeField][Range(0, 10)]
     [Tooltip("Sets how high the player can jump")]
     float jumpPower = 7;
     [SerializeField][Range(0, 20)]
     [Tooltip("Sets how fast the player falls without using jetpack")]
-    float gravity = -Physics.gravity.y;    
+    float gravity = -Physics.gravity.y;   
+    
+    // Camera
+    [Header("Camera")]
+    [SerializeField][Range(0, 10)]
+    float verticalRotationSpeed = 2;
+    [SerializeField][Range(0, 10)]
+    float horizontalRotationSpeed = 2;
+    [SerializeField][Range(0, 180)]
+    float verticalRotationLimit = 90;
 
     // Jetpack
     [Header("Jetpack")]
@@ -90,12 +97,16 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateFaceDirection()
     {
-        rotateY += Input.GetAxis("Mouse X") * rotationSpeed;
-        rotateX += -Input.GetAxis("Mouse Y") * rotationSpeed;
+        rotateY += Input.GetAxis("Mouse X") * horizontalRotationSpeed;
+
+        if(Input.GetAxis("Mouse Y") > 0 && rotateX > -verticalRotationLimit ||
+           Input.GetAxis("Mouse Y") < 0 && rotateX < verticalRotationLimit)
+            rotateX += -Input.GetAxis("Mouse Y") * verticalRotationSpeed;       
 
         // rotate player
         transform.rotation = Quaternion.Euler(0, rotateY, 0);
         // rotate camera
+
         camera.rotation = Quaternion.Euler(rotateX, rotateY, 0);
     }
 
@@ -169,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
 
         Debug.DrawRay(grounded.position, Vector3.down);
 
-        if (Physics.Raycast(grounded.position, Vector3.down, out hit, LayerMask.NameToLayer("Level")))
+        if (Physics.Raycast(grounded.position, Vector3.down, out hit))//, LayerMask.NameToLayer("Level")))
         {
             distance = transform.position.y - hit.point.y;
 
@@ -178,10 +189,11 @@ public class PlayerMovement : MonoBehaviour
                 //Debug.Log("Player is on ground");
                 return true;
             }
+
+            //Debug.Log("Distance from ground: " + distance);
         }
 
         //Debug.Log("Player is off ground");
-
         return false;
     }
 
