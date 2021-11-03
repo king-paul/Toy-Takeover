@@ -6,12 +6,7 @@ using UnityEngine;
 public enum GameState { Init, Running, Paused, Win, Loss};
 
 public class GameManager : MonoBehaviour
-{
-    //[Header("Pause and Game Over Text")]
-    //public GameObject gameOverText;
-    //public GameObject pauseText;
-    //public GameObject winText;
-    
+{    
     [Header("Enemy Spawning")]
     public bool spawnEnemies = false;
     [Tooltip("Enemy prefabs to be instantiated in each wave")]
