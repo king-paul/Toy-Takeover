@@ -615,6 +615,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 261492781745074939, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 620494046467043912, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876274295925274823, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 916868933929994125, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1357937237602412558, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: weight
       value: 0
@@ -622,6 +638,34 @@ PrefabInstance:
     - target: {fileID: 1357937237602412558, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894203787438083176, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070632700557154370, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179201864174943086, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943773326545172404, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229269761437577648, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519969060146289271, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844448247926770750, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5373801838531647799, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.x
@@ -639,9 +683,33 @@ PrefabInstance:
       propertyPath: camAnimator
       value: 
       objectReference: {fileID: 2127430051}
+    - target: {fileID: 5692910288181036622, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155443751239059525, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7872020813417177758, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_VolumeLayerMask.m_Bits
       value: 1847
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959694869420149522, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064126871329273607, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200537260738771125, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8203070285406745417, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.x
@@ -702,6 +770,10 @@ PrefabInstance:
     - target: {fileID: 8537989894881865666, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 1847
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178569588800674695, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9221786482290004872, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_IsActive
@@ -2258,7 +2330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 167302130}
   m_Layer: 0
-  m_Name: NEW
+  m_Name: Main Env
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
