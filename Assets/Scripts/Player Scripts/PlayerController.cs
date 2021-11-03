@@ -101,11 +101,11 @@ public class PlayerController : MonoBehaviour
 
         //damageEffect.weight = 1;
         //damageEffect.gameObject.active = 0;
-        //animator.SetTrigger("PlayerDamage");
+        animator.SetTrigger("PlayerTakesDamage");
 
-        animator.SetBool("Damage", true);
-        Debug.Log("Starting damage animation");
-        Invoke("StopDamage", 1.0f);
+        //animator.SetBool("Damage", true);
+        //Debug.Log("Starting damage animation");
+        //Invoke("StopDamage", 1.0f);
     }
 
     public void AddArmour(float amount)
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
     public void StopDamage()
     {
         animator.SetBool("Damage", false);
-        Debug.Log("Stopping damage animation"); ;
+        //Debug.Log("Stopping damage animation"); ;
     }
     #endregion
 

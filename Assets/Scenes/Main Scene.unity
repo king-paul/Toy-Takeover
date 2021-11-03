@@ -615,6 +615,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1357937237602412558, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: weight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357937237602412558, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5373801838531647799, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.022
@@ -627,6 +635,14 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 110388068}
+    - target: {fileID: 5453762235983606453, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: camAnimator
+      value: 
+      objectReference: {fileID: 2127430051}
+    - target: {fileID: 7872020813417177758, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_VolumeLayerMask.m_Bits
+      value: 1847
+      objectReference: {fileID: 0}
     - target: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.31
@@ -679,6 +695,10 @@ PrefabInstance:
       propertyPath: m_StepOffset
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 8537989894274617262, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8537989894881865666, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 1847
@@ -686,6 +706,14 @@ PrefabInstance:
     - target: {fileID: 9221786482290004872, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221786482290004918, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: weight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221786482290004918, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
@@ -14424,7 +14452,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1438250202
 Mesh:
@@ -19008,7 +19036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3680783983746029366, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3680783983746029366, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21216,7 +21244,7 @@ MonoBehaviour:
   isGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 1
+  weight: 0
   sharedProfile: {fileID: 11400000, guid: 77edce7ccc9415947bcd7ddccaf58d9f, type: 2}
 --- !u!1001 &2049127283
 PrefabInstance:
@@ -22916,6 +22944,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &2127430051 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7935973975556471241, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+  m_PrefabInstance: {fileID: 39005051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2131888633
 PrefabInstance:
   m_ObjectHideFlags: 0
