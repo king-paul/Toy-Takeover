@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.Rendering;
+
 public class PlayerController : MonoBehaviour
 {
     #region variable declaration
@@ -29,6 +31,9 @@ public class PlayerController : MonoBehaviour
     private GameManager game;
     private GunController gun;
     private WeaponController weapon;
+
+    private Animator animator;
+    Volume damageEffect;
 
     private int weaponNum = 0;
     private int prevWeaponNum;
@@ -71,6 +76,7 @@ public class PlayerController : MonoBehaviour
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
     }
+
     public void TakeDamage(float amount)
     {
         // if the player has armour damage the armour
@@ -92,6 +98,14 @@ public class PlayerController : MonoBehaviour
 
         if (currentHealth < 0)
             currentHealth = 0;
+
+        //damageEffect.weight = 1;
+        //damageEffect.gameObject.active = 0;
+        //animator.SetTrigger("PlayerDamage");
+
+        animator.SetBool("Damage", true);
+        Debug.Log("Starting damage animation");
+        Invoke("StopDamage", 1.0f);
     }
 
     public void AddArmour(float amount)
@@ -110,6 +124,12 @@ public class PlayerController : MonoBehaviour
     {
         currentFuel -= fuelDrainSpeed * Time.deltaTime;
     }
+
+    public void StopDamage()
+    {
+        animator.SetBool("Damage", false);
+        Debug.Log("Stopping damage animation"); ;
+    }
     #endregion
 
     #region Unity functions
@@ -124,6 +144,7 @@ public class PlayerController : MonoBehaviour
     // Start is called after awake
     private void Start()
     {
+        animator = GetComponent<Animator>();
         weapons[weaponNum].SetActive(true);
     }
 
@@ -206,7 +227,7 @@ public class PlayerController : MonoBehaviour
         weapons[prevWeaponNum].SetActive(false);
         weapons[weaponNum].SetActive(true);        
 
-        Debug.Log("Selected weapon " + weaponNum);
+        //Debug.Log("Selected weapon " + weaponNum);
     }
 
     private void ResetHit()
