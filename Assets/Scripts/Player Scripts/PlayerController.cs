@@ -183,6 +183,7 @@ public class PlayerController : MonoBehaviour
             {
                 currentHealth -= fallOffDamage;
                 hitFloor = true;
+                animator.SetTrigger("PlayerTakesDamage");
 
                 Invoke("ResetHit", 0.5f); // prevents more than one collision
 
