@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
     public float fallOffDamage = 10f;
 
     // private variables
-    //[SerializeField]
     private float currentHealth = 100;
     private float currentArmour = 0;
     private float currentFuel = 0;

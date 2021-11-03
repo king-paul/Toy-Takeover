@@ -18,6 +18,12 @@ public class GUIController : MonoBehaviour
     public TextMeshProUGUI enemiesLeft;
     public TextMeshProUGUI timeText;
 
+    [Header("Game State information")]
+    public GameObject pauseMenu;
+    public GameObject gameOverText;
+    public GameObject winText;
+    public GameObject backButton;
+
     GameManager game;
     PlayerController player;
 
@@ -54,4 +60,23 @@ public class GUIController : MonoBehaviour
         enemiesLeft.text = game.EnemiesLeft.ToString();
         timeText.text = ((int)Time.time).ToString();
     }
+
+    #region public functions
+    public void TogglePauseMenu()
+    {
+        pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
+    }
+    public void ShowGameOver()
+    {
+        gameOverText.SetActive(true);
+        backButton.SetActive(true);
+    }
+    public void ShowLevelComplete()
+    {
+        winText.SetActive(true);
+        backButton.SetActive(true);
+    }
+
+    #endregion
+
 }
