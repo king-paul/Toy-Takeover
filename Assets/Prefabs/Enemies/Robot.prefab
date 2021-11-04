@@ -193,6 +193,8 @@ MonoBehaviour:
   projectileDamageParticles: {fileID: 187500115511264534}
   laserDamageParticles: {fileID: 928215322213031308}
   maxHealth: 60
+  collisionDamage: 5
+  framesPerDamage: 5
   flyingEnemy: 0
 --- !u!114 &4283558823875897926
 MonoBehaviour:

@@ -31,12 +31,15 @@ public class PlayerController : MonoBehaviour
     private GameManager game;
     private GunController gun;
     private WeaponController weapon;
-
+    private EnemyController enemy;
     private Animator animator;
-    Volume damageEffect;
 
     private int weaponNum = 0;
     private int prevWeaponNum;
+
+    private int totalFrames = 0; // used to count frames from last collision damage
+    private bool collidingWithEnemy = false;
+
     #endregion
 
     #region properties
@@ -57,6 +60,111 @@ public class PlayerController : MonoBehaviour
         }
     }
     public float Armour { get => currentArmour; }
+    #endregion
+
+    #region Unity functions
+    // Awake is called as soon s the script is run
+    void Awake()
+    {
+        currentHealth = maxHealth;
+        hitFloor = false;
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
+    // Start is called after awake
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        weapons[weaponNum].SetActive(true);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (game.State == GameState.Running && currentHealth <= 0)
+        {
+            game.Die();
+        }
+
+        // get mouse scroll from player
+        if (Input.mouseScrollDelta.y != 0)
+        {
+            prevWeaponNum = weaponNum;
+
+            if (Input.mouseScrollDelta.y == -1)
+                ++weaponNum;
+
+            if (Input.mouseScrollDelta.y == 1)
+                --weaponNum;
+
+            SwitchWeapons();
+        }
+
+    }
+
+    private void FixedUpdate()
+    {
+        // resolve collisions with enemy
+        if (collidingWithEnemy)
+        {
+            totalFrames++;
+            if (totalFrames > enemy.framesPerDamage)
+            {
+                TakeDamage(enemy.collisionDamage);
+                totalFrames = 0;
+                collidingWithEnemy = false;
+            }
+
+        }
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        // damage the player if they collide with an enemy
+        if (hit.gameObject.tag == "Enemy" && !collidingWithEnemy)
+        {
+            collidingWithEnemy = true;
+            enemy = hit.gameObject.GetComponent<EnemyController>();
+        }
+
+        // send player to spawnpoint when they collide with floor
+        // and subtract health
+        if (hit.gameObject.layer == LayerMask.NameToLayer("Boundary") &&
+            hit.gameObject.CompareTag("KillZone"))
+        {
+            if (!hitFloor)
+            {
+                currentHealth -= fallOffDamage;
+                hitFloor = true;
+                animator.SetTrigger("PlayerTakesDamage");
+
+                Invoke("ResetHit", 0.5f); // prevents more than one collision
+
+                GetComponent<CharacterController>().enabled = false;
+                transform.position = spawnPoint.position;
+                transform.rotation = spawnPoint.rotation;
+                GetComponent<CharacterController>().enabled = true;
+            }
+        }
+    }
+
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("KillZone") && !hitFloor)
+        {
+            currentHealth -= fallOffDamage;
+            hitFloor = true;
+
+            Invoke("ResetHit", 0.5f); // prevents more than one collision
+
+            GetComponent<CharacterController>().enabled = false;
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
+            GetComponent<CharacterController>().enabled = true;
+        }
+    }*/
+
     #endregion
 
     #region public functions
@@ -99,13 +207,7 @@ public class PlayerController : MonoBehaviour
         if (currentHealth < 0)
             currentHealth = 0;
 
-        //damageEffect.weight = 1;
-        //damageEffect.gameObject.active = 0;
-        animator.SetTrigger("PlayerTakesDamage");
-
-        //animator.SetBool("Damage", true);
-        //Debug.Log("Starting damage animation");
-        //Invoke("StopDamage", 1.0f);
+        animator.SetTrigger("TakeDamage");
     }
 
     public void AddArmour(float amount)
@@ -130,90 +232,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Damage", false);
         //Debug.Log("Stopping damage animation"); ;
     }
-    #endregion
-
-    #region Unity functions
-    // Awake is called as soon s the script is run
-    void Awake()
-    {
-        currentHealth = maxHealth;
-        hitFloor = false;
-        game = GameObject.Find("GameManager").GetComponent<GameManager>();
-    }
-
-    // Start is called after awake
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-        weapons[weaponNum].SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (game.State == GameState.Running && currentHealth <= 0)
-        {
-            game.Die();
-        }
-
-        // get mouse scroll from player
-        if(Input.mouseScrollDelta.y != 0)
-        {
-            prevWeaponNum = weaponNum;
-
-            if (Input.mouseScrollDelta.y == -1)
-                ++weaponNum;                
-
-            if (Input.mouseScrollDelta.y == 1)
-                --weaponNum;
-                
-            SwitchWeapons();
-        }
-        
-    }
-
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        // send player to spawnpoint when they collide with floor
-        // and subtract health
-        if (hit.gameObject.layer == LayerMask.NameToLayer("Boundary") &&
-            hit.gameObject.CompareTag("KillZone"))
-        {
-            if (!hitFloor)
-            {
-                currentHealth -= fallOffDamage;
-                hitFloor = true;
-                animator.SetTrigger("PlayerTakesDamage");
-
-                Invoke("ResetHit", 0.5f); // prevents more than one collision
-
-                GetComponent<CharacterController>().enabled = false;
-                transform.position = spawnPoint.position;
-                transform.rotation = spawnPoint.rotation;
-                GetComponent<CharacterController>().enabled = true;
-            }
-        }
-
-    }
-
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("KillZone") && !hitFloor)
-        {
-            currentHealth -= fallOffDamage;
-            hitFloor = true;
-
-            Invoke("ResetHit", 0.5f); // prevents more than one collision
-
-            GetComponent<CharacterController>().enabled = false;
-            transform.position = spawnPoint.position;
-            transform.rotation = spawnPoint.rotation;
-            GetComponent<CharacterController>().enabled = true;
-        }
-    }*/
-
-    #endregion
+    #endregion    
 
     #region private functions
     private void SwitchWeapons()

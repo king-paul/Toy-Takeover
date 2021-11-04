@@ -632,7 +632,6 @@ GameObject:
   - component: {fileID: 8922432861276067966}
   - component: {fileID: 4597857018323811947}
   - component: {fileID: 8922432861276067952}
-  - component: {fileID: 1787749753440893961}
   - component: {fileID: 1923666235592500154}
   - component: {fileID: 5231865332751422528}
   m_Layer: 0
@@ -651,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 8922432861276067955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.36008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1925005062376993193}
   - {fileID: 838153614476292983}
@@ -736,22 +735,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!208 &1787749753440893961
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8922432861276067955}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 1, y: 0.5, z: 1}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &1923666235592500154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +751,8 @@ MonoBehaviour:
   projectileDamageParticles: {fileID: 5716412227290920460}
   laserDamageParticles: {fileID: 4757156714981773203}
   maxHealth: 30
+  collisionDamage: 5
+  framesPerDamage: 5
   flyingEnemy: 0
 --- !u!114 &5231865332751422528
 MonoBehaviour:
@@ -782,6 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 2
+  attackRate: 2.5
   damagePerAttack: 10
 --- !u!1 &8978456818100710269
 GameObject:

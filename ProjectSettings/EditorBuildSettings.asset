@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Paul.unity
     guid: ddbc8be977d89f9479bc69a8e7a686b8
   - enabled: 1
-    path: Assets/Scenes/Title Screen.unity
-    guid: 030f1f0473538f748bac1d4357653a0d
-  - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 2437bf089601447eca7cb7e94a4e23b2
   m_configObjects: {}

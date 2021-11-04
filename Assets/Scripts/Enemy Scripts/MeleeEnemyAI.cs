@@ -6,6 +6,10 @@ public class MeleeEnemyAI : MonoBehaviour
 {
     [SerializeField][Range(1, 4)]
     float attackRange = 1.4f;
+    [SerializeField][Range(1, 5)]
+    [Tooltip("Number of times per second the melee enemy attacks the player")]
+    float attackRate = 1;
+
     //[SerializeField]
     //[Tooltip("Destroy the game object when it collides tithe the player")]
     //bool destroyOnContact = false;
@@ -34,7 +38,7 @@ public class MeleeEnemyAI : MonoBehaviour
             if (controller.Distance <= attackRange)
             {
                 controller.State = EnemyState.Attack;
-                Invoke("AttackPlayer", 1.0f);
+                Invoke("AttackPlayer", 1 / attackRate);
                 return;
             }
 
@@ -57,7 +61,7 @@ public class MeleeEnemyAI : MonoBehaviour
         player.TakeDamage(damagePerAttack);
 
         if(controller.State == EnemyState.Attack)
-            Invoke("AttackPlayer", 1.0f);
+            Invoke("AttackPlayer", 1 / attackRate);
     }
 
 }

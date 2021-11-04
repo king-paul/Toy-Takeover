@@ -18,6 +18,11 @@ public class EnemyController : MonoBehaviour
     float maxHealth = 30;
     float curHealth;
 
+    // collision damage
+    [Header("Collision damage")]
+    public float collisionDamage = 1;
+    public float framesPerDamage = 5;
+
     [SerializeField]
     bool flyingEnemy = false;
 

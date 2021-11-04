@@ -113,4 +113,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.083333336
+    functionName: StopDamage
+    data: 
+    objectReferenceParameter: {fileID: 8537989894274617258, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
