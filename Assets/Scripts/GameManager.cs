@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
@@ -117,10 +117,16 @@ public class GameManager : MonoBehaviour
             // the time has been reached
             if (!spawn.hasSpawned && waveTime >= spawn.timePeriod)
             {
-                Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+                GameObject newEnemy = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
                 spawn.hasSpawned = true;
                 enemiesSpawned++;
                 enemiesInScene++;
+
+                PatrolEnemyAI patrolEnemy = newEnemy.GetComponent<PatrolEnemyAI>();
+                if(patrolEnemy != null)
+                {
+                    patrolEnemy.SetSpawnPoint(spawnPoint);
+                }
 
                 //Debug.Log("Enemies Spawned: " + enemiesSpawned +
                           //", Enemies in Scene " + enemiesInScene);
