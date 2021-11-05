@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Spawnpoint
   - KillZone
+  - Waypoint
   layers:
   - Default
   - TransparentFX
