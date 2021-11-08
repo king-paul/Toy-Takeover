@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EnemyType { Grunt, Robot, Car, PatrolGrunt };
+public enum EnemyType { Grunt, Robot, Car};
 public enum SpawnPoint { element0, element1, element2, element3, element4, element5 };
 
 [System.Serializable]

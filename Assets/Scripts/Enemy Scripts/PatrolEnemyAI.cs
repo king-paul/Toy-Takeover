@@ -67,8 +67,11 @@ public class PatrolEnemyAI : MonoBehaviour
         //Get the direction from the enemy to the player and normalize it
         directionToTarget = (player.position - transform.position).normalized;
 
-        if(useVisionCone)
+        if (useVisionCone)
+        {
             DrawVisionCone();
+            //Debug.DrawLine(transform.position, (transform.position+directionToTarget) * viewDistance, Color.red);
+        }
 
         // if the enemy can see the player while it is patrolling switch to follow state
         if (enemy.State == EnemyState.Patrol)
@@ -109,7 +112,7 @@ public class PatrolEnemyAI : MonoBehaviour
         {
             // check if player is obscured by a wall. If not return true
             if (Physics.Raycast(transform.position, directionToTarget, out rayToPlayer, viewDistance)
-            && rayToPlayer.transform.tag != "Player")
+            && rayToPlayer.transform.tag == "Player")
                 return true;
         }
 

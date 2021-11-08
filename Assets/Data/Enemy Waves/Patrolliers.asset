@@ -13,47 +13,47 @@ MonoBehaviour:
   m_Name: Patrolliers
   m_EditorClassIdentifier: 
   enemiesInWave:
-  - enemy: 3
+  - enemy: 0
     spawnPoint: 0
     timePeriod: 0
     hasSpawned: 1
-  - enemy: 3
+  - enemy: 1
     spawnPoint: 0
     timePeriod: 3
     hasSpawned: 1
-  - enemy: 3
+  - enemy: 0
     spawnPoint: 0
     timePeriod: 6
     hasSpawned: 1
-  - enemy: 3
+  - enemy: 1
     spawnPoint: 0
     timePeriod: 9
     hasSpawned: 1
-  - enemy: 3
+  - enemy: 0
     spawnPoint: 0
     timePeriod: 12
-    hasSpawned: 1
-  - enemy: 3
+    hasSpawned: 0
+  - enemy: 1
     spawnPoint: 0
     timePeriod: 15
-    hasSpawned: 1
-  - enemy: 3
+    hasSpawned: 0
+  - enemy: 0
     spawnPoint: 0
     timePeriod: 18
-    hasSpawned: 1
-  - enemy: 3
+    hasSpawned: 0
+  - enemy: 1
     spawnPoint: 0
     timePeriod: 21
-    hasSpawned: 1
-  - enemy: 3
+    hasSpawned: 0
+  - enemy: 0
     spawnPoint: 0
     timePeriod: 24
-    hasSpawned: 1
-  - enemy: 3
+    hasSpawned: 0
+  - enemy: 1
     spawnPoint: 0
     timePeriod: 27
-    hasSpawned: 1
-  - enemy: 3
+    hasSpawned: 0
+  - enemy: 0
     spawnPoint: 0
     timePeriod: 30
-    hasSpawned: 1
+    hasSpawned: 0

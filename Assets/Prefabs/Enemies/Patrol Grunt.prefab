@@ -800,7 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useVisionCone: 1
-  viewDistance: 50
+  viewDistance: 25
   viewAngle: 45
   followWhenInRange: 1
   minDistanceFromPlayer: 10
