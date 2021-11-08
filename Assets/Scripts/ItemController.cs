@@ -7,15 +7,17 @@ public enum PlayerStats { Health, JetpackFuel, Armour, CrossBowAmmo, WaterGunAmm
 
 public class ItemController : MonoBehaviour
 {
-    //public UnityEvent onCollect;
     public PlayerStats statChanged;
     public float increaseAmount;
+    public AudioClip pickupSound;
 
-    private PlayerController player;    
+    private PlayerController player;
+    private PlayerSound audio;
 
     private void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        audio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,6 +25,7 @@ public class ItemController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             ApplyItemEffect();
+            audio.PlaySound(pickupSound);
             Destroy(this.gameObject);
         }
         

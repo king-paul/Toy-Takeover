@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
     [Tooltip("Place enemy wave scriptable objects here")]
     public EnemyWave[] waves;
 
+    [Header("Sound Effects")]
+    public AudioClip waveEnd;
+    public AudioClip levelComplete;
+    public AudioClip gameOver;
+
     GameState state;
     GUIController gui;
 

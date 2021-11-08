@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponController : MonoBehaviour
-{
+{    
     public Transform firingPoint;
     public Weapon weaponObject;
+
+    [Header("Sound Effects")]
+    public AudioClip fireSound;
+    public AudioClip reloadSound;
 
     private Camera fpsCam;
     private LineRenderer laserLine;

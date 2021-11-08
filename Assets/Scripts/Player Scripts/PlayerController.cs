@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
     private bool hitFloor;
 
     private GameManager game;
-    private GunController gun;
     private WeaponController weapon;
     private EnemyController enemy;
     private Animator animator;
