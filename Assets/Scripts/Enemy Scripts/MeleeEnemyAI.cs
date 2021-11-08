@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MeleeEnemyAI : MonoBehaviour
 {
-    [SerializeField][Range(1, 4)]
-    float attackRange = 1.4f;
+    [SerializeField][Range(2, 4)]
+    [Tooltip("The distance that the melee enemy attacks the player from")]
+    float attackRange = 2f;
     [SerializeField][Range(1, 5)]
     [Tooltip("Number of times per second the melee enemy attacks the player")]
     float attackRate = 1;
@@ -42,7 +43,8 @@ public class MeleeEnemyAI : MonoBehaviour
                 return;
             }
 
-            //Debug.Log("Distance from player: " + controller.Distance);
+            //Debug.Log("Distance from player: " + controller.Distance +
+            //          "Attack Range: " + attackRange);
 
         }
 
