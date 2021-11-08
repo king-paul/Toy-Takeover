@@ -5,14 +5,13 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour
 {
     public float travelSpeed = 1000;
-    [SerializeField]
     float damage = 20f;
 
     private Rigidbody rigidBody;
     private float boundary = 30;
 
     // properties
-    public float Damage { get => damage; }
+    public float Damage { get => damage; set => damage = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -46,5 +45,4 @@ public class ProjectileController : MonoBehaviour
         if(other.gameObject.layer != 2) // Ignore Raycast layer
             GameObject.Destroy(this.gameObject);
     }
-
 }

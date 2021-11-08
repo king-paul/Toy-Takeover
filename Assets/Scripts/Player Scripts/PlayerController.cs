@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     public Transform spawnPoint;
     public float fallOffDamage = 10f;
 
+    [Header("Debug Cheats")]
+    public bool godMode = false;
+
     // private variables
     private float currentHealth = 100;
     private float currentArmour = 0;
