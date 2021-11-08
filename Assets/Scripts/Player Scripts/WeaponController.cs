@@ -7,12 +7,15 @@ public class WeaponController : MonoBehaviour
     public Transform firingPoint;
     public Weapon weaponObject;
 
+    [Header("Laser Weapon objects")]
+    public GameObject laser;
+
     [Header("Sound Effects")]
     public AudioClip fireSound;
     public AudioClip reloadSound;
 
     private Camera fpsCam;
-    private LineRenderer laserLine;
+    //private LineRenderer laserLine;
     private RaycastHit hit;
     private float nextFire;
 
@@ -36,7 +39,7 @@ public class WeaponController : MonoBehaviour
     {
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         fpsCam = GetComponentInParent<Camera>();
-        laserLine = GetComponentInChildren<LineRenderer>();
+        //laserLine = GetComponentInChildren<LineRenderer>();
         curAmmo = weaponObject.startingAmmo;
     }
 
@@ -86,7 +89,7 @@ public class WeaponController : MonoBehaviour
 
             if (Input.GetButton("Fire1") && curAmmo > 0)
             {
-                FireRaycast();                
+                FireRaycast();
 
                 if (Time.time > nextFire)
                 {
@@ -95,7 +98,8 @@ public class WeaponController : MonoBehaviour
                 }
             }
             else
-                laserLine.enabled = false;
+                //laserLine.enabled = false;
+                laser.SetActive(false);
         }
 
     }
@@ -108,21 +112,22 @@ public class WeaponController : MonoBehaviour
         // Create a vector at the center of our camera's viewport
         Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
 
-        laserLine.enabled = true;
+        //laserLine.enabled = true;
+        laser.SetActive(true);
 
         // Set the start position
-        laserLine.SetPosition(0, firingPoint.position); 
+        //laserLine.SetPosition(0, rayOrigin);
 
         // Check if our raycast has hit anything and if it did handle what it hit
         if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weapon.laserRange))
         {
-            laserLine.SetPosition(1, hit.point);
+            //laserLine.SetPosition(1, hit.point);
             HandleRaycastHit(hit.transform.gameObject);
         }
         else
         {
             // fire laser until range has been reached
-            laserLine.SetPosition(1, rayOrigin + (fpsCam.transform.forward) * weapon.laserRange);
+            //laserLine.SetPosition(1, rayOrigin + (fpsCam.transform.forward) * weapon.laserRange);
         }
     }
 
