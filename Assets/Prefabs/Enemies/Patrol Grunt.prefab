@@ -633,6 +633,8 @@ GameObject:
   - component: {fileID: 4597857018323811947}
   - component: {fileID: 8922432861276067952}
   - component: {fileID: -3985970733157762015}
+  - component: {fileID: 2142429961615529122}
+  - component: {fileID: 6105160214702041893}
   - component: {fileID: -1101435726516547770}
   m_Layer: 0
   m_Name: Patrol Grunt
@@ -751,6 +753,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2142429961615529122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922432861276067955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  projectileDamageParticles: {fileID: 5716412227290920460}
+  laserDamageParticles: {fileID: 4757156714981773203}
+  maxHealth: 30
+  collisionDamage: 1
+  framesPerDamage: 5
+  flyingEnemy: 0
+--- !u!114 &6105160214702041893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922432861276067955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfd51e4b4843f340b14c0ac91ad89ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 2
+  attackRate: 1.5
+  damagePerAttack: 5
 --- !u!114 &-1101435726516547770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,6 +993,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4326184927528056092, guid: 7d68a10aa4a3d674ca14272c20eb93a1, type: 3}
   m_PrefabInstance: {fileID: 4010466466374927979}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &5716412227290920460 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8718067978911559783, guid: 7d68a10aa4a3d674ca14272c20eb93a1, type: 3}
+  m_PrefabInstance: {fileID: 4010466466374927979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7411874418618578239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1033,5 +1074,10 @@ PrefabInstance:
 --- !u!4 &898587165078033938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7684311701908562733, guid: 71cae5853a0c11143884333b9b58b4ee, type: 3}
+  m_PrefabInstance: {fileID: 7411874418618578239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4757156714981773203 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2655035053679770284, guid: 71cae5853a0c11143884333b9b58b4ee, type: 3}
   m_PrefabInstance: {fileID: 7411874418618578239}
   m_PrefabAsset: {fileID: 0}
