@@ -13,67 +13,67 @@ MonoBehaviour:
   m_Name: Wave1_Main
   m_EditorClassIdentifier: 
   enemiesInWave:
-  - enemy: 0
+  - enemy: 3
     spawnPoint: 0
     timePeriod: 0
-    hasSpawned: 0
-  - enemy: 0
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 1
     timePeriod: 0
-    hasSpawned: 0
-  - enemy: 0
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 2
     timePeriod: 0
-    hasSpawned: 0
-  - enemy: 0
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 3
     timePeriod: 0
-    hasSpawned: 0
-  - enemy: 0
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 4
     timePeriod: 0
-    hasSpawned: 0
-  - enemy: 0
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 5
     timePeriod: 0
-    hasSpawned: 0
-  - enemy: 0
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 0
-    timePeriod: 1
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 1
-    timePeriod: 1
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 2
-    timePeriod: 1
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 3
-    timePeriod: 1
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 4
-    timePeriod: 1
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 5
-    timePeriod: 1
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 2
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 0
-    timePeriod: 2
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 3
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 1
-    timePeriod: 2
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 3
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 2
-    timePeriod: 2
-    hasSpawned: 0
-  - enemy: 0
+    timePeriod: 3
+    hasSpawned: 1
+  - enemy: 3
     spawnPoint: 3
-    timePeriod: 2
-    hasSpawned: 0
+    timePeriod: 3
+    hasSpawned: 1
