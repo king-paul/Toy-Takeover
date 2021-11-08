@@ -16,11 +16,11 @@ MonoBehaviour:
   - enemy: 0
     spawnPoint: 0
     timePeriod: 0
-    hasSpawned: 0
+    hasSpawned: 1
   - enemy: 0
     spawnPoint: 0
     timePeriod: 2
-    hasSpawned: 0
+    hasSpawned: 1
   - enemy: 0
     spawnPoint: 0
     timePeriod: 4
@@ -132,4 +132,284 @@ MonoBehaviour:
   - enemy: 0
     spawnPoint: 0
     timePeriod: 60
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 62
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 64
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 66
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 68
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 70
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 72
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 74
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 76
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 78
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 80
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 82
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 84
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 86
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 88
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 90
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 92
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 94
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 98
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 100
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 102
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 104
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 106
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 108
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 110
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 112
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 114
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 116
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 118
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 120
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 122
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 124
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 126
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 128
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 130
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 132
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 134
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 136
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 138
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 140
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 142
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 144
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 146
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 148
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 150
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 152
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 154
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 156
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 158
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 160
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 162
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 164
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 166
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 168
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 170
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 172
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 174
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 176
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 178
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 180
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 182
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 184
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 186
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 188
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 190
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 192
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 194
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 196
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 198
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 200
+    hasSpawned: 0
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 202
     hasSpawned: 0

@@ -13,7 +13,7 @@ public class EnemySpawn
     [Tooltip("The numbar the the enemy is spawned at")]
     public SpawnPoint spawnPoint;
     [Tooltip("The number of seconds after the start of the wave that the enemy is spawned")]
-    [Range(0, 60)]
+    [Range(0, 240)]
     public float timePeriod;
 
     [HideInInspector]
