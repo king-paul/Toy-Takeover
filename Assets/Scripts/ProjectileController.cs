@@ -34,6 +34,14 @@ public class ProjectileController : MonoBehaviour
             PlayerController player = other.GetComponent<PlayerController>();
             player.TakeDamage(damage);
         }
+        // projectile hits an enemy
+        else if(other.gameObject.CompareTag("Enemy"))
+        {
+            EnemyController enemy = other.GetComponent<EnemyController>();
+
+            enemy.PlayDamageParticles();
+            enemy.TakeDamage(damage); 
+        }
 
         if(other.gameObject.layer != 2) // Ignore Raycast layer
             GameObject.Destroy(this.gameObject);

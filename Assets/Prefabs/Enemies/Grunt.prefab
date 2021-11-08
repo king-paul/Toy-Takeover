@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  initialState: 0
   projectileDamageParticles: {fileID: 5716412227290920460}
   laserDamageParticles: {fileID: 4757156714981773203}
   maxHealth: 30
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cfd51e4b4843f340b14c0ac91ad89ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 2
+  attackRange: 2.1
   attackRate: 2.5
   damagePerAttack: 10
 --- !u!1 &8978456818100710269

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public enum EnemyState { Follow, Attack, Aim };
+public enum EnemyState { Patrol, Follow, Attack, Aim };
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
 {
     // public variables
-    public Color hitColor = Color.red;
+    //public Color hitColor = Color.red;
+    public EnemyState initialState;
 
     [Header("Damage Particles")]
     public ParticleSystem projectileDamageParticles;
@@ -38,7 +39,24 @@ public class EnemyController : MonoBehaviour
     // properties and public functions
     public EnemyState State { get => state; set => state = value; }
     public float Distance { get => (player.position - transform.position).magnitude; }
-    public void TakeDamage(float amount){ curHealth -= amount; }
+    public void TakeDamage(float amount){ 
+        curHealth -= amount;
+
+        // switch enemy to follow after taking damage if patrolling
+        if (state == EnemyState.Patrol)
+        {
+            state = EnemyState.Follow;
+        }
+
+    }
+
+    private void Awake()
+    {
+        state = initialState;
+
+        if (!flyingEnemy)
+            agent = GetComponent<NavMeshAgent>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -46,10 +64,6 @@ public class EnemyController : MonoBehaviour
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.FindWithTag("Player").transform;
 
-        if(!flyingEnemy)
-            agent = GetComponent<NavMeshAgent>();  
-        
-        state = EnemyState.Follow;
         curHealth = maxHealth;
 
         material = GetComponent<Renderer>().material;
@@ -60,9 +74,6 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (game.State != GameState.Running)
-            //return;
-
         //Debug.Log("Distance: " + Distance);
 
         if (curHealth <= 0)
@@ -74,12 +85,14 @@ public class EnemyController : MonoBehaviour
 
         if (state == EnemyState.Follow)
         {
-            if (!flyingEnemy)                
-                agent.destination = player.position;
+            //if (!flyingEnemy)     
+            agent.isStopped = false;
+            agent.destination = player.position;
         }
-        else {
-            if (!flyingEnemy)
-                agent.destination = transform.position;
+        else if(state == EnemyState.Attack)
+        {
+            //if (!flyingEnemy)
+            agent.isStopped = true;
         }
     }
 
@@ -89,21 +102,20 @@ public class EnemyController : MonoBehaviour
         {
             // flash enemy red
             //StartCoroutine(FlashColor());
-            PlayDamageParticles();
+            //PlayDamageParticles();
 
-            curHealth -= 10;            
-
+            //curHealth -= 10;
             //Debug.Log("Enemy hit by projectile");
         }
     }
 
-    IEnumerator FlashColor()
-    {
-        material = GetComponentInChildren<Renderer>().material;
-        material.color = hitColor;
-        yield return new WaitForSeconds(0.1f);
-        GetComponent<Renderer>().material.color = Color.white;
-    }
+    //IEnumerator FlashColor()
+    //{
+    //    material = GetComponentInChildren<Renderer>().material;
+    //    material.color = hitColor;
+    //    yield return new WaitForSeconds(0.1f);
+    //    GetComponent<Renderer>().material.color = Color.white;
+    //}
 
     public void PlayDamageParticles()
     {
