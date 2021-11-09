@@ -14201,6 +14201,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
   m_PrefabInstance: {fileID: 819575199}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &821142977 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1019667140624816252, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+  m_PrefabInstance: {fileID: 1881900707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &823831201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25553,7 +25558,7 @@ PrefabInstance:
     - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: fuelBar
       value: 
-      objectReference: {fileID: 1881900715}
+      objectReference: {fileID: 821142977}
     - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: currentAmmoText
       value: 
