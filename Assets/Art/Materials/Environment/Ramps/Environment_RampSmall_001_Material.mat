@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Environment_RampLarge_001_Material 1
+  m_Name: Environment_RampSmall_001_Material
   m_Shader: {fileID: -6465566751694194690, guid: 3a4a20ae8bb0ae04a92bbd3b77119c46, type: 3}
   m_ShaderKeywords: _ROUGHNESS_ON _USE_METALLIC_ON
   m_LightmapFlags: 4
@@ -37,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: d3fb6ef744123ec4e8574ad90687e85d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6a97c364294338f4a87c37316c7d7c16, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -73,7 +73,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 839aee10836fd634aa37f7a77db3ddd9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0b661a86014359f4e8b803327b3fd6b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
