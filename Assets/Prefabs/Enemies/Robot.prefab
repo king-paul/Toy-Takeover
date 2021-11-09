@@ -163,14 +163,16 @@ GameObject:
   m_Component:
   - component: {fileID: 4495125919215545006}
   - component: {fileID: 6403814964904092184}
-  - component: {fileID: 8022354399355635959}
   - component: {fileID: 4745279868794798831}
+  - component: {fileID: 8022354399355635959}
+  - component: {fileID: 664964726354778918}
   - component: {fileID: 7057391014905581073}
+  - component: {fileID: -7606788201388964225}
   - component: {fileID: 4283558823875897926}
-  - component: {fileID: -8861400500189625655}
-  - component: {fileID: 3350422317642187624}
+  - component: {fileID: -944458588945779257}
+  - component: {fileID: -1036609915704547817}
   m_Layer: 10
-  m_Name: Robot
+  m_Name: Patrol Robot
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 1782209278137205567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0891709, y: 1.0891705, z: 1.0891705}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4759201769914402536}
   - {fileID: 1092207982186743846}
@@ -235,6 +237,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!195 &4745279868794798831
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782209278137205567}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 3
+  m_Speed: 8
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 3.69
+  m_BaseOffset: 0.02
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!65 &8022354399355635959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -248,28 +272,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.1474106, y: 3.9557183, z: 2.7162561}
   m_Center: {x: -0.023101848, y: 1.9682819, z: 0.004468992}
---- !u!195 &4745279868794798831
-NavMeshAgent:
+--- !u!54 &664964726354778918
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782209278137205567}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 2
-  m_Speed: 8
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 10
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2.97
-  m_BaseOffset: 0.02
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &7057391014905581073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +307,7 @@ MonoBehaviour:
   collisionDamage: 5
   framesPerDamage: 5
   flyingEnemy: 0
---- !u!114 &4283558823875897926
+--- !u!114 &-7606788201388964225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,6 +315,29 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782209278137205567}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointsInRoute: 5
+  canUseRamps: 0
+  preventDuplicates: 1
+  includeSpawnpoint: 1
+  useVisionCone: 0
+  viewDistance: 100
+  viewAngle: 45
+  followWhenInRange: 0
+  minDistanceFromPlayer: 3
+  nextWaypoint: {fileID: 0}
+  patrolRoute: []
+--- !u!114 &4283558823875897926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782209278137205567}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b08807001217794d93eadb5615e29fb, type: 3}
   m_Name: 
@@ -309,7 +350,7 @@ MonoBehaviour:
   viewAngle: 45
   turnSpeed: 40
   aimSpeed: 50
---- !u!82 &-8861400500189625655
+--- !u!82 &-944458588945779257
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,7 +446,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3350422317642187624
+--- !u!114 &-1036609915704547817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1039,13 +1080,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 327413bfcc38cbb4cbbf03f73647e4ca, type: 3}
---- !u!198 &187500115511264534 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8718067978911559783, guid: 327413bfcc38cbb4cbbf03f73647e4ca, type: 3}
-  m_PrefabInstance: {fileID: 8819999696666752369}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5075377264827990125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4326184927528056092, guid: 327413bfcc38cbb4cbbf03f73647e4ca, type: 3}
+  m_PrefabInstance: {fileID: 8819999696666752369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &187500115511264534 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8718067978911559783, guid: 327413bfcc38cbb4cbbf03f73647e4ca, type: 3}
   m_PrefabInstance: {fileID: 8819999696666752369}
   m_PrefabAsset: {fileID: 0}

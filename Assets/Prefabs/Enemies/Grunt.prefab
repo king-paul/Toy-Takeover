@@ -632,12 +632,14 @@ GameObject:
   - component: {fileID: 8922432861276067966}
   - component: {fileID: 4597857018323811947}
   - component: {fileID: 8922432861276067952}
-  - component: {fileID: 1923666235592500154}
-  - component: {fileID: 5231865332751422528}
-  - component: {fileID: -5045411832098929641}
-  - component: {fileID: -7904205610349580761}
+  - component: {fileID: -3985970733157762015}
+  - component: {fileID: 2142429961615529122}
+  - component: {fileID: 6105160214702041893}
+  - component: {fileID: -1101435726516547770}
+  - component: {fileID: 8554687332863593069}
+  - component: {fileID: 1548243902737486723}
   m_Layer: 0
-  m_Name: Grunt
+  m_Name: Patrol Grunt
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,7 +728,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 10
-  m_Acceleration: 8
+  m_Acceleration: 80
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -737,7 +739,23 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1923666235592500154
+--- !u!54 &-3985970733157762015
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922432861276067955}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2142429961615529122
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -753,10 +771,25 @@ MonoBehaviour:
   projectileDamageParticles: {fileID: 5716412227290920460}
   laserDamageParticles: {fileID: 4757156714981773203}
   maxHealth: 30
-  collisionDamage: 5
+  collisionDamage: 1
   framesPerDamage: 5
   flyingEnemy: 0
---- !u!114 &5231865332751422528
+--- !u!114 &6105160214702041893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922432861276067955}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfd51e4b4843f340b14c0ac91ad89ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 2.1
+  attackRate: 1.5
+  damagePerAttack: 5
+--- !u!114 &-1101435726516547770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -765,13 +798,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 8922432861276067955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfd51e4b4843f340b14c0ac91ad89ec, type: 3}
+  m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 2.1
-  attackRate: 2.5
-  damagePerAttack: 10
---- !u!82 &-5045411832098929641
+  waypointsInRoute: 10
+  canUseRamps: 1
+  preventDuplicates: 1
+  includeSpawnpoint: 1
+  useVisionCone: 0
+  viewDistance: 25
+  viewAngle: 45
+  followWhenInRange: 0
+  minDistanceFromPlayer: 10
+  nextWaypoint: {fileID: 0}
+  patrolRoute: []
+--- !u!82 &8554687332863593069
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -867,7 +908,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-7904205610349580761
+--- !u!114 &1548243902737486723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
