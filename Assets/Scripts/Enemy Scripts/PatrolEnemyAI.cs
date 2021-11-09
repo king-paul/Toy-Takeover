@@ -5,6 +5,17 @@ using UnityEngine.AI;
 
 public class PatrolEnemyAI : MonoBehaviour
 {
+
+    [Header("Patrol Route")]
+    [SerializeField][Range(2, 20)]
+    int waypointsInRoute = 5;
+    [SerializeField]
+    bool canUseRamps = true;
+    [SerializeField]
+    bool preventDuplicates = true;
+    [SerializeField]
+    bool includeSpawnpoint = true;    
+
     // adjustable variables
     [Header("Enemy Vision")]
     [SerializeField]
@@ -23,10 +34,15 @@ public class PatrolEnemyAI : MonoBehaviour
 
     // Game objects and components
     Transform spawnpoint;
-    Transform[] patrolRoute;
+    //Transform[] patrolRoute;
+    [Header("Debug Info")]
+    public Transform nextWaypoint;
+    [SerializeField]
+    List<Transform> patrolRoute;
     NavMeshAgent agent;
     EnemyController enemy;
     Transform player;
+    GameManager game;
 
     // vision cone variables
     private Vector3 directionToTarget;
@@ -44,7 +60,8 @@ public class PatrolEnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();      
+        agent = GetComponent<NavMeshAgent>();
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Start()
@@ -52,11 +69,14 @@ public class PatrolEnemyAI : MonoBehaviour
         enemy = GetComponent<EnemyController>();
         player = GameObject.FindWithTag("Player").transform;
 
-        patrolRoute = spawnpoint.GetComponent<PatrolRoute>().wayPoints;
+        //patrolRoute = spawnpoint.GetComponent<PatrolRoute>().wayPoints;
+        patrolRoute = new List<Transform>();
+        SelectRandomRoute();
 
-        if (enemy.State == EnemyState.Patrol)        
+        if (enemy.State == EnemyState.Patrol) {
             agent.SetDestination(patrolRoute[waypoint].position);
-
+            nextWaypoint = patrolRoute[waypoint];
+        }
     }
 
     // Update is called once per frame
@@ -81,27 +101,86 @@ public class PatrolEnemyAI : MonoBehaviour
                 followWhenInRange && distanceToPlayer <= minDistanceFromPlayer)
                 enemy.State = EnemyState.Follow;
         }
-    }    
+    }   
+    
+    // Causes the enemy to select a random route from the waypoints in the scene
+    private void SelectRandomRoute()
+    {
+        float totalWaypoints = 0;
+        int maxRange, chosenNumber;
+        bool alreadyInRoute;
+
+        if (canUseRamps)
+            maxRange = game.groundWaypoints.Length + game.platformWaypoints.Length;
+        else
+            maxRange = game.groundWaypoints.Length;
+
+        // selects random waypoints until the route is full
+        while (totalWaypoints < waypointsInRoute && totalWaypoints < maxRange)
+        {
+            do
+            {
+                chosenNumber = Random.Range(0, maxRange);
+                //Debug.Log("Chosen Number: " + chosenNumber + " of " + maxRange);
+
+                // if the number is greater than a certain value select from the platform waypoints
+                if (canUseRamps && chosenNumber > game.groundWaypoints.Length - 1)
+                {
+                    chosenNumber -= game.groundWaypoints.Length;
+                    alreadyInRoute = AlreadyInRoute(game.platformWaypoints[chosenNumber]);
+
+                    if (!preventDuplicates || !alreadyInRoute)
+                        patrolRoute.Add(game.platformWaypoints[chosenNumber]);
+                }
+                else // if it is less than the value select a ground waypoint
+                {
+                    alreadyInRoute = AlreadyInRoute(game.groundWaypoints[chosenNumber]);
+
+                    if (!preventDuplicates || !alreadyInRoute)
+                        patrolRoute.Add(game.groundWaypoints[chosenNumber]);
+                }
+
+            } while (preventDuplicates && alreadyInRoute);
+
+            totalWaypoints++;
+        }
+
+        // return to spawnpoint after completing the route
+        if (includeSpawnpoint)
+            patrolRoute.Add(spawnpoint);
+    }
+
+    private bool AlreadyInRoute(Transform chosenWaypoint)
+    {
+        foreach(Transform waypoint in patrolRoute)
+        {
+            if (waypoint == chosenWaypoint)
+                return true;
+        }
+
+        return false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(enemy.State == EnemyState.Patrol &&
+        if (enemy.State == EnemyState.Patrol &&
             other.gameObject.transform == patrolRoute[waypoint])
         {
             //Debug.Log("Agent has reached waypoint: " + waypoint);
 
-            if (waypoint < patrolRoute.Length - 1)
+            if (waypoint < patrolRoute.Count - 1)
                 waypoint++;
             else
                 waypoint = 0;
 
             agent.SetDestination(patrolRoute[waypoint].position);
+            nextWaypoint = patrolRoute[waypoint];
         }
 
     }
 
     #region enemy vision functions
-    bool PlayerInVision()
+    private bool PlayerInVision()
     {
         // convert the cone's field of view into the same unit type that is returned by a dot product
         float coneValue = Mathf.Cos((Mathf.Deg2Rad * viewAngle) * 0.5f);
@@ -121,7 +200,7 @@ public class PatrolEnemyAI : MonoBehaviour
 
     // displays the vision cone of each enemy in the scene window at runtime
     // by drawing debug lines
-    void DrawVisionCone()
+    private void DrawVisionCone()
     {
         float radians = Mathf.Deg2Rad * (viewAngle * 0.5f);
 

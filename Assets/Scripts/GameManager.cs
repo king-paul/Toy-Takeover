@@ -21,8 +21,15 @@ public class GameManager : MonoBehaviour
     public AudioClip levelComplete;
     public AudioClip gameOver;
 
+    [Header("Enemy Waypoints")]
+    [Tooltip("Waypoints on bottom of the level that all enemies can travel to")]
+    public Transform[] groundWaypoints;
+    [Tooltip("Waypoints above the ground which enemis that can use ramps travel to")]
+    public Transform[] platformWaypoints;
+
     GameState state;
     GUIController gui;
+    Transform enemiesTransform;
 
     // gui variables
     private float barWidth;
@@ -58,6 +65,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         gui = GetComponent<GUIController>();
         state = GameState.Running;
+        enemiesTransform = GameObject.Find("Enemies").transform;
 
         // ensure that each hasSpawn variable is set to false by default
         if (spawnEnemies)
@@ -122,7 +130,7 @@ public class GameManager : MonoBehaviour
             // the time has been reached
             if (!spawn.hasSpawned && waveTime >= spawn.timePeriod)
             {
-                GameObject newEnemy = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+                GameObject newEnemy = Instantiate(enemy, spawnPoint.position, spawnPoint.rotation, enemiesTransform);
                 spawn.hasSpawned = true;
                 enemiesSpawned++;
                 enemiesInScene++;

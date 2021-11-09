@@ -302,11 +302,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useVisionCone: 1
+  waypointsInRoute: 5
+  canUseRamps: 0
+  preventDuplicates: 1
+  includeSpawnpoint: 1
+  useVisionCone: 0
   viewDistance: 100
   viewAngle: 45
-  followWhenInRange: 1
+  followWhenInRange: 0
   minDistanceFromPlayer: 3
+  nextWaypoint: {fileID: 0}
+  patrolRoute: []
 --- !u!114 &4283558823875897926
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 604101679903821004}
   - component: {fileID: 604101679903821007}
+  - component: {fileID: 1447529048}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -43,12 +44,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd09b0b4c1b8b5444a29f7353cb15db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnEnemies: 1
+  enemies:
+  - {fileID: 8922432861276067955, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
+  - {fileID: 1782209278137205567, guid: be9859c2f32864c469c5ef905c622054, type: 3}
+  - {fileID: 7008889368304603673, guid: a28b0546390b9824e8d997052e51717f, type: 3}
+  spawnPoints:
+  - {fileID: 0}
   waves:
-  - {fileID: 11400000, guid: fd5459befcd08e24bbdbce4ee72cd3f2, type: 2}
+  - {fileID: 11400000, guid: dfc763e2d5fbdd944b6a556876c76c93, type: 2}
+  waveEnd: {fileID: 0}
+  levelComplete: {fileID: 0}
+  gameOver: {fileID: 0}
+  groundWaypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  platformWaypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1447529048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604101679903821006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111852440ca64cd429e17131d3f67086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   healthText: {fileID: 0}
   fuelBar: {fileID: 0}
   currentAmmoText: {fileID: 0}
   maxAmmoText: {fileID: 0}
   armourText: {fileID: 0}
+  waveNumber: {fileID: 0}
+  enemiesLeft: {fileID: 0}
+  timeText: {fileID: 0}
+  pauseMenu: {fileID: 0}
   gameOverText: {fileID: 0}
-  pauseText: {fileID: 0}
+  winText: {fileID: 0}
+  backButton: {fileID: 0}
