@@ -28,6 +28,7 @@ public class RangedEnemyAI : MonoBehaviour
 
     // vectors use to create a vision cone
     Vector3 directionToTarget;
+    Vector3 shootDirection;
 
     private float timer;
 
@@ -50,10 +51,8 @@ public class RangedEnemyAI : MonoBehaviour
 
         float distanceToTarget = (player.position - transform.position).magnitude;
 
-        //DrawVisionCone();
-
         Debug.DrawRay(transform.position, directionToTarget * viewDistance, Color.blue); // draws line to player
-        Debug.DrawRay(gunEnd.position, gunEnd.forward * viewDistance, Color.red); // draws gun ray
+        Debug.DrawRay(gunEnd.position, shootDirection * viewDistance, Color.red); // draws gun ray
 
         switch (controller.State)
         {
@@ -62,7 +61,7 @@ public class RangedEnemyAI : MonoBehaviour
                 {
                     //Debug.Log("Enemy can see player");
 
-                    controller.State = EnemyState.Attack;
+                    controller.State = EnemyState.Aim;
                     //Debug.Log("Switching to attack state");
                 }
                 break;
@@ -79,12 +78,21 @@ public class RangedEnemyAI : MonoBehaviour
     // perform aim state
     void Aim()
     {
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, directionToTarget, 
-            Mathf.Deg2Rad * aimSpeed * Time.deltaTime, 0);        
-        transform.rotation = Quaternion.LookRotation(newDirection);
+        shootDirection = (player.position - gun.position).normalized;
+        shootDirection.Normalize();
+
+        // restrict angle of aiming
+        if (Vector3.Angle(shootDirection, transform.forward) >= 30)
+            shootDirection = transform.forward;
+
+        //Vector3 newDirection = Vector3.RotateTowards(transform.forward, shootDirection, 
+        //    Mathf.Deg2Rad * aimSpeed * Time.deltaTime, 0);        
+        //gun.rotation = Quaternion.LookRotation(shootDirection);
+
+        gun.forward = shootDirection;
 
         // if the gun is pointing at the player switch to the attack state
-        if (Physics.Raycast(gunEnd.position, gunEnd.forward, out gunRay) &&
+        if (Physics.Raycast(gunEnd.position, shootDirection, out gunRay) &&
            gunRay.transform.tag == "Player")
         {
             Debug.Log("Switching to attack state");
@@ -108,7 +116,7 @@ public class RangedEnemyAI : MonoBehaviour
     {
         AimWeapon();
 
-        if (Physics.Raycast(gunEnd.position, gunEnd.forward, out gunRay) &&
+        if (Physics.Raycast(gunEnd.position, shootDirection, out gunRay) &&
            gunRay.transform.tag == "Player")
         {
             // if the time delay has been reached fire another shot
@@ -120,17 +128,6 @@ public class RangedEnemyAI : MonoBehaviour
             }
         }
 
-        //if (!PlayerInVision())
-        //{
-        //    controller.State = EnemyState.Follow;
-        //    Debug.Log("Switching to follow state");
-        //    return;
-        //}
-
-        //// check if the blue line is hitting the player
-        //if (!PlayerInVision() ||
-        //    Physics.Raycast(gunEnd.position, gunEnd.forward, out gunRay) &&  gunRay.transform.tag != "Player" && 
-        //    gunRay.transform.gameObject.layer != LayerMask.NameToLayer("Boundary"))
         if(PlayerBehindWall())
         {
             //controller.State = EnemyState.Aim;
@@ -141,6 +138,13 @@ public class RangedEnemyAI : MonoBehaviour
 
     void AimWeapon()
     {
+        shootDirection = (player.position - gun.position).normalized;
+        shootDirection.Normalize();
+
+        // restrict angle of aiming
+        if (Vector3.Angle(shootDirection, transform.forward) >= 30)
+            shootDirection = transform.forward;
+
         // Turn towards the player
         Vector3 faceDirection = Vector3.RotateTowards(transform.forward, directionToTarget,
             Mathf.Deg2Rad * turnSpeed * Time.deltaTime, 0);
@@ -148,10 +152,10 @@ public class RangedEnemyAI : MonoBehaviour
 
         //Vector3 aimDirection = (player.position - gunEnd.position).normalized;
 
-        Vector3 gunDirection = Vector3.RotateTowards(gun.forward, directionToTarget,
-            Mathf.Deg2Rad * aimSpeed * Time.deltaTime, 0);
+        //Vector3 gunDirection = Vector3.RotateTowards(gun.forward, directionToTarget,
+            //Mathf.Deg2Rad * aimSpeed * Time.deltaTime, 0);
 
-        gun.rotation = Quaternion.LookRotation(gunDirection);
+        //gun.rotation = Quaternion.LookRotation(gunDirection);
     }
 
     bool PlayerInVision()
@@ -181,40 +185,6 @@ public class RangedEnemyAI : MonoBehaviour
         }
             
         return false;
-    }
-
-    void DrawVisionCone()
-    {
-        float radians = Mathf.Deg2Rad * (viewAngle * 0.5f);
-
-        //Create ends of the lines as unit length vectors
-        Vector3[] coneEnds = {
-            new Vector3(-Mathf.Sin(radians), 0, Mathf.Cos(radians)), // left
-            new Vector3(0, -Mathf.Sin(radians), Mathf.Cos(radians)), // top
-            new Vector3(Mathf.Sin(radians), 0, Mathf.Cos(radians)), // right            
-            new Vector3(0, Mathf.Sin(radians), Mathf.Cos(radians)), // bottom
-        };
-
-        for(int i=0; i< coneEnds.Length; i++)
-        {
-            // Rotate the lines to match the rotation of the character
-            coneEnds[i] = transform.rotation * coneEnds[i];
-
-            // Scale the lines out to their correct length
-            coneEnds[i] *= viewDistance;
-
-            // Translate the lines if the location of the character
-            coneEnds[i] += transform.position;
-
-            //Draw the line
-            Debug.DrawLine(transform.position, coneEnds[i], Color.green);    
-        }
-
-        // draw conections
-        Debug.DrawLine(coneEnds[0], coneEnds[1], Color.green);
-        Debug.DrawLine(coneEnds[1], coneEnds[2], Color.green);
-        Debug.DrawLine(coneEnds[2], coneEnds[3], Color.green);
-        Debug.DrawLine(coneEnds[3], coneEnds[0], Color.green);
-    }
+    }    
 
 }
