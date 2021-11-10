@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: -5045411832098929641}
   - component: {fileID: -7904205610349580761}
   m_Layer: 0
-  m_Name: Grunt
+  m_Name: Grunt (Old)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: 0
+  initialState: 1
   projectileDamageParticles: {fileID: 5716412227290920460}
   laserDamageParticles: {fileID: 4757156714981773203}
   maxHealth: 30
