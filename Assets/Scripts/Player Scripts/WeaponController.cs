@@ -24,6 +24,7 @@ public class WeaponController : MonoBehaviour
 
     // public functions and properties
     public int Ammo { get => curAmmo; }
+    public int MaxAmmo { get => weaponObject.maxAmmo; }
 
     public void AddAmmo(int amount) 
     { 

@@ -1104,6 +1104,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+--- !u!114 &742024246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3983830764608727559, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+  m_PrefabInstance: {fileID: 8545282525536278128}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &744114824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4495125919215545006, guid: be9859c2f32864c469c5ef905c622054, type: 3}
@@ -2247,7 +2258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8922432861276067955, guid: 658eedb8ff06d2b45a2231b51e006b08, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8922432861276067964, guid: 658eedb8ff06d2b45a2231b51e006b08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2508,6 +2519,14 @@ PrefabInstance:
       propertyPath: backButton
       value: 
       objectReference: {fileID: 8545282525536278129}
+    - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: pickupText
+      value: 
+      objectReference: {fileID: 742024246}
+    - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: pickupMessageTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 604101679903821004, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.29

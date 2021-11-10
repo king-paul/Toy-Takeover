@@ -112,6 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statChanged: 2
   increaseAmount: 10
+  pickupSound: {fileID: 0}
+  pickupMessage: Collected Armour
+  alreadyFullMassage: Armour already at Maximum
 --- !u!108 &-1594934366450921667
 Light:
   m_ObjectHideFlags: 0

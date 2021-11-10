@@ -8,15 +8,12 @@ public class GUIController : MonoBehaviour
 {
     // GUI
     [Header("Heads Up Display")]
-    //public TextMeshProUGUI healthText;
-    //public RectTransform healthBar;
-    //public GameObject[] healthMetre;
+
     public GameObject healthBar;
     public RectTransform fuelBar;
     public RectTransform armourBar;
     public TextMeshProUGUI currentAmmoText;
     public TextMeshProUGUI maxAmmoText;
-    //public TextMeshProUGUI armourText;
 
     [Header("Wave Information")]
     public TextMeshProUGUI waveNumber;
@@ -28,6 +25,10 @@ public class GUIController : MonoBehaviour
     public GameObject gameOverText;
     public GameObject winText;
     public GameObject backButton;
+
+    [Header("Messages")]
+    public TextMeshProUGUI pickupText;
+    public float pickupMessageTime = 0.5f;
 
     GameManager game;
     PlayerController player;
@@ -48,30 +49,25 @@ public class GUIController : MonoBehaviour
         MAX_HEALTH_HEIGHT = healthBar.GetComponent<RectTransform>().rect.height;
         MAX_FUEL_HEIGHT = fuelBar.rect.height;
         MAX_ARMOUR_WIDTH = armourBar.rect.width;
-
-        // Initialize jetpack fuel bar
-        //MAX_WIDTH = fuelBar.rect.width;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /** Update HUD **/
-        //healthText.text = player.Health.ToString();
-        // update the jetpack fuel bar
-        //barWidth = MAX_WIDTH / player.maxFuel * player.Fuel;
-        //fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
-        //currentAmmoText.text = player.Ammo.ToString();
-        //maxAmmoText.text = player.MaxAmmo.ToString();
-        //armourText.text = player.Armour.ToString();
-
+        // Update HUD
         UpdateText();
         UpdateHealth();
         UpdateJetpackFuel();
         UpdateArmour();
     }
 
-    #region public functions   
+    #region public functions  
+    public void ShowPickupMessage(string message)
+    {
+        pickupText.text = message;
+        StartCoroutine(ShowPickupText());
+    }
+
     public void TogglePauseMenu()
     {
         pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
@@ -137,4 +133,13 @@ public class GUIController : MonoBehaviour
         fuelBar.sizeDelta = new Vector2(fuelBar.rect.width, fuelBarHeight);
     }
     #endregion
+
+    IEnumerator ShowPickupText()
+    {
+        pickupText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(pickupMessageTime);
+        pickupText.gameObject.SetActive(false);
+    }
+
 }

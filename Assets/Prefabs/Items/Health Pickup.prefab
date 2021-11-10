@@ -100,6 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statChanged: 0
   increaseAmount: 20
+  pickupSound: {fileID: 0}
+  pickupMessage: Gained Health
+  alreadyFullMassage: Health Already Full
 --- !u!65 &392924489445425748
 BoxCollider:
   m_ObjectHideFlags: 0

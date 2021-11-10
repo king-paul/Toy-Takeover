@@ -115,6 +115,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statChanged: 3
   increaseAmount: 50
+  pickupSound: {fileID: 0}
+  pickupMessage: Croosbow Ammo
+  alreadyFullMassage: Crossbow Ammo Full
 --- !u!108 &6990626877340065214
 Light:
   m_ObjectHideFlags: 0

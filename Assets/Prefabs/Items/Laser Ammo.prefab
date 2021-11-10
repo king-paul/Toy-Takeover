@@ -114,6 +114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statChanged: 5
   increaseAmount: 50
+  pickupSound: {fileID: 0}
+  pickupMessage: Laser Ammo
+  alreadyFullMassage: Laser Ammo is Full
 --- !u!108 &7978571426246531463
 Light:
   m_ObjectHideFlags: 0

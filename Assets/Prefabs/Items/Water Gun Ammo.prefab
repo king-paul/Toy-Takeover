@@ -99,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statChanged: 4
   increaseAmount: 50
+  pickupSound: {fileID: 0}
+  pickupMessage: Water Gun Ammo
+  alreadyFullMassage: Water Gun Ammo is Full
 --- !u!136 &6300348361250108437
 CapsuleCollider:
   m_ObjectHideFlags: 0

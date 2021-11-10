@@ -218,10 +218,17 @@ public class PlayerController : MonoBehaviour
             currentArmour += amount;
     }
 
-    public void AddAmmo(int weaponNum, int amount)
+    public bool AddAmmo(int weaponNum, int amount)
     {
-        weapon = weapons[weaponNum].GetComponent<WeaponController>();
-        weapon.AddAmmo(amount);
+        weapon = weapons[weaponNum].GetComponent<WeaponController>();        
+
+        if(weapon.Ammo < weapon.MaxAmmo)
+        {
+            weapon.AddAmmo(amount);
+            return true;
+        }
+
+        return false;
     }
 
     public void DrainFuel()

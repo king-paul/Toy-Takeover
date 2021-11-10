@@ -90,6 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statChanged: 1
   increaseAmount: 2
+  pickupSound: {fileID: 0}
+  pickupMessage: Jetpack Fuel
+  alreadyFullMassage: Jetpack Tank is Full
 --- !u!65 &1696386087307536471
 BoxCollider:
   m_ObjectHideFlags: 0
