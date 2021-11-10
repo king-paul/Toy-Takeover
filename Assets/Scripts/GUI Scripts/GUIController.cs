@@ -33,10 +33,10 @@ public class GUIController : MonoBehaviour
     PlayerController player;
 
     // gui variables
-    private float barWidth;
-    private float healthBarHeight, fuelBarHeight;
-    float MAX_WIDTH;
-    float MAX_HEALTH_HEIGHT, MAX_FUEL_HEIGHT;
+    //private float barWidth;
+    private float healthBarHeight, fuelBarHeight, armourBarWidth;
+    //float MAX_WIDTH;
+    float MAX_HEALTH_HEIGHT, MAX_FUEL_HEIGHT, MAX_ARMOUR_WIDTH;
 
     // Start is called before the first frame update
     void Start()
@@ -46,12 +46,11 @@ public class GUIController : MonoBehaviour
 
         // initialize max bar heights
         MAX_HEALTH_HEIGHT = healthBar.GetComponent<RectTransform>().rect.height;
+        MAX_FUEL_HEIGHT = fuelBar.rect.height;
+        MAX_ARMOUR_WIDTH = armourBar.rect.width;
 
         // Initialize jetpack fuel bar
-        MAX_WIDTH = fuelBar.rect.width;
-        MAX_FUEL_HEIGHT = fuelBar.rect.height;
-        barWidth = MAX_WIDTH / player.maxFuel * player.Fuel;
-        fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
+        //MAX_WIDTH = fuelBar.rect.width;
     }
 
     // Update is called once per frame
@@ -60,13 +59,16 @@ public class GUIController : MonoBehaviour
         /** Update HUD **/
         //healthText.text = player.Health.ToString();
         // update the jetpack fuel bar
-        barWidth = MAX_WIDTH / player.maxFuel * player.Fuel;
-        fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
-        currentAmmoText.text = player.Ammo.ToString();
-        maxAmmoText.text = player.MaxAmmo.ToString();
+        //barWidth = MAX_WIDTH / player.maxFuel * player.Fuel;
+        //fuelBar.sizeDelta = new Vector2(barWidth, fuelBar.rect.height);
+        //currentAmmoText.text = player.Ammo.ToString();
+        //maxAmmoText.text = player.MaxAmmo.ToString();
         //armourText.text = player.Armour.ToString();
 
+        UpdateText();
         UpdateHealth();
+        UpdateJetpackFuel();
+        UpdateArmour();
     }
 
     #region public functions   
@@ -114,9 +116,9 @@ public class GUIController : MonoBehaviour
         healthTransform.sizeDelta = new Vector2(healthTransform.rect.width, healthBarHeight);
 
         // update the color of the bar based on the health percentage
-        if (percentHealth >= 80)
+        if (percentHealth >= 60)
             healthImage.color = Color.green;
-        else if (percentHealth >= 40 && percentHealth < 80)
+        else if (percentHealth >= 40 && percentHealth < 60)
             healthImage.color = Color.yellow;
         else if (percentHealth < 40)
             healthImage.color = Color.red;
@@ -125,7 +127,8 @@ public class GUIController : MonoBehaviour
 
     private void UpdateArmour()
     {
-
+        armourBarWidth = MAX_ARMOUR_WIDTH / player.maxArmour * player.Armour;
+        armourBar.sizeDelta = new Vector2(armourBarWidth, armourBar.rect.height);
     }
 
     private void UpdateJetpackFuel()
