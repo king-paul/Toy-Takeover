@@ -16,6 +16,7 @@ public class MeleeEnemyAI : MonoBehaviour
     //bool destroyOnContact = false;
 
     EnemyController controller;
+    EnemySound audio;
     PlayerController player;
 
     [SerializeField]
@@ -25,6 +26,7 @@ public class MeleeEnemyAI : MonoBehaviour
     void Start()
     {
         controller = GetComponent<EnemyController>();
+        audio = GetComponent<EnemySound>();
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 
@@ -60,6 +62,7 @@ public class MeleeEnemyAI : MonoBehaviour
 
     public void AttackPlayer()
     {
+        audio.PlaySound(audio.attackSound);
         player.TakeDamage(damagePerAttack);
 
         if(controller.State == EnemyState.Attack)

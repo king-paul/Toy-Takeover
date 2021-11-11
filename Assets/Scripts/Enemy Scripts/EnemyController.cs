@@ -30,11 +30,12 @@ public class EnemyController : MonoBehaviour
     // private variables
     Transform player;
     NavMeshAgent agent;
-    Rigidbody rigidbody;
-    private float distance;
+    Rigidbody rigidbody;    
     EnemyState state;
     Material material;
     GameManager game;
+    EnemySound audio;
+    private float distance;
 
     // properties and public functions
     public EnemyState State { get => state; set => state = value; }
@@ -48,6 +49,8 @@ public class EnemyController : MonoBehaviour
             state = EnemyState.Follow;
         }
 
+        if(curHealth > 0)
+            audio.PlaySound(audio.damageSound);
     }
 
     private void Awake()
@@ -61,6 +64,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<EnemySound>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.FindWithTag("Player").transform;
 
@@ -79,6 +83,7 @@ public class EnemyController : MonoBehaviour
         if (curHealth <= 0)
         {
             game.KillEnemy();
+            game.PlaySound(audio.deadSound, 1);
             GameObject.Destroy(this.gameObject);
             return;
         }
@@ -94,19 +99,6 @@ public class EnemyController : MonoBehaviour
             //if (!flyingEnemy)
             agent.destination = transform.position;
             agent.isStopped = true;
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Projectile")
-        {
-            // flash enemy red
-            //StartCoroutine(FlashColor());
-            //PlayDamageParticles();
-
-            //curHealth -= 10;
-            //Debug.Log("Enemy hit by projectile");
         }
     }
 

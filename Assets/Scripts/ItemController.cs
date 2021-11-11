@@ -10,6 +10,7 @@ public class ItemController : MonoBehaviour
     public PlayerStats statChanged;
     public float increaseAmount;
     public AudioClip pickupSound;
+    public AudioClip alreadyFullSound;
     public string pickupMessage;
     public string alreadyFullMassage;
     public bool collectAtFullCapacity = false;
@@ -30,14 +31,15 @@ public class ItemController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             if (ApplyItemEffect())
-            {
-                audio.PlaySound(pickupSound);
+            {                
                 gui.ShowPickupMessage(pickupMessage);
+                audio.PlaySound(pickupSound);
                 Destroy(this.gameObject);
             }
             else
             {
                 gui.ShowPickupMessage(alreadyFullMassage);
+                audio.PlaySound(alreadyFullSound);
             }
             
         }

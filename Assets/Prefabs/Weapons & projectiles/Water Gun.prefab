@@ -542,8 +542,7 @@ MonoBehaviour:
   firingPoint: {fileID: 0}
   weaponObject: {fileID: 11400000, guid: 9e8fac34f7ae040469f5dd2fa9d9291a, type: 2}
   laser: {fileID: 0}
-  fireSound: {fileID: 0}
-  reloadSound: {fileID: 0}
+  fireSound: {fileID: 8300000, guid: c4615c2f4e6e017499f7ec690ef551ca, type: 3}
 --- !u!1 &6852876340819558543
 GameObject:
   m_ObjectHideFlags: 0

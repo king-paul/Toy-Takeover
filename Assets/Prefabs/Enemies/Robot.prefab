@@ -169,8 +169,8 @@ GameObject:
   - component: {fileID: 7057391014905581073}
   - component: {fileID: -7606788201388964225}
   - component: {fileID: 4283558823875897926}
-  - component: {fileID: -944458588945779257}
   - component: {fileID: -1036609915704547817}
+  - component: {fileID: -944458588945779257}
   m_Layer: 10
   m_Name: Robot
   m_TagString: Enemy
@@ -350,6 +350,22 @@ MonoBehaviour:
   viewAngle: 45
   turnSpeed: 40
   aimSpeed: 50
+--- !u!114 &-1036609915704547817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782209278137205567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709e4749bd7f58743a3a7bede89c0c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSound: {fileID: 8300000, guid: 1c450f6b8b7ac83459b6be0e582198b4, type: 3}
+  attackSound: {fileID: 8300000, guid: 43de86f6492c01a4bacc8dc60a23b7e1, type: 3}
+  damageSound: {fileID: 8300000, guid: 1d4abf74fa79f85408df1f1c18f06380, type: 3}
+  deadSound: {fileID: 8300000, guid: fae9109fa462f5a4681e6298567fb166, type: 3}
 --- !u!82 &-944458588945779257
 AudioSource:
   m_ObjectHideFlags: 0
@@ -446,22 +462,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-1036609915704547817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782209278137205567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709e4749bd7f58743a3a7bede89c0c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSound: {fileID: 0}
-  attackSound: {fileID: 0}
-  damageSound: {fileID: 0}
-  deadSound: {fileID: 0}
 --- !u!1 &1890480947588397694
 GameObject:
   m_ObjectHideFlags: 0

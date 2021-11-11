@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponController : MonoBehaviour
-{    
-    public Transform firingPoint;
+{
+    #region veriable declaration
     public Weapon weaponObject;
-
-    [Header("Laser Weapon objects")]
+    public Transform firingPoint;    
     public GameObject laser;
 
     [Header("Sound Effects")]
     public AudioClip fireSound;
-    public AudioClip reloadSound;
+    //public AudioClip reloadSound;
 
     private Camera fpsCam;
     //private LineRenderer laserLine;
@@ -21,6 +20,9 @@ public class WeaponController : MonoBehaviour
 
     private GameManager game;
     private int curAmmo;
+
+    private PlayerSound playerAudio;
+    #endregion
 
     // public functions and properties
     public int Ammo { get => curAmmo; }
@@ -40,7 +42,7 @@ public class WeaponController : MonoBehaviour
     {
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         fpsCam = GetComponentInParent<Camera>();
-        //laserLine = GetComponentInChildren<LineRenderer>();
+        playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
         curAmmo = weaponObject.startingAmmo;
     }
 
@@ -65,6 +67,7 @@ public class WeaponController : MonoBehaviour
                 if (curAmmo > 0)
                 {
                     Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                    playerAudio.PlaySound(fireSound);
                     curAmmo--;
                 }
             }
@@ -77,6 +80,7 @@ public class WeaponController : MonoBehaviour
                 if (curAmmo > 0)
                 {
                     Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                    playerAudio.PlaySound(fireSound);
                     curAmmo--;
                 }
                     
@@ -96,11 +100,15 @@ public class WeaponController : MonoBehaviour
                 {
                     curAmmo--;
                     nextFire = Time.time + weapon.shotDelay;
+                    playerAudio.PlaySound(fireSound, 2, true);
                 }
             }
             else
+            {
                 //laserLine.enabled = false;
                 laser.SetActive(false);
+                playerAudio.StopPlaying(2);
+            }
         }
 
     }
@@ -116,20 +124,13 @@ public class WeaponController : MonoBehaviour
         //laserLine.enabled = true;
         laser.SetActive(true);
 
-        // Set the start position
-        //laserLine.SetPosition(0, rayOrigin);
-
         // Check if our raycast has hit anything and if it did handle what it hit
         if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weapon.laserRange))
         {
             //laserLine.SetPosition(1, hit.point);
             HandleRaycastHit(hit.transform.gameObject);
         }
-        else
-        {
-            // fire laser until range has been reached
-            //laserLine.SetPosition(1, rayOrigin + (fpsCam.transform.forward) * weapon.laserRange);
-        }
+
     }
 
     void HandleRaycastHit(GameObject obj)

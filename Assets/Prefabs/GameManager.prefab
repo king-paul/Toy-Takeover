@@ -55,7 +55,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dfc763e2d5fbdd944b6a556876c76c93, type: 2}
   waveEnd: {fileID: 0}
   levelComplete: {fileID: 0}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 8300000, guid: 71372077246136142a4e7561dec43ea5, type: 3}
   groundWaypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -86,3 +86,5 @@ MonoBehaviour:
   gameOverText: {fileID: 0}
   winText: {fileID: 0}
   backButton: {fileID: 0}
+  pickupText: {fileID: 0}
+  pickupMessageTime: 0.5

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(PlayerSound))]
 public class PlayerMovement : MonoBehaviour
 {
     public Transform camera;
@@ -51,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rigidBody;
     private CharacterController controller;
     private PlayerController player;
+    private PlayerSound audio;
     private GameManager game;
     private float moveSpeed;
 
@@ -68,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Get the PlayerController and GameManger scripts
         player = GetComponent<PlayerController>();
+        audio = GetComponent<PlayerSound>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         grounded = transform.Find("Grounded");
 
@@ -133,6 +137,9 @@ public class PlayerMovement : MonoBehaviour
         {
             usingJetpack = false;
             //Debug.Log("Jetpack is off");
+
+            // stop jetpack sound
+            audio.StopPlaying(1);
         }
 
         // get input from player
@@ -144,16 +151,21 @@ public class PlayerMovement : MonoBehaviour
                 player.DrainFuel(); // reduce the fuel based on drain speed
                 verticalVelocity = lift;
                 usingJetpack = true;
+
+                // play jetpack sound
+                audio.PlaySound(audio.jetpackThrust, 1, true);
             }
             else if (isOnGround())// otherwise jump if on ground
             {
                 verticalVelocity = jumpPower;
+                audio.PlaySound(audio.playerJump);
             }
         }
 
         if(Input.GetButton("Jump") && isOnGround()) // space bar makes player jump
         {
             verticalVelocity = jumpPower;
+            audio.PlaySound(audio.playerJump);
         }
 
         // Release the jetpack when player releases the hump button

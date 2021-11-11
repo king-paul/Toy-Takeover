@@ -632,9 +632,9 @@ GameObject:
   - component: {fileID: 8922432861276067966}
   - component: {fileID: 4597857018323811947}
   - component: {fileID: 8922432861276067952}
+  - component: {fileID: -5045411832098929641}
   - component: {fileID: 1923666235592500154}
   - component: {fileID: 5231865332751422528}
-  - component: {fileID: -5045411832098929641}
   - component: {fileID: -7904205610349580761}
   m_Layer: 0
   m_Name: Grunt (Old)
@@ -737,40 +737,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1923666235592500154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8922432861276067955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialState: 1
-  projectileDamageParticles: {fileID: 5716412227290920460}
-  laserDamageParticles: {fileID: 4757156714981773203}
-  maxHealth: 30
-  collisionDamage: 5
-  framesPerDamage: 5
-  flyingEnemy: 0
---- !u!114 &5231865332751422528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8922432861276067955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfd51e4b4843f340b14c0ac91ad89ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 2.1
-  attackRate: 2.5
-  damagePerAttack: 10
 --- !u!82 &-5045411832098929641
 AudioSource:
   m_ObjectHideFlags: 0
@@ -867,6 +833,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1923666235592500154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922432861276067955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: 1
+  projectileDamageParticles: {fileID: 5716412227290920460}
+  laserDamageParticles: {fileID: 4757156714981773203}
+  maxHealth: 30
+  collisionDamage: 5
+  framesPerDamage: 5
+  flyingEnemy: 0
+--- !u!114 &5231865332751422528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922432861276067955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfd51e4b4843f340b14c0ac91ad89ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 2.1
+  attackRate: 2.5
+  damagePerAttack: 10
 --- !u!114 &-7904205610349580761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,9 +880,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSound: {fileID: 0}
-  attackSound: {fileID: 0}
-  damageSound: {fileID: 0}
-  deadSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: b52273f52a99248419a97ff38a2ca445, type: 3}
+  damageSound: {fileID: 8300000, guid: 1eb18db1352d67e4aa0bf4ca1e599628, type: 3}
+  deadSound: {fileID: 8300000, guid: b3336e15d073a8b479978dac612f053e, type: 3}
 --- !u!1 &8978456818100710269
 GameObject:
   m_ObjectHideFlags: 0

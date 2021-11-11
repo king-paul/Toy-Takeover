@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class EnemySound : MonoBehaviour
 {
-    private AudioSource enemySound;
+    private AudioSource[] enemyAudio;
 
     public AudioClip moveSound;
     public AudioClip attackSound;
@@ -14,12 +14,36 @@ public class EnemySound : MonoBehaviour
     
     void Awake()
     {
-        enemySound = GetComponent<AudioSource>();
+        enemyAudio = GetComponents<AudioSource>();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        enemyAudio = GetComponents<AudioSource>();        
     }
 
     public void PlaySound(AudioClip clip)
     {
         if (clip != null)
-            enemySound.PlayOneShot(clip);
+            enemyAudio[0].PlayOneShot(clip);
+    }
+
+    public void PlaySound(AudioClip clip, int index, bool loop)
+    {
+        if (clip != null && index > 0 && index <= 2 &&
+            (!enemyAudio[index].isPlaying || enemyAudio[index].clip != clip))
+        {
+            enemyAudio[index].clip = clip;
+            enemyAudio[index].loop = loop;
+            enemyAudio[index].Play();
+        }
+    }
+
+    // stops specified audio source if it is playing something
+    public void StopPlaying(int index)
+    {
+        if (enemyAudio[index].isPlaying)
+            enemyAudio[index].Stop();
     }
 }

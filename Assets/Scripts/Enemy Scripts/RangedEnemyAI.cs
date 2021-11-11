@@ -25,6 +25,7 @@ public class RangedEnemyAI : MonoBehaviour
     private RaycastHit gunRay;
     private bool firing;
     private EnemyController controller;
+    private EnemySound audio;
 
     // vectors use to create a vision cone
     Vector3 directionToTarget;
@@ -36,6 +37,7 @@ public class RangedEnemyAI : MonoBehaviour
     void Start()
     {
         controller = GetComponent<EnemyController>();
+        audio = GetComponent<EnemySound>();
         player = GameObject.FindWithTag("Player").transform;
         timer = 0;
     }
@@ -124,6 +126,7 @@ public class RangedEnemyAI : MonoBehaviour
             if (timer > firingDelay)
             {
                 Instantiate(projectile, gunEnd.position, gunEnd.rotation);
+                audio.PlaySound(audio.attackSound);
                 timer = 0;
             }
         }

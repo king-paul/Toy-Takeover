@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     private WeaponController weapon;
     private EnemyController enemy;
     private Animator animator;
+    private PlayerSound audio;
 
     private int weaponNum = 0;
     private int prevWeaponNum;
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audio = GetComponent<PlayerSound>();
         weapons[weaponNum].SetActive(true);
     }
 
@@ -200,15 +202,22 @@ public class PlayerController : MonoBehaviour
             {
                 currentHealth += currentArmour;
                 currentArmour = 0;
+                audio.PlaySound(audio.healthDamage);
             }
+            else
+                audio.PlaySound(audio.armourDamage);
         }
         else
+        {
             currentHealth -= amount;
+            audio.PlaySound(audio.healthDamage);
+        }
 
         if (currentHealth < 0)
-            currentHealth = 0;
+        currentHealth = 0;
 
         animator.SetTrigger("TakeDamage");
+        
     }
 
     public void AddArmour(float amount)
