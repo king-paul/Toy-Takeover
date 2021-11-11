@@ -704,7 +704,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (5)
@@ -902,6 +902,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3903636566074356361, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: laser
+      value: 
+      objectReference: {fileID: 1871585030}
     - target: {fileID: 3943773326545172404, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1837,7 +1841,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (21)
@@ -2442,7 +2446,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.463615
@@ -3044,7 +3048,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.419884
@@ -4022,7 +4026,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -139.7
@@ -4638,7 +4642,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (16)
@@ -4708,7 +4712,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.967537
@@ -4930,7 +4934,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -65.05
@@ -5000,7 +5004,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.999996
@@ -5741,7 +5745,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -96.68492
@@ -5811,7 +5815,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.499996
@@ -5943,7 +5947,7 @@ PrefabInstance:
     - target: {fileID: 6784644564176782820, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80541a775de2d3a4c9ecee1644a42043, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
 --- !u!4 &335245987 stripped
@@ -5961,7 +5965,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.746822
@@ -6031,7 +6035,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (30)
@@ -7428,7 +7432,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -124.80675
@@ -7729,7 +7733,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (8)
@@ -8349,7 +8353,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (14)
@@ -8514,7 +8518,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (33)
@@ -8993,7 +8997,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (13)
@@ -9063,7 +9067,7 @@ PrefabInstance:
     - target: {fileID: 647086795214167023, guid: e7fd5edc70dd9c8419d1e289aa78d870, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cc3f83839ec12e44daa18feca09392cb, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 1439487714901211706, guid: e7fd5edc70dd9c8419d1e289aa78d870, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_Cylinder_001 (1)
@@ -9185,7 +9189,7 @@ PrefabInstance:
     - target: {fileID: 3506258931632592529, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3c73d933a36540145a143161b39575d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
 --- !u!4 &539632637 stripped
@@ -9203,7 +9207,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.91021
@@ -9273,7 +9277,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.8
@@ -9671,7 +9675,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (11)
@@ -9886,7 +9890,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -102.90207
@@ -10289,7 +10293,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -100.1
@@ -10359,7 +10363,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (28)
@@ -10664,7 +10668,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -75.1
@@ -10734,7 +10738,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4999962
@@ -11553,7 +11557,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (6)
@@ -12137,7 +12141,7 @@ PrefabInstance:
     - target: {fileID: 6784644564176782820, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80541a775de2d3a4c9ecee1644a42043, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
 --- !u!4 &706064218 stripped
@@ -12387,7 +12391,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.967537
@@ -12604,7 +12608,7 @@ PrefabInstance:
     - target: {fileID: 3506258931632592529, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3c73d933a36540145a143161b39575d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
 --- !u!4 &733390228 stripped
@@ -12980,7 +12984,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.91021
@@ -13112,7 +13116,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.94
@@ -13530,7 +13534,7 @@ PrefabInstance:
     - target: {fileID: 3506258931632592529, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3c73d933a36540145a143161b39575d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
 --- !u!4 &781526129 stripped
@@ -13548,7 +13552,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.746822
@@ -13732,7 +13736,7 @@ PrefabInstance:
     - target: {fileID: 3506258931632592529, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3c73d933a36540145a143161b39575d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
 --- !u!4 &791676313 stripped
@@ -13850,7 +13854,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (22)
@@ -14189,7 +14193,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.967537
@@ -15512,7 +15516,7 @@ PrefabInstance:
     - target: {fileID: 3506258931632592529, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3c73d933a36540145a143161b39575d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
 --- !u!4 &900728673 stripped
@@ -15995,7 +15999,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (18)
@@ -16222,7 +16226,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (27)
@@ -16513,7 +16517,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (9)
@@ -17037,7 +17041,7 @@ PrefabInstance:
     - target: {fileID: 6784644564176782820, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80541a775de2d3a4c9ecee1644a42043, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
 --- !u!4 &985688980 stripped
@@ -17768,7 +17772,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (23)
@@ -18451,7 +18455,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.463615
@@ -18815,7 +18819,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -49.194954
@@ -19150,7 +19154,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.999996
@@ -20153,7 +20157,7 @@ PrefabInstance:
     - target: {fileID: 6784644564176782820, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80541a775de2d3a4c9ecee1644a42043, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
 --- !u!4 &1198348592 stripped
@@ -20271,7 +20275,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -139.7
@@ -20341,7 +20345,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.996578
@@ -21090,7 +21094,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002
@@ -21160,7 +21164,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (12)
@@ -22858,7 +22862,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (19)
@@ -23130,7 +23134,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (32)
@@ -23364,7 +23368,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (29)
@@ -23787,7 +23791,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (2)
@@ -23919,7 +23923,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.999996
@@ -24291,7 +24295,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.442417
@@ -25044,7 +25048,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (10)
@@ -25934,7 +25938,7 @@ PrefabInstance:
     - target: {fileID: 3506258931632592529, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3c73d933a36540145a143161b39575d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb438fb6c52b52542b4856d2ee9fd547, type: 3}
 --- !u!4 &1519395072 stripped
@@ -26755,7 +26759,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -122.2
@@ -26920,7 +26924,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.499996
@@ -27042,7 +27046,7 @@ PrefabInstance:
     - target: {fileID: 6784644564176782820, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80541a775de2d3a4c9ecee1644a42043, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
 --- !u!4 &1575361357 stripped
@@ -27690,7 +27694,7 @@ PrefabInstance:
     - target: {fileID: 6784644564176782820, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80541a775de2d3a4c9ecee1644a42043, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
 --- !u!4 &1619263512 stripped
@@ -27708,7 +27712,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -122.2
@@ -28323,7 +28327,7 @@ PrefabInstance:
     - target: {fileID: 647086795214167023, guid: e7fd5edc70dd9c8419d1e289aa78d870, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cc3f83839ec12e44daa18feca09392cb, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 1439487714901211706, guid: e7fd5edc70dd9c8419d1e289aa78d870, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_Cylinder_001 (4)
@@ -29080,7 +29084,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.91021
@@ -29384,7 +29388,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -47.609943
@@ -29618,7 +29622,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -70.1
@@ -30389,7 +30393,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.94481
@@ -30529,7 +30533,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.94481
@@ -31068,7 +31072,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -100.1
@@ -31233,7 +31237,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (17)
@@ -31303,7 +31307,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -139.7
@@ -31908,7 +31912,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (3)
@@ -32063,6 +32067,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868898731}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1871585030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6786019806403046457, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+  m_PrefabInstance: {fileID: 39005051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1875435698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32556,7 +32565,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -115.3
@@ -32930,7 +32939,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (1)
@@ -33126,7 +33135,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (20)
@@ -33278,7 +33287,7 @@ PrefabInstance:
     - target: {fileID: 6784644564176782820, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80541a775de2d3a4c9ecee1644a42043, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
 --- !u!4 &1919081927 stripped
@@ -33600,7 +33609,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (34)
@@ -34051,7 +34060,7 @@ PrefabInstance:
     - target: {fileID: 6784644564176782820, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80541a775de2d3a4c9ecee1644a42043, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19dc1eb6c799ff545902f9204e92be62, type: 3}
 --- !u!4 &1948463950 stripped
@@ -34221,7 +34230,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (31)
@@ -34866,7 +34875,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -54.999996
@@ -34936,7 +34945,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -35422,7 +35431,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.94
@@ -35572,7 +35581,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (25)
@@ -35746,7 +35755,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.746822
@@ -37633,7 +37642,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (26)
@@ -38080,7 +38089,7 @@ PrefabInstance:
     - target: {fileID: 7359245336290531247, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cfdfb51c233217043aaa2df3a07790a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.94
@@ -38155,7 +38164,7 @@ PrefabInstance:
     - target: {fileID: 5558176568748775958, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb23d8815ae6f6c40aeec6f69a780e94, type: 2}
+      objectReference: {fileID: 2100000, guid: 708fe0474941ed449933cbe7102f3dbc, type: 2}
     - target: {fileID: 6206629151395560387, guid: 55796e5d9c49b57499dec82710f8b61f, type: 3}
       propertyPath: m_Name
       value: Environment_WoodenBlock_002 (15)
