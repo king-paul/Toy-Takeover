@@ -902,6 +902,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3903636566074356361, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: laser
+      value: 
+      objectReference: {fileID: 1871585030}
     - target: {fileID: 3943773326545172404, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -32063,6 +32067,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868898731}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1871585030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6786019806403046457, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+  m_PrefabInstance: {fileID: 39005051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1875435698
 PrefabInstance:
   m_ObjectHideFlags: 0
