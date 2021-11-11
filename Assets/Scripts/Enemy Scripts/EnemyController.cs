@@ -92,6 +92,7 @@ public class EnemyController : MonoBehaviour
         else if(state == EnemyState.Attack)
         {
             //if (!flyingEnemy)
+            agent.destination = transform.position;
             agent.isStopped = true;
         }
     }

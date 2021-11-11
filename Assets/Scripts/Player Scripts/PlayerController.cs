@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
 
     private int totalFrames = 0; // used to count frames from last collision damage
     private bool collidingWithEnemy = false;
-
     #endregion
 
     #region properties

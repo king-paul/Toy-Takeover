@@ -42,7 +42,8 @@ public class ProjectileController : MonoBehaviour
             enemy.TakeDamage(damage); 
         }
 
-        if(other.gameObject.layer != 2) // Ignore Raycast layer
+        // check for Ignore Raycast layer or ViewModel layer
+        if (other.gameObject.layer != 2 && other.gameObject.layer != 12)
             GameObject.Destroy(this.gameObject);
     }
 }
