@@ -1042,6 +1042,10 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 1847
       objectReference: {fileID: 0}
+    - target: {fileID: 8537989895921377964, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: startingAngle
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 9178569588800674695, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_CastShadows
       value: 0
