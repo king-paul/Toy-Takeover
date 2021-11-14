@@ -40,35 +40,26 @@ public class RangedEnemyAI : MonoBehaviour
         audio = GetComponent<EnemySound>();
         player = GameObject.FindWithTag("Player").transform;
         timer = 0;
+        shootDirection = transform.forward;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (game.State != GameState.Running)
-            //return;
-
         //Get the direction from the enemy to the player and normalize it
         directionToTarget = (player.position - transform.position).normalized;
-
-        float distanceToTarget = (player.position - transform.position).magnitude;
+        float distanceToTarget = (player.position - transform.position).magnitude;        
 
         Debug.DrawRay(transform.position, directionToTarget * viewDistance, Color.blue); // draws line to player
-        Debug.DrawRay(gunEnd.position, shootDirection * viewDistance, Color.red); // draws gun ray
+        Debug.DrawRay(gunEnd.position, gunEnd.forward * viewDistance, Color.red); // draws gun ray
 
         switch (controller.State)
         {
             case EnemyState.Follow:
-                if (!PlayerBehindWall() && distanceToTarget <= viewDistance)//PlayerInVision())
+                if (!PlayerBehindWall() && distanceToTarget <= viewDistance)
                 {
-                    //Debug.Log("Enemy can see player");
-
-                    controller.State = EnemyState.Aim;
-                    //Debug.Log("Switching to attack state");
+                    controller.State = EnemyState.Attack;
                 }
-                break;
-
-            case EnemyState.Aim: Aim();
                 break;
 
             case EnemyState.Attack: Fire();
@@ -77,106 +68,47 @@ public class RangedEnemyAI : MonoBehaviour
 
     }
 
-    // perform aim state
-    void Aim()
-    {
-        shootDirection = (player.position - gun.position).normalized;
-        shootDirection.Normalize();
-
-        // restrict angle of aiming
-        if (Vector3.Angle(shootDirection, transform.forward) >= 30)
-            shootDirection = transform.forward;
-
-        //Vector3 newDirection = Vector3.RotateTowards(transform.forward, shootDirection, 
-        //    Mathf.Deg2Rad * aimSpeed * Time.deltaTime, 0);        
-        //gun.rotation = Quaternion.LookRotation(shootDirection);
-
-        gun.forward = shootDirection;
-
-        // if the gun is pointing at the player switch to the attack state
-        if (Physics.Raycast(gunEnd.position, shootDirection, out gunRay) &&
-           gunRay.transform.tag == "Player")
-        {
-            Debug.Log("Switching to attack state");
-            controller.State = EnemyState.Attack;
-            Invoke("FireProjectile", firingDelay);
-            return;
-        }
-
-        // check that the raycast from the enemy is hitting something other than the player
-        if (Physics.Raycast(transform.position, directionToTarget, out rayToPlayer)
-            && rayToPlayer.transform.tag != "Player")
-        {
-            // If the object is the player switch to the attack state
-            controller.State = EnemyState.Follow;
-            Debug.Log("Switching to follow state");
-        }
-        
-    }
-
     void Fire()
     {
         AimWeapon();
 
-        if (Physics.Raycast(gunEnd.position, shootDirection, out gunRay) &&
+        if (Physics.Raycast(gunEnd.position, gunEnd.forward, out gunRay) &&
            gunRay.transform.tag == "Player")
         {
             // if the time delay has been reached fire another shot
             timer += Time.deltaTime;
             if (timer > firingDelay)
             {
-                Instantiate(projectile, gunEnd.position, gunEnd.rotation);
+                Instantiate(projectile, gunEnd.position, gun.rotation);
                 audio.PlaySound(audio.attackSound);
                 timer = 0;
             }
         }
-
-        if(PlayerBehindWall())
+        else if(PlayerBehindWall())
         {
             //controller.State = EnemyState.Aim;
             controller.State = EnemyState.Follow;
             Debug.Log("Switching to follow state");
         }
+            
     }
 
     void AimWeapon()
     {
-        shootDirection = (player.position - gun.position).normalized;
+        // rotate enemy towards the player
+        Vector3 faceDirection = Vector3.RotateTowards(transform.forward, directionToTarget,
+            Mathf.Deg2Rad * turnSpeed * Time.deltaTime, 0);
+        transform.rotation = Quaternion.LookRotation(faceDirection);
+
+        // calculate the vector that the weapon needs to be aiming at
+        shootDirection = (player.position - gunEnd.position).normalized;
         shootDirection.Normalize();
 
         // restrict angle of aiming
         if (Vector3.Angle(shootDirection, transform.forward) >= 30)
             shootDirection = transform.forward;
 
-        // Turn towards the player
-        Vector3 faceDirection = Vector3.RotateTowards(transform.forward, directionToTarget,
-            Mathf.Deg2Rad * turnSpeed * Time.deltaTime, 0);
-        transform.rotation = Quaternion.LookRotation(faceDirection);
-
-        //Vector3 aimDirection = (player.position - gunEnd.position).normalized;
-
-        //Vector3 gunDirection = Vector3.RotateTowards(gun.forward, directionToTarget,
-            //Mathf.Deg2Rad * aimSpeed * Time.deltaTime, 0);
-
-        //gun.rotation = Quaternion.LookRotation(gunDirection);
-    }
-
-    bool PlayerInVision()
-    {
-        // convert the cone's field of view into the same unit type that is returned by a dot product
-        float coneValue = Mathf.Cos((Mathf.Deg2Rad * viewAngle) * 0.5f);
-        float dotProuct = Vector3.Dot(directionToTarget, transform.forward);
-
-        // check if target is inside the cone
-        if (dotProuct >= coneValue)
-        {
-            // check if player is obscured by a wall. If not return true
-            if( Physics.Raycast(transform.position, directionToTarget, out rayToPlayer)
-            && rayToPlayer.transform.tag != "Player")
-                return true;
-        }
-
-        return false;
+        gun.forward = shootDirection; // get the gun to face the player
     }
 
     bool PlayerBehindWall()

@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: 0
+  initialState: 1
   projectileDamageParticles: {fileID: 187500115511264534}
   laserDamageParticles: {fileID: 928215322213031308}
   maxHealth: 60
@@ -448,7 +448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890480947588397694}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.07, z: 0.71}
+  m_LocalPosition: {x: 0, y: 0.07, z: 1.042}
   m_LocalScale: {x: 1.0008898, y: 0.14860156, z: 0.16183412}
   m_Children: []
   m_Father: {fileID: 1092207982186743846}
@@ -758,15 +758,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8668811186007120319}
-  m_LocalRotation: {x: -0, y: -0.042398293, z: -0, w: 0.99910086}
-  m_LocalPosition: {x: -0.035, y: 0.519, z: -0.405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.035, y: 1.463, z: -0.405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2720009774046209493}
   - {fileID: 7474806691942004169}
   m_Father: {fileID: 4495125919215545006}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -4.86, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &7612043320540511099
 LineRenderer:
   m_ObjectHideFlags: 0
