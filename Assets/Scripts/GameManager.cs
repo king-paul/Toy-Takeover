@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public Transform[] groundWaypoints;
     [Tooltip("Waypoints above the ground which enemis that can use ramps travel to")]
     public Transform[] platformWaypoints;
+    [Tooltip("Waypoints that flying enemies can move between")]
+    public Transform[] skyWaypoints;
 
     GameState state;
     GUIController gui;

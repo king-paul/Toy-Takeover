@@ -58,6 +58,7 @@ public class RangedEnemyAI : MonoBehaviour
             case EnemyState.Follow:
                 if (!PlayerBehindWall() && distanceToTarget <= viewDistance)
                 {
+
                     controller.State = EnemyState.Attack;
                 }
                 break;

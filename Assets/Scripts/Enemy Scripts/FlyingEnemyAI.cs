@@ -10,6 +10,7 @@ public class FlyingEnemyAI : MonoBehaviour
     Rigidbody rigidbody;
     Transform player;
     EnemyController controller;
+    PatrolEnemyAI patrolEnemy;
 
     private int wayPointNum;
 
@@ -19,11 +20,23 @@ public class FlyingEnemyAI : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player").transform;
         controller = GetComponent<EnemyController>();
+        patrolEnemy = GetComponent<PatrolEnemyAI>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(controller.State == EnemyState.Patrol)
+        {
+            Vector3 moveDirection = patrolEnemy.nextWaypointPos - transform.position;
+            float rotation = Mathf.Atan2(moveDirection.z, moveDirection.x);
+            moveDirection.Normalize();
+
+            transform.rotation = Quaternion.Euler(0, rotation, 0);
+            //Debug.Log("Enemy Rotation: " + transform.rotation);
+            rigidbody.velocity = moveDirection * flySpeed;
+        }
+
         if (controller.State == EnemyState.Follow)
         {
             Vector3 directionToPlayer = (player.position - transform.position).normalized;
@@ -38,4 +51,5 @@ public class FlyingEnemyAI : MonoBehaviour
         if(collision.gameObject.tag != "Projectile")
             Destroy(this.gameObject);
     }
+
 }

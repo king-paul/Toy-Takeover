@@ -10,14 +10,16 @@ public class PatrolEnemyAI : MonoBehaviour
     [SerializeField][Range(2, 20)]
     int waypointsInRoute = 5;
     [SerializeField]
+    bool flyingEnemy = false;
+    [SerializeField]
     bool canUseRamps = true;
     [SerializeField]
     bool preventDuplicates = true;
     [SerializeField]
-    bool includeSpawnpoint = true;    
+    bool includeSpawnpoint = true; 
 
     // adjustable variables
-    [Header("Enemy Vision")]
+    [Header("Enemy Visioflyinn")]
     [SerializeField]
     bool useVisionCone = true;
     [SerializeField][Range(1, 200)]
@@ -36,9 +38,10 @@ public class PatrolEnemyAI : MonoBehaviour
     Transform spawnpoint;
     //Transform[] patrolRoute;
     [Header("Debug Info")]
-    public Transform nextWaypoint;
     [SerializeField]
-    List<Transform> patrolRoute;
+    Transform nextWaypoint;    
+    [SerializeField]
+    List<Transform> patrolRoute;    
     NavMeshAgent agent;
     EnemyController enemy;
     Transform player;
@@ -52,6 +55,8 @@ public class PatrolEnemyAI : MonoBehaviour
     private int waypoint = 0;
     private float distanceToPlayer;
 
+    public Vector3 nextWaypointPos { get => nextWaypoint.position; }
+
     public void SetSpawnPoint(Transform spawnpoint)
     {
         this.spawnpoint = spawnpoint;        
@@ -60,7 +65,8 @@ public class PatrolEnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
+        if (!flyingEnemy)
+            agent = GetComponent<NavMeshAgent>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
@@ -74,7 +80,9 @@ public class PatrolEnemyAI : MonoBehaviour
         SelectRandomRoute();
 
         if (enemy.State == EnemyState.Patrol) {
-            agent.SetDestination(patrolRoute[waypoint].position);
+            if (!flyingEnemy)
+                agent.SetDestination(patrolRoute[waypoint].position);
+
             nextWaypoint = patrolRoute[waypoint];
         }
     }
@@ -110,10 +118,15 @@ public class PatrolEnemyAI : MonoBehaviour
         int maxRange, chosenNumber;
         bool alreadyInRoute;
 
-        if (canUseRamps)
-            maxRange = game.groundWaypoints.Length + game.platformWaypoints.Length;
+        if (flyingEnemy)
+            maxRange = game.skyWaypoints.Length;
         else
-            maxRange = game.groundWaypoints.Length;
+            {
+            if (canUseRamps)
+                maxRange = game.groundWaypoints.Length + game.platformWaypoints.Length;
+            else
+                maxRange = game.groundWaypoints.Length;
+        }
 
         // selects random waypoints until the route is full
         while (totalWaypoints < waypointsInRoute && totalWaypoints < maxRange)
@@ -123,21 +136,31 @@ public class PatrolEnemyAI : MonoBehaviour
                 chosenNumber = Random.Range(0, maxRange);
                 //Debug.Log("Chosen Number: " + chosenNumber + " of " + maxRange);
 
-                // if the number is greater than a certain value select from the platform waypoints
-                if (canUseRamps && chosenNumber > game.groundWaypoints.Length - 1)
+                if (flyingEnemy)
                 {
-                    chosenNumber -= game.groundWaypoints.Length;
-                    alreadyInRoute = AlreadyInRoute(game.platformWaypoints[chosenNumber]);
+                    alreadyInRoute = AlreadyInRoute(game.skyWaypoints[chosenNumber]);
 
                     if (!preventDuplicates || !alreadyInRoute)
-                        patrolRoute.Add(game.platformWaypoints[chosenNumber]);
+                        patrolRoute.Add(game.skyWaypoints[chosenNumber]);
                 }
-                else // if it is less than the value select a ground waypoint
+                else
                 {
-                    alreadyInRoute = AlreadyInRoute(game.groundWaypoints[chosenNumber]);
+                    // if the number is greater than a certain value select from the platform waypoints
+                    if (canUseRamps && chosenNumber > game.groundWaypoints.Length - 1)
+                    {
+                        chosenNumber -= game.groundWaypoints.Length;
+                        alreadyInRoute = AlreadyInRoute(game.platformWaypoints[chosenNumber]);
 
-                    if (!preventDuplicates || !alreadyInRoute)
-                        patrolRoute.Add(game.groundWaypoints[chosenNumber]);
+                        if (!preventDuplicates || !alreadyInRoute)
+                            patrolRoute.Add(game.platformWaypoints[chosenNumber]);
+                    }
+                    else // if it is less than the value select a ground waypoint
+                    {
+                        alreadyInRoute = AlreadyInRoute(game.groundWaypoints[chosenNumber]);
+
+                        if (!preventDuplicates || !alreadyInRoute)
+                            patrolRoute.Add(game.groundWaypoints[chosenNumber]);
+                    }
                 }
 
             } while (preventDuplicates && alreadyInRoute);
@@ -173,7 +196,9 @@ public class PatrolEnemyAI : MonoBehaviour
             else
                 waypoint = 0;
 
-            agent.SetDestination(patrolRoute[waypoint].position);
+            if(!flyingEnemy)
+                agent.SetDestination(patrolRoute[waypoint].position);
+
             nextWaypoint = patrolRoute[waypoint];
         }
 

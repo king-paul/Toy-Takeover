@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5871003587511559280}
   - component: {fileID: 5871003587511559287}
   - component: {fileID: 5871003587511559286}
-  - component: {fileID: 5871003587511559292}
-  - component: {fileID: 5871003587511559283}
   - component: {fileID: 8326915236368201393}
+  - component: {fileID: 5871003587511559292}
+  - component: {fileID: 3641016315081617923}
+  - component: {fileID: 5871003587511559283}
   - component: {fileID: 2712776598375209321}
   m_Layer: 0
   m_Name: Flying Enemy
@@ -33,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 5871003587511559285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.28, y: 10.38, z: 4.79}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -116,39 +117,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5871003587511559292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5871003587511559285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialState: 0
-  projectileDamageParticles: {fileID: 0}
-  laserDamageParticles: {fileID: 0}
-  maxHealth: 30
-  collisionDamage: 1
-  framesPerDamage: 5
-  flyingEnemy: 1
---- !u!114 &5871003587511559283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5871003587511559285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 345cfe0c5d6185f41bbd48e90f0213a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flySpeed: 5
-  wayPoints: []
 --- !u!82 &8326915236368201393
 AudioSource:
   m_ObjectHideFlags: 0
@@ -245,6 +213,63 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5871003587511559292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5871003587511559285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: 0
+  projectileDamageParticles: {fileID: 0}
+  laserDamageParticles: {fileID: 0}
+  maxHealth: 30
+  collisionDamage: 1
+  framesPerDamage: 5
+  flyingEnemy: 1
+--- !u!114 &3641016315081617923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5871003587511559285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointsInRoute: 5
+  flyingEnemy: 1
+  canUseRamps: 0
+  preventDuplicates: 1
+  includeSpawnpoint: 0
+  useVisionCone: 1
+  viewDistance: 100
+  viewAngle: 45
+  followWhenInRange: 1
+  minDistanceFromPlayer: 3
+  nextWaypoint: {fileID: 0}
+  patrolRoute: []
+--- !u!114 &5871003587511559283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5871003587511559285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345cfe0c5d6185f41bbd48e90f0213a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flySpeed: 5
+  wayPoints: []
 --- !u!114 &2712776598375209321
 MonoBehaviour:
   m_ObjectHideFlags: 0
