@@ -33,7 +33,7 @@ public class PlayerSound : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
-        if(clip != null && !playerAudio[0].isPlaying)
+        if(clip != null)
             playerAudio[0].PlayOneShot(clip);        
     }
 
