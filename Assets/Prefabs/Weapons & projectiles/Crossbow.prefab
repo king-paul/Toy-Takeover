@@ -50,11 +50,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01940c49590e26347abc1ed9b4c62423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firingPoint: {fileID: 0}
   weaponObject: {fileID: 11400000, guid: 5b4561c281be57f4c9ec97a1d7023d76, type: 2}
+  firingPoint: {fileID: 0}
   laser: {fileID: 0}
-  fireSound: {fileID: 0}
-  reloadSound: {fileID: 0}
+  fireSounds:
+  - {fileID: 0}
 --- !u!1 &4128958887757171758
 GameObject:
   m_ObjectHideFlags: 0

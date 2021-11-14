@@ -27,9 +27,8 @@ public class GunController : MonoBehaviour
     private LineRenderer laserLine;
     private RaycastHit hit;
     private Vector3 rayOrigin;
-    private float nextFire;
-
     private GameManager game;
+    private float nextFire;
 
     // Start is called before the first frame update
     void Start()

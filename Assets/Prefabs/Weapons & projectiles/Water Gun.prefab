@@ -539,10 +539,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01940c49590e26347abc1ed9b4c62423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firingPoint: {fileID: 0}
   weaponObject: {fileID: 11400000, guid: 9e8fac34f7ae040469f5dd2fa9d9291a, type: 2}
+  firingPoint: {fileID: 0}
   laser: {fileID: 0}
-  fireSound: {fileID: 8300000, guid: c4615c2f4e6e017499f7ec690ef551ca, type: 3}
+  fireSounds:
+  - {fileID: 8300000, guid: c4615c2f4e6e017499f7ec690ef551ca, type: 3}
+  - {fileID: 8300000, guid: a4fa5ab6360d506499c905842f8d582a, type: 3}
+  - {fileID: 8300000, guid: 6c6fb2ccc3f51064d949a0f6d757f382, type: 3}
+  - {fileID: 8300000, guid: d112eb573db563843818fceca9a872e1, type: 3}
+  - {fileID: 8300000, guid: 8a663a214a08f944eaeee186a45f359d, type: 3}
 --- !u!1 &6852876340819558543
 GameObject:
   m_ObjectHideFlags: 0

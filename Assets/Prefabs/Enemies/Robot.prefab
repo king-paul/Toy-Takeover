@@ -166,11 +166,11 @@ GameObject:
   - component: {fileID: 4745279868794798831}
   - component: {fileID: 8022354399355635959}
   - component: {fileID: 664964726354778918}
+  - component: {fileID: -944458588945779257}
   - component: {fileID: 7057391014905581073}
   - component: {fileID: -7606788201388964225}
   - component: {fileID: 4283558823875897926}
   - component: {fileID: -1036609915704547817}
-  - component: {fileID: -944458588945779257}
   m_Layer: 10
   m_Name: Robot
   m_TagString: Enemy
@@ -288,84 +288,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7057391014905581073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782209278137205567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialState: 0
-  projectileDamageParticles: {fileID: 187500115511264534}
-  laserDamageParticles: {fileID: 928215322213031308}
-  maxHealth: 60
-  collisionDamage: 5
-  framesPerDamage: 5
-  flyingEnemy: 0
---- !u!114 &-7606788201388964225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782209278137205567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypointsInRoute: 5
-  canUseRamps: 0
-  preventDuplicates: 1
-  includeSpawnpoint: 1
-  useVisionCone: 0
-  viewDistance: 100
-  viewAngle: 45
-  followWhenInRange: 0
-  minDistanceFromPlayer: 3
-  nextWaypoint: {fileID: 0}
-  patrolRoute: []
---- !u!114 &4283558823875897926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782209278137205567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b08807001217794d93eadb5615e29fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun: {fileID: 1092207982186743846}
-  gunEnd: {fileID: 7474806691942004169}
-  projectile: {fileID: 626429588367930485, guid: 0d0ac5ef9b30a71448142ca7c4026ae7, type: 3}
-  viewDistance: 30
-  firingDelay: 0.25
-  viewAngle: 45
-  turnSpeed: 40
-  aimSpeed: 50
---- !u!114 &-1036609915704547817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782209278137205567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709e4749bd7f58743a3a7bede89c0c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSound: {fileID: 8300000, guid: 1c450f6b8b7ac83459b6be0e582198b4, type: 3}
-  attackSound: {fileID: 8300000, guid: 43de86f6492c01a4bacc8dc60a23b7e1, type: 3}
-  damageSound: {fileID: 8300000, guid: 1d4abf74fa79f85408df1f1c18f06380, type: 3}
-  deadSound: {fileID: 8300000, guid: fae9109fa462f5a4681e6298567fb166, type: 3}
 --- !u!82 &-944458588945779257
 AudioSource:
   m_ObjectHideFlags: 0
@@ -462,6 +384,91 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7057391014905581073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782209278137205567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: 0
+  projectileDamageParticles: {fileID: 187500115511264534}
+  laserDamageParticles: {fileID: 928215322213031308}
+  maxHealth: 60
+  collisionDamage: 5
+  framesPerDamage: 5
+  flyingEnemy: 0
+--- !u!114 &-7606788201388964225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782209278137205567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointsInRoute: 5
+  flyingEnemy: 0
+  canUseRamps: 0
+  preventDuplicates: 1
+  includeSpawnpoint: 1
+  useVisionCone: 0
+  viewDistance: 100
+  viewAngle: 45
+  followWhenInRange: 0
+  minDistanceFromPlayer: 3
+  nextWaypoint: {fileID: 0}
+  patrolRoute: []
+--- !u!114 &4283558823875897926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782209278137205567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b08807001217794d93eadb5615e29fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 1092207982186743846}
+  gunEnd: {fileID: 7474806691942004169}
+  projectile: {fileID: 626429588367930485, guid: 0d0ac5ef9b30a71448142ca7c4026ae7, type: 3}
+  viewDistance: 30
+  firingDelay: 0.25
+  viewAngle: 45
+  turnSpeed: 40
+  aimSpeed: 50
+--- !u!114 &-1036609915704547817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782209278137205567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709e4749bd7f58743a3a7bede89c0c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSound: {fileID: 8300000, guid: 1c450f6b8b7ac83459b6be0e582198b4, type: 3}
+  attackSounds:
+  - {fileID: 8300000, guid: 43de86f6492c01a4bacc8dc60a23b7e1, type: 3}
+  damageSounds:
+  - {fileID: 8300000, guid: 1d4abf74fa79f85408df1f1c18f06380, type: 3}
+  - {fileID: 8300000, guid: ab7713d7c96e1a142952a15f6bb47b41, type: 3}
+  - {fileID: 8300000, guid: 1abf09493971163469fcc57d3cb46b27, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: e67545a020424b64485866c542d61e8d, type: 3}
+  - {fileID: 8300000, guid: fae9109fa462f5a4681e6298567fb166, type: 3}
 --- !u!1 &1890480947588397694
 GameObject:
   m_ObjectHideFlags: 0

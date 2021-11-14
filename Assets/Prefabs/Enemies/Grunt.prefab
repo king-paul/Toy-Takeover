@@ -635,9 +635,9 @@ GameObject:
   - component: {fileID: 8554687332863593069}
   - component: {fileID: -3985970733157762015}
   - component: {fileID: 2142429961615529122}
+  - component: {fileID: -1101435726516547770}
   - component: {fileID: 6105160214702041893}
   - component: {fileID: 1548243902737486723}
-  - component: {fileID: -1101435726516547770}
   m_Layer: 0
   m_Name: Grunt
   m_TagString: Enemy
@@ -750,7 +750,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -870,6 +870,30 @@ MonoBehaviour:
   collisionDamage: 1
   framesPerDamage: 5
   flyingEnemy: 0
+--- !u!114 &-1101435726516547770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922432861276067955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointsInRoute: 10
+  flyingEnemy: 0
+  canUseRamps: 1
+  preventDuplicates: 1
+  includeSpawnpoint: 1
+  useVisionCone: 0
+  viewDistance: 25
+  viewAngle: 45
+  followWhenInRange: 0
+  minDistanceFromPlayer: 10
+  nextWaypoint: {fileID: 0}
+  patrolRoute: []
 --- !u!114 &6105160214702041893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,32 +922,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSound: {fileID: 0}
-  attackSound: {fileID: 8300000, guid: b52273f52a99248419a97ff38a2ca445, type: 3}
-  damageSound: {fileID: 8300000, guid: 1eb18db1352d67e4aa0bf4ca1e599628, type: 3}
-  deadSound: {fileID: 8300000, guid: b3336e15d073a8b479978dac612f053e, type: 3}
---- !u!114 &-1101435726516547770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8922432861276067955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypointsInRoute: 10
-  canUseRamps: 1
-  preventDuplicates: 1
-  includeSpawnpoint: 1
-  useVisionCone: 0
-  viewDistance: 25
-  viewAngle: 45
-  followWhenInRange: 0
-  minDistanceFromPlayer: 10
-  nextWaypoint: {fileID: 0}
-  patrolRoute: []
+  attackSounds:
+  - {fileID: 8300000, guid: 1eb18db1352d67e4aa0bf4ca1e599628, type: 3}
+  - {fileID: 8300000, guid: 78a1b8c55de6ac748b9a26ef57931e3d, type: 3}
+  - {fileID: 8300000, guid: 34079dc588c33e44498ed7f20000773d, type: 3}
+  damageSounds:
+  - {fileID: 8300000, guid: 1eb18db1352d67e4aa0bf4ca1e599628, type: 3}
+  - {fileID: 8300000, guid: 78a1b8c55de6ac748b9a26ef57931e3d, type: 3}
+  - {fileID: 8300000, guid: 34079dc588c33e44498ed7f20000773d, type: 3}
+  - {fileID: 8300000, guid: 01031e636c82ba540917a243f5d870c7, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: b3336e15d073a8b479978dac612f053e, type: 3}
+  - {fileID: 8300000, guid: 7f98370bdea9eac4fbca380de4cb02d2, type: 3}
+  - {fileID: 8300000, guid: 8a9eefc3ad9dd6247be97e73cb86c676, type: 3}
+  - {fileID: 8300000, guid: 2a3b76a4a2b83c84d9f6990c1e68dd88, type: 3}
 --- !u!1 &8978456818100710269
 GameObject:
   m_ObjectHideFlags: 0

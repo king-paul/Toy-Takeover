@@ -420,8 +420,9 @@ GameObject:
   - component: {fileID: 7008889368304603675}
   - component: {fileID: 7008889368304603672}
   - component: {fileID: 6988174573132303476}
-  - component: {fileID: 7008889368304603674}
   - component: {fileID: -6839595495458533141}
+  - component: {fileID: 7008889368304603674}
+  - component: {fileID: -7489867347767036787}
   - component: {fileID: 4819375934043842456}
   m_Layer: 0
   m_Name: Car
@@ -480,25 +481,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6574581, y: 1.1499479, z: 3.4400568}
   m_Center: {x: -0.0007504225, y: 0.38070464, z: 0.31446123}
---- !u!114 &7008889368304603674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7008889368304603673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialState: 0
-  projectileDamageParticles: {fileID: 0}
-  laserDamageParticles: {fileID: 0}
-  maxHealth: 30
-  collisionDamage: 1
-  framesPerDamage: 5
-  flyingEnemy: 0
 --- !u!82 &-6839595495458533141
 AudioSource:
   m_ObjectHideFlags: 0
@@ -595,6 +577,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7008889368304603674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008889368304603673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: 0
+  projectileDamageParticles: {fileID: 0}
+  laserDamageParticles: {fileID: 0}
+  maxHealth: 30
+  collisionDamage: 1
+  framesPerDamage: 5
+  flyingEnemy: 0
+--- !u!114 &-7489867347767036787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008889368304603673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42fe43b85a000de4a9d0fe26304cf05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4819375934043842456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,7 +620,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709e4749bd7f58743a3a7bede89c0c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSound: {fileID: 0}
-  attackSound: {fileID: 0}
-  damageSound: {fileID: 0}
-  deadSound: {fileID: 0}
+  moveSound: {fileID: 8300000, guid: e64c2a4cfdd36af41b1f556dac0add05, type: 3}
+  attackSounds:
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  damageSounds:
+  - {fileID: 8300000, guid: 1539dec00abbd654a90d09f88f12378c, type: 3}
+  - {fileID: 8300000, guid: 06f96e5e985edcb479c8fe7b74e8247e, type: 3}
+  - {fileID: 8300000, guid: 781548a341264c149adce72ed6e8119a, type: 3}
+  - {fileID: 8300000, guid: eea34e67123a53947b7ac27776f93af1, type: 3}
+  deadSounds:
+  - {fileID: 8300000, guid: 1539dec00abbd654a90d09f88f12378c, type: 3}
+  - {fileID: 8300000, guid: 06f96e5e985edcb479c8fe7b74e8247e, type: 3}
+  - {fileID: 8300000, guid: 781548a341264c149adce72ed6e8119a, type: 3}
+  - {fileID: 8300000, guid: eea34e67123a53947b7ac27776f93af1, type: 3}

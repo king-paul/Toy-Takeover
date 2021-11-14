@@ -81,7 +81,7 @@ public class RangedEnemyAI : MonoBehaviour
             if (timer > firingDelay)
             {
                 Instantiate(projectile, gunEnd.position, gun.rotation);
-                audio.PlaySound(audio.attackSound);
+                audio.PlaySound(audio.attackSounds);
                 timer = 0;
             }
         }

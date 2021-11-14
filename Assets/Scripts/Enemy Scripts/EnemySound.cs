@@ -8,9 +8,9 @@ public class EnemySound : MonoBehaviour
     private AudioSource[] enemyAudio;
 
     public AudioClip moveSound;
-    public AudioClip attackSound;
-    public AudioClip damageSound;
-    public AudioClip deadSound;
+    public AudioClip[] attackSounds;
+    public AudioClip[] damageSounds;
+    public AudioClip[] deadSounds;
     
     void Awake()
     {
@@ -37,6 +37,16 @@ public class EnemySound : MonoBehaviour
             enemyAudio[index].clip = clip;
             enemyAudio[index].loop = loop;
             enemyAudio[index].Play();
+        }
+    }
+
+    public void PlaySound(AudioClip[] clips)
+    {
+        if (clips.Length > 0)
+        {
+            AudioClip randomSound = clips[Random.Range(0, clips.Length - 1)];
+            Debug.Log("Playing Enemy Sound: " + randomSound);
+            enemyAudio[0].PlayOneShot(randomSound);
         }
     }
 

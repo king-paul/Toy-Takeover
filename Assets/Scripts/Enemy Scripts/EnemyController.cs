@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour
         }
 
         if(curHealth > 0)
-            audio.PlaySound(audio.damageSound);
+            audio.PlaySound(audio.damageSounds);
     }
 
     private void Awake()
@@ -83,7 +83,7 @@ public class EnemyController : MonoBehaviour
         if (curHealth <= 0)
         {
             game.KillEnemy();
-            game.PlaySound(audio.deadSound, 1);
+            game.PlayRandomSound(audio.deadSounds, 1);
             GameObject.Destroy(this.gameObject);
             return;
         }

@@ -64,6 +64,20 @@ public class GameManager : MonoBehaviour
         audio.PlayOneShot(clip, volume);
     }
 
+    public void PlayRandomSound(AudioClip[] clips, float volume)
+    {
+        int randomNum = Random.Range(0, clips.Length);
+        if(randomNum == clips.Length)
+        {
+            randomNum = clips.Length - 1;
+        }
+
+        AudioClip randomSound = clips[randomNum];
+        Debug.Log("Playing Enemy Sound: " + randomSound);
+        audio.PlayOneShot(randomSound, volume);
+    }
+
+
     // Start is called before the first frame update
     void Awake()
     {

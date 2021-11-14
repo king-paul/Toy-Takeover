@@ -10,7 +10,7 @@ public class WeaponController : MonoBehaviour
     public GameObject laser;
 
     [Header("Sound Effects")]
-    public AudioClip fireSound;
+    public AudioClip[] fireSounds;
     //public AudioClip reloadSound;
 
     private Camera fpsCam;
@@ -67,7 +67,9 @@ public class WeaponController : MonoBehaviour
                 if (curAmmo > 0)
                 {
                     Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
-                    playerAudio.PlaySound(fireSound);
+
+                    
+                    playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)]);
                     curAmmo--;
                 }
             }
@@ -80,7 +82,9 @@ public class WeaponController : MonoBehaviour
                 if (curAmmo > 0)
                 {
                     Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
-                    playerAudio.PlaySound(fireSound);
+                    AudioClip randomSound = fireSounds[Random.Range(0, fireSounds.Length - 1)];
+                    //Debug.Log("Player Sound: " + randomSound.ToString());
+                    playerAudio.PlaySound(randomSound);
                     curAmmo--;
                 }
                     
@@ -100,7 +104,7 @@ public class WeaponController : MonoBehaviour
                 {
                     curAmmo--;
                     nextFire = Time.time + weapon.shotDelay;
-                    playerAudio.PlaySound(fireSound, 2, true);
+                    playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)], 2, true);
                 }
             }
             else
