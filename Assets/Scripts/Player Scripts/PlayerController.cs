@@ -89,20 +89,36 @@ public class PlayerController : MonoBehaviour
             game.Die();
         }
 
+        GetInput();
+    }
+
+    private void GetInput()
+    {
         // get mouse scroll from player
         if (Input.mouseScrollDelta.y != 0)
         {
             prevWeaponNum = weaponNum;
 
             if (Input.mouseScrollDelta.y == -1)
-                ++weaponNum;
+                weaponNum++;
 
             if (Input.mouseScrollDelta.y == 1)
-                --weaponNum;
+                weaponNum++;
 
             SwitchWeapons();
         }
-
+        else if (Input.GetButtonDown("NextWeapon")) // right bumper
+        {
+            prevWeaponNum = weaponNum;
+            weaponNum++;
+            SwitchWeapons();
+        }
+        else if (Input.GetButtonDown("PrevWeapon")) // left bumper
+        {
+            prevWeaponNum = weaponNum;
+            weaponNum--;
+            SwitchWeapons();
+        }
     }
 
     private void FixedUpdate()
