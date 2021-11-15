@@ -13,131 +13,23 @@ MonoBehaviour:
   m_Name: Wave3_Main
   m_EditorClassIdentifier: 
   enemiesInWave:
-  - enemy: 3
+  - enemy: 0
     spawnPoint: 0
-    timePeriod: 0
-    hasSpawned: 1
-  - enemy: 3
+    timePeriod: 10
+    hasSpawned: 0
+  - enemy: 0
     spawnPoint: 1
-    timePeriod: 0
-    hasSpawned: 1
-  - enemy: 3
+    timePeriod: 10
+    hasSpawned: 0
+  - enemy: 0
     spawnPoint: 2
-    timePeriod: 0
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 3
-    timePeriod: 0
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 4
-    timePeriod: 0
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 5
-    timePeriod: 0
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 0
-    timePeriod: 1
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 1
-    timePeriod: 1
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 2
-    timePeriod: 1
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 3
-    timePeriod: 1
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 4
-    timePeriod: 1
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 5
-    timePeriod: 1
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 0
-    timePeriod: 2
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 1
-    timePeriod: 2
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 2
-    timePeriod: 2
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 3
-    timePeriod: 2
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 4
-    timePeriod: 2
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 5
-    timePeriod: 2
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 0
-    timePeriod: 3
-    hasSpawned: 1
-  - enemy: 3
-    spawnPoint: 1
-    timePeriod: 3
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 2
-    timePeriod: 3
-    hasSpawned: 1
+    timePeriod: 10
+    hasSpawned: 0
   - enemy: 1
     spawnPoint: 3
-    timePeriod: 3
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 4
-    timePeriod: 3
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 5
-    timePeriod: 3
-    hasSpawned: 1
+    timePeriod: 10
+    hasSpawned: 0
   - enemy: 1
     spawnPoint: 0
-    timePeriod: 4
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 1
-    timePeriod: 4
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 2
-    timePeriod: 4
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 3
-    timePeriod: 4
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 4
-    timePeriod: 4
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 5
-    timePeriod: 4
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 0
-    timePeriod: 5
-    hasSpawned: 1
-  - enemy: 1
-    spawnPoint: 1
-    timePeriod: 5
-    hasSpawned: 1
+    timePeriod: 10
+    hasSpawned: 0
