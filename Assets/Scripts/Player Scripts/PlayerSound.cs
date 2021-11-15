@@ -37,14 +37,32 @@ public class PlayerSound : MonoBehaviour
             playerAudio[0].PlayOneShot(clip);        
     }
 
+    public void PlaySound(AudioClip clip, float volumeScale)
+    {
+        if (clip != null)
+            playerAudio[0].PlayOneShot(clip, volumeScale);
+    }
+
     public void PlaySound(AudioClip clip, int index, bool loop)
     {
+        Debug.Log("index: " + index);
+        Debug.Log("Sound playing: " + playerAudio[index].isPlaying);
+
         if (clip != null && index > 0 && index <= 2 &&
             (!playerAudio[index].isPlaying || playerAudio[index].clip != clip))
         {
-            playerAudio[index].clip = clip;
-            playerAudio[index].loop = loop;      
-            playerAudio[index].Play();
+            if (loop)
+            {
+                playerAudio[index].clip = clip;
+                playerAudio[index].loop = true;                
+                //Debug.Log("Playing sound");
+                playerAudio[index].Play();
+            }
+            else
+            {
+                playerAudio[index].PlayOneShot(clip);
+            }
+
         }
     }
 

@@ -132,9 +132,9 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(movementVector * Time.deltaTime);
 
         // start and stop running sound effect
-        if (movementVector != Vector3.zero)
+        if (movementVector != Vector3.zero && isOnGround())
             audio.PlaySound(audio.playerRunning, 1, true);
-        else
+        else if (isOnGround())
             audio.StopPlaying(1);
 
         //Debug.Log("Movement Vector: " + movementVector);
@@ -234,7 +234,7 @@ public class PlayerMovement : MonoBehaviour
         if (!landed)
         {
             Debug.Log("Player hit something");
-            audio.PlaySound(audio.playerLanding);
+            audio.PlaySound(audio.playerLanding, 0.5f);
             landed = true;
         }
     }
