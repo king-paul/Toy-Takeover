@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BeamOrigin_Material
+  m_Name: WaterDroplets_Material
   m_Shader: {fileID: -6465566751694194690, guid: b0b774b301c842c458be6430bde7dd9e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -29,11 +29,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_8BBECD0C: 25
-    - Vector1_B8DDBAC5: 0.111
-    - Vector1_E884F5CE: 0.089
+    - Vector1_B8DDBAC5: 0.416
+    - Vector1_E884F5CE: 0
     - Vector1_F9142D61: 2
     m_Colors:
-    - Color_3588327A: {r: 766.9961, g: 184.72157, b: 598.3373, a: 1}
-    - Vector2_1FBBD737: {r: -0.41, g: -1, b: 1, a: 0}
+    - Color_3588327A: {r: 1.6297609, g: 2.7640746, b: 2.7640746, a: 0.63529414}
+    - Vector2_1FBBD737: {r: -0.2, g: 0, b: 1, a: 0}
     - Vector2_81A09981: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
