@@ -19,7 +19,7 @@ public class PatrolEnemyAI : MonoBehaviour
     bool includeSpawnpoint = true; 
 
     // adjustable variables
-    [Header("Enemy Visioflyinn")]
+    [Header("Enemy Vision")]
     [SerializeField]
     bool useVisionCone = true;
     [SerializeField][Range(1, 200)]

@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
     // handles keyboard input from the user
     void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Cancel"))
         {
             if (state == GameState.Running)
             {                

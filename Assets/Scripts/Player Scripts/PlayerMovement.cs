@@ -101,11 +101,11 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateFaceDirection()
     {
-        rotateY += Input.GetAxis("Mouse X") * horizontalRotationSpeed;
+        rotateY += Input.GetAxis("Camera Horizontal") * horizontalRotationSpeed;
 
-        if(Input.GetAxis("Mouse Y") > 0 && rotateX > -verticalRotationLimit ||
-           Input.GetAxis("Mouse Y") < 0 && rotateX < verticalRotationLimit)
-            rotateX += -Input.GetAxis("Mouse Y") * verticalRotationSpeed;       
+        if(Input.GetAxis("Camera Vertical") > 0 && rotateX > -verticalRotationLimit ||
+           Input.GetAxis("Camera Vertical") < 0 && rotateX < verticalRotationLimit)
+            rotateX += -Input.GetAxis("Camera Vertical") * verticalRotationSpeed;       
 
         // rotate player
         transform.rotation = Quaternion.Euler(0, rotateY, 0);
@@ -142,8 +142,8 @@ public class PlayerMovement : MonoBehaviour
             audio.StopPlaying(1);
         }
 
-        // get input from player
-        if (Input.GetMouseButton(1))
+        // get jetpack input from player
+        if (Input.GetButton("Jetpack") || Input.GetAxis("Jetpack") != 0)
         {
             // if there is jetpack fuel left, use the jetpack
             if (player.Fuel > 0f)
@@ -168,8 +168,9 @@ public class PlayerMovement : MonoBehaviour
             audio.PlaySound(audio.playerJump);
         }
 
-        // Release the jetpack when player releases the hump button
-        if ((Input.GetButtonUp("Jump") || Input.GetMouseButtonUp(1)) && usingJetpack)
+        // Release the jetpack when player releases the jump button
+        if ((Input.GetButtonUp("Jump") || Input.GetButtonUp("Jetpack") || Input.GetAxis("Jetpack") == 0) 
+            && usingJetpack)
         {
             verticalVelocity = -weight;
         }

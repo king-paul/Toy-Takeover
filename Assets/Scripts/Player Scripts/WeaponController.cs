@@ -60,7 +60,7 @@ public class WeaponController : MonoBehaviour
             ProjectileWeapon weapon = (ProjectileWeapon)weaponObject;
 
             // handle single shot weapon
-            if (!weapon.rapidFire && Input.GetButtonDown("Fire1") && Time.time > nextFire)
+            if (!weapon.rapidFire && FirePressed() && Time.time > nextFire)
             {
                 nextFire = Time.time + weapon.shotDelayTime;
 
@@ -75,7 +75,7 @@ public class WeaponController : MonoBehaviour
             }
 
             // handle machine gun weapon
-            else if (weapon.rapidFire && Input.GetButton("Fire1") && Time.time > nextFire)
+            else if (weapon.rapidFire && FirePressed() && Time.time > nextFire)
             {
                 nextFire = Time.time + weapon.shotDelayTime;
 
@@ -96,7 +96,7 @@ public class WeaponController : MonoBehaviour
         {
             LaserWeapon weapon = (LaserWeapon) weaponObject;
 
-            if (Input.GetButton("Fire1") && curAmmo > 0)
+            if (FirePressed() && curAmmo > 0)
             {
                 FireRaycast();
 
@@ -152,5 +152,13 @@ public class WeaponController : MonoBehaviour
                     weaponObject.damagePerHit + " damage");*/
             }
         }
+    }
+
+    private bool FirePressed()
+    {
+        if (Input.GetButton("Fire") || Input.GetAxis("Fire") != 0)
+            return true;
+
+        return false;
     }
 }
