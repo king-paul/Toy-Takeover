@@ -89,36 +89,39 @@ public class PlayerController : MonoBehaviour
             game.Die();
         }
 
-        GetInput();
+        UpdateSwitchWeapons();
     }
 
-    private void GetInput()
+    private void UpdateSwitchWeapons()
     {
         // get mouse scroll from player
         if (Input.mouseScrollDelta.y != 0)
         {
-            prevWeaponNum = weaponNum;
+            //prevWeaponNum = weaponNum;
 
             if (Input.mouseScrollDelta.y == -1)
-                weaponNum++;
+                SwitchWeapons(weaponNum + 1);
 
             if (Input.mouseScrollDelta.y == 1)
-                weaponNum++;
-
-            SwitchWeapons();
+                SwitchWeapons(weaponNum - 1);
         }
         else if (Input.GetButtonDown("NextWeapon")) // right bumper
         {
-            prevWeaponNum = weaponNum;
-            weaponNum++;
-            SwitchWeapons();
+            SwitchWeapons(weaponNum + 1);
         }
         else if (Input.GetButtonDown("PrevWeapon")) // left bumper
         {
-            prevWeaponNum = weaponNum;
-            weaponNum--;
-            SwitchWeapons();
+            SwitchWeapons(weaponNum - 1);
         }
+
+        // number keys
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            SwitchWeapons(0);
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            SwitchWeapons(1);
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            SwitchWeapons(2);
+
     }
 
     private void FixedUpdate()
@@ -268,8 +271,11 @@ public class PlayerController : MonoBehaviour
     #endregion    
 
     #region private functions
-    private void SwitchWeapons()
+    private void SwitchWeapons(int number)
     {
+        prevWeaponNum = weaponNum;
+        weaponNum = number;
+
         if (weaponNum < 0)
             weaponNum = weapons.Length - 1;
 
