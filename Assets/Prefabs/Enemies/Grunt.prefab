@@ -887,10 +887,10 @@ MonoBehaviour:
   canUseRamps: 1
   preventDuplicates: 1
   includeSpawnpoint: 1
-  useVisionCone: 0
+  useVisionCone: 1
   viewDistance: 25
   viewAngle: 45
-  followWhenInRange: 0
+  followWhenInRange: 1
   minDistanceFromPlayer: 10
   nextWaypoint: {fileID: 0}
   patrolRoute: []
