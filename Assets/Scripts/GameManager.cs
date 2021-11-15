@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 public enum GameState { Init, Running, Paused, Win, Loss};
 
 [RequireComponent(typeof(AudioSource))]
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
     [Tooltip("Waypoints above the ground which enemis that can use ramps travel to")]
     public Transform[] platformWaypoints;
     [Tooltip("Waypoints that flying enemies can move between")]
-    public Transform[] skyWaypoints;
+    public Transform[] skyWaypoints;    
 
     GameState state;
     GUIController gui;
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour
     private int enemiesLeft = 0;
     private int enemiesSpawned = 0;
     private int enemiesInScene = 0;
+    private bool highlightQuitButton;
 
     // public properties and functions
     public GameState State { get => state; set => state = value; }
@@ -103,31 +106,34 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleInput();
+
+        //HandleInput();
         if(spawnEnemies && waveNumber <= waves.Length && state == GameState.Running)
             UpdateEnemySpawns();
+
+        if (Input.GetButtonDown("Cancel"))        
+            TogglePause();
+        
     }
 
-    // handles keyboard input from the user
-    void HandleInput()
-    {
-        if (Input.GetButtonDown("Cancel"))
-        {
-            if (state == GameState.Running)
-            {                
-                Time.timeScale = 0;
-                Cursor.lockState = CursorLockMode.None;
-                state = GameState.Paused;
-            }
-            else if (state == GameState.Paused)
-            {
-                Time.timeScale = 1;
-                Cursor.lockState = CursorLockMode.Locked;
-                state = GameState.Running;
-            }
 
-            gui.TogglePauseMenu();
+    public void TogglePause()
+    {
+        if (state == GameState.Running)
+        {
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            state = GameState.Paused;
         }
+        else if (state == GameState.Paused)
+        {
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+            state = GameState.Running;
+        }
+
+        gui.TogglePauseMenu();
+        
     }
 
     // Checks enemy wave data for new enemmis to be spawned at time the current time interval

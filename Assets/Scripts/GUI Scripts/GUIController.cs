@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class GUIController : MonoBehaviour
 {
     // GUI
     [Header("Heads Up Display")]
-
     public GameObject healthBar;
     public RectTransform fuelBar;
     public RectTransform armourBar;
@@ -22,6 +22,7 @@ public class GUIController : MonoBehaviour
 
     [Header("Game State information")]
     public GameObject pauseMenu;
+    public GameObject quitButton;
     public GameObject gameOverText;
     public GameObject winText;
     public GameObject backButton;
@@ -31,7 +32,7 @@ public class GUIController : MonoBehaviour
     public float pickupMessageTime = 0.5f;
 
     GameManager game;
-    PlayerController player;
+    PlayerController player;    
 
     // gui variables
     //private float barWidth;
@@ -69,8 +70,11 @@ public class GUIController : MonoBehaviour
     }
 
     public void TogglePauseMenu()
-    {
+    {        
         pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
+
+        if (pauseMenu.activeInHierarchy)
+            StartCoroutine(HighlighQuitButton());
     }
     public void ShowGameOver()
     {
@@ -140,6 +144,12 @@ public class GUIController : MonoBehaviour
 
         yield return new WaitForSeconds(pickupMessageTime);
         pickupText.gameObject.SetActive(false);
+    }
+
+    IEnumerator HighlighQuitButton()
+    {
+        yield return new WaitForSeconds(0.1f);
+        EventSystem.current.SetSelectedGameObject(quitButton);
     }
 
 }
