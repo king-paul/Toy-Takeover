@@ -29221,10 +29221,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 978919644}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
-      propertyPath: enemies.Array.data[0]
-      value: 
-      objectReference: {fileID: 8922432861276067955, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
-    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: enemies.Array.data[1]
       value: 
       objectReference: {fileID: 1782209278137205567, guid: be9859c2f32864c469c5ef905c622054, type: 3}
@@ -29508,6 +29504,10 @@ PrefabInstance:
       propertyPath: platformWaypoints.Array.data[25]
       value: 
       objectReference: {fileID: 503604133}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 8922432861276067955, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
 --- !u!1 &1513658133 stripped
