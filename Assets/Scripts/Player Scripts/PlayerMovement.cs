@@ -64,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool onGround;
     private bool usingJetpack;
+    private bool landed;
     private Transform grounded;
 
     // Start is called before the first frame update
@@ -128,7 +129,15 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("Horizontal Input: " + Input.GetAxis("Horizontal"));
         //Debug.Log("Vertical Input: " + Input.GetAxis("Horizontal"));        
 
-        controller.Move(movementVector * Time.deltaTime);      
+        controller.Move(movementVector * Time.deltaTime);
+
+        // start and stop running sound effect
+        if (movementVector != Vector3.zero)
+            audio.PlaySound(audio.playerRunning, 1, true);
+        else
+            audio.StopPlaying(1);
+
+        //Debug.Log("Movement Vector: " + movementVector);
     }
 
     void UpdateVerticalPosition()
@@ -160,12 +169,20 @@ public class PlayerMovement : MonoBehaviour
                 verticalVelocity = jumpPower;
                 audio.PlaySound(audio.playerJump);
             }
+            else
+            {
+                audio.PlaySound(audio.jetpackRunout);
+            }
+
+            landed = false;
         }
 
         if(Input.GetButton("Jump") && isOnGround()) // space bar makes player jump
         {
             verticalVelocity = jumpPower;
             audio.PlaySound(audio.playerJump);
+
+            landed = false;
         }
 
         // Release the jetpack when player releases the jump button
@@ -208,6 +225,18 @@ public class PlayerMovement : MonoBehaviour
 
         //Debug.Log("Player is off ground");
         return false;
+    }
+
+    // detect collision with ground and walls
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        // play land sound effect when player lands on ground
+        if (!landed)
+        {
+            Debug.Log("Player hit something");
+            audio.PlaySound(audio.playerLanding);
+            landed = true;
+        }
     }
 
 }

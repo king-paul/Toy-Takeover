@@ -496,7 +496,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRunning: {fileID: 0}
-  playerJump: {fileID: 0}
+  playerJump: {fileID: 8300000, guid: 8f5d54b6737656140ac1fe02d29c4424, type: 3}
   playerLanding: {fileID: 8300000, guid: ff1d27936300d5b448fed672fad17858, type: 3}
   jetpackThrust: {fileID: 8300000, guid: fce8d6e59c3447d40bc80093fe2fe53d, type: 3}
   jetpackRunout: {fileID: 8300000, guid: ec6cabb1649292144b67618a2fd1adae, type: 3}
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras:
-  - {fileID: 2877861587607672230}
+  - {fileID: 0}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2

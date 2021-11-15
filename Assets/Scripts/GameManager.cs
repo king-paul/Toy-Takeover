@@ -106,14 +106,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //HandleInput();
         if(spawnEnemies && waveNumber <= waves.Length && state == GameState.Running)
             UpdateEnemySpawns();
 
         if (Input.GetButtonDown("Cancel"))        
-            TogglePause();
-        
+            TogglePause();        
     }
 
 
@@ -183,9 +181,11 @@ public class GameManager : MonoBehaviour
         enemiesSpawned = 0;        
         previousElapsedTime = Time.time;
 
+        // WIN GAME CONDITION
         if (waveNumber > waves.Length)
         {
-            gui.ShowLevelComplete();            
+            gui.ShowLevelComplete();
+            playerAudio.PlaySound(playerAudio.levelComplete);
             state = GameState.Win;
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
