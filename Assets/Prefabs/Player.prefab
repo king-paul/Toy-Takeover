@@ -659,14 +659,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRunning: {fileID: 0}
-  playerLanding: {fileID: 0}
+  playerJump: {fileID: 0}
+  playerLanding: {fileID: 8300000, guid: ff1d27936300d5b448fed672fad17858, type: 3}
   jetpackThrust: {fileID: 8300000, guid: fce8d6e59c3447d40bc80093fe2fe53d, type: 3}
-  jetpackRunout: {fileID: 0}
+  jetpackRunout: {fileID: 8300000, guid: ec6cabb1649292144b67618a2fd1adae, type: 3}
   healthDamage: {fileID: 8300000, guid: d257a65b7f4a2d448a01ed4328aa0917, type: 3}
   armourDamage: {fileID: 8300000, guid: 728232f892264dd45a9d353f57b37082, type: 3}
   gameOver: {fileID: 8300000, guid: 71372077246136142a4e7561dec43ea5, type: 3}
-  waveEnd: {fileID: 0}
-  levelComplete: {fileID: 0}
+  waveEnd: {fileID: 8300000, guid: 398c4b7958a731d4ebad5d7bdc5114db, type: 3}
+  levelComplete: {fileID: 8300000, guid: bf8032844bb2c1645ac812511ce942bc, type: 3}
 --- !u!95 &7054755859581980805
 Animator:
   serializedVersion: 3

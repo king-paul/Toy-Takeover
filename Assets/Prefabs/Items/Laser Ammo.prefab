@@ -115,8 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statChanged: 5
   increaseAmount: 50
-  pickupSound: {fileID: 8300000, guid: 0dba3cf5e9e869e43946b0fe177e5757, type: 3}
-  alreadyFullSound: {fileID: 8300000, guid: eea34e67123a53947b7ac27776f93af1, type: 3}
+  pickupSound: {fileID: 8300000, guid: f0f1fee15039de744a09b44ba95754df, type: 3}
+  alreadyFullSound: {fileID: 8300000, guid: d2b83e655456ab942b6c9d4d52185905, type: 3}
   pickupMessage: Laser Ammo
   alreadyFullMassage: Laser Ammo is Full
   collectAtFullCapacity: 0
