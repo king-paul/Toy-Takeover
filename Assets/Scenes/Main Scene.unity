@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.345
@@ -411,6 +427,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (5)
@@ -473,6 +505,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6060038844819618927, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
       propertyPath: m_Name
       value: Armour (2)
@@ -1051,6 +1099,14 @@ PrefabInstance:
       propertyPath: startingAngle
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 8537989895921377964, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: horizontalRotationSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8537989895921377964, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: verticalRotationSpeed
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9178569588800674695, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1570,6 +1626,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -90.18
@@ -1632,6 +1704,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo (6)
@@ -1909,6 +1997,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup
@@ -2150,6 +2254,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo
@@ -2538,6 +2658,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -2959,6 +3095,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -3439,6 +3591,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo
@@ -3496,6 +3664,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo (5)
@@ -3727,6 +3911,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup
@@ -4527,6 +4727,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack Fuel (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
 --- !u!4 &193205973 stripped
@@ -4865,6 +5081,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -5590,6 +5822,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6060038844819618927, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
       propertyPath: m_Name
       value: Armour
@@ -5931,6 +6179,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo
@@ -6035,6 +6299,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -9558,6 +9838,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (7)
@@ -9885,6 +10181,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo
@@ -11885,6 +12197,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -71.603
@@ -12579,6 +12907,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.44
@@ -13926,6 +14270,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo (2)
@@ -14201,6 +14561,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack Fuel (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
 --- !u!4 &758895666 stripped
@@ -14449,6 +14825,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (8)
@@ -14726,6 +15118,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup
@@ -15842,6 +16250,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (3)
@@ -16815,6 +17239,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo (1)
@@ -16947,6 +17387,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo
@@ -17213,6 +17669,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo (2)
@@ -17275,6 +17747,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo (4)
@@ -17709,6 +18197,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (9)
@@ -18402,6 +18906,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack Fuel (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
 --- !u!4 &983426323 stripped
@@ -18982,6 +19502,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (4)
@@ -19860,6 +20396,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack Fuel
       objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
 --- !u!1001 &1062555875
@@ -20066,6 +20618,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo (7)
@@ -20208,6 +20776,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo (4)
@@ -21459,6 +22043,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo
@@ -21563,6 +22163,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -22251,6 +22867,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6060038844819618927, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
       propertyPath: m_Name
       value: Armour (1)
@@ -22783,6 +23415,22 @@ PrefabInstance:
     - target: {fileID: -1594934366450921667, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
       propertyPath: m_Range
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6060038844819618927, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
       propertyPath: m_Name
@@ -23439,6 +24087,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup
@@ -24941,6 +25605,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo (1)
@@ -25335,6 +26015,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -26095,6 +26791,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup
@@ -27442,6 +28154,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup
@@ -28702,6 +29430,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack Fuel (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
 --- !u!1001 &1523962571
@@ -28824,6 +29568,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -29361,6 +30121,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo
@@ -31286,6 +32062,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo (5)
@@ -31395,6 +32187,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -31652,6 +32460,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.73
@@ -32917,6 +33741,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo (3)
@@ -34538,6 +35378,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -95.72
@@ -34595,6 +35451,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -123.01
@@ -34657,6 +35529,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.345
@@ -34837,6 +35725,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jetpack Fuel (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
 --- !u!4 &1863117785 stripped
@@ -35016,6 +35920,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo
@@ -35313,6 +36233,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (6)
@@ -37495,6 +38431,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590482575684270809, guid: d31777ac0697b71428977e3f360957f6, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8307583335537162131, guid: d31777ac0697b71428977e3f360957f6, type: 3}
       propertyPath: m_Name
       value: Crossbow Ammo (6)
@@ -37622,6 +38574,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (1)
@@ -38045,6 +39013,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.7
@@ -38197,6 +39181,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422655097539354662, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3494049469379154786, guid: 222ebe98635c4244a895f887c088b0dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.04
@@ -38852,6 +39852,22 @@ PrefabInstance:
     - target: {fileID: 3554588997601417503, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
       propertyPath: m_Name
       value: Jetpack Fuel (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784474305328309651, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7b9dd7ce3b3dbd4385218bce4993997, type: 3}
@@ -39894,6 +40910,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 64116916013358864, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400206034586899672, guid: fc8db8f9e2d3e9d4d8a1c065d95b2795, type: 3}
       propertyPath: m_Name
       value: Water Gun Ammo (3)
@@ -41490,6 +42522,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2726864430542880706, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6060038844819618927, guid: a2cd61018414a5f43acf8941c126598b, type: 3}
       propertyPath: m_Name
       value: Armour
@@ -41981,6 +43029,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5715755083429499887}
     m_Modifications:
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867551477734533901, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5906686336828864227, guid: ea789c1406c3b1e4d93a451f91508a52, type: 3}
       propertyPath: m_Name
       value: Health Pickup (2)
