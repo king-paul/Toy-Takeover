@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HealthEffect_Material
+  m_Name: ArmourEffect_Material
   m_Shader: {fileID: -6465566751694194690, guid: b0b774b301c842c458be6430bde7dd9e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
     - Vector1_E884F5CE: 0.099
     - Vector1_F9142D61: 2
     m_Colors:
-    - Color_3588327A: {r: 55.215687, g: 191.74902, b: 46.180393, a: 1}
+    - Color_3588327A: {r: 22.086275, g: 148.5804, b: 256, a: 1}
     - Vector2_1FBBD737: {r: -0.41, g: -1, b: 1, a: 0}
     - Vector2_81A09981: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
