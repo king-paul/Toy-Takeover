@@ -251,6 +251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_WaterGunAmmoPickup_ParticleSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 5120098939168720087, guid: dda3caedd59cb8549adfece5e43792d9, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.y
+      value: 1.165485
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dda3caedd59cb8549adfece5e43792d9, type: 3}
 --- !u!4 &2554805489165343688 stripped
