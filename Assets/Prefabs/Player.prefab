@@ -694,8 +694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRunning: {fileID: 8300000, guid: c2a36a49422a8f54ea738f089e10ff79, type: 3}
-  playerJump: {fileID: 8300000, guid: 8f5d54b6737656140ac1fe02d29c4424, type: 3}
-  playerLanding: {fileID: 0}
+  playerJump: {fileID: 8300000, guid: 102cda4990dd4c74f86ab574d78f87d9, type: 3}
+  playerLanding: {fileID: 8300000, guid: 55793e0d04155a442a9effb871e018f8, type: 3}
   jetpackThrust: {fileID: 8300000, guid: fce8d6e59c3447d40bc80093fe2fe53d, type: 3}
   jetpackRunout: {fileID: 0}
   healthDamage: {fileID: 8300000, guid: d257a65b7f4a2d448a01ed4328aa0917, type: 3}
