@@ -54,7 +54,7 @@ MonoBehaviour:
   firingPoint: {fileID: 0}
   laser: {fileID: 0}
   fireSounds:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 1072057c08b80dc48897edf990a233be, type: 3}
 --- !u!1 &4128958887757171758
 GameObject:
   m_ObjectHideFlags: 0
