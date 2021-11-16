@@ -151,6 +151,8 @@ public class PlayerController : MonoBehaviour
         {
             collidingWithEnemy = true;
             enemy = hit.gameObject.GetComponent<EnemyController>();
+
+            TakeDamage(enemy.collisionDamage);
         }
 
         // send player to spawnpoint when they collide with floor

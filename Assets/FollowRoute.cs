@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 public class FollowRoute : MonoBehaviour
 {
     [Range(0, 12)]

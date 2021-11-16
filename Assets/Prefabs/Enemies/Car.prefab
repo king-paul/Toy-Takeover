@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 1120207605}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -595,7 +595,7 @@ MonoBehaviour:
   damageParticles: {fileID: 0}
   deathParticles: {fileID: 0}
   maxHealth: 30
-  collisionDamage: 1
+  collisionDamage: 10
   framesPerDamage: 5
   flyingEnemy: 0
 --- !u!114 &-7489867347767036787
@@ -623,6 +623,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSounds:
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
   - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
   damageSounds:
   - {fileID: 8300000, guid: 1539dec00abbd654a90d09f88f12378c, type: 3}
