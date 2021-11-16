@@ -167,7 +167,7 @@ public class PlayerMovement : MonoBehaviour
             else if (isOnGround())// otherwise jump if on ground
             {
                 verticalVelocity = jumpPower;
-                audio.PlaySound(audio.playerJump);
+                audio.PlaySound(audio.playerJump, 0.5f);
             }
             else
             {
@@ -180,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButton("Jump") && isOnGround()) // space bar makes player jump
         {
             verticalVelocity = jumpPower;
-            audio.PlaySound(audio.playerJump);
+            audio.PlaySound(audio.playerJump, 0.5f);
 
             landed = false;
         }
