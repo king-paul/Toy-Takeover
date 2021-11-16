@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd96c08819017340b44ef72a99626c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRunning: {fileID: 0}
+  playerRunning: {fileID: 8300000, guid: 833616ef505667743823f529ae3540e5, type: 3}
   playerJump: {fileID: 0}
   playerLanding: {fileID: 0}
   jetpackThrust: {fileID: 8300000, guid: fce8d6e59c3447d40bc80093fe2fe53d, type: 3}
