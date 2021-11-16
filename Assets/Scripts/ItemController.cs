@@ -7,6 +7,7 @@ public enum PlayerStats { Health, JetpackFuel, Armour, CrossBowAmmo, WaterGunAmm
 
 public class ItemController : MonoBehaviour
 {
+    // public variables
     public PlayerStats statChanged;
     public float increaseAmount;
     public AudioClip pickupSound;
@@ -14,6 +15,8 @@ public class ItemController : MonoBehaviour
     public string pickupMessage;
     public string alreadyFullMassage;
     public bool collectAtFullCapacity = false;
+    [Range(-1, 2)]
+    public int particleIndex = -1;
 
     private GUIController gui;
     private PlayerController player;
@@ -34,6 +37,11 @@ public class ItemController : MonoBehaviour
             {                
                 gui.ShowPickupMessage(pickupMessage);
                 audio.PlaySound(pickupSound);
+
+                // play particle system upon collecting
+                if(particleIndex != -1)
+                    player.PlayParticles(particleIndex);
+
                 Destroy(this.gameObject);
             }
             else

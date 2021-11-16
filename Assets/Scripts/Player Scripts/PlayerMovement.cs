@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerController player;
     private PlayerSound audio;
     private GameManager game;
+    private ParticleSystem jetpackEmission;
     private float moveSpeed;
 
     Vector3 forwardVector, sidewaysVector;
@@ -70,11 +71,12 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get the PlayerController and GameManger scripts
+        // Get componenets attached to the game object
         player = GetComponent<PlayerController>();
         audio = GetComponent<PlayerSound>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         grounded = transform.Find("Grounded");
+        jetpackEmission = transform.Find("ParticleSystems").GetChild(2).GetComponent<ParticleSystem>();
 
         // Initialize Rigid body and camera variables
         rigidBody = GetComponent<Rigidbody>();
@@ -162,8 +164,10 @@ public class PlayerMovement : MonoBehaviour
                 verticalVelocity = lift;
                 usingJetpack = true;
 
-                // play jetpack sound
+                // play jetpack sound and particle system
                 audio.PlaySound(audio.jetpackThrust, 1, true);
+                if(!jetpackEmission.isPlaying)
+                    jetpackEmission.Play();
             }
             else if (isOnGround())// otherwise jump if on ground
             {
@@ -233,11 +237,12 @@ public class PlayerMovement : MonoBehaviour
     // detect collision with ground and walls
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        // play land sound effect when player lands on ground
-        if (!landed)
+        // check if player hit the grond
+        if (!landed && isOnGround())
         {
             //Debug.Log("Player hit something");
             audio.PlaySound(audio.playerLanding, 0.5f);
+            jetpackEmission.Stop();
             landed = true;
         }
     }
