@@ -30,7 +30,7 @@ public class FollowRoute : MonoBehaviour
             else
                 checkpoint = 0;
 
-            Debug.Log("Driving towards: " + game.roadCheckpoints[checkpoint]);
+            //Debug.Log("Driving towards: " + game.roadCheckpoints[checkpoint]);
             agent.SetDestination(game.roadCheckpoints[checkpoint].position);
         }
 
