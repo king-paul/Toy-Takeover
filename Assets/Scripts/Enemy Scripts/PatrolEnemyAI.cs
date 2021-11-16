@@ -118,15 +118,15 @@ public class PatrolEnemyAI : MonoBehaviour
         int maxRange, chosenNumber;
         bool alreadyInRoute;
 
-        if (flyingEnemy)
-            maxRange = game.skyWaypoints.Length;
-        else
-            {
+        //if (flyingEnemy)
+            //maxRange = game.skyWaypoints.Length;
+        //else
+            //{
             if (canUseRamps)
                 maxRange = game.groundWaypoints.Length + game.platformWaypoints.Length;
             else
                 maxRange = game.groundWaypoints.Length;
-        }
+        //}
 
         // selects random waypoints until the route is full
         while (totalWaypoints < waypointsInRoute && totalWaypoints < maxRange)
@@ -136,15 +136,15 @@ public class PatrolEnemyAI : MonoBehaviour
                 chosenNumber = Random.Range(0, maxRange);
                 //Debug.Log("Chosen Number: " + chosenNumber + " of " + maxRange);
 
-                if (flyingEnemy)
-                {
-                    alreadyInRoute = AlreadyInRoute(game.skyWaypoints[chosenNumber]);
+                //if (flyingEnemy)
+                //{
+                //    /alreadyInRoute = AlreadyInRoute(game.skyWaypoints[chosenNumber]);
 
-                    if (!preventDuplicates || !alreadyInRoute)
-                        patrolRoute.Add(game.skyWaypoints[chosenNumber]);
-                }
-                else
-                {
+                //    if (!preventDuplicates || !alreadyInRoute)
+                //        patrolRoute.Add(game.skyWaypoints[chosenNumber]);
+                //}
+                //else
+                //{
                     // if the number is greater than a certain value select from the platform waypoints
                     if (canUseRamps && chosenNumber > game.groundWaypoints.Length - 1)
                     {
@@ -169,7 +169,7 @@ public class PatrolEnemyAI : MonoBehaviour
                         if (!preventDuplicates || !alreadyInRoute)
                             patrolRoute.Add(game.groundWaypoints[chosenNumber]);
                     }
-                }
+                //}
 
             } while (preventDuplicates && alreadyInRoute);
 
