@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3554588997601417490}
   - component: {fileID: 1696386087307536471}
   - component: {fileID: 7023137981675742298}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Jetpack Fuel
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4543209575101908627}
   - component: {fileID: 622449599521835318}
   - component: {fileID: 3406856385391345148}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pickup_Fuel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,6 +273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_JetpackFuelPickup_ParticleSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 1526008779503363446, guid: f7a9ff871a9e85b4cb63d07ed4189bff, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2863778555754510867, guid: f7a9ff871a9e85b4cb63d07ed4189bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -288,6 +292,10 @@ PrefabInstance:
     - target: {fileID: 2863778555754510867, guid: f7a9ff871a9e85b4cb63d07ed4189bff, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500411729935300858, guid: f7a9ff871a9e85b4cb63d07ed4189bff, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6644486187119663029, guid: f7a9ff871a9e85b4cb63d07ed4189bff, type: 3}
       propertyPath: m_LocalPosition.x

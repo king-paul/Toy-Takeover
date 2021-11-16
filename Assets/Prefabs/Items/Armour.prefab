@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5699702565535817146}
   - component: {fileID: 8980764538524184259}
   - component: {fileID: -1594934366450921667}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Armour
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -202,6 +202,10 @@ PrefabInstance:
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5407229119671468262, guid: c73d3040c65945844b88b7f216613789, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7524966133160691315, guid: c73d3040c65945844b88b7f216613789, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -265,6 +269,10 @@ PrefabInstance:
     - target: {fileID: 8881827525581346142, guid: c73d3040c65945844b88b7f216613789, type: 3}
       propertyPath: m_Name
       value: VFX_ArmourPickup_ParticleSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881827525581346142, guid: c73d3040c65945844b88b7f216613789, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73d3040c65945844b88b7f216613789, type: 3}

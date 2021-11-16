@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7753721013106527346}
   - component: {fileID: 6300348361250108437}
   - component: {fileID: 4011414797348747045}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Water Gun Ammo
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,6 +231,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1602717248502920835, guid: dda3caedd59cb8549adfece5e43792d9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3647830240838579171, guid: dda3caedd59cb8549adfece5e43792d9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -250,6 +254,10 @@ PrefabInstance:
     - target: {fileID: 4376381151709589957, guid: dda3caedd59cb8549adfece5e43792d9, type: 3}
       propertyPath: m_Name
       value: VFX_WaterGunAmmoPickup_ParticleSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4376381151709589957, guid: dda3caedd59cb8549adfece5e43792d9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5120098939168720087, guid: dda3caedd59cb8549adfece5e43792d9, type: 3}
       propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.y
