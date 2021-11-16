@@ -155,10 +155,10 @@ public class PlayerController : MonoBehaviour
             hit.gameObject.CompareTag("KillZone"))
         {
             if (!hitFloor)
-            {
-                currentHealth -= fallOffDamage;
+            {                
+                TakeDamage(fallOffDamage);
                 hitFloor = true;
-                animator.SetTrigger("PlayerTakesDamage");
+                animator.SetTrigger("PlayerTakesDamage");                
 
                 Invoke("ResetHit", 0.5f); // prevents more than one collision
 

@@ -131,29 +131,30 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(movementVector * Time.deltaTime);
 
+
         // start and stop running sound effect
         if (movementVector != Vector3.zero && isOnGround())
-            audio.PlaySound(audio.playerRunning, 1, true);
-        else if (isOnGround())
+            audio.PlaySound(audio.playerRunning, 1, true);        
+        else if (movementVector == Vector3.zero && isOnGround())
             audio.StopPlaying(1);
+            
 
         //Debug.Log("Movement Vector: " + movementVector);
     }
 
     void UpdateVerticalPosition()
     {
-        if (isOnGround() || player.Fuel <= 0)
+        if (usingJetpack & (isOnGround() || player.Fuel <= 0))
         {
-            usingJetpack = false;
-            //Debug.Log("Jetpack is off");
-
             // stop jetpack sound
             audio.StopPlaying(1);
+            usingJetpack = false;
+            //Debug.Log("Jetpack is off");
         }
 
         // get jetpack input from player
         if (Input.GetButton("Jetpack") || Input.GetAxis("Jetpack") != 0)
-        {
+        {            
             // if there is jetpack fuel left, use the jetpack
             if (player.Fuel > 0f)
             {
@@ -167,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
             else if (isOnGround())// otherwise jump if on ground
             {
                 verticalVelocity = jumpPower;
+                audio.StopPlaying(1); // stop playing footsteps sound
                 audio.PlaySound(audio.playerJump, 0.5f);
             }
             else
@@ -180,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButton("Jump") && isOnGround()) // space bar makes player jump
         {
             verticalVelocity = jumpPower;
+            audio.StopPlaying(1); // stop playing footsteps sound
             audio.PlaySound(audio.playerJump, 0.5f);
 
             landed = false;
@@ -233,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
         // play land sound effect when player lands on ground
         if (!landed)
         {
-            Debug.Log("Player hit something");
+            //Debug.Log("Player hit something");
             audio.PlaySound(audio.playerLanding, 0.5f);
             landed = true;
         }

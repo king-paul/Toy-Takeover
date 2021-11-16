@@ -45,8 +45,8 @@ public class PlayerSound : MonoBehaviour
 
     public void PlaySound(AudioClip clip, int index, bool loop)
     {
-        Debug.Log("index: " + index);
-        Debug.Log("Sound playing: " + playerAudio[index].isPlaying);
+        //Debug.Log("index: " + index);
+        //Debug.Log("Sound playing: " + playerAudio[index].isPlaying);
 
         if (clip != null && index > 0 && index <= 2 &&
             (!playerAudio[index].isPlaying || playerAudio[index].clip != clip))
@@ -67,9 +67,12 @@ public class PlayerSound : MonoBehaviour
     }
 
     // stops specified audio source if it is playing something
-    public void StopPlaying(int index) { 
-        if(playerAudio[index].isPlaying)
-            playerAudio[index].Stop(); 
+    public void StopPlaying(int index) {
+        if (playerAudio[index].isPlaying)
+        {
+            //Debug.Log("Stopping sound");
+            playerAudio[index].Stop();
+        }
     }
 
 }
