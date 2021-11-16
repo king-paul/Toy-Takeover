@@ -11355,7 +11355,7 @@ GameObject:
   - component: {fileID: 582741226}
   - component: {fileID: 582741225}
   m_Layer: 0
-  m_Name: MUS_bensound-theduel_01
+  m_Name: MusicPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11371,7 +11371,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ae83590fd9aa2ab4e9d5e81c7b655f5d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 80def60550827fa44925d93cdb221e3a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
