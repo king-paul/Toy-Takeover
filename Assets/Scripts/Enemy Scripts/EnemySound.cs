@@ -7,7 +7,6 @@ public class EnemySound : MonoBehaviour
 {
     private AudioSource[] enemyAudio;
 
-    public AudioClip moveSound;
     public AudioClip[] attackSounds;
     public AudioClip[] damageSounds;
     public AudioClip[] deadSounds;
@@ -48,6 +47,12 @@ public class EnemySound : MonoBehaviour
             Debug.Log("Playing Enemy Sound: " + randomSound);
             enemyAudio[0].PlayOneShot(randomSound);
         }
+    }
+
+    public void PlayMoveSound()
+    {
+        if(enemyAudio.Length > 1 && !enemyAudio[1].isPlaying)
+            enemyAudio[1].Play();
     }
 
     // stops specified audio source if it is playing something

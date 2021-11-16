@@ -367,6 +367,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147270417}
     m_Modifications:
+    - target: {fileID: 2142429961615529122, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
+      propertyPath: initialState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193434074301175246, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c2a36a49422a8f54ea738f089e10ff79, type: 3}
+    - target: {fileID: 6193434074301175246, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193434074301175246, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
+      propertyPath: MaxDistance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554687332863593069, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8922432861276067955, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
       propertyPath: m_Name
       value: Grunt
@@ -3259,11 +3279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7022b2a8f4b77dc40a87c427396a3d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {fileID: 443443935}
-  - {fileID: 623340229}
-  - {fileID: 133575500}
-  - {fileID: 2040743015}
 --- !u!65 &6515943240732992638
 BoxCollider:
   m_ObjectHideFlags: 0

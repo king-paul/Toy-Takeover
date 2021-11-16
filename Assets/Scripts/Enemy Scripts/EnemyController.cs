@@ -54,7 +54,6 @@ public class EnemyController : MonoBehaviour
             audio.PlaySound(audio.damageSounds);
             PlayDamageParticles();
         }
-
               
     }
 
@@ -93,9 +92,16 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
+        // play sound while enemy is moving
+        if((state == EnemyState.Patrol || state == EnemyState.Follow))
+        {
+            audio.PlayMoveSound();
+        }
+
         if (state == EnemyState.Follow)
         {
-            //if (!flyingEnemy)     
+            //if (!flyingEnemy) 
+            audio.StopPlaying(0);
             agent.isStopped = false;
             agent.destination = player.position;
         }
