@@ -154,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
 
         // get jetpack input from player
         if (Input.GetButton("Jetpack") || Input.GetAxis("Jetpack") != 0)
-        {
+        {            
             // if there is jetpack fuel left, use the jetpack
             if (player.Fuel > 0f)
             {
@@ -168,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
             else if (isOnGround())// otherwise jump if on ground
             {
                 verticalVelocity = jumpPower;
+                audio.StopPlaying(1); // stop playing footsteps sound
                 audio.PlaySound(audio.playerJump, 0.5f);
             }
             else
@@ -181,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButton("Jump") && isOnGround()) // space bar makes player jump
         {
             verticalVelocity = jumpPower;
+            audio.StopPlaying(1); // stop playing footsteps sound
             audio.PlaySound(audio.playerJump, 0.5f);
 
             landed = false;
