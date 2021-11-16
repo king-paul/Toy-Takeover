@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 7054755859581980805}
   - component: {fileID: 2043963758}
   - component: {fileID: 6403829252002052557}
+  - component: {fileID: 1071389314904616084}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -665,11 +666,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 8537989894881865668}
-  startingAngle: 90
+  startingAngle: -90
   runSpeed: 10
   jumpPower: 7
   gravity: 14
-  verticalRotationSpeed: 2
+  verticalRotationSpeed: 0.4
   horizontalRotationSpeed: 2
   verticalRotationLimit: 90
   maxFuel: 8
@@ -736,6 +737,23 @@ MonoBehaviour:
   weight: 0
   sharedProfile: {fileID: 11400000, guid: 77edce7ccc9415947bcd7ddccaf58d9f, type: 2}
 --- !u!114 &6403829252002052557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537989894274617258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: 77edce7ccc9415947bcd7ddccaf58d9f, type: 2}
+--- !u!114 &1071389314904616084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -858,7 +876,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras:
-  - {fileID: 0}
+  - {fileID: 2877861587607672230}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2

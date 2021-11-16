@@ -397,8 +397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialState: 0
-  projectileDamageParticles: {fileID: 187500115511264534}
-  laserDamageParticles: {fileID: 928215322213031308}
+  damageParticles: {fileID: 2192772104946133490, guid: 7b0d1ae9d88921640a029ca96dae5f7d, type: 3}
+  deathParticles: {fileID: 585584894909195365, guid: 3b420bcebe7b9384d883031d7dacd290, type: 3}
   maxHealth: 60
   collisionDamage: 5
   framesPerDamage: 5
@@ -1009,11 +1009,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7684311701908562733, guid: 71cae5853a0c11143884333b9b58b4ee, type: 3}
   m_PrefabInstance: {fileID: 2898412408200488736}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &928215322213031308 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2655035053679770284, guid: 71cae5853a0c11143884333b9b58b4ee, type: 3}
-  m_PrefabInstance: {fileID: 2898412408200488736}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8819999696666752369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1090,10 +1085,5 @@ PrefabInstance:
 --- !u!4 &5075377264827990125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4326184927528056092, guid: 327413bfcc38cbb4cbbf03f73647e4ca, type: 3}
-  m_PrefabInstance: {fileID: 8819999696666752369}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &187500115511264534 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8718067978911559783, guid: 327413bfcc38cbb4cbbf03f73647e4ca, type: 3}
   m_PrefabInstance: {fileID: 8819999696666752369}
   m_PrefabAsset: {fileID: 0}

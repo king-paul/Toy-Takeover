@@ -79,7 +79,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("Playing Enemy Sound: " + randomSound);
         audio.PlayOneShot(randomSound, volume);
     }
-
+    
+    // Instantiates a game object and destroys it after a specified time
+    public IEnumerator LoadAndDestroyObject(GameObject obj, Vector3 position, Quaternion rotation, float seconds)
+    {
+        var newObject = Instantiate(obj, position, rotation);
+        yield return new WaitForSeconds(seconds);
+        GameObject.Destroy(newObject);
+    }
 
     // Start is called before the first frame update
     void Awake()

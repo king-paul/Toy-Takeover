@@ -146,7 +146,6 @@ public class WeaponController : MonoBehaviour
             if (Time.time > nextFire)
             {
                 enemy.TakeDamage(weaponObject.damagePerHit);
-                enemy.PlayLaserParticles();
 
                 /*Debug.Log("The raycast has hit an enemy and dealt " + 
                     weaponObject.damagePerHit + " damage");*/
