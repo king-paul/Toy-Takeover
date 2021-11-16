@@ -37,8 +37,6 @@ public class ProjectileController : MonoBehaviour
         else if(other.gameObject.CompareTag("Enemy"))
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
-
-            enemy.PlayDamageParticles();
             enemy.TakeDamage(damage); 
         }
 

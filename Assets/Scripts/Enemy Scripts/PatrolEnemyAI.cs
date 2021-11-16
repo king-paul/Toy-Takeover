@@ -151,12 +151,20 @@ public class PatrolEnemyAI : MonoBehaviour
                         chosenNumber -= game.groundWaypoints.Length;
                         alreadyInRoute = AlreadyInRoute(game.platformWaypoints[chosenNumber]);
 
+                        // break out of loop if null is detected
+                        if (game.platformWaypoints[chosenNumber] == null)
+                            return;
+
                         if (!preventDuplicates || !alreadyInRoute)
                             patrolRoute.Add(game.platformWaypoints[chosenNumber]);
                     }
                     else // if it is less than the value select a ground waypoint
                     {
                         alreadyInRoute = AlreadyInRoute(game.groundWaypoints[chosenNumber]);
+
+                        // break out of loop if null is detected
+                        if (game.groundWaypoints[chosenNumber] == null)
+                            return;
 
                         if (!preventDuplicates || !alreadyInRoute)
                             patrolRoute.Add(game.groundWaypoints[chosenNumber]);

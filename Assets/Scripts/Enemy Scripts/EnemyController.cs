@@ -12,8 +12,8 @@ public class EnemyController : MonoBehaviour
     public EnemyState initialState;
 
     [Header("Damage Particles")]
-    public ParticleSystem projectileDamageParticles;
-    public ParticleSystem laserDamageParticles;
+    public GameObject damageParticles;
+    public GameObject deathParticles;
 
     [SerializeField]
     float maxHealth = 30;
@@ -49,8 +49,13 @@ public class EnemyController : MonoBehaviour
             state = EnemyState.Follow;
         }
 
-        if(curHealth > 0)
+        if (curHealth > 0)
+        {
             audio.PlaySound(audio.damageSounds);
+            PlayDamageParticles();
+        }
+
+              
     }
 
     private void Awake()
@@ -102,24 +107,18 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    //IEnumerator FlashColor()
-    //{
-    //    material = GetComponentInChildren<Renderer>().material;
-    //    material.color = hitColor;
-    //    yield return new WaitForSeconds(0.1f);
-    //    GetComponent<Renderer>().material.color = Color.white;
-    //}
-
     public void PlayDamageParticles()
     {
-        projectileDamageParticles.gameObject.SetActive(true);
-        projectileDamageParticles.Play();
+        // play damage particles
+        if (damageParticles != null)        
+           Instantiate(damageParticles, transform);        
     }
 
-    public void PlayLaserParticles()
+    //play death particles when the enemy dies
+    private void OnDestroy()
     {
-        laserDamageParticles.gameObject.SetActive(true);
-        laserDamageParticles.Play();
+        if (deathParticles != null)        
+            Instantiate(deathParticles, transform.position, transform.rotation);
     }
 
 }
