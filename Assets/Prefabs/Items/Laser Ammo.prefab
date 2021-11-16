@@ -63,9 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8368722655750445499, guid: f9eb01f4792dcc94ca38fdd5e3bd7fd0, type: 3}
-  - {fileID: 5561349426305759274, guid: f9eb01f4792dcc94ca38fdd5e3bd7fd0, type: 3}
-  - {fileID: 4875329586141879171, guid: f9eb01f4792dcc94ca38fdd5e3bd7fd0, type: 3}
+  - {fileID: -916221021340139282, guid: 8e686b8d439ab7a4c91818c1d0d94218, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,6 +118,7 @@ MonoBehaviour:
   pickupMessage: Laser Ammo
   alreadyFullMassage: Laser Ammo is Full
   collectAtFullCapacity: 0
+  particleIndex: -1
 --- !u!108 &7978571426246531463
 Light:
   m_ObjectHideFlags: 0
