@@ -106,6 +106,7 @@ MonoBehaviour:
   pickupMessage: Gained Health
   alreadyFullMassage: Health Already Full
   collectAtFullCapacity: 0
+  particleIndex: 0
 --- !u!65 &392924489445425748
 BoxCollider:
   m_ObjectHideFlags: 0

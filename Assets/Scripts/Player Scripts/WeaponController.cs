@@ -6,8 +6,8 @@ public class WeaponController : MonoBehaviour
 {
     #region veriable declaration
     public Weapon weaponObject;
-    public Transform firingPoint;    
-    public GameObject laser;
+    public Transform firingPoint;
+    public GameObject emissionEffect;
 
     [Header("Sound Effects")]
     public AudioClip[] fireSounds;
@@ -68,7 +68,9 @@ public class WeaponController : MonoBehaviour
                 {
                     Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
 
-                    
+                    if(emissionEffect != null)
+                        emissionEffect.SetActive(true);
+
                     playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)]);
                     curAmmo--;
                 }
@@ -84,6 +86,10 @@ public class WeaponController : MonoBehaviour
                     Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
                     AudioClip randomSound = fireSounds[Random.Range(0, fireSounds.Length - 1)];
                     //Debug.Log("Player Sound: " + randomSound.ToString());
+
+                    if(emissionEffect != null)
+                        emissionEffect.SetActive(true);
+
                     playerAudio.PlaySound(randomSound);
                     curAmmo--;
                 }
@@ -109,8 +115,8 @@ public class WeaponController : MonoBehaviour
             }
             else
             {
-                //laserLine.enabled = false;
-                laser.SetActive(false);
+                //emissionEffectLine.enabled = false;
+                emissionEffect.SetActive(false);
                 playerAudio.StopPlaying(2);
             }
         }
@@ -124,9 +130,7 @@ public class WeaponController : MonoBehaviour
 
         // Create a vector at the center of our camera's viewport
         Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
-
-        //laserLine.enabled = true;
-        laser.SetActive(true);
+        emissionEffect.SetActive(true);
 
         // Check if our raycast has hit anything and if it did handle what it hit
         if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weapon.laserRange))
@@ -160,4 +164,5 @@ public class WeaponController : MonoBehaviour
 
         return false;
     }
+
 }

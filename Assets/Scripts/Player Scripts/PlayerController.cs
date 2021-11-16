@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private EnemyController enemy;
     private Animator animator;
     private PlayerSound audio;
+    private Transform playerParticles;
 
     private int weaponNum = 0;
     private int prevWeaponNum;
@@ -79,6 +80,9 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         audio = GetComponent<PlayerSound>();
         weapons[weaponNum].SetActive(true);
+        playerParticles = transform.Find("ParticleSystems");
+
+
     }
 
     // Update is called once per frame
@@ -266,9 +270,16 @@ public class PlayerController : MonoBehaviour
     public void StopDamage()
     {
         animator.SetBool("Damage", false);
-        //Debug.Log("Stopping damage animation"); ;
+        //Debug.Log("Stopping damage animation");
     }
-    #endregion    
+
+    public void PlayParticles(int index)
+    {        
+        ParticleSystem[] particles = playerParticles.GetChild(index).GetComponentsInChildren<ParticleSystem>();
+        foreach (ParticleSystem p in particles)
+            p.Play();
+    }
+    #endregion
 
     #region private functions
     private void SwitchWeapons(int number)
