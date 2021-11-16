@@ -923,9 +923,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSound: {fileID: 0}
   attackSounds:
-  - {fileID: 8300000, guid: 1eb18db1352d67e4aa0bf4ca1e599628, type: 3}
-  - {fileID: 8300000, guid: 78a1b8c55de6ac748b9a26ef57931e3d, type: 3}
-  - {fileID: 8300000, guid: 34079dc588c33e44498ed7f20000773d, type: 3}
+  - {fileID: 8300000, guid: b52273f52a99248419a97ff38a2ca445, type: 3}
+  - {fileID: 8300000, guid: 0dba3cf5e9e869e43946b0fe177e5757, type: 3}
+  - {fileID: 8300000, guid: 8f5d54b6737656140ac1fe02d29c4424, type: 3}
   damageSounds:
   - {fileID: 8300000, guid: 1eb18db1352d67e4aa0bf4ca1e599628, type: 3}
   - {fileID: 8300000, guid: 78a1b8c55de6ac748b9a26ef57931e3d, type: 3}
