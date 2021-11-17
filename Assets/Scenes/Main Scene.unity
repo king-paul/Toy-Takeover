@@ -27583,6 +27583,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: KillZone
       objectReference: {fileID: 0}
+    - target: {fileID: 821900372846518469, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62
+      objectReference: {fileID: 0}
     - target: {fileID: 1740300519917003775, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 119
