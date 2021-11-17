@@ -25,7 +25,8 @@ public class EnemyController : MonoBehaviour
     public float framesPerDamage = 5;
 
     [SerializeField]
-    bool flyingEnemy = false;
+    bool enviromentalHazard = false;
+    //bool flyingEnemy = false;
 
     // private variables
     Transform player;
@@ -61,7 +62,7 @@ public class EnemyController : MonoBehaviour
     {
         state = initialState;
 
-        if (!flyingEnemy)
+        //if (!flyingEnemy)
             agent = GetComponent<NavMeshAgent>();
     }
 
@@ -86,7 +87,10 @@ public class EnemyController : MonoBehaviour
 
         if (curHealth <= 0)
         {
-            game.KillEnemy();
+            // if the enemy is not a car reduce the number in the wave
+            if(!enviromentalHazard)
+                game.KillEnemy();
+
             game.PlayRandomSound(audio.deadSounds, 1);
             GameObject.Destroy(this.gameObject);
             return;

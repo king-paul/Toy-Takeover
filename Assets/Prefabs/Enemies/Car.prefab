@@ -655,7 +655,7 @@ MonoBehaviour:
   maxHealth: 30
   collisionDamage: 10
   framesPerDamage: 5
-  flyingEnemy: 0
+  enviromentalHazard: 1
 --- !u!114 &-7489867347767036787
 MonoBehaviour:
   m_ObjectHideFlags: 0
