@@ -1347,6 +1347,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1725932760120805441, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4753532115564197112, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
       propertyPath: m_Layer
       value: 12
@@ -1371,6 +1375,18 @@ PrefabInstance:
       propertyPath: firingPoint
       value: 
       objectReference: {fileID: 9185991721635016568}
+    - target: {fileID: 6452682820192378796, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.139
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452682820192378796, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.119
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452682820192378796, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.125
+      objectReference: {fileID: 0}
     - target: {fileID: 6485335445116890570, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.031595353
