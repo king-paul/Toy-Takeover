@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6441300731805633728}
   - component: {fileID: 9115549162185553930}
   m_Layer: 0
-  m_Name: Env_bookshelf
+  m_Name: Bookshelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,14 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3305760222731039726, guid: 4773a8a4c5511de45a0fe04001296138, type: 3}
-  - {fileID: 5561349426305759274, guid: 4773a8a4c5511de45a0fe04001296138, type: 3}
-  - {fileID: -8067726398312463513, guid: 4773a8a4c5511de45a0fe04001296138, type: 3}
-  - {fileID: 8368722655750445499, guid: 4773a8a4c5511de45a0fe04001296138, type: 3}
-  - {fileID: -6423246096181390017, guid: 4773a8a4c5511de45a0fe04001296138, type: 3}
-  - {fileID: 5985177183389019671, guid: 4773a8a4c5511de45a0fe04001296138, type: 3}
-  - {fileID: 169997778938151021, guid: 4773a8a4c5511de45a0fe04001296138, type: 3}
-  - {fileID: -8255497921437555292, guid: 4773a8a4c5511de45a0fe04001296138, type: 3}
+  - {fileID: 2100000, guid: a3010a046377b7043bb0f0ab78329c70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

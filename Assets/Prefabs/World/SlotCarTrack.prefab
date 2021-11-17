@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6957668315389595442}
   - component: {fileID: 5146045585099947000}
   m_Layer: 0
-  m_Name: Env_slotcar
+  m_Name: SlotCarTrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,9 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5985177183389019671, guid: e5553970dcee86c448a12422636c11bf, type: 3}
-  - {fileID: -6423246096181390017, guid: e5553970dcee86c448a12422636c11bf, type: 3}
-  - {fileID: -915216440286173917, guid: e5553970dcee86c448a12422636c11bf, type: 3}
+  - {fileID: 2100000, guid: a3010a046377b7043bb0f0ab78329c70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

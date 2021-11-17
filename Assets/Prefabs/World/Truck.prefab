@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1551622352204981042}
   - component: {fileID: 3633436259921893368}
   m_Layer: 0
-  m_Name: Env_Truck
+  m_Name: Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,9 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5985177183389019671, guid: be892691e184eb24b80d2212bc884d63, type: 3}
-  - {fileID: 3305760222731039726, guid: be892691e184eb24b80d2212bc884d63, type: 3}
-  - {fileID: -915216440286173917, guid: be892691e184eb24b80d2212bc884d63, type: 3}
+  - {fileID: 2100000, guid: a3010a046377b7043bb0f0ab78329c70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
