@@ -131,16 +131,18 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             state = GameState.Paused;
+
+            gui.TogglePauseMenu();
         }
         else if (state == GameState.Paused)
         {
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
             state = GameState.Running;
+
+            gui.TogglePauseMenu();
         }
 
-        gui.TogglePauseMenu();
-        
     }
 
     // Checks enemy wave data for new enemmis to be spawned at time the current time interval
