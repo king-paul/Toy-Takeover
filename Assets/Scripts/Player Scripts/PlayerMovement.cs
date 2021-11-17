@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     private bool onGround;
     private bool usingJetpack;
     private bool landed;
+    private bool jumping;
     private Transform grounded;
 
     // Start is called before the first frame update
@@ -86,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Initialize jetpack variables
         usingJetpack = false;
+        jumping = false;
         movementVector = Vector3.zero;
     }
 
@@ -174,6 +176,8 @@ public class PlayerMovement : MonoBehaviour
                 verticalVelocity = jumpPower;
                 audio.StopPlaying(1); // stop playing footsteps sound
                 audio.PlaySound(audio.playerJump, 0.5f);
+
+                jumping = true;
             }
             else
             {
@@ -189,6 +193,7 @@ public class PlayerMovement : MonoBehaviour
             audio.StopPlaying(1); // stop playing footsteps sound
             audio.PlaySound(audio.playerJump, 0.5f);
 
+            jumping = true;
             landed = false;
         }
 
@@ -203,6 +208,10 @@ public class PlayerMovement : MonoBehaviour
         if (!isOnGround() && !usingJetpack)
         {
             verticalVelocity += Physics.gravity.y * Time.deltaTime;
+        }
+        else if(isOnGround() && !usingJetpack && !jumping)
+        {
+            verticalVelocity = 0;
         }
 
         // Move the player vertically
@@ -244,6 +253,8 @@ public class PlayerMovement : MonoBehaviour
             audio.PlaySound(audio.playerLanding, 0.5f);
             jetpackEmission.Stop();
             landed = true;
+            jumping = false;
+            verticalVelocity = 0;
         }
     }
 
