@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8753716556804200220}
   - component: {fileID: 6818315272950506454}
   m_Layer: 0
-  m_Name: Env_door
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,9 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1550975326256456482, guid: 30526bc3840e2dc44901d59584db3783, type: 3}
-  - {fileID: 8368722655750445499, guid: 30526bc3840e2dc44901d59584db3783, type: 3}
-  - {fileID: -8896051167825165466, guid: 30526bc3840e2dc44901d59584db3783, type: 3}
+  - {fileID: 2100000, guid: a3010a046377b7043bb0f0ab78329c70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

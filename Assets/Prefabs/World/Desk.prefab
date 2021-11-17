@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6717225041021414017}
   - component: {fileID: 8853117939530882635}
   m_Layer: 0
-  m_Name: Env_table
+  m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7051629503081086878}
-  m_Mesh: {fileID: 2502843528329499362, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
+  m_Mesh: {fileID: -1116444134294172880, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
 --- !u!23 &8853117939530882635
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59,14 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3305760222731039726, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
-  - {fileID: 5985177183389019671, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
-  - {fileID: -6423246096181390017, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
-  - {fileID: 5561349426305759274, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
-  - {fileID: 6456106153768494664, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
-  - {fileID: -8255497921437555292, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
-  - {fileID: -8067726398312463513, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
-  - {fileID: 8368722655750445499, guid: 3d69a03a2a93a0e4783be02bf603c2c2, type: 3}
+  - {fileID: 2100000, guid: a3010a046377b7043bb0f0ab78329c70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1340897825801992377}
   - component: {fileID: 3854839655582502003}
   m_Layer: 0
-  m_Name: Env_bed
+  m_Name: Bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3350634477435628966}
-  m_Mesh: {fileID: -4520746834724897692, guid: 4bb3f499c2c8045498ba6ec6c65f5717, type: 3}
+  m_Mesh: {fileID: -3451527565871154039, guid: 4bb3f499c2c8045498ba6ec6c65f5717, type: 3}
 --- !u!23 &3854839655582502003
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59,10 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6456106153768494664, guid: 4bb3f499c2c8045498ba6ec6c65f5717, type: 3}
-  - {fileID: -8542156595334428731, guid: 4bb3f499c2c8045498ba6ec6c65f5717, type: 3}
-  - {fileID: -8067726398312463513, guid: 4bb3f499c2c8045498ba6ec6c65f5717, type: 3}
-  - {fileID: 8368722655750445499, guid: 4bb3f499c2c8045498ba6ec6c65f5717, type: 3}
+  - {fileID: 2100000, guid: a3010a046377b7043bb0f0ab78329c70, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
