@@ -66,7 +66,9 @@ public class WeaponController : MonoBehaviour
 
                 if (curAmmo > 0)
                 {
-                    Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                    var projectile = Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                    // set the object who fired the projectile
+                    projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
 
                     if(emissionEffect != null)
                         emissionEffect.SetActive(true);
@@ -83,7 +85,9 @@ public class WeaponController : MonoBehaviour
 
                 if (curAmmo > 0)
                 {
-                    Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                    var projectile = Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+                    projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
+
                     AudioClip randomSound = fireSounds[Random.Range(0, fireSounds.Length - 1)];
                     //Debug.Log("Player Sound: " + randomSound.ToString());
 

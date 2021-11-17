@@ -7,7 +7,7 @@ public class RangedEnemyAI : MonoBehaviour
 {
     public Transform gun;
     public Transform gunEnd;
-    public Transform projectile;
+    public Transform projectilePrefab;
     [Range(1, 200)]
     public float viewDistance = 100f;
     [Range(0, 2)]
@@ -80,7 +80,8 @@ public class RangedEnemyAI : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > firingDelay)
             {
-                Instantiate(projectile, gunEnd.position, gun.rotation);
+                var projectile = Instantiate(projectilePrefab, gunEnd.position, gun.rotation);
+                projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
                 audio.PlaySound(audio.attackSounds);
                 timer = 0;
             }

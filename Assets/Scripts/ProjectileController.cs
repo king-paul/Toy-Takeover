@@ -9,9 +9,11 @@ public class ProjectileController : MonoBehaviour
 
     private Rigidbody rigidBody;
     private float boundary = 30;
+    private GameObject firer;
 
     // properties
     public float Damage { get => damage; set => damage = value; }
+    public GameObject Firer { set => firer = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +32,11 @@ public class ProjectileController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerController player = other.GetComponent<PlayerController>();
-            player.TakeDamage(damage);
+            if (other.gameObject != firer)
+            {
+                PlayerController player = other.GetComponent<PlayerController>();
+                player.TakeDamage(damage);
+            }
         }
         // projectile hits an enemy
         else if(other.gameObject.CompareTag("Enemy"))
@@ -41,7 +46,8 @@ public class ProjectileController : MonoBehaviour
         }
 
         // check for Ignore Raycast layer or ViewModel layer
-        if (other.gameObject.layer != 2 && other.gameObject.layer != 12)
+        if (other.gameObject.layer != 2 && other.gameObject.layer != 12 
+            && other.gameObject != firer)
             GameObject.Destroy(this.gameObject);
     }
 }

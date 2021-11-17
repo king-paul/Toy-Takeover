@@ -444,7 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gun: {fileID: 1092207982186743846}
   gunEnd: {fileID: 7474806691942004169}
-  projectile: {fileID: 626429588367930485, guid: 0d0ac5ef9b30a71448142ca7c4026ae7, type: 3}
+  projectilePrefab: {fileID: 626429588367930485, guid: 0d0ac5ef9b30a71448142ca7c4026ae7, type: 3}
   viewDistance: 30
   firingDelay: 0.25
   viewAngle: 45
