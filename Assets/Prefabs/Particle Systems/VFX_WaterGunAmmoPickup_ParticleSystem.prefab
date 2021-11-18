@@ -63,7 +63,7 @@ VisualEffect:
         m_Overridden: 1
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0.7490196, y: 0.61960787, z: 0.14117648, w: 0}
+      - m_Value: {x: 0.3745098, y: 0.30980393, z: 0.07058824, w: 0}
         m_Name: EffectColour
         m_Overridden: 1
     m_Uint:
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4376381151709589957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4691893801432440058}

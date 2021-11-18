@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6865562864970918718}
+  - {fileID: 6620663262461565273}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -179,7 +179,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &3650697967014477186
+--- !u!1001 &3895562349714018277
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -206,17 +206,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_ArrowPickup_ParticleSystem
       objectReference: {fileID: 0}
-    - target: {fileID: 7786727181555558412, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7921413352848823996, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7921413352848823996, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 7921413352848823996, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -255,25 +251,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8205380086454580880, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
-      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.y
-      value: 0.58369935
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205380086454580880, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205380086454580880, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Name
+      value: Height
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205380086454580880, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Overridden
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8205380086454580880, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
       propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.x
-      value: 1.3612566
+      value: 0.3764706
       objectReference: {fileID: 0}
     - target: {fileID: 8205380086454580880, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
-      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.z
-      value: 0.25657192
-      objectReference: {fileID: 0}
-    - target: {fileID: 8931737266210262978, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
-      propertyPath: m_Layer
-      value: 2
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.y
+      value: 0.15843672
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
---- !u!4 &6865562864970918718 stripped
+--- !u!4 &6620663262461565273 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7921413352848823996, guid: ed7d77ebf369d994ab40f5c3af64fd11, type: 3}
-  m_PrefabInstance: {fileID: 3650697967014477186}
+  m_PrefabInstance: {fileID: 3895562349714018277}
   m_PrefabAsset: {fileID: 0}
