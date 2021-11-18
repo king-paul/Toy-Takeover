@@ -30152,6 +30152,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6940015549073774346, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940015549073774346, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940015549073774346, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1333535
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940015549073774346, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20602041
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940015549073774346, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.15750326
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940015549073774346, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7711345584368160176, guid: bb25c497e224a154cb882a2f12aade10, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -35667,7 +35691,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642187469}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
