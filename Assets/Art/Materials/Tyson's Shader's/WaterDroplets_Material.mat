@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WaterDroplets_Material
-  m_Shader: {fileID: -6465566751694194690, guid: b0b774b301c842c458be6430bde7dd9e, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: bcff5e368ea9f1244b0df1495114b1d1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
