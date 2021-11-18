@@ -60,73 +60,72 @@ public class WeaponController : MonoBehaviour
             ProjectileWeapon weapon = (ProjectileWeapon)weaponObject;
 
             // handle single shot weapon
-            if (!weapon.rapidFire && FirePressed() && Time.time > nextFire)
+            if (!weapon.rapidFire && Input.GetButtonDown("Fire") && Time.time > nextFire)
             {
-                nextFire = Time.time + weapon.shotDelayTime;
-
-                if (curAmmo > 0)
-                {
-                    var projectile = Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
-                    // set the object who fired the projectile
-                    projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
-
-                    if(emissionEffect != null)
-                        emissionEffect.SetActive(true);
-
-                    playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)]);
-                    curAmmo--;
-                }
+                FireProjectileWeapon();
             }
-
             // handle machine gun weapon
             else if (weapon.rapidFire && FirePressed() && Time.time > nextFire)
-            {
-                nextFire = Time.time + weapon.shotDelayTime;
-
-                if (curAmmo > 0)
-                {
-                    var projectile = Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
-                    projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
-
-                    AudioClip randomSound = fireSounds[Random.Range(0, fireSounds.Length - 1)];
-                    //Debug.Log("Player Sound: " + randomSound.ToString());
-
-                    if(emissionEffect != null)
-                        emissionEffect.SetActive(true);
-
-                    playerAudio.PlaySound(randomSound);
-                    curAmmo--;
-                }
-                    
+            {                
+                FireProjectileWeapon();
             }
         }
 
         // handle laser weapon
         if (weaponObject.GetType() == typeof(LaserWeapon))
         {
-            LaserWeapon weapon = (LaserWeapon) weaponObject;
-
-            if (FirePressed() && curAmmo > 0)
-            {
-                FireRaycast();
-
-                if (Time.time > nextFire)
-                {
-                    curAmmo--;
-                    nextFire = Time.time + weapon.shotDelay;
-                    playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)], 2, true);
-                }
-            }
-            else
-            {
-                //emissionEffectLine.enabled = false;
-                emissionEffect.SetActive(false);
-                playerAudio.StopPlaying(2);
-            }
+            FireLaserWeapon();
         }
 
     }
     #endregion
+
+    void FireProjectileWeapon()
+    {
+        ProjectileWeapon weapon = (ProjectileWeapon)weaponObject;
+
+        nextFire = Time.time + weapon.shotDelayTime;        
+
+        if (curAmmo > 0)
+        {
+            var projectile = Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
+            // set the object who fired the projectile
+            projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
+
+            if (emissionEffect != null)
+            {
+                ParticleSystem[] particles = emissionEffect.GetComponentsInChildren<ParticleSystem>();
+                foreach (ParticleSystem p in particles)
+                    p.Play();
+            }
+
+            playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)]);
+            curAmmo--;
+        }
+    }
+
+    void FireLaserWeapon()
+    {
+        LaserWeapon weapon = (LaserWeapon)weaponObject;
+
+        if (FirePressed() && curAmmo > 0)
+        {
+            FireRaycast();
+
+            if (Time.time > nextFire)
+            {
+                curAmmo--;
+                nextFire = Time.time + weapon.shotDelay;
+                playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)], 2, true);
+            }
+        }
+        else
+        {
+            //emissionEffectLine.enabled = false;
+            emissionEffect.SetActive(false);
+            playerAudio.StopPlaying(2);
+        }
+    }
 
     void FireRaycast()
     {

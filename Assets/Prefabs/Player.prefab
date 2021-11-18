@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 12
   m_Name: Firing Point
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1367,7 +1367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1725932760120805441, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4753532115564197112, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
       propertyPath: m_Layer
@@ -1411,11 +1411,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6485335445116890570, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.30900002
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6485335445116890570, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3487474
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 6485335445116890570, guid: 425ed3e63b423e74e8b262b463d6d2da, type: 3}
       propertyPath: m_LocalRotation.x

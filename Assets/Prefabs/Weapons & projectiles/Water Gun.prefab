@@ -61,12 +61,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6485335445116890570}
     m_Modifications:
+    - target: {fileID: 967208684558612627, guid: 2829e740e7b082a4985e59e9a3d1fdf6, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 967208684558612627, guid: 2829e740e7b082a4985e59e9a3d1fdf6, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3883644691917961606, guid: 2829e740e7b082a4985e59e9a3d1fdf6, type: 3}
       propertyPath: m_Name
       value: VFX_WaterGun_MuzzleFlash
       objectReference: {fileID: 0}
     - target: {fileID: 3883644691917961606, guid: 2829e740e7b082a4985e59e9a3d1fdf6, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846557685339663034, guid: 2829e740e7b082a4985e59e9a3d1fdf6, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846557685339663034, guid: 2829e740e7b082a4985e59e9a3d1fdf6, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8906514915405672043, guid: 2829e740e7b082a4985e59e9a3d1fdf6, type: 3}

@@ -63,8 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052f2f0872948244eba75ca3f8dfb4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travelSpeed: 100
-  damage: 5
+  travelSpeed: 50
 --- !u!65 &865713520326472925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91,7 +90,7 @@ GameObject:
   - component: {fileID: 3514162760207923886}
   - component: {fileID: 8441822746447920108}
   m_Layer: 2
-  m_Name: Sphere (1)
+  m_Name: water drop 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +185,7 @@ GameObject:
   - component: {fileID: 7588992122361500090}
   - component: {fileID: 5354627886328868925}
   m_Layer: 2
-  m_Name: Sphere
+  m_Name: water drop 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
