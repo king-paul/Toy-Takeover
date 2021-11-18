@@ -11,12 +11,11 @@ public class WeaponController : MonoBehaviour
 
     [Header("Sound Effects")]
     public AudioClip[] fireSounds;
-    //public AudioClip reloadSound;
 
     private Camera fpsCam;
-    //private LineRenderer laserLine;
     private RaycastHit hit;
     private float nextFire;
+    private bool fired = false;
 
     private GameManager game;
     private int curAmmo;
@@ -60,7 +59,7 @@ public class WeaponController : MonoBehaviour
             ProjectileWeapon weapon = (ProjectileWeapon)weaponObject;
 
             // handle single shot weapon
-            if (!weapon.rapidFire && Input.GetButtonDown("Fire") && Time.time > nextFire)
+            if (!weapon.rapidFire && FirePressedOnce() && Time.time > nextFire)
             {
                 FireProjectileWeapon();
             }
@@ -164,6 +163,20 @@ public class WeaponController : MonoBehaviour
     {
         if (Input.GetButton("Fire") || Input.GetAxis("Fire") != 0)
             return true;
+
+        return false;
+    }
+
+    private bool FirePressedOnce()
+    {
+        if (Input.GetButtonUp("Fire") || Input.GetAxis("Fire") == 0)
+            fired = false;
+
+        if ((Input.GetButtonDown("Fire") || Input.GetAxis("Fire") == 1) && !fired)
+        {
+            fired = true;
+            return true;
+        }
 
         return false;
     }
