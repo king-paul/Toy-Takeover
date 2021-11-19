@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     GameState state;
     GUIController gui;
     Transform enemiesTransform;
-    AudioSource audio;
+    AudioSource musicSource, soundSource;
     PlayerSound playerAudio;
 
     // gui variables
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     public void Die()
     {
         gui.ShowGameOver();
-        audio.PlayOneShot(playerAudio.gameOver);
+        soundSource.PlayOneShot(playerAudio.gameOver);
         state = GameState.Loss;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
     public void PlaySound(AudioClip clip, float volume)
     {
-        audio.PlayOneShot(clip, volume);
+        soundSource.PlayOneShot(clip, volume);
     }
 
     public void PlayRandomSound(AudioClip[] clips, float volume)
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
 
         AudioClip randomSound = clips[randomNum];
         Debug.Log("Playing Enemy Sound: " + randomSound);
-        audio.PlayOneShot(randomSound, volume);
+        soundSource.PlayOneShot(randomSound, volume);
     }
     
     // Instantiates a game object and destroys it after a specified time
@@ -98,7 +98,8 @@ public class GameManager : MonoBehaviour
         gui = GetComponent<GUIController>();
         state = GameState.Running;
         enemiesTransform = GameObject.Find("Enemies").transform;
-        audio = GetComponent<AudioSource>();
+        musicSource = GetComponents<AudioSource>()[0];
+        soundSource = GetComponents<AudioSource>()[1];
         playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
 
         // ensure that each hasSpawn variable is set to false by default
@@ -120,7 +121,20 @@ public class GameManager : MonoBehaviour
             UpdateEnemySpawns();
 
         if (Input.GetButtonDown("Cancel"))        
-            TogglePause();        
+            TogglePause();
+
+        // turn music on and off
+        if (state != GameState.Running && musicSource.isPlaying)
+        {
+            // pause track if game is paused otherwise stop it
+            if (state == GameState.Paused)
+                musicSource.Pause();
+            else
+                musicSource.Stop();
+        }
+        else if (state == GameState.Running && !musicSource.isPlaying)
+            musicSource.Play();
+
     }
 
 
@@ -149,7 +163,7 @@ public class GameManager : MonoBehaviour
     // and instantiates them. Also updates the wave number when there are not enemies left
     void UpdateEnemySpawns()
     {
-        waveTime = Time.time - previousElapsedTime;
+        waveTime = Time.timeSinceLevelLoad - previousElapsedTime;
 
         // Check that all enemies have been spawned and there are none left in the wave
         if (enemiesSpawned == waves[waveNumber - 1].enemiesInWave.Length && enemiesLeft == 0)
