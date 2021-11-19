@@ -22,8 +22,10 @@ public class PlayerController : MonoBehaviour
     public Transform spawnPoint;
     public float fallOffDamage = 10f;
 
-    [Header("Debug Cheats")]
-    public bool godMode = false;
+    //[Header("Debug Cheats")]
+    //public bool godMode = false;
+    [HideInInspector]
+    public bool firing = false;
 
     // private variables
     private float currentHealth = 100;
@@ -93,40 +95,8 @@ public class PlayerController : MonoBehaviour
             game.Die();
         }
 
-        if(game.State == GameState.Running)
+        if(game.State == GameState.Running && !weapon.isFiring)
             UpdateSwitchWeapons();
-    }
-
-    private void UpdateSwitchWeapons()
-    {
-        // get mouse scroll from player
-        if (Input.mouseScrollDelta.y != 0)
-        {
-            //prevWeaponNum = weaponNum;
-
-            if (Input.mouseScrollDelta.y == -1)
-                SwitchWeapons(weaponNum + 1);
-
-            if (Input.mouseScrollDelta.y == 1)
-                SwitchWeapons(weaponNum - 1);
-        }
-        else if (Input.GetButtonDown("NextWeapon")) // right bumper
-        {
-            SwitchWeapons(weaponNum + 1);
-        }
-        else if (Input.GetButtonDown("PrevWeapon")) // left bumper
-        {
-            SwitchWeapons(weaponNum - 1);
-        }
-
-        // number keys
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            SwitchWeapons(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            SwitchWeapons(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            SwitchWeapons(2);
-
     }
 
     private void FixedUpdate()
@@ -285,6 +255,38 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region private functions
+    private void UpdateSwitchWeapons()
+    {
+        // get mouse scroll from player
+        if (Input.mouseScrollDelta.y != 0)
+        {
+            //prevWeaponNum = weaponNum;
+
+            if (Input.mouseScrollDelta.y == -1)
+                SwitchWeapons(weaponNum + 1);
+
+            if (Input.mouseScrollDelta.y == 1)
+                SwitchWeapons(weaponNum - 1);
+        }
+        else if (Input.GetButtonDown("NextWeapon")) // right bumper
+        {
+            SwitchWeapons(weaponNum + 1);
+        }
+        else if (Input.GetButtonDown("PrevWeapon")) // left bumper
+        {
+            SwitchWeapons(weaponNum - 1);
+        }
+
+        // number keys
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            SwitchWeapons(0);
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            SwitchWeapons(1);
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            SwitchWeapons(2);
+
+    }
+
     private void SwitchWeapons(int number)
     {
         prevWeaponNum = weaponNum;

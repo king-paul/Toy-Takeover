@@ -19,7 +19,6 @@ public class WeaponController : MonoBehaviour
 
     private GameManager game;
     private int curAmmo;
-
     private PlayerSound playerAudio;
     #endregion
 
@@ -35,12 +34,14 @@ public class WeaponController : MonoBehaviour
             curAmmo = weaponObject.maxAmmo;
     }
 
+    public bool isFiring { get => fired; }
+
     #region unity functions
     // Start is called before the first frame update
     void Start()
     {
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
-        fpsCam = GetComponentInParent<Camera>();
+        fpsCam = GetComponentInParent<Camera>();        
         playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
         curAmmo = weaponObject.startingAmmo;
     }
@@ -162,21 +163,25 @@ public class WeaponController : MonoBehaviour
     private bool FirePressed()
     {
         if (Input.GetButton("Fire") || Input.GetAxis("Fire") != 0)
+        {
+            fired = true;
             return true;
+        }
 
+        fired = false;
         return false;
     }
 
     private bool FirePressedOnce()
-    {
-        if (Input.GetButtonUp("Fire") || Input.GetAxis("Fire") == 0)
-            fired = false;
-
+    {        
         if ((Input.GetButtonDown("Fire") || Input.GetAxis("Fire") == 1) && !fired)
         {
             fired = true;
             return true;
         }
+
+        if (Input.GetButtonUp("Fire") || Input.GetAxis("Fire") == 0)
+            fired = false;
 
         return false;
     }
