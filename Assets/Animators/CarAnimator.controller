@@ -1,7 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
-=======
 --- !u!1107 &-1845486000983234643
 AnimatorStateMachine:
   serializedVersion: 5
@@ -21,7 +19,6 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 0}
->>>>>>> main
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -30,10 +27,6 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: CarAnimator
   serializedVersion: 5
-<<<<<<< HEAD
-  m_AnimatorParameters: []
-  m_AnimatorLayers: []
-=======
   m_AnimatorParameters:
   - m_Name: Walk
     m_Type: 9
@@ -84,4 +77,3 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
->>>>>>> main
