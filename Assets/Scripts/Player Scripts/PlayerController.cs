@@ -93,7 +93,8 @@ public class PlayerController : MonoBehaviour
             game.Die();
         }
 
-        UpdateSwitchWeapons();
+        if(game.State == GameState.Running)
+            UpdateSwitchWeapons();
     }
 
     private void UpdateSwitchWeapons()

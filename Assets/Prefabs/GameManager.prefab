@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604101679903821004}
+  - component: {fileID: 8811335024764321506}
+  - component: {fileID: 1513658134}
   - component: {fileID: 604101679903821007}
   - component: {fileID: 1447529048}
-  - component: {fileID: 1513658134}
+  - component: {fileID: 887026423723030598}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -33,129 +35,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &604101679903821007
-MonoBehaviour:
+--- !u!82 &8811335024764321506
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604101679903821006}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd09b0b4c1b8b5444a29f7353cb15db2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnEnemies: 1
-  enemies:
-  - {fileID: 8922432861276067955, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
-  - {fileID: 1782209278137205567, guid: be9859c2f32864c469c5ef905c622054, type: 3}
-  - {fileID: 7008889368304603673, guid: a28b0546390b9824e8d997052e51717f, type: 3}
-  spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  waves:
-  - {fileID: 11400000, guid: 81a0ad59850e00141bb15f7892d6ae7a, type: 2}
-  - {fileID: 11400000, guid: 64200cdfb99a35c4cbea6571fd2a0392, type: 2}
-  - {fileID: 11400000, guid: 57b2131b6f8bf314da409be94cb18c32, type: 2}
-  - {fileID: 11400000, guid: cf8154a7e2a00704890c440080d5b742, type: 2}
-  - {fileID: 11400000, guid: 45888f73d9f94d842b0aaa9be4f05aad, type: 2}
-  groundWaypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  platformWaypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  skyWaypoints: []
---- !u!114 &1447529048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604101679903821006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 111852440ca64cd429e17131d3f67086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  fuelBar: {fileID: 0}
-  armourBar: {fileID: 0}
-  currentAmmoText: {fileID: 0}
-  maxAmmoText: {fileID: 0}
-  waveNumber: {fileID: 0}
-  enemiesLeft: {fileID: 0}
-  timeText: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  quitButton: {fileID: 0}
-  gameOverText: {fileID: 0}
-  winText: {fileID: 0}
-  backButton: {fileID: 0}
-  pickupText: {fileID: 0}
-  pickupMessageTime: 0.5
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 80def60550827fa44925d93cdb221e3a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!82 &1513658134
 AudioSource:
   m_ObjectHideFlags: 0
@@ -252,3 +227,164 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &604101679903821007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604101679903821006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd09b0b4c1b8b5444a29f7353cb15db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnEnemies: 1
+  enemies:
+  - {fileID: 8922432861276067955, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
+  - {fileID: 1782209278137205567, guid: be9859c2f32864c469c5ef905c622054, type: 3}
+  - {fileID: 7008889368304603673, guid: a28b0546390b9824e8d997052e51717f, type: 3}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  waves:
+  - {fileID: 11400000, guid: 81a0ad59850e00141bb15f7892d6ae7a, type: 2}
+  - {fileID: 11400000, guid: 64200cdfb99a35c4cbea6571fd2a0392, type: 2}
+  - {fileID: 11400000, guid: 57b2131b6f8bf314da409be94cb18c32, type: 2}
+  - {fileID: 11400000, guid: cf8154a7e2a00704890c440080d5b742, type: 2}
+  - {fileID: 11400000, guid: 45888f73d9f94d842b0aaa9be4f05aad, type: 2}
+  groundWaypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  platformWaypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  roadCheckpoints: []
+--- !u!114 &1447529048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604101679903821006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111852440ca64cd429e17131d3f67086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  fuelBar: {fileID: 0}
+  armourBar: {fileID: 0}
+  currentAmmoText: {fileID: 0}
+  maxAmmoText: {fileID: 0}
+  waveNumber: {fileID: 0}
+  enemiesLeft: {fileID: 0}
+  timeText: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  quitButton: {fileID: 0}
+  gameOverText: {fileID: 0}
+  winText: {fileID: 0}
+  backButton: {fileID: 0}
+  pickupText: {fileID: 0}
+  pickupMessageTime: 0.5
+--- !u!114 &887026423723030598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604101679903821006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63fbd5622b7c4d4ba518b498bfb1b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolRoutes:
+  - waypoints:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    twoWay: 0
+    randomizeOrder: 0
+  - waypoints: []
+    twoWay: 0
+    randomizeOrder: 0
+  - waypoints: []
+    twoWay: 0
+    randomizeOrder: 0
+  - waypoints: []
+    twoWay: 0
+    randomizeOrder: 0
+  - waypoints: []
+    twoWay: 0
+    randomizeOrder: 0

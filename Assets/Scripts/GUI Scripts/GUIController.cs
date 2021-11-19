@@ -94,7 +94,7 @@ public class GUIController : MonoBehaviour
         // info text
         waveNumber.text = game.WaveNumber.ToString();
         enemiesLeft.text = game.EnemiesLeft.ToString();
-        timeText.text = ((int)Time.time).ToString();
+        timeText.text = ((int)Time.timeSinceLevelLoad).ToString();
 
         // ammo text
         currentAmmoText.text = player.Ammo.ToString();
