@@ -44,7 +44,7 @@ public class EnemySound : MonoBehaviour
         if (clips.Length > 0)
         {
             AudioClip randomSound = clips[Random.Range(0, clips.Length - 1)];
-            Debug.Log("Playing Enemy Sound: " + randomSound);
+            //Debug.Log("Playing Enemy Sound: " + randomSound);
             enemyAudio[0].PlayOneShot(randomSound);
         }
     }

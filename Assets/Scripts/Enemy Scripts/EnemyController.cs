@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public enum EnemyState { Patrol, Follow, Attack, Aim };
+public enum EnemyState { Patrol, Follow, Attack, Dead };
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
@@ -31,7 +31,8 @@ public class EnemyController : MonoBehaviour
     // private variables
     Transform player;
     NavMeshAgent agent;
-    Rigidbody rigidbody;    
+    Rigidbody rigidbody;
+    Animator animator;
     EnemyState state;
     Material material;
     GameManager game;
@@ -42,7 +43,9 @@ public class EnemyController : MonoBehaviour
     public EnemyState State { get => state; set => state = value; }
     public float Distance { get => (player.position - transform.position).magnitude; }
     public void TakeDamage(float amount){ 
-        curHealth -= amount;
+
+        curHealth -= amount; // reduces health
+        animator.SetTrigger("Damage"); // plays animation
 
         // switch enemy to follow after taking damage if patrolling
         if (state == EnemyState.Patrol)
@@ -62,8 +65,8 @@ public class EnemyController : MonoBehaviour
     {
         state = initialState;
 
-        //if (!flyingEnemy)
-            agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -91,30 +94,81 @@ public class EnemyController : MonoBehaviour
             if(!enviromentalHazard)
                 game.KillEnemy();
 
+            animator.SetTrigger("Death");
             game.PlayRandomSound(audio.deadSounds, 1);
+
             GameObject.Destroy(this.gameObject);
             return;
         }
 
-        // play sound while enemy is moving
+        // needs to be updated
         if((state == EnemyState.Patrol || state == EnemyState.Follow))
         {
             audio.PlayMoveSound();
+            animator.SetBool("Moving", true);
+            animator.SetBool("Attacking", false);
         }
 
         if (state == EnemyState.Follow)
         {
-            //if (!flyingEnemy) 
             audio.StopPlaying(0);
             agent.isStopped = false;
             agent.destination = player.position;
+            animator.SetTrigger("Walk");
         }
         else if(state == EnemyState.Attack)
         {
-            //if (!flyingEnemy)
             agent.destination = transform.position;
             agent.isStopped = true;
+            animator.SetTrigger("Attack");
         }
+    }
+
+    // Not currently used
+    public void ChangeState(EnemyState newState)
+    {
+        state = newState;
+
+        switch(state)
+        {
+            case EnemyState.Patrol:
+                audio.PlayMoveSound();
+                animator.SetBool("Moving", true);
+                animator.SetBool("Attacking", false);
+            break;
+
+            case EnemyState.Follow:
+                audio.PlayMoveSound();
+                audio.StopPlaying(0);
+                agent.isStopped = false;
+
+                agent.destination = player.position;
+                animator.SetTrigger("Walk");
+            break;
+
+            case EnemyState.Attack:
+                agent.destination = transform.position;
+                agent.isStopped = true;
+                animator.SetTrigger("Attack");
+                animator.SetBool("Walking", false);
+                animator.SetBool("Attacking", true);
+                break;
+
+            case EnemyState.Dead:
+                agent.isStopped = false;
+                animator.SetTrigger("Death");
+                game.PlayRandomSound(audio.deadSounds, 1);
+            break;
+        }
+
+    }
+
+    public void DestroyEnemy()
+    {
+        if (deathParticles != null)
+            Instantiate(deathParticles, transform.position, transform.rotation);
+
+        GameObject.Destroy(this.gameObject);
     }
 
     public void PlayDamageParticles()
