@@ -21,14 +21,10 @@ public class PatrolManager : MonoBehaviour
     public PatrolRoute[] patrolRoutes;
 
     public PatrolRoute GetPatrolRoute()
-    {
-        //return patrolRoutes[1];
-        /*
+    {        
         int random = Random.Range(0, patrolRoutes.Length);
         if (random == patrolRoutes.Length)
-            random = patrolRoutes.Length - 1;*/
-
-        int random = 2;
+            random = patrolRoutes.Length - 1;
 
         if (patrolRoutes[random].randomizeOrder)
         {
