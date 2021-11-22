@@ -67,9 +67,8 @@ public class PatrolEnemyAI : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake()
-    {
-        if (!flyingEnemy)
-            agent = GetComponent<NavMeshAgent>();
+    {        
+        agent = GetComponent<NavMeshAgent>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
         patrolManager = GameObject.Find("GameManager").GetComponent<PatrolManager>();
     }
