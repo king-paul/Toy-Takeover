@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8811335024764321506}
   - component: {fileID: 1513658134}
   - component: {fileID: 604101679903821007}
-  - component: {fileID: 1447529048}
   - component: {fileID: 887026423723030598}
+  - component: {fileID: 1447529048}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -257,99 +257,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57b2131b6f8bf314da409be94cb18c32, type: 2}
   - {fileID: 11400000, guid: cf8154a7e2a00704890c440080d5b742, type: 2}
   - {fileID: 11400000, guid: 45888f73d9f94d842b0aaa9be4f05aad, type: 2}
-  groundWaypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  platformWaypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   roadCheckpoints: []
---- !u!114 &1447529048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604101679903821006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 111852440ca64cd429e17131d3f67086, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  fuelBar: {fileID: 0}
-  armourBar: {fileID: 0}
-  currentAmmoText: {fileID: 0}
-  maxAmmoText: {fileID: 0}
-  waveNumber: {fileID: 0}
-  enemiesLeft: {fileID: 0}
-  timeText: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  quitButton: {fileID: 0}
-  gameOverText: {fileID: 0}
-  winText: {fileID: 0}
-  backButton: {fileID: 0}
-  pickupText: {fileID: 0}
-  pickupMessageTime: 0.5
 --- !u!114 &887026423723030598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,3 +296,30 @@ MonoBehaviour:
   - waypoints: []
     twoWay: 0
     randomizeOrder: 0
+--- !u!114 &1447529048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604101679903821006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111852440ca64cd429e17131d3f67086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  fuelBar: {fileID: 0}
+  armourBar: {fileID: 0}
+  currentAmmoText: {fileID: 0}
+  maxAmmoText: {fileID: 0}
+  waveNumber: {fileID: 0}
+  enemiesLeft: {fileID: 0}
+  timeText: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  quitButton: {fileID: 0}
+  gameOverText: {fileID: 0}
+  winText: {fileID: 0}
+  backButton: {fileID: 0}
+  pickupText: {fileID: 0}
+  pickupMessageTime: 0.5

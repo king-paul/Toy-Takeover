@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class PatrolEnemyAI : MonoBehaviour
 {
-
     [Header("Patrol Route")]
     [SerializeField][Range(2, 20)]
     int waypointsInRoute = 5;
@@ -39,13 +38,16 @@ public class PatrolEnemyAI : MonoBehaviour
     //Transform[] patrolRoute;
     [Header("Debug Info")]
     [SerializeField]
-    Transform nextWaypoint;    
+    Transform nextWaypoint;
     [SerializeField]
-    List<Transform> patrolRoute;    
+    Transform[] waypoints;
+    PatrolRoute patrolRoute;
+
     NavMeshAgent agent;
     EnemyController enemy;
     Transform player;
     GameManager game;
+    PatrolManager patrolManager;
 
     // vision cone variables
     private Vector3 directionToTarget;
@@ -54,6 +56,7 @@ public class PatrolEnemyAI : MonoBehaviour
     // other variables
     private int waypoint = 0;
     private float distanceToPlayer;
+    private bool reverseOrder = false;
 
     public Vector3 nextWaypointPos { get => nextWaypoint.position; }
 
@@ -68,22 +71,21 @@ public class PatrolEnemyAI : MonoBehaviour
         if (!flyingEnemy)
             agent = GetComponent<NavMeshAgent>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        patrolManager = GameObject.Find("GameManager").GetComponent<PatrolManager>();
     }
 
     private void Start()
     {
         enemy = GetComponent<EnemyController>();
         player = GameObject.FindWithTag("Player").transform;
+                
+        patrolRoute = patrolManager.GetPatrolRoute();
+        waypoints = patrolRoute.waypoints;
 
-        //patrolRoute = spawnpoint.GetComponent<PatrolRoute>().wayPoints;
-        patrolRoute = new List<Transform>();
-        SelectRandomRoute();
+        if (enemy.State == EnemyState.Patrol) {           
+            agent.SetDestination(waypoints[waypoint].position);
 
-        if (enemy.State == EnemyState.Patrol) {
-            if (!flyingEnemy)
-                agent.SetDestination(patrolRoute[waypoint].position);
-
-            nextWaypoint = patrolRoute[waypoint];
+            nextWaypoint = waypoints[waypoint];
         }
     }
 
@@ -112,102 +114,109 @@ public class PatrolEnemyAI : MonoBehaviour
     }   
     
     // Causes the enemy to select a random route from the waypoints in the scene
-    private void SelectRandomRoute()
-    {
-        float totalWaypoints = 0;
-        int maxRange, chosenNumber;
-        bool alreadyInRoute;
+    //private void SelectRandomRoute()
+    //{
+    //    float totalWaypoints = 0;
+    //    int maxRange, chosenNumber;
+    //    bool alreadyInRoute;
 
-        //if (flyingEnemy)
-            //maxRange = game.skyWaypoints.Length;
-        //else
-            //{
-            if (canUseRamps)
-                maxRange = game.groundWaypoints.Length + game.platformWaypoints.Length;
-            else
-                maxRange = game.groundWaypoints.Length;
-        //}
+    //        if (canUseRamps)
+    //            maxRange = game.groundWaypoints.Length + game.platformWaypoints.Length;
+    //        else
+    //            maxRange = game.groundWaypoints.Length;
 
-        // selects random waypoints until the route is full
-        while (totalWaypoints < waypointsInRoute && totalWaypoints < maxRange)
-        {
-            do
-            {
-                chosenNumber = Random.Range(0, maxRange);
-                //Debug.Log("Chosen Number: " + chosenNumber + " of " + maxRange);
+    //    // selects random waypoints until the route is full
+    //    while (totalWaypoints < waypointsInRoute && totalWaypoints < maxRange)
+    //    {
+    //        do
+    //        {
+    //            chosenNumber = Random.Range(0, maxRange);
+    //            //Debug.Log("Chosen Number: " + chosenNumber + " of " + maxRange);
 
-                //if (flyingEnemy)
-                //{
-                //    /alreadyInRoute = AlreadyInRoute(game.skyWaypoints[chosenNumber]);
+    //                // if the number is greater than a certain value select from the platform waypoints
+    //                if (canUseRamps && chosenNumber > game.groundWaypoints.Length - 1)
+    //                {
+    //                    chosenNumber -= game.groundWaypoints.Length;
+    //                    alreadyInRoute = AlreadyInRoute(game.platformWaypoints[chosenNumber]);
 
-                //    if (!preventDuplicates || !alreadyInRoute)
-                //        patrolRoute.Add(game.skyWaypoints[chosenNumber]);
-                //}
-                //else
-                //{
-                    // if the number is greater than a certain value select from the platform waypoints
-                    if (canUseRamps && chosenNumber > game.groundWaypoints.Length - 1)
-                    {
-                        chosenNumber -= game.groundWaypoints.Length;
-                        alreadyInRoute = AlreadyInRoute(game.platformWaypoints[chosenNumber]);
+    //                    // break out of loop if null is detected
+    //                    if (game.platformWaypoints[chosenNumber] == null)
+    //                        return;
 
-                        // break out of loop if null is detected
-                        if (game.platformWaypoints[chosenNumber] == null)
-                            return;
+    //                    if (!preventDuplicates || !alreadyInRoute)
+    //                        patrolRoute.Add(game.platformWaypoints[chosenNumber]);
+    //                }
+    //                else // if it is less than the value select a ground waypoint
+    //                {
+    //                    alreadyInRoute = AlreadyInRoute(game.groundWaypoints[chosenNumber]);
 
-                        if (!preventDuplicates || !alreadyInRoute)
-                            patrolRoute.Add(game.platformWaypoints[chosenNumber]);
-                    }
-                    else // if it is less than the value select a ground waypoint
-                    {
-                        alreadyInRoute = AlreadyInRoute(game.groundWaypoints[chosenNumber]);
+    //                    // break out of loop if null is detected
+    //                    if (game.groundWaypoints[chosenNumber] == null)
+    //                        return;
 
-                        // break out of loop if null is detected
-                        if (game.groundWaypoints[chosenNumber] == null)
-                            return;
+    //                    if (!preventDuplicates || !alreadyInRoute)
+    //                        patrolRoute.Add(game.groundWaypoints[chosenNumber]);
+    //                }
 
-                        if (!preventDuplicates || !alreadyInRoute)
-                            patrolRoute.Add(game.groundWaypoints[chosenNumber]);
-                    }
-                //}
+    //        } while (preventDuplicates && alreadyInRoute);
 
-            } while (preventDuplicates && alreadyInRoute);
+    //        totalWaypoints++;
+    //    }
 
-            totalWaypoints++;
-        }
+    //    // return to spawnpoint after completing the route
+    //    if (includeSpawnpoint)
+    //        patrolRoute.Add(spawnpoint);
+    //}
 
-        // return to spawnpoint after completing the route
-        if (includeSpawnpoint)
-            patrolRoute.Add(spawnpoint);
-    }
+    //private bool AlreadyInRoute(Transform chosenWaypoint)
+    //{
+    //    foreach(Transform waypoint in patrolRoute)
+    //    {
+    //        if (waypoint == chosenWaypoint)
+    //            return true;
+    //    }
 
-    private bool AlreadyInRoute(Transform chosenWaypoint)
-    {
-        foreach(Transform waypoint in patrolRoute)
-        {
-            if (waypoint == chosenWaypoint)
-                return true;
-        }
-
-        return false;
-    }
+    //    return false;
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
+        // Update the waypoints when the enemy walks into one
         if (enemy.State == EnemyState.Patrol &&
-            other.gameObject.transform == patrolRoute[waypoint])
+            other.gameObject.transform == waypoints[waypoint])
         {
-            //Debug.Log("Agent has reached waypoint: " + waypoint);
+            Transform curWaypoint = waypoints[waypoint];
 
-            if (waypoint < patrolRoute.Count - 1)
-                waypoint++;
+            if (!reverseOrder)
+            {
+                if (waypoint < waypoints.Length - 1)
+                    waypoint++;
+                else if(patrolRoute.twoWay)
+                {
+                    waypoint--;
+                    reverseOrder = true;
+                }
+                else
+                    waypoint = 0;
+            }
             else
-                waypoint = 0;
+            {
+                if (waypoint > 0)
+                    waypoint--;
+                else if (patrolRoute.twoWay)
+                {
+                    waypoint++;
+                    reverseOrder = false;
+                }
+                else
+                    waypoint = waypoints.Length - 1;
+            }
 
-            if(!flyingEnemy)
-                agent.SetDestination(patrolRoute[waypoint].position);
+            nextWaypoint = waypoints[waypoint];
 
-            nextWaypoint = patrolRoute[waypoint];
+            Debug.Log("Agent " + this.gameObject.GetInstanceID() + " has reached waypoint: " + curWaypoint +
+                      "\nand will now move to waypoint " + nextWaypoint);
+            agent.SetDestination(nextWaypoint.position);
         }
 
     }
