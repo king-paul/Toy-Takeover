@@ -10,8 +10,8 @@ public class RangedEnemyAI : MonoBehaviour
     public Transform projectilePrefab;
     [Range(1, 200)]
     public float viewDistance = 100f;
-    [Range(0, 2)]
-    public float firingDelay = 0.25f;
+    //[Range(0, 2)]
+    //public float firingDelay = 0.25f;
 
     [SerializeField][Range(1, 100)]
     float viewAngle = 45f;
@@ -22,8 +22,7 @@ public class RangedEnemyAI : MonoBehaviour
 
     private Transform player;
     private RaycastHit rayToPlayer;
-    private RaycastHit gunRay;
-    private bool firing;
+    private RaycastHit gunRay;    
     private EnemyController controller;
     private EnemySound audio;
 
@@ -31,7 +30,9 @@ public class RangedEnemyAI : MonoBehaviour
     Vector3 directionToTarget;
     Vector3 shootDirection;
 
+    private bool firing;
     private float timer;
+    private float distanceToTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -48,58 +49,77 @@ public class RangedEnemyAI : MonoBehaviour
     {
         //Get the direction from the enemy to the player and normalize it
         directionToTarget = (player.position - transform.position).normalized;
-        float distanceToTarget = (player.position - transform.position).magnitude;        
+        distanceToTarget = (player.position - transform.position).magnitude;        
 
         Debug.DrawRay(transform.position, directionToTarget * viewDistance, Color.blue); // draws line to player
         Debug.DrawRay(gunEnd.position, gunEnd.forward * viewDistance, Color.red); // draws gun ray
 
-        switch (controller.State)
+        if (controller.State == EnemyState.Follow)
         {
-            case EnemyState.Follow:
-                if (!PlayerBehindWall() && distanceToTarget <= viewDistance)
-                {
+            if (!PlayerBehindWall() && distanceToTarget <= viewDistance)
+            {
+                controller.ChangeState(EnemyState.Aim);
+            }
+        }
 
+        // Aim and fire
+        if (controller.State == EnemyState.Aim || controller.State == EnemyState.Attack)
+        {
+            AimWeapon();
+
+            // if the gun lines up with the player switch to attack state
+            // otherwise switch back to aim state
+            if (Physics.Raycast(gunEnd.position, gun.forward, out gunRay) &&
+                gunRay.transform.tag == "Player")
+            {
+                if(controller.State == EnemyState.Aim)
                     controller.ChangeState(EnemyState.Attack);
-                }
-                break;
+            }
+            else if (controller.State == EnemyState.Attack)
+            {
+                controller.ChangeState(EnemyState.Aim);
+            }
 
-            case EnemyState.Attack: Fire();
-                break;
+            // if the player is no longer visible start following
+            if (PlayerBehindWall() || distanceToTarget > viewDistance)
+                controller.ChangeState(EnemyState.Follow);
         }
 
     }
 
-    void Fire()
+    private void Fire()
     {
         AimWeapon();
 
         if (Physics.Raycast(gunEnd.position, gunEnd.forward, out gunRay) &&
            gunRay.transform.tag == "Player")
         {
-            // if the time delay has been reached fire another shot
-            timer += Time.deltaTime;
-            if (timer > firingDelay)
-            {
-                var projectile = Instantiate(projectilePrefab, gunEnd.position, gun.rotation);
-                projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
-                audio.PlaySound(audio.attackSounds);
-                timer = 0;
-            }
+            controller.ChangeState(EnemyState.Attack);
         }
-        else if(PlayerBehindWall())
+        else if(PlayerBehindWall() || distanceToTarget > viewDistance)
         {            
             controller.ChangeState(EnemyState.Follow);
-            Debug.Log("Switching to follow state");
+            //Debug.Log("Switching to follow state");
         }
             
     }
 
-    void AimWeapon()
+    private void FireProjectile()
+    {
+        var projectile = Instantiate(projectilePrefab, gunEnd.position, gun.rotation);
+        projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
+        audio.PlaySound(audio.attackSounds);
+    }
+
+    private void AimWeapon()
     {
         // rotate enemy towards the player
         Vector3 faceDirection = Vector3.RotateTowards(transform.forward, directionToTarget,
             Mathf.Deg2Rad * turnSpeed * Time.deltaTime, 0);
         transform.rotation = Quaternion.LookRotation(faceDirection);
+
+        ///gun.rotation = Quaternion.LookRotation(faceDirection);
+        //gun.localRotation = Quaternion.Euler(gun.rotation.x, gun.rotation.y+1.5f, gun.rotation.z);
 
         // calculate the vector that the weapon needs to be aiming at
         shootDirection = (player.position - gunEnd.position).normalized;
@@ -107,9 +127,14 @@ public class RangedEnemyAI : MonoBehaviour
 
         // restrict angle of aiming
         if (Vector3.Angle(shootDirection, transform.forward) >= 30)
-            shootDirection = transform.forward;
+        shootDirection = transform.forward;
 
-        gun.forward = shootDirection; // get the gun to face the player
+        Vector3 gunDirection = Vector3.RotateTowards(gun.forward, shootDirection,
+            Mathf.Deg2Rad * turnSpeed * Time.deltaTime, 0);
+        gun.rotation = Quaternion.LookRotation(gunDirection);
+
+        //gun.forward = shootDirection; // get the gun to face the player
+        //gun.forward = Quaternion.LookRotation(faceDirection);
     }
 
     bool PlayerBehindWall()

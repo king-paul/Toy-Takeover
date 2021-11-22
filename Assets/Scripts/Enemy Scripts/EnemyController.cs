@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public enum EnemyState { Patrol, Follow, Attack, Damage, Dead };
+public enum EnemyState { Patrol, Follow, Aim, Attack, Damage, Dead };
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
@@ -23,6 +23,16 @@ public class EnemyController : MonoBehaviour
     [Header("Collision damage")]
     public float collisionDamage = 1;
     public float framesPerDamage = 5;
+
+    [Header("Animation Speed")]
+    [Range(0.1f, 5)]
+    public float movementSpeed = 1;
+    [Range(0.1f, 5)]
+    public float attackSpeed = 1;
+    [Range(0.1f, 5)]
+    public float damageSpeed = 1;
+    [Range(0.1f, 5)]
+    public float deathSpeed = 1;
 
     [SerializeField]
     bool enviromentalHazard = false;
@@ -115,28 +125,35 @@ public class EnemyController : MonoBehaviour
         {
             case EnemyState.Patrol:
                 audio.PlayMoveSound();
-                animator.SetBool("Moving", true);
-                animator.SetBool("Attacking", false);
-            break;
+                animator.SetTrigger("Walk");
+                break;
 
             case EnemyState.Follow:
                 audio.PlayMoveSound();
-                audio.StopPlaying(0);
-                agent.isStopped = false;
+                //audio.StopPlaying(0);
 
+                agent.isStopped = false;
                 agent.destination = player.position;
+
+                animator.ResetTrigger("Attack");
                 animator.SetTrigger("Walk");
+                animator.speed = movementSpeed;
             break;
 
-            case EnemyState.Attack:
-                agent.destination = transform.position;
+            case EnemyState.Attack:                
                 agent.isStopped = true;
-                animator.ResetTrigger("Walking");
+
+                animator.ResetTrigger("Walk");
                 animator.SetTrigger("Attack");
-                
-                //animator.SetBool("Walking", false);
-                //animator.SetBool("Attacking", true);
+                animator.speed = attackSpeed;
                 break;
+
+            case EnemyState.Aim:
+                agent.isStopped = true;
+                animator.ResetTrigger("Attack");
+                animator.SetTrigger("Walk");
+                animator.speed = movementSpeed;
+            break;
 
             case EnemyState.Damage:
                 agent.isStopped = true; // stops the agent form moving
@@ -145,13 +162,14 @@ public class EnemyController : MonoBehaviour
                 animator.ResetTrigger("Walk");
                 animator.ResetTrigger("Attack");
                 animator.SetTrigger("Damage");
-                animator.speed = 2;
+                animator.speed = damageSpeed;
             break;
 
             case EnemyState.Dead:
                 agent.isStopped = true;                
                 audio.PlaySound(audio.deadSounds);
                 animator.SetTrigger("Death");
+                animator.speed = movementSpeed;
             break;
         }
 
@@ -176,13 +194,6 @@ public class EnemyController : MonoBehaviour
     {
         animator.speed = 1;
         ChangeState(EnemyState.Follow);
-    }
-
-    //play death particles when the enemy dies
-    private void OnDestroy()
-    {
-        if (deathParticles != null)        
-            Instantiate(deathParticles, transform.position, transform.rotation);
     }
 
 }
