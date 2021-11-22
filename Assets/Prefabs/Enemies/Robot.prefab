@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 4745279868794798831}
   - component: {fileID: 8022354399355635959}
   - component: {fileID: 664964726354778918}
-  - component: {fileID: 2795432869978878200}
   - component: {fileID: -944458588945779257}
   - component: {fileID: 454546568561992437}
   - component: {fileID: 7057391014905581073}
@@ -196,25 +195,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &2795432869978878200
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782209278137205567}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f87d23285a5d6ef449c26b7cd763d1c8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &-944458588945779257
 AudioSource:
   m_ObjectHideFlags: 0
@@ -782,6 +762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4759201769914402536}
+  - component: {fileID: 4522884461663118988}
   m_Layer: 0
   m_Name: Enemies_Robot
   m_TagString: Untagged
@@ -805,6 +786,25 @@ Transform:
   m_Father: {fileID: 4495125919215545006}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &4522884461663118988
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5280405038074223698}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f87d23285a5d6ef449c26b7cd763d1c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5699162751320157708
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ RotationConstraint:
   m_Enabled: 1
   m_Weight: 1
   m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationOffset: {x: 0, y: -85.14006, z: -90}
+  m_RotationOffset: {x: 0, y: -85.14007, z: -90}
   m_AffectRotationX: 1
   m_AffectRotationY: 1
   m_AffectRotationZ: 1
