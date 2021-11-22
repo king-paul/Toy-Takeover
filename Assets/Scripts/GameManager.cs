@@ -112,6 +112,11 @@ public class GameManager : MonoBehaviour
         waveTime = 0;    
     }
 
+    private void Start()
+    {
+        SpawnItemPickups();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -167,6 +172,7 @@ public class GameManager : MonoBehaviour
         if (enemiesSpawned == waves[waveNumber - 1].enemiesInWave.Length && enemiesLeft == 0)
         {
             playerAudio.PlaySound(playerAudio.waveEnd);
+            SpawnItemPickups(); // spawn the next set of item pickups
             NextWave(); // load the next wave
             return;
         }
@@ -222,6 +228,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void SpawnItemPickups()
+    {
+        GameObject[] pickupSpawners = GameObject.FindGameObjectsWithTag("PickupSpawner");
 
+        foreach (GameObject spawner in pickupSpawners)
+        {
+            spawner.GetComponent<ItemPickupSpawner>().SpawnPickup();
+        }
+
+    }
 
 }

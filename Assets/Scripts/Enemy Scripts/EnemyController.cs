@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour
             audio.PlaySound(audio.damageSounds);
             PlayDamageParticles();
         }
-              
+
     }
 
     private void Awake()
@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
         state = initialState;
 
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Start is called before the first frame update
