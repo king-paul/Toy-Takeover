@@ -472,8 +472,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 626429588367930485, guid: 0d0ac5ef9b30a71448142ca7c4026ae7, type: 3}
   viewDistance: 30
   viewAngle: 45
-  turnSpeed: 40
-  aimSpeed: 50
+  turnSpeed: 10
+  aimSpeed: 40
 --- !u!114 &-1036609915704547817
 MonoBehaviour:
   m_ObjectHideFlags: 0

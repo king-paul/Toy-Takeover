@@ -15,10 +15,8 @@ public class RangedEnemyAI : MonoBehaviour
 
     [SerializeField][Range(1, 100)]
     float viewAngle = 45f;
-    [SerializeField][Range(1, 100)]
+    [SerializeField][Range(1, 20)]
     float turnSpeed = 10f;
-    [SerializeField][Range(1, 100)]
-    float aimSpeed = 30f;
 
     private Transform player;
     private RaycastHit rayToPlayer;
