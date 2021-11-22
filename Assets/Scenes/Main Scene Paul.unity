@@ -1403,7 +1403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.16
+      value: 46.42
       objectReference: {fileID: 0}
     - target: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1411,7 +1411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.34
+      value: -4.58
       objectReference: {fileID: 0}
     - target: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_LocalRotation.x
@@ -8819,7 +8819,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh99538
+  m_Name: pb_Mesh32782
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22633,7 +22633,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63894
+  m_Name: pb_Mesh-21376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25181,7 +25181,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh100080
+  m_Name: pb_Mesh33324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28832,7 +28832,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh99904
+  m_Name: pb_Mesh33148
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32113,7 +32113,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh100472
+  m_Name: pb_Mesh33710
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32906,7 +32906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: waves.Array.size
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: spawnPoints.Array.size
@@ -32963,7 +32963,7 @@ PrefabInstance:
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: waves.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 81a0ad59850e00141bb15f7892d6ae7a, type: 2}
+      objectReference: {fileID: 11400000, guid: 0a7ea7a8053d2ad4095f8711216ec966, type: 2}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 
@@ -32995,19 +32995,19 @@ PrefabInstance:
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: waves.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 64200cdfb99a35c4cbea6571fd2a0392, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: waves.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 57b2131b6f8bf314da409be94cb18c32, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: waves.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: cf8154a7e2a00704890c440080d5b742, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: waves.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 45888f73d9f94d842b0aaa9be4f05aad, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: winText
       value: 
@@ -33275,11 +33275,11 @@ PrefabInstance:
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 8922432861276067955, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
+      objectReference: {fileID: 8922432861276067955, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: waves.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 86ab288c9fc8e5249b75b642fd6e20d6, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: roadCheckpoints.Array.data[0]
       value: 
@@ -33333,8 +33333,104 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1022939740}
     - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[0].waypoints.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[1].waypoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: patrolRoutes.Array.data[0].randomizeOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[0].waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2116352185}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[0].waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1773898853}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[0].waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1511783467}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[0].waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 30423688}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[0].waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1551453545}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[1].waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1931422289}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[1].waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 553267151}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[1].waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1027723715}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[1].waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 2027233843}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[1].waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1556749751}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[1].twoWay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1182793952}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 775245075}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 2087740496}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1544164653}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1780074090}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 1499176535}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 648845200}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].waypoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 1780074090}
+    - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: patrolRoutes.Array.data[2].randomizeOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8811335024764321506, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: m_Volume
@@ -45292,7 +45388,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-63910
+  m_Name: pb_Mesh-21392
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

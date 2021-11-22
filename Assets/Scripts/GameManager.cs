@@ -20,12 +20,12 @@ public class GameManager : MonoBehaviour
     public EnemyWave[] waves;
 
     [Header("Enemy Waypoints")]
-    [Tooltip("Waypoints on bottom of the level that all enemies can travel to")]
-    public Transform[] groundWaypoints;
-    [Tooltip("Waypoints above the ground which enemis that can use ramps travel to")]
-    public Transform[] platformWaypoints;
-    //[Tooltip("Waypoints that flying enemies can move between")]
-    //public Transform[] skyWaypoints;
+    //[Tooltip("Waypoints on bottom of the level that all enemies can travel to")]
+    //public Transform[] groundWaypoints;
+    //[Tooltip("Waypoints above the ground which enemis that can use ramps travel to")]
+    //public Transform[] platformWaypoints;
+    ////[Tooltip("Waypoints that flying enemies can move between")]
+    ////public Transform[] skyWaypoints;
     [Tooltip("Temporary waypoints for the cars to drive towards")]
     public Transform[] roadCheckpoints;
 
@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
     private int enemiesLeft = 0;
     private int enemiesSpawned = 0;
     private int enemiesInScene = 0;
-    private bool highlightQuitButton;
 
     // public properties and functions
     public GameState State { get => state; set => state = value; }
@@ -137,7 +136,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-
     public void TogglePause()
     {
         if (state == GameState.Running)
@@ -223,5 +221,7 @@ public class GameManager : MonoBehaviour
                 spawn.hasSpawned = false;
         }
     }
+
+
 
 }

@@ -792,7 +792,7 @@ MonoBehaviour:
   followWhenInRange: 1
   minDistanceFromPlayer: 10
   nextWaypoint: {fileID: 0}
-  patrolRoute: []
+  waypoints: []
 --- !u!114 &6105160214702041893
 MonoBehaviour:
   m_ObjectHideFlags: 0
