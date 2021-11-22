@@ -108,7 +108,7 @@ public class PatrolEnemyAI : MonoBehaviour
             // follow the player if in vision or they get too close
             if (useVisionCone && PlayerInVision() ||
                 followWhenInRange && distanceToPlayer <= minDistanceFromPlayer)
-                enemy.State = EnemyState.Follow;
+                enemy.ChangeState(EnemyState.Follow);
         }
     }   
     

@@ -40,7 +40,7 @@ public class MeleeEnemyAI : MonoBehaviour
         {
             if (controller.Distance <= attackRange)
             {
-                controller.State = EnemyState.Attack;
+                controller.ChangeState(EnemyState.Attack);
                 Invoke("AttackPlayer", 1 / attackRate);
                 return;
             }
@@ -54,7 +54,7 @@ public class MeleeEnemyAI : MonoBehaviour
         {
             if (controller.Distance > attackRange)
             {
-                controller.State = EnemyState.Follow;
+                controller.ChangeState(EnemyState.Follow);
                 CancelInvoke();
             }
         }
@@ -64,9 +64,6 @@ public class MeleeEnemyAI : MonoBehaviour
     {
         audio.PlaySound(audio.attackSounds);
         player.TakeDamage(damagePerAttack);
-
-        if(controller.State == EnemyState.Attack)
-            Invoke("AttackPlayer", 1 / attackRate);
     }
 
 }

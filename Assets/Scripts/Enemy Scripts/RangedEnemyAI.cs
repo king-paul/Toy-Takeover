@@ -59,7 +59,7 @@ public class RangedEnemyAI : MonoBehaviour
                 if (!PlayerBehindWall() && distanceToTarget <= viewDistance)
                 {
 
-                    controller.State = EnemyState.Attack;
+                    controller.ChangeState(EnemyState.Attack);
                 }
                 break;
 
@@ -87,9 +87,8 @@ public class RangedEnemyAI : MonoBehaviour
             }
         }
         else if(PlayerBehindWall())
-        {
-            //controller.State = EnemyState.Aim;
-            controller.State = EnemyState.Follow;
+        {            
+            controller.ChangeState(EnemyState.Follow);
             Debug.Log("Switching to follow state");
         }
             

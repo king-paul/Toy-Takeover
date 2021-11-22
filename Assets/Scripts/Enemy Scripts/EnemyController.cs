@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public enum EnemyState { Patrol, Follow, Attack, Dead };
+public enum EnemyState { Patrol, Follow, Attack, Damage, Dead };
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
@@ -45,12 +45,13 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(float amount){ 
 
         curHealth -= amount; // reduces health
-        animator.SetTrigger("Damage"); // plays animation
+
+        ChangeState(EnemyState.Damage);
 
         // switch enemy to follow after taking damage if patrolling
         if (state == EnemyState.Patrol)
         {
-            state = EnemyState.Follow;
+            ChangeState(EnemyState.Follow);
         }
 
         if (curHealth > 0)
@@ -88,39 +89,20 @@ public class EnemyController : MonoBehaviour
     {
         //Debug.Log("Distance: " + Distance);
 
-        if (curHealth <= 0)
+        if (curHealth <= 0 && state != EnemyState.Dead)
         {
             // if the enemy is not a car reduce the number in the wave
             if(!enviromentalHazard)
                 game.KillEnemy();
+            
+             ChangeState(EnemyState.Dead);
 
-            animator.SetTrigger("Death");
-            game.PlayRandomSound(audio.deadSounds, 1);
-
-            GameObject.Destroy(this.gameObject);
             return;
-        }
-
-        // needs to be updated
-        if((state == EnemyState.Patrol || state == EnemyState.Follow))
-        {
-            audio.PlayMoveSound();
-            animator.SetBool("Moving", true);
-            animator.SetBool("Attacking", false);
         }
 
         if (state == EnemyState.Follow)
         {
-            audio.StopPlaying(0);
-            agent.isStopped = false;
-            agent.destination = player.position;
-            animator.SetTrigger("Walk");
-        }
-        else if(state == EnemyState.Attack)
-        {
-            agent.destination = transform.position;
-            agent.isStopped = true;
-            animator.SetTrigger("Attack");
+            agent.destination = player.position;            
         }
     }
 
@@ -149,15 +131,27 @@ public class EnemyController : MonoBehaviour
             case EnemyState.Attack:
                 agent.destination = transform.position;
                 agent.isStopped = true;
+                animator.ResetTrigger("Walking");
                 animator.SetTrigger("Attack");
-                animator.SetBool("Walking", false);
-                animator.SetBool("Attacking", true);
+                
+                //animator.SetBool("Walking", false);
+                //animator.SetBool("Attacking", true);
                 break;
 
+            case EnemyState.Damage:
+                agent.isStopped = true; // stops the agent form moving
+
+                // update animation state to the damage state
+                animator.ResetTrigger("Walk");
+                animator.ResetTrigger("Attack");
+                animator.SetTrigger("Damage");
+                animator.speed = 2;
+            break;
+
             case EnemyState.Dead:
-                agent.isStopped = false;
+                agent.isStopped = true;                
+                audio.PlaySound(audio.deadSounds);
                 animator.SetTrigger("Death");
-                game.PlayRandomSound(audio.deadSounds, 1);
             break;
         }
 
@@ -176,6 +170,12 @@ public class EnemyController : MonoBehaviour
         // play damage particles
         if (damageParticles != null)        
            Instantiate(damageParticles, transform);        
+    }
+
+    public void StartFollowing()
+    {
+        animator.speed = 1;
+        ChangeState(EnemyState.Follow);
     }
 
     //play death particles when the enemy dies
