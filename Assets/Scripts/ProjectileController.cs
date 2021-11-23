@@ -42,7 +42,9 @@ public class ProjectileController : MonoBehaviour
         else if(other.gameObject.CompareTag("Enemy"))
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
-            enemy.TakeDamage(damage); 
+
+            if(enemy.State != EnemyState.Dead)
+                enemy.TakeDamage(damage);
         }
 
         // check for Ignore Raycast layer or ViewModel layer
