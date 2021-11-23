@@ -171,7 +171,7 @@ public class EnemyController : MonoBehaviour
                 animator.SetTrigger("Death");
                 animator.speed = movementSpeed;
 
-                GetComponent<CapsuleCollider>().enabled = false; // turns off collisions
+                GetComponent<Collider>().enabled = false; // turns off collisions
             break;
         }
 

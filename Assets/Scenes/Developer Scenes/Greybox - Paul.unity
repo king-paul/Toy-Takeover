@@ -2454,6 +2454,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6945199117130744953, guid: dc1a1912cfbcc974cb304353770a72ed, type: 3}
   m_PrefabInstance: {fileID: 1436296228}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1468838173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1915009623053785214, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+  m_PrefabInstance: {fileID: 8545282525536278128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1490928710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3637,6 +3642,10 @@ PrefabInstance:
       propertyPath: pickupMessageTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: quitButton
+      value: 
+      objectReference: {fileID: 1468838173}
     - target: {fileID: 604101679903821004, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.29
