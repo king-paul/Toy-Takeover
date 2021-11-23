@@ -655,7 +655,7 @@ MonoBehaviour:
   - {fileID: 6357407514209807851}
   spawnPoint: {fileID: 0}
   fallOffDamage: 10
-  godMode: 0
+  firing: 0
 --- !u!114 &8537989895921377964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGlobal: 1
-  priority: 0
+  priority: 32
   blendDistance: 0
   weight: 0
   sharedProfile: {fileID: 11400000, guid: 77edce7ccc9415947bcd7ddccaf58d9f, type: 2}
@@ -908,7 +908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGlobal: 1
-  priority: 0
+  priority: 16
   blendDistance: 0
   weight: 0
   sharedProfile: {fileID: 11400000, guid: 77edce7ccc9415947bcd7ddccaf58d9f, type: 2}
