@@ -43628,11 +43628,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11598558834473605, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 11598558834473605, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 781965925864779976, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1369672046966851890, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -43893,6 +43897,10 @@ PrefabInstance:
     - target: {fileID: 7923979194695213809, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_SizeDelta.y
       value: 94.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8254798296151251770, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8519807037139541780, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_fontAsset
