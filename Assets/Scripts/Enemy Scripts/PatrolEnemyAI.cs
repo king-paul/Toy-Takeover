@@ -5,18 +5,6 @@ using UnityEngine.AI;
 
 public class PatrolEnemyAI : MonoBehaviour
 {
-    [Header("Patrol Route")]
-    [SerializeField][Range(2, 20)]
-    int waypointsInRoute = 5;
-    [SerializeField]
-    bool flyingEnemy = false;
-    [SerializeField]
-    bool canUseRamps = true;
-    [SerializeField]
-    bool preventDuplicates = true;
-    [SerializeField]
-    bool includeSpawnpoint = true; 
-
     // adjustable variables
     [Header("Enemy Vision")]
     [SerializeField]
