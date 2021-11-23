@@ -517,7 +517,7 @@ AudioSource:
   m_GameObject: {fileID: 8922432861276067955}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1095790181896709802, guid: d74a42cb712d1514b8abfbeb69dbaaf5, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -613,7 +613,7 @@ AudioSource:
   m_GameObject: {fileID: 8922432861276067955}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1095790181896709802, guid: d74a42cb712d1514b8abfbeb69dbaaf5, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.8
@@ -735,11 +735,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b295850cd3ee5cc4182b2f5becae9ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointsInRoute: 10
-  flyingEnemy: 0
-  canUseRamps: 1
-  preventDuplicates: 1
-  includeSpawnpoint: 1
   useVisionCone: 1
   viewDistance: 25
   viewAngle: 45
