@@ -44072,6 +44072,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 75.19835
       objectReference: {fileID: 0}
+    - target: {fileID: 9131920068697876778, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 9131920068697876778, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
 --- !u!1 &1881900708 stripped
