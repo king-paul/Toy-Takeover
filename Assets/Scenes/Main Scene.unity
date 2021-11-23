@@ -10637,6 +10637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5203288315870422189, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6436634798270821824, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
       propertyPath: itemPickups.Array.data[0]
       value: 
@@ -22455,6 +22459,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5203288315870422189, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6436634798270821824, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
       propertyPath: itemPickups.Array.data[0]
       value: 
@@ -23693,6 +23701,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5203288315870422189, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6436634798270821824, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
       propertyPath: itemPickups.Array.data[0]
       value: 
@@ -31426,6 +31438,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5203288315870422189, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6436634798270821824, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
       propertyPath: itemPickups.Array.data[0]
       value: 
@@ -41603,6 +41619,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5203288315870422189, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6436634798270821824, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
       propertyPath: itemPickups.Array.data[0]
       value: 
@@ -44686,6 +44706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5203288315870422189, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6436634798270821824, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
       propertyPath: itemPickups.Array.data[0]
       value: 
@@ -45013,6 +45037,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 5203288315870422189, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6436634798270821824, guid: 24a8f19bf4e8caa4bb1674ca309dc784, type: 3}
       propertyPath: itemPickups.Array.data[0]
       value: 
