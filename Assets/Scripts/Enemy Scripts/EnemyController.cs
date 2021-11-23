@@ -52,7 +52,7 @@ public class EnemyController : MonoBehaviour
     // properties and public functions
     public EnemyState State { get => state; set => state = value; }
     public float Distance { get => (player.position - transform.position).magnitude; }
-    public void TakeDamage(float amount){ 
+    public void TakeDamage(float amount, bool interruptSound){ 
 
         curHealth -= amount; // reduces health
 
@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
 
         if (curHealth > 0)
         {
-            audio.PlaySound(audio.damageSounds);
+            audio.PlaySound(audio.damageSounds, interruptSound);
             PlayDamageParticles();
         }
 
@@ -105,7 +105,7 @@ public class EnemyController : MonoBehaviour
             if(!enviromentalHazard)
                 game.KillEnemy();
             
-             ChangeState(EnemyState.Dead);
+            ChangeState(EnemyState.Dead);
 
             return;
         }
@@ -167,7 +167,7 @@ public class EnemyController : MonoBehaviour
 
             case EnemyState.Dead:
                 agent.isStopped = true;
-                audio.PlaySound(audio.deadSounds);
+                audio.PlaySound(audio.deadSounds, true);
                 animator.SetTrigger("Death");
                 animator.speed = movementSpeed;
 

@@ -39,8 +39,11 @@ public class EnemySound : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip[] clips)
+    public void PlaySound(AudioClip[] clips, bool interrupt)
     {
+        if (enemyAudio[0].isPlaying && !interrupt)
+            return;
+
         if (clips.Length > 0)
         {
             AudioClip randomSound = clips[Random.Range(0, clips.Length - 1)];

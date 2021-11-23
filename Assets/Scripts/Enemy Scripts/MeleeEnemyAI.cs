@@ -62,7 +62,7 @@ public class MeleeEnemyAI : MonoBehaviour
 
     public void AttackPlayer()
     {
-        audio.PlaySound(audio.attackSounds);
+        audio.PlaySound(audio.attackSounds, true);
         player.TakeDamage(damagePerAttack);
     }
 
