@@ -12,13 +12,9 @@ public class ItemPickupSpawner : MonoBehaviour
 
     GameManager game;
 
-    private void Start()
-    {
-        game = GameObject.Find("GameManager").GetComponent<GameManager>();
-    }
-
     public void SpawnPickup()
     {
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
         Quaternion rotation = Quaternion.Euler(0, spawnAngle, 0);
 
         // if there is already an item pickup on the spawnpoint don't spawn anything

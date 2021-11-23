@@ -15,37 +15,41 @@ public class PlayerMovement : MonoBehaviour
     // Basic movement
     [Header("Basic Movement")]
     [SerializeField] [Range(0, 50)]
-    float runSpeed = 20;    
-    [SerializeField][Range(0, 10)]
+    float runSpeed = 20;
+    [SerializeField] [Range(0, 10)]
     [Tooltip("Sets how high the player can jump")]
     float jumpPower = 7;
-    [SerializeField][Range(0, 20)]
+    [SerializeField] [Range(0, 20)]
     [Tooltip("Sets how fast the player falls without using jetpack")]
-    float gravity = -Physics.gravity.y;   
-    
+    float gravity = -Physics.gravity.y;
+
+    [SerializeField][Range(1,5)]
+    [Tooltip("The speed in which the player gets kkocked back when on top of an enemy")]
+    float damageKnockback = 2f;
+
     // Camera
     [Header("Camera")]
-    [SerializeField][Range(0, 10)]
+    [SerializeField] [Range(0, 10)]
     float verticalRotationSpeed = 2;
-    [SerializeField][Range(0, 10)]
+    [SerializeField] [Range(0, 10)]
     float horizontalRotationSpeed = 2;
-    [SerializeField][Range(0, 180)]
+    [SerializeField] [Range(0, 180)]
     float verticalRotationLimit = 90;
 
     // Jetpack
     [Header("Jetpack")]
-    [SerializeField][Range(1, 10)]
+    [SerializeField] [Range(1, 10)]
     [Tooltip("The maxmimum fuel capacity that the jetpack can store")]
     float maxFuel = 4f;
-    [SerializeField][Range(0, 10)]
+    [SerializeField] [Range(0, 10)]
     float startingFuel = 4f;
-    [SerializeField][Range(0, 20)]
+    [SerializeField] [Range(0, 20)]
     [Tooltip("The upwards speed while on the jetpack")]
     float lift = 7f;
-    [SerializeField][Range(0, 20)]
+    [SerializeField] [Range(0, 20)]
     [Tooltip("The forward, back and sideways movement speed while on jetpack")]
     float thrust = 7f;
-    [SerializeField][Range(0, 20)]
+    [SerializeField] [Range(0, 20)]
     [Tooltip("The speed in which the character falls while there is still jetpack fuel")]
     float weight = 9.8f;
 
@@ -63,11 +67,16 @@ public class PlayerMovement : MonoBehaviour
     private float rotateX, rotateY;
     private float verticalVelocity;
 
-    private bool onGround;
     private bool usingJetpack;
     private bool landed;
     private bool jumping;
     private Transform grounded;
+
+    // Public functions
+    public void KnockBack()
+    {
+        controller.Move(Vector3.back * damageKnockback);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -226,7 +235,7 @@ public class PlayerMovement : MonoBehaviour
 
         Debug.DrawRay(grounded.position, Vector3.down);
 
-        if (Physics.Raycast(grounded.position, Vector3.down, out hit))//, LayerMask.NameToLayer("Level")))
+        if (Physics.Raycast(grounded.position, Vector3.down, out hit))
         {
             distance = transform.position.y - hit.point.y;
 

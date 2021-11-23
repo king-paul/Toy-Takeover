@@ -34529,7 +34529,7 @@ PrefabInstance:
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 8922432861276067955, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
+      objectReference: {fileID: 8922432861276067955, guid: 946d5c0572a047642b60a21b352fa359, type: 3}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: waves.Array.data[5]
       value: 
@@ -43690,7 +43690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 781965925864779976, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1369672046966851890, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument

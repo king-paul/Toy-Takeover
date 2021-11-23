@@ -18,9 +18,9 @@ GameObject:
   - component: {fileID: 3641016315081617923}
   - component: {fileID: 5871003587511559283}
   - component: {fileID: 2712776598375209321}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Flying Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,12 +226,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialState: 0
-  projectileDamageParticles: {fileID: 0}
-  laserDamageParticles: {fileID: 0}
+  damageParticles: {fileID: 0}
+  deathParticles: {fileID: 0}
   maxHealth: 30
   collisionDamage: 1
   framesPerDamage: 5
-  flyingEnemy: 1
+  movementSpeed: 1
+  attackSpeed: 1
+  damageSpeed: 1
+  deathSpeed: 1
+  enviromentalHazard: 0
 --- !u!114 &3641016315081617923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +259,7 @@ MonoBehaviour:
   followWhenInRange: 1
   minDistanceFromPlayer: 3
   nextWaypoint: {fileID: 0}
-  patrolRoute: []
+  waypoints: []
 --- !u!114 &5871003587511559283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709e4749bd7f58743a3a7bede89c0c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSound: {fileID: 0}
-  attackSound: {fileID: 0}
-  damageSound: {fileID: 0}
-  deadSound: {fileID: 0}
+  attackSounds: []
+  damageSounds: []
+  deadSounds: []

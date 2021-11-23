@@ -39,12 +39,13 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private PlayerSound audio;
     private Transform playerParticles;
+    private CharacterController controller;
 
     private int weaponNum = 0;
     private int prevWeaponNum;
 
     private int totalFrames = 0; // used to count frames from last collision damage
-    private bool collidingWithEnemy = false;
+    private bool takeCollisionDamage = false;
     #endregion
 
     #region properties
@@ -83,8 +84,6 @@ public class PlayerController : MonoBehaviour
         audio = GetComponent<PlayerSound>();
         weapons[weaponNum].SetActive(true);
         playerParticles = transform.Find("ParticleSystems");
-
-
     }
 
     // Update is called once per frame
@@ -101,15 +100,25 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        RaycastHit hit;
+        if (CollidingAboveEnemy(out hit))
+        {
+            takeCollisionDamage = true;
+            enemy = hit.transform.GetComponent<EnemyController>();
+
+            PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+            playerMovement.KnockBack();            
+        }
+
         // resolve collisions with enemy
-        if (collidingWithEnemy)
+        if (takeCollisionDamage)
         {
             totalFrames++;
             if (totalFrames > enemy.framesPerDamage)
             {
                 TakeDamage(enemy.collisionDamage);
                 totalFrames = 0;
-                collidingWithEnemy = false;
+                takeCollisionDamage = false;
             }
 
         }
@@ -118,12 +127,9 @@ public class PlayerController : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         // damage the player if they collide with an enemy
-        if (hit.gameObject.tag == "Enemy" && !collidingWithEnemy)
+        if (hit.gameObject.tag == "Enemy" && !takeCollisionDamage)
         {
-            collidingWithEnemy = true;
-            enemy = hit.gameObject.GetComponent<EnemyController>();
-
-            TakeDamage(enemy.collisionDamage);
+            takeCollisionDamage = true;
         }
 
         // send player to spawnpoint when they collide with floor
@@ -308,6 +314,25 @@ public class PlayerController : MonoBehaviour
     private void ResetHit()
     {
         hitFloor = false;
+    }
+
+    bool CollidingAboveEnemy(out RaycastHit hit)
+    {       
+        float distance = 0;
+        float minDistanceAboveEnemy = 4;
+        Transform grounded = transform.Find("Grounded").transform;
+
+        if (Physics.Raycast(grounded.position, Vector3.down, out hit, LayerMask.NameToLayer("Character")))
+        {
+            distance = transform.position.y - hit.point.y;
+
+            if (distance <= minDistanceAboveEnemy && hit.transform.tag == "Enemy")
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
     #endregion
 
