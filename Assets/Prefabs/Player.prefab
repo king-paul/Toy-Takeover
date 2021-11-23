@@ -699,7 +699,7 @@ MonoBehaviour:
   playerJump: {fileID: 8300000, guid: 102cda4990dd4c74f86ab574d78f87d9, type: 3}
   playerLanding: {fileID: 8300000, guid: 55793e0d04155a442a9effb871e018f8, type: 3}
   jetpackThrust: {fileID: 8300000, guid: fce8d6e59c3447d40bc80093fe2fe53d, type: 3}
-  jetpackRunout: {fileID: 0}
+  jetpackRunout: {fileID: 8300000, guid: ec6cabb1649292144b67618a2fd1adae, type: 3}
   healthDamage: {fileID: 8300000, guid: d257a65b7f4a2d448a01ed4328aa0917, type: 3}
   armourDamage: {fileID: 8300000, guid: 728232f892264dd45a9d353f57b37082, type: 3}
   gameOver: {fileID: 8300000, guid: 71372077246136142a4e7561dec43ea5, type: 3}

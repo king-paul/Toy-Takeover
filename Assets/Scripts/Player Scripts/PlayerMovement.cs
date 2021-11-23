@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // get jetpack input from player
-        if (Input.GetButton("Jetpack") || Input.GetAxis("Jetpack") != 0)
+        if (Input.GetButtonDown("Jetpack") || Input.GetAxis("Jetpack") != 0)
         {            
             // if there is jetpack fuel left, use the jetpack
             if (player.Fuel > 0f)
@@ -180,27 +180,36 @@ public class PlayerMovement : MonoBehaviour
                 if(!jetpackEmission.isPlaying)
                     jetpackEmission.Play();
             }
-            else if (isOnGround())// otherwise jump if on ground
-            {
-                verticalVelocity = jumpPower;
+            else if (isOnGround() && !jumping)// otherwise jump if on ground
+            {                
                 audio.StopPlaying(1); // stop playing footsteps sound
-                audio.PlaySound(audio.playerJump, 0.5f);
 
-                jumping = true;
+                if(!audio.isPlaying(0))
+                    audio.PlaySound(audio.jetpackRunout);
+                //Debug.Log("Jumping");
+
+                //jumping = true;
             }
-            else
+            else if(!jumping)
             {
                 audio.PlaySound(audio.jetpackRunout);
+                jumping = true;
+                //Debug.Log("Out of jetpack fuel");
             }
 
             landed = false;
         }
 
-        if(Input.GetButton("Jump") && isOnGround()) // space bar makes player jump
+        //if (!Input.GetButton("Jetpack") && Input.GetAxis("Jetpack") == 0)
+            //jetpackButtonPressed = 0;        
+
+        // handle jumping
+        if(Input.GetButtonDown("Jump") && isOnGround() && !jumping)
         {
             verticalVelocity = jumpPower;
             audio.StopPlaying(1); // stop playing footsteps sound
             audio.PlaySound(audio.playerJump, 0.5f);
+            Debug.Log("Jumping");
 
             jumping = true;
             landed = false;

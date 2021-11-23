@@ -24,6 +24,14 @@ public class PlayerSound : MonoBehaviour
     public AudioClip waveEnd;
     public AudioClip levelComplete;
 
+    public bool isPlaying(int index)
+    {
+        if (playerAudio[index].isPlaying)
+            return true;
+
+        return false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +56,7 @@ public class PlayerSound : MonoBehaviour
         //Debug.Log("index: " + index);
         //Debug.Log("Sound playing: " + playerAudio[index].isPlaying);
 
-        if (clip != null && index > 0 && index <= 2 &&
+        if (clip != null && index <= 2 &&
             (!playerAudio[index].isPlaying || playerAudio[index].clip != clip))
         {
             if (loop)
@@ -60,6 +68,7 @@ public class PlayerSound : MonoBehaviour
             }
             else
             {
+                //Debug.Log("Playing sound " + clip);
                 playerAudio[index].PlayOneShot(clip);
             }
 
