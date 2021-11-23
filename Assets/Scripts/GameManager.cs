@@ -46,13 +46,39 @@ public class GameManager : MonoBehaviour
     private int enemiesSpawned = 0;
     private int enemiesInScene = 0;
 
-    // public properties and functions
+
+    #region public properties and functions
     public GameState State { get => state; set => state = value; }
     public int EnemiesLeft { get => enemiesLeft; set => enemiesLeft = value; }
     public int WaveNumber { get => waveNumber; }
+    public string WaveTime { 
+        get {
+            int waveTimeSeconds = (int)waveTime % 60;
+            int waveTimeMins = (int)Mathf.Floor(waveTime / 60);
+
+            if (waveTimeSeconds < 10)
+                return waveTimeMins + ":0" + waveTimeSeconds;
+            else
+                return waveTimeMins + ":" + waveTimeSeconds;
+        } 
+    }
+    public string TotalTime {
+        get
+        {
+            int totalTimeSeconds = (int)Time.timeSinceLevelLoad % 60;
+            int totalTimeMins = (int)Mathf.Floor(Time.timeSinceLevelLoad / 60);
+
+            if (totalTimeSeconds < 10)
+                return totalTimeMins + ":0" + totalTimeSeconds;
+            else
+                return totalTimeMins + ":" + totalTimeSeconds;
+        }
+    }
+
     public void KillEnemy() {
         enemiesInScene--;
-        enemiesLeft--;  }
+        enemiesLeft--;  
+    }
 
     public void Die()
     {
@@ -80,14 +106,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Playing Enemy Sound: " + randomSound);
         soundSource.PlayOneShot(randomSound, volume);
     }
-    
-    // Instantiates a game object and destroys it after a specified time
-    public IEnumerator LoadAndDestroyObject(GameObject obj, Vector3 position, Quaternion rotation, float seconds)
-    {
-        var newObject = Instantiate(obj, position, rotation);
-        yield return new WaitForSeconds(seconds);
-        GameObject.Destroy(newObject);
-    }
+    #endregion
 
     // Start is called before the first frame update
     void Awake()
@@ -120,7 +139,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //HandleInput();
         if(spawnEnemies && waveNumber <= waves.Length && state == GameState.Running)
             UpdateEnemySpawns();
 
@@ -139,6 +157,7 @@ public class GameManager : MonoBehaviour
         else if (state == GameState.Running && !musicSource.isPlaying)
             musicSource.Play();
 
+        waveTime = Time.timeSinceLevelLoad - previousElapsedTime;
     }
 
     public void TogglePause()
@@ -166,8 +185,6 @@ public class GameManager : MonoBehaviour
     // and instantiates them. Also updates the wave number when there are not enemies left
     void UpdateEnemySpawns()
     {
-        waveTime = Time.timeSinceLevelLoad - previousElapsedTime;
-
         // Check that all enemies have been spawned and there are none left in the wave
         if (enemiesSpawned == waves[waveNumber - 1].enemiesInWave.Length && enemiesLeft == 0)
         {
@@ -206,12 +223,11 @@ public class GameManager : MonoBehaviour
 
     void NextWave()
     {
-        waveNumber++;
         enemiesSpawned = 0;        
-        previousElapsedTime = Time.time;
+        previousElapsedTime = Time.timeSinceLevelLoad;
 
         // WIN GAME CONDITION
-        if (waveNumber > waves.Length)
+        if (waveNumber >= waves.Length)
         {
             gui.ShowLevelComplete();
             playerAudio.PlaySound(playerAudio.levelComplete);
@@ -221,6 +237,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            StartCoroutine(gui.ShowWaveCompletion());
+            waveNumber++;
+
             enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
             // reset hasSpawned values
             foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)

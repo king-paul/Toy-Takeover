@@ -20,6 +20,13 @@ public class GUIController : MonoBehaviour
     public TextMeshProUGUI enemiesLeft;
     public TextMeshProUGUI timeText;
 
+    [Header("Wave Completion")]
+    public GameObject waveCompletionInfo;
+    public TextMeshProUGUI mainMessage;
+    public TextMeshProUGUI waveTimeText;
+    public TextMeshProUGUI totalTimeText;
+    public float displayTime = 3;
+
     [Header("Game State information")]
     public GameObject pauseMenu;
     public GameObject quitButton;
@@ -76,11 +83,30 @@ public class GUIController : MonoBehaviour
         if (pauseMenu.activeInHierarchy)
             StartCoroutine(HighlighQuitButton());
     }
+
+    public IEnumerator ShowWaveCompletion()
+    {
+        mainMessage.gameObject.SetActive(true);
+        waveCompletionInfo.SetActive(true);
+
+        mainMessage.text = "WAVE " + game.WaveNumber + " COMPLETE";
+        waveTimeText.text = game.WaveTime;
+        totalTimeText.text = game.TotalTime;
+
+        yield return new WaitForSeconds(displayTime);
+        waveCompletionInfo.SetActive(false);
+        mainMessage.text = "WAVE " + game.WaveNumber;
+
+        yield return new WaitForSeconds(displayTime);
+        mainMessage.gameObject.SetActive(false);
+    }
+
     public void ShowGameOver()
     {
         gameOverText.SetActive(true);
         backButton.SetActive(true);
     }
+
     public void ShowLevelComplete()
     {
         winText.SetActive(true);
@@ -94,7 +120,7 @@ public class GUIController : MonoBehaviour
         // info text
         waveNumber.text = game.WaveNumber.ToString();
         enemiesLeft.text = game.EnemiesLeft.ToString();
-        timeText.text = ((int)Time.timeSinceLevelLoad).ToString();
+        timeText.text = game.WaveTime;
 
         // ammo text
         currentAmmoText.text = player.Ammo.ToString();
