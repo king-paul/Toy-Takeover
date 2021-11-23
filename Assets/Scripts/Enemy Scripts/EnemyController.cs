@@ -166,10 +166,12 @@ public class EnemyController : MonoBehaviour
             break;
 
             case EnemyState.Dead:
-                agent.isStopped = true;                
+                agent.isStopped = true;
                 audio.PlaySound(audio.deadSounds);
                 animator.SetTrigger("Death");
                 animator.speed = movementSpeed;
+
+                GetComponent<CapsuleCollider>().enabled = false; // turns off collisions
             break;
         }
 

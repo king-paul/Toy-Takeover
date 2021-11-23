@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5ea1bf21c2e00ef4c91e55427121672b, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 173eebce40d5b8f4da22556f07caee1c, type: 2}
 --- !u!1 &3303234
 GameObject:
   m_ObjectHideFlags: 0
@@ -38300,6 +38300,10 @@ PrefabInstance:
     - target: {fileID: 4604238261664663512, guid: a0a33f624bdc235469d5d299bc049f3d, type: 3}
       propertyPath: m_Name
       value: playmat new
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604238261664663512, guid: a0a33f624bdc235469d5d299bc049f3d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8123397714564729229, guid: a0a33f624bdc235469d5d299bc049f3d, type: 3}
       propertyPath: m_LocalPosition.x
