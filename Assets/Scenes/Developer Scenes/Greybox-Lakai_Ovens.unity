@@ -28035,6 +28035,10 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 1847
       objectReference: {fileID: 0}
+    - target: {fileID: 8537989894881865666, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8537989895921377964, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: startingAngle
       value: -90
@@ -31607,36 +31611,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1779421991746003072, guid: e7fd5edc70dd9c8419d1e289aa78d870, type: 3}
   m_PrefabInstance: {fileID: 1623182499}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1268998639
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1268998640}
-  m_Layer: 0
-  m_Name: TiltHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1268998640
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268998639}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -21.586561, y: 21.78875, z: 107.809265}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1529176997}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1273818484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32610,7 +32584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 781965925864779976, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1369672046966851890, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -37988,11 +37962,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 0
   sharedProfile: {fileID: 11400000, guid: 77edce7ccc9415947bcd7ddccaf58d9f, type: 2}
---- !u!4 &1529176997 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8537989894274617248, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
-  m_PrefabInstance: {fileID: 1054160388}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1531545753
 GameObject:
   m_ObjectHideFlags: 0
