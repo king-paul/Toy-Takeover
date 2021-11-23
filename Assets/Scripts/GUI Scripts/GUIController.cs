@@ -34,6 +34,7 @@ public class GUIController : MonoBehaviour
     public GameObject winText;
     public GameObject backButton;
     public GameObject exitButton;
+    public GameObject restartButton;
 
     [Header("Messages")]
     public TextMeshProUGUI pickupText;
@@ -107,6 +108,7 @@ public class GUIController : MonoBehaviour
         gameOverText.SetActive(true);
         backButton.SetActive(true);
         exitButton.SetActive(true);
+        restartButton.SetActive(true);
     }
 
     public void ShowLevelComplete()
@@ -114,6 +116,7 @@ public class GUIController : MonoBehaviour
         winText.SetActive(true);
         backButton.SetActive(true);
         exitButton.SetActive(true);
+        restartButton.SetActive(true);
     }
     #endregion
 
