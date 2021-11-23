@@ -44,7 +44,7 @@ public class ProjectileController : MonoBehaviour
             EnemyController enemy = other.GetComponent<EnemyController>();
 
             if(enemy.State != EnemyState.Dead)
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(damage, true);
         }
 
         // check for Ignore Raycast layer or ViewModel layer

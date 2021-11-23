@@ -106,7 +106,7 @@ public class RangedEnemyAI : MonoBehaviour
     {
         var projectile = Instantiate(projectilePrefab, gunEnd.position, gun.rotation);
         projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
-        audio.PlaySound(audio.attackSounds);
+        audio.PlaySound(audio.attackSounds, true);
     }
 
     private void AimWeapon()

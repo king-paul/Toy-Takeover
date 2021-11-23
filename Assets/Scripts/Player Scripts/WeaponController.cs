@@ -150,14 +150,15 @@ public class WeaponController : MonoBehaviour
         {
             EnemyController enemy = obj.GetComponent<EnemyController>();
 
-            if (Time.time > nextFire)
+            if (Time.time > nextFire && enemy.State != EnemyState.Dead)
             {
-                enemy.TakeDamage(weaponObject.damagePerHit);
+                enemy.TakeDamage(weaponObject.damagePerHit, false);
 
                 /*Debug.Log("The raycast has hit an enemy and dealt " + 
                     weaponObject.damagePerHit + " damage");*/
             }
         }
+
     }
 
     private bool FirePressed()
