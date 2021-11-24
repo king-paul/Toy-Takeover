@@ -9,6 +9,7 @@ public class GUIController : MonoBehaviour
 {
     // GUI
     [Header("Heads Up Display")]
+    public GameObject HUD;
     public GameObject healthBar;
     public RectTransform fuelBar;
     public RectTransform armourBar;
@@ -16,25 +17,27 @@ public class GUIController : MonoBehaviour
     public TextMeshProUGUI maxAmmoText;
 
     [Header("Wave Information")]
+    public TextMeshProUGUI waveStartText;
+    [Range(0, 10)]
+    public float waveStartTime = 3;
     public TextMeshProUGUI waveNumber;
     public TextMeshProUGUI enemiesLeft;
     public TextMeshProUGUI timeText;
 
     [Header("Wave Completion")]
-    public GameObject waveCompletionInfo;
+    public GameObject waveCompletionInfo;    
     public TextMeshProUGUI mainMessage;
     public TextMeshProUGUI waveTimeText;
-    public TextMeshProUGUI totalTimeText;
-    public float displayTime = 3;
+    public TextMeshProUGUI totalTimeText;    
+    [Range(0, 10)]
+    public float waveEndTime = 3;
 
     [Header("Game State information")]
     public GameObject pauseMenu;
     public GameObject quitButton;
     public GameObject gameOverText;
     public GameObject winText;
-    public GameObject backButton;
-    public GameObject exitButton;
-    public GameObject restartButton;
+    public GameObject endGameButtons;
 
     [Header("Messages")]
     public TextMeshProUGUI pickupText;
@@ -86,37 +89,44 @@ public class GUIController : MonoBehaviour
             StartCoroutine(HighlighQuitButton());
     }
 
+    #region public coroutines
+    // Wave start and end displays
+    public IEnumerator ShowWaveStartText()
+    {
+        waveStartText.gameObject.SetActive(true);
+        waveStartText.text = "WAVE " + game.WaveNumber;
+        yield return new WaitForSeconds(waveStartTime);
+        waveStartText.gameObject.SetActive(false);
+    }
+
     public IEnumerator ShowWaveCompletion()
     {
         mainMessage.gameObject.SetActive(true);
         waveCompletionInfo.SetActive(true);
-
+   
         mainMessage.text = "WAVE " + game.WaveNumber + " COMPLETE";
         waveTimeText.text = game.WaveTime;
         totalTimeText.text = game.TotalTime;
 
-        yield return new WaitForSeconds(displayTime);
+        yield return new WaitForSeconds(waveEndTime);
         waveCompletionInfo.SetActive(false);
-        mainMessage.text = "WAVE " + game.WaveNumber;
-
-        yield return new WaitForSeconds(displayTime);
-        mainMessage.gameObject.SetActive(false);
+        
+        game.StartNextWave(); // loads next wave from game manager
     }
+    #endregion
 
     public void ShowGameOver()
     {
         gameOverText.SetActive(true);
-        backButton.SetActive(true);
-        exitButton.SetActive(true);
-        restartButton.SetActive(true);
+        endGameButtons.SetActive(true);
+        HUD.SetActive(false);
     }
 
     public void ShowLevelComplete()
     {
         winText.SetActive(true);
-        backButton.SetActive(true);
-        exitButton.SetActive(true);
-        restartButton.SetActive(true);
+        endGameButtons.SetActive(true);
+        HUD.SetActive(false);
     }
     #endregion
 
@@ -154,7 +164,6 @@ public class GUIController : MonoBehaviour
             healthImage.color = Color.yellow;
         else if (percentHealth < 40)
             healthImage.color = Color.red;
-
     }
 
     private void UpdateArmour()

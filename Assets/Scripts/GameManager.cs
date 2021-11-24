@@ -4,12 +4,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public enum GameState { Init, Running, Paused, Win, Loss};
+public enum GameState { Standby, Running, Paused, Win, Loss};
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(GUIController))]
 public class GameManager : MonoBehaviour
-{    
+{
+    [Header("Debug Cheats")]
+    public bool enableCheats = false;
+    public KeyCode waveSkipKey = KeyCode.F2;
+
     [Header("Enemy Spawning")]
     public bool spawnEnemies = false;
     [Tooltip("Enemy prefabs to be instantiated in each wave")]
@@ -18,16 +22,6 @@ public class GameManager : MonoBehaviour
     public Transform[] spawnPoints;
     [Tooltip("Place enemy wave scriptable objects here")]
     public EnemyWave[] waves;
-
-    [Header("Enemy Waypoints")]
-    //[Tooltip("Waypoints on bottom of the level that all enemies can travel to")]
-    //public Transform[] groundWaypoints;
-    //[Tooltip("Waypoints above the ground which enemis that can use ramps travel to")]
-    //public Transform[] platformWaypoints;
-    ////[Tooltip("Waypoints that flying enemies can move between")]
-    ////public Transform[] skyWaypoints;
-    [Tooltip("Temporary waypoints for the cars to drive towards")]
-    public Transform[] roadCheckpoints;
 
     GameState state;
     GUIController gui;
@@ -45,7 +39,6 @@ public class GameManager : MonoBehaviour
     private int enemiesLeft = 0;
     private int enemiesSpawned = 0;
     private int enemiesInScene = 0;
-
 
     #region public properties and functions
     public GameState State { get => state; set => state = value; }
@@ -118,9 +111,14 @@ public class GameManager : MonoBehaviour
         enemiesTransform = GameObject.Find("Enemies").transform;
         musicSource = GetComponents<AudioSource>()[0];
         soundSource = GetComponents<AudioSource>()[1];
-        playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
+        playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();        
+        waveTime = 0;
+    }
 
-        // ensure that each hasSpawn variable is set to false by default
+    private void Start()
+    {
+        StartCoroutine(gui.ShowWaveStartText());
+        SpawnItemPickups();
         if (spawnEnemies)
         {
             enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
@@ -128,12 +126,6 @@ public class GameManager : MonoBehaviour
                 spawn.hasSpawned = false;
         }
 
-        waveTime = 0;    
-    }
-
-    private void Start()
-    {
-        SpawnItemPickups();
     }
 
     // Update is called once per frame
@@ -151,13 +143,28 @@ public class GameManager : MonoBehaviour
             // pause track if game is paused otherwise stop it
             if (state == GameState.Paused)
                 musicSource.Pause();
-            else
+            else if(state == GameState.Loss || state == GameState.Win)
                 musicSource.Stop();
         }
         else if (state == GameState.Running && !musicSource.isPlaying)
             musicSource.Play();
 
         waveTime = Time.timeSinceLevelLoad - previousElapsedTime;
+
+        // wave skipping key
+        if(enableCheats && Input.GetKeyDown(waveSkipKey))
+        {
+            GameObject[] enemySpawns = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach(GameObject enemy in enemySpawns)
+            {
+                GameObject.Destroy(enemy);
+                KillEnemy();
+            }
+
+            enemiesSpawned = waves[waveNumber - 1].enemiesInWave.Length;
+            enemiesLeft = 0;
+        }
     }
 
     public void TogglePause()
@@ -186,11 +193,13 @@ public class GameManager : MonoBehaviour
     void UpdateEnemySpawns()
     {
         // Check that all enemies have been spawned and there are none left in the wave
-        if (enemiesSpawned == waves[waveNumber - 1].enemiesInWave.Length && enemiesLeft == 0)
+        if (state == GameState.Running &&
+            enemiesSpawned == waves[waveNumber - 1].enemiesInWave.Length && enemiesLeft == 0)
         {
             playerAudio.PlaySound(playerAudio.waveEnd);
-            SpawnItemPickups(); // spawn the next set of item pickups
-            NextWave(); // load the next wave
+            StartCoroutine(gui.ShowWaveCompletion());
+            state = GameState.Standby;
+            
             return;
         }
 
@@ -221,25 +230,29 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void NextWave()
+    public void StartNextWave()
     {
         enemiesSpawned = 0;        
         previousElapsedTime = Time.timeSinceLevelLoad;
+        state = GameState.Running;
 
         // WIN GAME CONDITION
         if (waveNumber >= waves.Length)
         {
-            gui.ShowLevelComplete();
-            playerAudio.PlaySound(playerAudio.levelComplete);
+            playerAudio.PlaySound(playerAudio.levelComplete);                        
             state = GameState.Win;
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
+
+            gui.ShowLevelComplete();            
         }
         else
         {
-            StartCoroutine(gui.ShowWaveCompletion());
             waveNumber++;
 
+            StartCoroutine(gui.ShowWaveStartText());
+
+            SpawnItemPickups(); // spawn the next set of item pickups
             enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
             // reset hasSpawned values
             foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
