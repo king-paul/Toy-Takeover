@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.18912424, g: 0.28331557, b: 0.4716981, a: 1}
+  m_AmbientSkyColor: {r: 0.53648984, g: 0.66294354, b: 0.8301887, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.23166609, g: 0.26755977, b: 0.3584906, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: fda2c5ca0eb44904cb40a65f0edaafbe, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 989d854208d013b47b1ad2579b36a9e5, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -770,6 +770,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Options Button
       objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8431373
+      objectReference: {fileID: 0}
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -842,6 +854,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 826874698929932132, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_text
       value: Options
@@ -889,13 +905,13 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.9800391, b: 0.9386792, a: 1}
-  m_Intensity: 0.75
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -945,13 +961,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137405129}
-  m_LocalRotation: {x: 0.112177625, y: 0.00672594, z: 0.35636562, w: 0.9275637}
+  m_LocalRotation: {x: 0.29719704, y: 0.21667026, z: 0.1098356, w: 0.92339814}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 11.731, y: 5.417, z: 42.59}
+  m_LocalEulerAnglesHint: {x: 30.084, y: 32.54, z: 22.536}
 --- !u!1 &1352563497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BedsideTable
       objectReference: {fileID: 0}
+    - target: {fileID: 2980495082142738561, guid: c3b78c2ee2a93754bbc51d7ecb979609, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3b78c2ee2a93754bbc51d7ecb979609, type: 3}
 --- !u!1 &1401530244 stripped
@@ -1284,6 +1304,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Feedback Button
       objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8431373
+      objectReference: {fileID: 0}
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1355,6 +1387,10 @@ PrefabInstance:
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 826874698929932132, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_text
@@ -1474,6 +1510,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quit Button
       objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8431373
+      objectReference: {fileID: 0}
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1537,6 +1585,10 @@ PrefabInstance:
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 826874698929932132, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_text
@@ -1758,6 +1810,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1355737722733823308, guid: 3dba84ad8217c7d47ae5b133d700b11d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4140087352651644685, guid: 3dba84ad8217c7d47ae5b133d700b11d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1770,6 +1826,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 63e5f1905b19b3e4c8985a4dcd7a4b5c, type: 2}
+    - target: {fileID: 6774179416099433662, guid: 3dba84ad8217c7d47ae5b133d700b11d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6919989557488218908, guid: 3dba84ad8217c7d47ae5b133d700b11d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1826,9 +1886,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7111926331082550086, guid: 3dba84ad8217c7d47ae5b133d700b11d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7729141756885674406, guid: 3dba84ad8217c7d47ae5b133d700b11d, type: 3}
       propertyPath: m_Name
       value: UI_EtchASketch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729141756885674406, guid: 3dba84ad8217c7d47ae5b133d700b11d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8408509976434716453, guid: 3dba84ad8217c7d47ae5b133d700b11d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1931,6 +1999,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play Button
       objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8431373
+      objectReference: {fileID: 0}
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2014,6 +2094,10 @@ PrefabInstance:
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
