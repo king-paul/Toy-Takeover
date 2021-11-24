@@ -1545,7 +1545,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650615151100073678, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650615151100073678, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: lengthInSec
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 9178569588800674695, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: m_CastShadows
