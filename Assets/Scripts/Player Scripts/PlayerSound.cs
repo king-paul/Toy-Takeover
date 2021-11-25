@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerSound : MonoBehaviour
 {    
     private AudioSource[] playerAudio;
-    //private AudioSource loopingAudio1, loopingAudio2;
 
     [Header("PlayerMovement")]
     public AudioClip playerRunning;

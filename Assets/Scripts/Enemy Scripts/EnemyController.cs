@@ -119,6 +119,7 @@ public class EnemyController : MonoBehaviour
     // Not currently used
     public void ChangeState(EnemyState newState)
     {
+        var enemyAI = GetComponent<RangedEnemyAI>();
         state = newState;
 
         switch(state)
@@ -126,7 +127,7 @@ public class EnemyController : MonoBehaviour
             case EnemyState.Patrol:
                 audio.PlayMoveSound();
                 animator.SetTrigger("Walk");
-                break;
+            break;
 
             case EnemyState.Follow:
                 audio.PlayMoveSound();
@@ -138,6 +139,10 @@ public class EnemyController : MonoBehaviour
                 animator.ResetTrigger("Attack");
                 animator.SetTrigger("Walk");
                 animator.speed = movementSpeed;
+
+                // stop particle effect if range enemy              
+                //if (enemyAI != null)
+                //    enemyAI.firingParticles.Stop();
             break;
 
             case EnemyState.Attack:                
@@ -146,13 +151,23 @@ public class EnemyController : MonoBehaviour
                 animator.ResetTrigger("Walk");
                 animator.SetTrigger("Attack");
                 animator.speed = attackSpeed;
-                break;
+
+                //if (enemyAI != null)
+                //    enemyAI.firingParticles.Stop();
+            break;
 
             case EnemyState.Aim:
                 agent.isStopped = true;
                 animator.ResetTrigger("Attack");
                 animator.SetTrigger("Walk");
                 animator.speed = movementSpeed;
+
+                // play particle effect
+                if (enemyAI != null)
+                {
+                    //if(enemyAI.firingParticles.isStopped)
+                    enemyAI.firingParticles.Play();
+                }
             break;
 
             case EnemyState.Damage:

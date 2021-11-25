@@ -17,6 +17,7 @@ public class RangedEnemyAI : MonoBehaviour
     float viewAngle = 45f;
     [SerializeField][Range(1, 20)]
     float turnSpeed = 10f;
+    public ParticleSystem firingParticles;
 
     private Transform player;
     private RaycastHit rayToPlayer;
@@ -31,6 +32,11 @@ public class RangedEnemyAI : MonoBehaviour
     private bool firing;
     private float timer;
     private float distanceToTarget;
+
+    public void PlayParticles()
+    {
+        RangedEnemyAI rangedEnemy;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +60,9 @@ public class RangedEnemyAI : MonoBehaviour
 
         if (controller.State == EnemyState.Follow)
         {
+            if (firingParticles.isPlaying)
+                firingParticles.Stop();
+
             if (!PlayerBehindWall() && distanceToTarget <= viewDistance)
             {
                 controller.ChangeState(EnemyState.Aim);
@@ -83,6 +92,13 @@ public class RangedEnemyAI : MonoBehaviour
                 controller.ChangeState(EnemyState.Follow);
         }
 
+        // start particles when aiming
+        if (controller.State == EnemyState.Aim && !firingParticles.isPlaying)
+            firingParticles.Play();
+
+        // stop particles while firing
+        if (controller.State == EnemyState.Attack && firingParticles.isPlaying)
+            firingParticles.Stop();
     }
 
     private void Fire()
@@ -105,6 +121,8 @@ public class RangedEnemyAI : MonoBehaviour
     private void FireProjectile()
     {
         var projectile = Instantiate(projectilePrefab, gunEnd.position, gun.rotation);
+        //firingParticles.Pause();        
+
         projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
         audio.PlaySound(audio.attackSounds, true);
     }

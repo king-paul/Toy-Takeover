@@ -116,11 +116,11 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start()
-    {
-        StartCoroutine(gui.ShowWaveStartText());
+    {        
         SpawnItemPickups();
         if (spawnEnemies)
         {
+            StartCoroutine(gui.ShowWaveStartText());
             enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
             foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
                 spawn.hasSpawned = false;
