@@ -15,6 +15,7 @@ public class MeleeEnemyAI : MonoBehaviour
     //[Tooltip("Destroy the game object when it collides tithe the player")]
     //bool destroyOnContact = false;
 
+    GameManager game;
     EnemyController controller;
     EnemySound audio;
     PlayerController player;
@@ -28,13 +29,14 @@ public class MeleeEnemyAI : MonoBehaviour
         controller = GetComponent<EnemyController>();
         audio = GetComponent<EnemySound>();
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (game.State != GameState.Running)
-            //return;
+        if (game.State != GameState.Running)
+            return;
 
         if (controller.State == EnemyState.Follow)
         {

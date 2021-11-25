@@ -97,7 +97,14 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("Distance: " + Distance);
+        if (game.State != GameState.Running)
+        {
+            if(animator != null)
+                animator.enabled = false;
+            if(agent != null)
+                agent.enabled = false;
+            return;
+        }
 
         if (curHealth <= 0 && state != EnemyState.Dead)
         {
@@ -129,7 +136,7 @@ public class EnemyController : MonoBehaviour
         {
             case EnemyState.Patrol:
                 audio.PlayMoveSound();
-                animator.SetTrigger("Walk");
+                animator.SetTrigger("Walk");                
             break;
 
             case EnemyState.Follow:

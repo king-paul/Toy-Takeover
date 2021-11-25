@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
         if (game.State == GameState.Running && currentHealth <= 0)
         {
             audio.StopAllSounds();
+            animator.SetTrigger("Gameover");
             game.Die();
         }
 

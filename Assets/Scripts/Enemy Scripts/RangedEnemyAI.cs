@@ -33,6 +33,8 @@ public class RangedEnemyAI : MonoBehaviour
     private float timer;
     private float distanceToTarget;
 
+    GameManager game;
+
     public void PlayParticles()
     {
         RangedEnemyAI rangedEnemy;
@@ -46,11 +48,15 @@ public class RangedEnemyAI : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
         timer = 0;
         shootDirection = transform.forward;
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(game.State != GameState.Running)
+            return;
+
         //Get the direction from the enemy to the player and normalize it
         directionToTarget = (player.position - transform.position).normalized;
         distanceToTarget = (player.position - transform.position).magnitude;        
@@ -148,9 +154,6 @@ public class RangedEnemyAI : MonoBehaviour
         Vector3 gunDirection = Vector3.RotateTowards(gun.forward, shootDirection,
             Mathf.Deg2Rad * turnSpeed * Time.deltaTime, 0);
         gun.rotation = Quaternion.LookRotation(gunDirection);
-
-        //gun.forward = shootDirection; // get the gun to face the player
-        //gun.forward = Quaternion.LookRotation(faceDirection);
     }
 
     bool PlayerBehindWall()
