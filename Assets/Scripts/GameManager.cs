@@ -79,7 +79,6 @@ public class GameManager : MonoBehaviour
         soundSource.PlayOneShot(playerAudio.gameOver);
         state = GameState.Loss;
         Cursor.lockState = CursorLockMode.None;
-        Time.timeScale = 0;
     }
 
     public void PlaySound(AudioClip clip, float volume)

@@ -382,6 +382,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3151803727661045924, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: playerLanding
+      value: 
+      objectReference: {fileID: 8300000, guid: b9f1bf356dc64a64c842d3b64e2c1c4a, type: 3}
+    - target: {fileID: 3151803727661045924, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
+      propertyPath: playerLandTooHigh
+      value: 
+      objectReference: {fileID: 8300000, guid: 55793e0d04155a442a9effb871e018f8, type: 3}
     - target: {fileID: 5453762235983606453, guid: f00c77c6f3f3c624384a74a68f033727, type: 3}
       propertyPath: spawnPoint
       value: 
@@ -1398,14 +1406,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8123397714564729229, guid: a0a33f624bdc235469d5d299bc049f3d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.009643916
-      objectReference: {fileID: 0}
-    - target: {fileID: 8123397714564729229, guid: a0a33f624bdc235469d5d299bc049f3d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.009340233
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a33f624bdc235469d5d299bc049f3d, type: 3}
 --- !u!1 &899282390 stripped
@@ -1529,7 +1529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1007949233
 Transform:
   m_ObjectHideFlags: 0
@@ -1914,6 +1914,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147270417}
     m_Modifications:
+    - target: {fileID: 2142429961615529122, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
+      propertyPath: initialState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8922432861276067955, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
       propertyPath: m_Name
       value: Grunt
@@ -2592,6 +2596,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147270417}
     m_Modifications:
+    - target: {fileID: 2142429961615529122, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
+      propertyPath: initialState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8922432861276067955, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
       propertyPath: m_Name
       value: Grunt (2)
@@ -2719,6 +2727,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1147270417}
     m_Modifications:
+    - target: {fileID: 2142429961615529122, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
+      propertyPath: initialState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8922432861276067955, guid: 11dfdcf797bee4143b34a927daab0be3, type: 3}
       propertyPath: m_Name
       value: Grunt (1)

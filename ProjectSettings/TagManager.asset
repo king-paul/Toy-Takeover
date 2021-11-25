@@ -11,6 +11,7 @@ TagManager:
   - KillZone
   - Waypoint
   - PickupSpawner
+  - GroundCollider
   layers:
   - Default
   - TransparentFX

@@ -251,7 +251,6 @@ public class PlayerMovement : MonoBehaviour
 
                 if (distance <= 1.5)
                 {
-                    //Debug.Log("Player is on ground");
                     return true;
                 }
 
@@ -263,7 +262,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        //Debug.Log("Player is off ground");
         return false;
     }
 
