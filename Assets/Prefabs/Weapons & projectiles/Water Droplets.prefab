@@ -75,8 +75,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21195126, y: 0.05785179, z: 0.107625246}
-  m_Center: {x: -0.0042443275, y: 0.009414196, z: 0.002031684}
+  m_Size: {x: 0.20906115, y: 0.05785179, z: 0.1636188}
+  m_Center: {x: -0.0027992725, y: 0.009414196, z: 0.114845395}
 --- !u!96 &3452569828400777609
 TrailRenderer:
   serializedVersion: 2

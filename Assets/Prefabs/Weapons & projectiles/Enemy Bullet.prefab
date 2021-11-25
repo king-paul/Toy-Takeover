@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!136 &7569494719587924669
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560382768402656237}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.04595718
+  m_Height: 0.41
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.01, z: 0}
 --- !u!1 &4999541130276871272
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +24,6 @@ GameObject:
   m_Component:
   - component: {fileID: 626429588367930485}
   - component: {fileID: -229760326644093807}
-  - component: {fileID: 6268193148334647355}
   - component: {fileID: 710641408354980119}
   m_Layer: 2
   m_Name: Enemy Bullet
@@ -50,19 +63,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!65 &6268193148334647355
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4999541130276871272}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07769544, y: 0.07822412, z: 0.10698971}
-  m_Center: {x: 0.00036992505, y: -0.000112086535, z: 0.005732164}
 --- !u!114 &710641408354980119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f7d2f86a697ebe4fa33efa516fa4d73, type: 3}
+--- !u!1 &3560382768402656237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3626415441225666466, guid: 9f7d2f86a697ebe4fa33efa516fa4d73, type: 3}
+  m_PrefabInstance: {fileID: 232666430568440911}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4189145825978331479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4114122981264790808, guid: 9f7d2f86a697ebe4fa33efa516fa4d73, type: 3}
