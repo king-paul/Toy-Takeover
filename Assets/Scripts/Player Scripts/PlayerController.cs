@@ -102,16 +102,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //RaycastHit hit;
-        //if (CollidingAboveEnemy())
-        //{
-            //takeCollisionDamage = true;
-            //enemy = hit.transform.GetComponent<EnemyController>();
-
-        //    PlayerMovement playerMovement = GetComponent<PlayerMovement>();
-        //    playerMovement.KnockBack();            
-        //}
-
         // resolve collisions with enemy
         if (takeCollisionDamage)
         {
@@ -300,27 +290,7 @@ public class PlayerController : MonoBehaviour
     private void ResetHit()
     {
         hitFloor = false;
-    }
-
-    bool CollidingAboveEnemy()
-    {
-        //float distance = 0;
-        //float minDistanceAboveEnemy = 4;
-        //RaycastHit hit;
-        //GameObject[] grounded = GameObject.FindGameObjectsWithTag("GroundCollider");
-
-        //if (Physics.Raycast(grounded.position, Vector3.down, out hit, LayerMask.NameToLayer("Character")))
-        //{
-        //        distance = transform.position.y - hit.point.y;
-
-        //        if (distance <= minDistanceAboveEnemy && hit.transform.tag == "Enemy")
-        //        {
-        //            return true;
-        //        }
-        //}
-
-        return false;
-    }
+    }    
     #endregion
 
 }

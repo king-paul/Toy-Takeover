@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public enum EnemyState { Patrol, Follow, Aim, Attack, Damage, Dead };
+public enum EnemyState { Idle, Patrol, Follow, Aim, Attack, Damage, Dead };
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
@@ -97,9 +97,11 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (game.State != GameState.Running)
+        if (game.State == GameState.Loss || game.State == GameState.Win)
         {
-            if(animator != null)
+            audio.StopAllSounds();
+
+            if (animator != null)
                 animator.enabled = false;
             if(agent != null)
                 agent.enabled = false;
@@ -122,8 +124,6 @@ public class EnemyController : MonoBehaviour
             agent.destination = player.position;            
         }
 
-        if (game.State == GameState.Win || game.State == GameState.Loss)
-            audio.StopAllSounds();
     }
 
     // Not currently used
@@ -134,6 +134,15 @@ public class EnemyController : MonoBehaviour
 
         switch(state)
         {
+            case EnemyState.Idle:
+                agent.isStopped = true;
+                animator.ResetTrigger("Attack");
+                animator.SetTrigger("Walk");
+                animator.StopPlayback();
+
+                Invoke("StartFollowing", 0.5f);
+            break;
+
             case EnemyState.Patrol:
                 audio.PlayMoveSound();
                 animator.SetTrigger("Walk");                

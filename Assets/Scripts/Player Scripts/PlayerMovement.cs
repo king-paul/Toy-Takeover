@@ -25,7 +25,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField][Range(1,5)]
     [Tooltip("The speed in which the player gets kkocked back when on top of an enemy")]
-    float damageKnockback = 2f;
+    float knockbackForce = 2f;
+
+    [SerializeField]
+    float distanceFromGround = 1.2f;
 
     // Camera
     [Header("Camera")]
@@ -145,17 +148,21 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(movementVector * Time.deltaTime);
 
         // start and stop running sound effect
-        if (movementVector != Vector3.zero && isOnGround())
+        if (movementVector != Vector3.zero && IsOnGround())
             audio.PlaySound(audio.playerRunning, 1, true);        
-        else if (movementVector == Vector3.zero && isOnGround())
+        else if (movementVector == Vector3.zero && IsOnGround())
             audio.StopPlaying(1);            
 
         //Debug.Log("Movement Vector: " + movementVector);
+
+        //if(CollidingAboveEnemy())        
+            //controller.Move(Vector3.back * knockbackForce);
+        
     }
 
     void UpdateVerticalPosition()
     {
-        if (usingJetpack & (isOnGround() || player.Fuel <= 0))
+        if (usingJetpack & (IsOnGround() || player.Fuel <= 0))
         {
             // stop jetpack sound
             audio.StopPlaying(1);
@@ -178,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
                 if(!jetpackEmission.isPlaying)
                     jetpackEmission.Play();
             }
-            else if (isOnGround() && !jumping)// otherwise jump if on ground
+            else if (IsOnGround() && !jumping)// otherwise jump if on ground
             {                
                 audio.StopPlaying(1); // stop playing footsteps sound
 
@@ -200,7 +207,7 @@ public class PlayerMovement : MonoBehaviour
             //jetpackButtonPressed = 0;        
 
         // handle jumping
-        if(Input.GetButtonDown("Jump") && isOnGround() && !jumping)
+        if(Input.GetButtonDown("Jump") && IsOnGround() && !jumping)
         {
             verticalVelocity = jumpPower;
             audio.StopPlaying(1); // stop playing footsteps sound
@@ -220,13 +227,13 @@ public class PlayerMovement : MonoBehaviour
 
         // If the player is off the ground and they are nore using the jetpack
         // Apply gravity, pulling the player down if they are above the ground
-        if (!isOnGround() && !usingJetpack)
+        if (!IsOnGround() && !usingJetpack)
         {
             landed = false;
             audio.StopPlaying(1);
             verticalVelocity += Physics.gravity.y * Time.deltaTime;
         }
-        else if(isOnGround() && !usingJetpack && !jumping)
+        else if(IsOnGround() && !usingJetpack && !jumping)
         {
             verticalVelocity = 0;
         }
@@ -236,7 +243,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("Y Velocity: " + (Vector3.up * verticalVelocity * Time.deltaTime).y);
     }
 
-    bool isOnGround()
+    public bool IsOnGround()
     {
         RaycastHit hit;
         float distance = 0;
@@ -249,12 +256,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 distance = transform.position.y - hit.point.y;
 
-                if (distance <= 1.5)
+                if (distance <= distanceFromGround)
                 {
-                    //if (hit.transform.tag == "Enemy")
-                        //controller.Move(Vector3.back * damageKnockback);
+                    if (hit.transform.tag == "Enemy")
+                    {
+                        KnocbackPlayer(hit);
+                    }
+                    //Debug.Log("Player on ground. Distance: " +distance);
 
-                    return true;
+                    return true;                   
                 }
 
                 Debug.DrawLine(castingPoint.position,
@@ -268,11 +278,18 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
+    void KnocbackPlayer(RaycastHit hit)
+    {
+        controller.Move(Vector3.back * knockbackForce);
+        var enemy = hit.transform.GetComponent<EnemyController>();
+        enemy.ChangeState(EnemyState.Idle);
+    }
+
     // detect collision with ground and walls
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         // check if player hit the grond
-        if (!landed && isOnGround())
+        if (!landed && IsOnGround())
         {
             //Debug.Log("Player hit something");
             audio.PlaySound(audio.playerLanding, 0.5f);
