@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8950134751043592583}
   - component: {fileID: 2169954239707777081}
   - component: {fileID: 8570574264798395861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Playmat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4604238261664663512}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.017251173, z: 0.5894983}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.009643916, y: 0.01, z: 0.009340233}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     private bool usingJetpack;
     private bool landed;
     private bool jumping;
-    private Transform grounded;
+    private GameObject[] groundChecks;
 
     // Public functions
     public void KnockBack()
@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<PlayerController>();
         audio = GetComponent<PlayerSound>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
-        grounded = transform.Find("Grounded");
+        groundChecks = GameObject.FindGameObjectsWithTag("GroundCollider");
         jetpackEmission = transform.Find("ParticleSystems").GetChild(2).GetComponent<ParticleSystem>();
 
         // Initialize Rigid body and camera variables
@@ -184,9 +184,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if(!audio.isPlaying(0))
                     audio.PlaySound(audio.jetpackRunout);
-                //Debug.Log("Jumping");
-
-                //jumping = true;
+                //Debug.Log("Jumping");                
             }
             else if(!jumping)
             {
@@ -220,9 +218,12 @@ public class PlayerMovement : MonoBehaviour
             verticalVelocity = -weight;
         }
 
+        // If the player is off the ground and they are nore using the jetpack
         // Apply gravity, pulling the player down if they are above the ground
         if (!isOnGround() && !usingJetpack)
         {
+            landed = false;
+            audio.StopPlaying(1);
             verticalVelocity += Physics.gravity.y * Time.deltaTime;
         }
         else if(isOnGround() && !usingJetpack && !jumping)
@@ -240,19 +241,26 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit hit;
         float distance = 0;
 
-        Debug.DrawRay(grounded.position, Vector3.down);
+        foreach (GameObject groundCheck in groundChecks)
+        {            
+            Transform castingPoint = groundCheck.transform;
 
-        if (Physics.Raycast(grounded.position, Vector3.down, out hit))
-        {
-            distance = transform.position.y - hit.point.y;
-
-            if (distance <= 1.2) 
+            if (Physics.Raycast(castingPoint.position, Vector3.down, out hit))
             {
-                //Debug.Log("Player is on ground");
-                return true;
-            }
+                distance = transform.position.y - hit.point.y;
 
-            //Debug.Log("Distance from ground: " + distance);
+                if (distance <= 1.5)
+                {
+                    //Debug.Log("Player is on ground");
+                    return true;
+                }
+
+                Debug.DrawLine(castingPoint.position,
+                new Vector3(castingPoint.position.x, hit.transform.position.y, castingPoint.position.z),
+                  Color.red);
+
+                //Debug.Log("Distance from ground: " + distance);
+            }
         }
 
         //Debug.Log("Player is off ground");

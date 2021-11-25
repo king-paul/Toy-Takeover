@@ -321,7 +321,7 @@ public class PlayerController : MonoBehaviour
     {       
         float distance = 0;
         float minDistanceAboveEnemy = 4;
-        Transform grounded = transform.Find("Grounded").transform;
+        Transform grounded = GameObject.FindGameObjectWithTag("GroundCollider").transform;
 
         if (Physics.Raycast(grounded.position, Vector3.down, out hit, LayerMask.NameToLayer("Character")))
         {

@@ -11,6 +11,7 @@ public class PlayerSound : MonoBehaviour
     public AudioClip playerRunning;
     public AudioClip playerJump;
     public AudioClip playerLanding;
+    public AudioClip playerLandTooHigh;
     public AudioClip jetpackThrust;
     public AudioClip jetpackRunout;
 
