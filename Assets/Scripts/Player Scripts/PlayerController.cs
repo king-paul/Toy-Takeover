@@ -102,15 +102,15 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit hit;
-        if (CollidingAboveEnemy(out hit))
-        {
-            takeCollisionDamage = true;
-            enemy = hit.transform.GetComponent<EnemyController>();
+        //RaycastHit hit;
+        //if (CollidingAboveEnemy())
+        //{
+            //takeCollisionDamage = true;
+            //enemy = hit.transform.GetComponent<EnemyController>();
 
-            PlayerMovement playerMovement = GetComponent<PlayerMovement>();
-            playerMovement.KnockBack();            
-        }
+        //    PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+        //    playerMovement.KnockBack();            
+        //}
 
         // resolve collisions with enemy
         if (takeCollisionDamage)
@@ -132,6 +132,7 @@ public class PlayerController : MonoBehaviour
         if (hit.gameObject.tag == "Enemy" && !takeCollisionDamage)
         {
             takeCollisionDamage = true;
+            enemy = hit.transform.GetComponent<EnemyController>();
         }
 
         // send player to spawnpoint when they collide with floor
@@ -154,23 +155,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("KillZone") && !hitFloor)
-        {
-            currentHealth -= fallOffDamage;
-            hitFloor = true;
-
-            Invoke("ResetHit", 0.5f); // prevents more than one collision
-
-            GetComponent<CharacterController>().enabled = false;
-            transform.position = spawnPoint.position;
-            transform.rotation = spawnPoint.rotation;
-            GetComponent<CharacterController>().enabled = true;
-        }
-    }*/
 
     #endregion
 
@@ -318,21 +302,22 @@ public class PlayerController : MonoBehaviour
         hitFloor = false;
     }
 
-    bool CollidingAboveEnemy(out RaycastHit hit)
-    {       
-        float distance = 0;
-        float minDistanceAboveEnemy = 4;
-        Transform grounded = GameObject.FindGameObjectWithTag("GroundCollider").transform;
+    bool CollidingAboveEnemy()
+    {
+        //float distance = 0;
+        //float minDistanceAboveEnemy = 4;
+        //RaycastHit hit;
+        //GameObject[] grounded = GameObject.FindGameObjectsWithTag("GroundCollider");
 
-        if (Physics.Raycast(grounded.position, Vector3.down, out hit, LayerMask.NameToLayer("Character")))
-        {
-            distance = transform.position.y - hit.point.y;
+        //if (Physics.Raycast(grounded.position, Vector3.down, out hit, LayerMask.NameToLayer("Character")))
+        //{
+        //        distance = transform.position.y - hit.point.y;
 
-            if (distance <= minDistanceAboveEnemy && hit.transform.tag == "Enemy")
-            {
-                return true;
-            }
-        }
+        //        if (distance <= minDistanceAboveEnemy && hit.transform.tag == "Enemy")
+        //        {
+        //            return true;
+        //        }
+        //}
 
         return false;
     }

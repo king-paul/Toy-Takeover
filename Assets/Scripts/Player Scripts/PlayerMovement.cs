@@ -73,10 +73,10 @@ public class PlayerMovement : MonoBehaviour
     private GameObject[] groundChecks;
 
     // Public functions
-    public void KnockBack()
-    {
-        controller.Move(Vector3.back * damageKnockback);
-    }
+    //public void KnockBack()
+    //{
+    //    controller.Move(Vector3.back * damageKnockback);
+    //}
 
     // Start is called before the first frame update
     void Start()
@@ -251,6 +251,9 @@ public class PlayerMovement : MonoBehaviour
 
                 if (distance <= 1.5)
                 {
+                    //if (hit.transform.tag == "Enemy")
+                        //controller.Move(Vector3.back * damageKnockback);
+
                     return true;
                 }
 
