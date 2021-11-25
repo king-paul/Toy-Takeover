@@ -83,4 +83,11 @@ public class PlayerSound : MonoBehaviour
         }
     }
 
+    // immediately stop playing all sounds attached to the player
+    public void StopAllSounds()
+    {
+        foreach (AudioSource source in playerAudio)
+            source.Stop();
+    }
+
 }

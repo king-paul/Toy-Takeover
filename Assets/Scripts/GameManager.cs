@@ -196,6 +196,7 @@ public class GameManager : MonoBehaviour
         if (state == GameState.Running &&
             enemiesSpawned == waves[waveNumber - 1].enemiesInWave.Length && enemiesLeft == 0)
         {
+            playerAudio.StopAllSounds();
             playerAudio.PlaySound(playerAudio.waveEnd);
             StartCoroutine(gui.ShowWaveCompletion());
             state = GameState.Standby;
@@ -238,7 +239,7 @@ public class GameManager : MonoBehaviour
 
         // WIN GAME CONDITION
         if (waveNumber >= waves.Length)
-        {
+        {            
             playerAudio.PlaySound(playerAudio.levelComplete);                        
             state = GameState.Win;
             Time.timeScale = 0;

@@ -64,4 +64,11 @@ public class EnemySound : MonoBehaviour
         if (enemyAudio[index].isPlaying)
             enemyAudio[index].Stop();
     }
+
+    // immediately stop playing all sounds attached to the player
+    public void StopAllSounds()
+    {
+        foreach (AudioSource source in enemyAudio)
+            source.Stop();
+    }
 }

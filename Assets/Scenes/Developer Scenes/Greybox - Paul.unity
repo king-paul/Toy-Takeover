@@ -1529,7 +1529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1007949233
 Transform:
   m_ObjectHideFlags: 0
@@ -3250,6 +3250,14 @@ PrefabInstance:
       propertyPath: quitButton
       value: 
       objectReference: {fileID: 1468838173}
+    - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 2088082644}
+    - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: endGameButtons
+      value: 
+      objectReference: {fileID: 2050432272}
     - target: {fileID: 604101679903821004, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.29
@@ -3344,6 +3352,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+--- !u!1 &2050432272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7729342294058469522, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+  m_PrefabInstance: {fileID: 8545282525536278128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2052970685
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,6 +3391,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3505210352170497390, guid: f4d374e79b36b5541bba521e2132f7ea, type: 3}
   m_PrefabInstance: {fileID: 2099033625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2088082644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1461563391000834181, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+  m_PrefabInstance: {fileID: 8545282525536278128}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2099033625
 PrefabInstance:

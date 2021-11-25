@@ -114,6 +114,9 @@ public class EnemyController : MonoBehaviour
         {
             agent.destination = player.position;            
         }
+
+        if (game.State == GameState.Win || game.State == GameState.Loss)
+            audio.StopAllSounds();
     }
 
     // Not currently used
