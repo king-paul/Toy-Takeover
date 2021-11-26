@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
-    //public Button playButton;
-    //public Button feedBackButton;
-    //public Button quitButton;
+    [Header("Menu Screens")]
+    public GameObject mainMenu;
+    public GameObject optionsScreen;
 
     public void Update()
     {
@@ -32,6 +32,20 @@ public class MenuController : MonoBehaviour
     {
         //Opens the URL defined in the string in a web browser
         Application.OpenURL(url);
+    }
+
+    public void GotToOptions()
+    {
+        mainMenu.SetActive(false);
+        optionsScreen.SetActive(true);
+
+        GetComponent<GameOptions>().InitGUI();
+    }
+
+    public void GoToMainMenu()
+    {
+        optionsScreen.SetActive(false);
+        mainMenu.SetActive(true);        
     }
 
     public void QuitGame()
