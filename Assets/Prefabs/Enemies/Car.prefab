@@ -539,7 +539,7 @@ MonoBehaviour:
   damageParticles: {fileID: 0}
   deathParticles: {fileID: 0}
   maxHealth: 30
-  collisionDamage: 10
+  collisionDamage: 35
   framesPerDamage: 5
   movementSpeed: 1
   attackSpeed: 1
