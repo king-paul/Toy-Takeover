@@ -448,7 +448,7 @@ MonoBehaviour:
   viewDistance: 100
   viewAngle: 45
   followWhenInRange: 1
-  minDistanceFromPlayer: 3
+  minDistanceFromPlayer: 20
   nextWaypoint: {fileID: 0}
   waypoints: []
 --- !u!114 &4283558823875897926

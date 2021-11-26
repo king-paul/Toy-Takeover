@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: 0
+  initialState: 1
   damageParticles: {fileID: 390033888642418726, guid: ec43f113bbab8904ebb472673aa61ec6, type: 3}
   deathParticles: {fileID: 8612663155036046339, guid: e7d0b622b67a4ee4592f1b593d3be00d, type: 3}
   maxHealth: 30
