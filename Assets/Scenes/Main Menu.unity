@@ -4835,7 +4835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826874697648434809, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_Name
-      value: Feedback Button
+      value: Credits Button
       objectReference: {fileID: 0}
     - target: {fileID: 826874697648434814, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_Color.r
@@ -4871,7 +4871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenURL
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4879,7 +4879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: https://forms.gle/JhQARdnYoJ63sfX59
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 826874697648434815, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
@@ -4927,7 +4927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826874698929932132, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_text
-      value: Give Feedback
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 826874698929932132, guid: dab3c95d75d15a84f870bde9fa9dbab4, type: 3}
       propertyPath: m_fontSize
