@@ -7736,6 +7736,7 @@ GameObject:
   - component: {fileID: 1484938553}
   - component: {fileID: 1484938557}
   - component: {fileID: 1484938558}
+  - component: {fileID: 1484938559}
   m_Layer: 5
   m_Name: Credits Screen
   m_TagString: Untagged
@@ -7855,6 +7856,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 646315f7d135f5b498986b359f401ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1484938559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484938552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255c6dbfba85b1140897abb792b8ab40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timescaleToSet: 1
 --- !u!1 &1486293633
 GameObject:
   m_ObjectHideFlags: 0
