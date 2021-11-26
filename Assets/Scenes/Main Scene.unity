@@ -33008,6 +33008,10 @@ PrefabInstance:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 196059176}
+    - target: {fileID: 1513658134, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 7876925560779082157, guid: d74a42cb712d1514b8abfbeb69dbaaf5, type: 2}
     - target: {fileID: 604101679903821004, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.29
@@ -33872,6 +33876,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8811335024764321506, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 1103479482768059794, guid: d74a42cb712d1514b8abfbeb69dbaaf5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
 --- !u!1001 &1519395071

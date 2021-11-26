@@ -13,8 +13,9 @@ public class MenuController : MonoBehaviour
 
     public void Update()
     {
-        //if(playButton.OnPointerEnter())
-        
+        if (Input.GetButtonDown("Cancel"))
+            GoToMainMenu();
+
     }    
 
     public void SetSelectedButton(GameObject button)
