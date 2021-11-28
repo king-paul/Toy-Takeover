@@ -731,7 +731,7 @@ MonoBehaviour:
     sourced from:\r\nSoundsnap\r\nhurt2.wav and hurt3.wav by thecheeseman on Freesound.org
     \r\n\r\nFonts:\r\nDigitalism by Cameron Woodward\r\nSketchtica by Millieri Comunicaci\xF3\n\r\n\r\nSpecial
     Thanks:\r\nsteve (Audacity Forums) - Audacity bitcrusher plugin\r\nEveryone who
-    playtested and gave feedback\r\nYou, for playing!\r"
+    playtested and gave feedback\r\nThanks to you, for playing!\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
