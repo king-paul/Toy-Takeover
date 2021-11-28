@@ -672,8 +672,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1905537101}
   m_HandleRect: {fileID: 1905537100}
   m_Direction: 2
-  m_Value: 1.0706015
-  m_Size: 0
+  m_Value: 0.9999999
+  m_Size: 0.116541296
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1551,7 +1551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -67.04568}
+  m_AnchoredPosition: {x: 0, y: -58.75}
   m_SizeDelta: {x: 25.3, y: 133}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763249849
@@ -1593,37 +1593,38 @@ MonoBehaviour:
     the enemies become more plentiful. But hang in there, and you\u2019ll reach the
     end eventually!\r\nTo survive these waves, you've been given 3 weapons and a
     Jetpack. There are a total of 3 enemies to look out for, and you'll also find
-    useful items throughout the play area. Keep reading to learn more!\r\n\n\r\n\r\nWEAPONS:\r\nYou\u2019ve
+    useful items throughout the play area. Keep reading to learn more!\r\n\r\n\r\n\r\nWEAPONS:\r\nYou\u2019ve
     been given 3 weapons, each using the highest grade plastic the toybox has to
-    offer!\r\n\r\nCrossbow:\r\nThis high power weapon may seem slow, \nbut is able
-    to pack quite the punch if you \ncan land a shot with it!\r\n\r\nSplash! Water
+    offer!\r\n\r\nCrossbow:\r\nThis high power weapon may seem slow, \r\nbut can
+    pack quite the punch if you \r\ncan land a shot with it!\r\n\r\nSplash! Water
     Blaster:\r\nThis automatic blaster will shoot continuous shots of water at your
-    targets, and though its\nmid-tier damage rate may make it seem\nless reliable
-    than other weapons, it\u2019s still\na perfectly trusty weapon to have by\nyour
-    side!\r\n\r\nLaser Gun:\r\nDon\u2019t let its low damage fool you, this\nweapon
-    is great for dealing with enemies \nat a long distance, and its high ammo\ncapacity
-    makes it a faithful weapon to\nalways have by your side!\r\n\r\n\r\nJETPACK:\r\nYou\u2019ve
+    targets, and though its\r\nmid-tier damage rate may make it seem\r\nless reliable
+    than other weapons, it can \r\nbe an excellent tool for taking out waves\r\nof
+    enemies\r\n\r\nLaser Gun:\r\nDon\u2019t let its low damage fool you, this\r\nweapon
+    is great for dealing with enemies \r\nat a long distance, its high ammo\r\ncapacity
+    makes it a reliable and strong \r\ntool in the right situation\r\n\r\n\r\nJETPACK:\r\nYou\u2019ve
     been equipped with a jetpack, one of the highest power accessories in the toybox!
-    This will let you fly in the air, and even let you glide down safely. \nHowever,
-    keep in mind that you\u2019ll need to\nkeep the jetpack fueled up! If you run
-    out\nof fuel, you won\u2019t be able to use the\njetpack until you find more
-    fuel, so\nkeep on the lookout!\r\n\r\n\r\nENEMIES:\r\n\nGrunt:\r\nThey may seem
-    weak individually, but as\na team, they can prove to be quite a\nhandful! These
-    toys will follow you on sight\nand will attack you with their crowbar.\r\n\r\nRobot:\r\nThe
-    biggest of the bunch, these will aim\nand fire their weapon at you on sight.\nKeep
-    an ear out for these, you do not\nwant to get hit by one of their bullets!\r\n\r\nCar:\r\nWhile
-    moving your way around the play\narea, keep on the lookout for these!\nThey\u2019ll
-    l travel around a set path, and will\ndeal some serious damage on impact!\r\n\r\n\r\nPICKUPS:\r\nAt
-    the beginning of each wave, you\u2019ll get a fresh set of pickups that you will
-    be able to find around the play area.\r\n\r\nHealth:\r\nIf your battery health
-    is running low, don\u2019t\nworry! You can find more battery health\naround the
-    play area!\r\n\r\nArmour:\r\nThese will give you a little bit of extra\nstrength.
-    Great if you need an extra \nboost!\r\n\r\nJetpack fuel:\r\nRefills half of your
-    jetpack fuel.\r\n\r\nAmmo:\r\nSeparate ammo for each of your weapons!\r\n\r\n\r\n\n\n\nWRAPPING
-    UP:\r\nBut that\u2019s not all! On top of all that, there is also a timer, which
-    will keep track of how long it takes you to complete all the waves. Once you\u2019ve
-    completed all the waves, try and beat your time, see how fast you can go, and
-    most importantly\u2026 Have fun!\r"
+    This will let you fly in the air, and even let you glide down safely. \r\nHowever,
+    keep in mind that you\u2019ll need to\r\nkeep the jetpack fueled up! If you run
+    out\r\nof fuel, you won\u2019t be able to use the\r\njetpack until you replenish
+    your tank, so\r\nkeep on the lookout!\r\n\r\n\r\nENEMIES:\r\n\r\nGrunt:\r\nThey
+    may seem weak individually, but as\r\na team, they can prove to be quite a\r\nhandful!
+    These toys will follow you on sight\r\nand will attack you with their crowbar.\r\n\r\nRobot:\r\nThe
+    biggest of the bunch, these will aim\r\nand fire their weapon at you on sight.\r\nKeep
+    an ear out for these, you do not\r\nwant to get hit by one of their bullets!\r\n\r\nCar:\r\nWhile
+    moving your way around the play\r\narea, keep on the lookout for these speedy
+    enemies!\r\nThey\u2019ll travel around a set track, and will\r\ndeal some serious
+    damage on impact!\r\n\r\n\r\nPICKUPS:\r\nAt the beginning of each wave, you\u2019ll
+    get a fresh set of pickups that you will be able to find all around the play
+    area.\r\n\r\nHealth:\r\nIf your battery health is running low, don\u2019t\r\nworry!
+    You can find more battery health\r\naround the play area!\r\n\r\nArmour:\r\nThese
+    will give you a little bit of extra\r\nstrength. Great if you need an extra \r\nboost!\r\n\r\nJetpack
+    fuel:\r\nRefills half of your jetpack fuel.\r\n\r\nAmmo:\r\nSeparate ammo for
+    each of your weapons!\r\n\r\n\r\n\r\n\r\n\r\nWRAPPING UP:\r\nBut that\u2019s
+    not all! On top of all that, there is also a timer, which will keep track of
+    how long it takes you to complete all the waves. Once you\u2019ve completed all
+    the waves, try and beat your time, see how fast you can go, and most importantly\u2026
+    Have fun!"
 --- !u!222 &763249850
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4731,6 +4732,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008530818}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2014886781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014886783}
+  - component: {fileID: 2014886782}
+  m_Layer: 0
+  m_Name: MUS_TapeStar-ShaneIvers_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2014886782
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014886781}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 1103479482768059794, guid: d74a42cb712d1514b8abfbeb69dbaaf5, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 8a8cfc04d29f9fc45bea9c36cba569fa, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2014886783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014886781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2056071056
 GameObject:
   m_ObjectHideFlags: 0
