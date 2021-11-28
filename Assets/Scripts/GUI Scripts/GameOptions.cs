@@ -129,9 +129,15 @@ public class GameOptions : MonoBehaviour
     #endregion
 
     #region controls options
-    public void SetCameraSensetivity()
+    public void SetCameraSensetivity(bool inMainScene)
     {
         cameraSensetivity = sensetivitySlider.value;
+
+        if (inMainScene)
+        {
+            PlayerMovement player = GameObject.Find("Player").GetComponent<PlayerMovement>();
+            player.CameraSensetivty = cameraSensetivity;
+        }
     }
     #endregion
 

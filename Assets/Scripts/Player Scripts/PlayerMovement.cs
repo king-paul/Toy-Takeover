@@ -33,9 +33,9 @@ public class PlayerMovement : MonoBehaviour
     // Camera
     [Header("Camera")]
     [SerializeField] [Range(0, 10)]
-    float verticalRotationSpeed = 2;
+    float verticalRotationSpeed = 1;
     [SerializeField] [Range(0, 10)]
-    float horizontalRotationSpeed = 2;
+    float horizontalRotationSpeed = 1;
     [SerializeField] [Range(0, 180)]
     float verticalRotationLimit = 90;
 
@@ -67,19 +67,18 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 forwardVector, sidewaysVector;
     Vector3 movementVector;
-    private float rotateX, rotateY;
+    private float rotateX, rotateY, angularXVel, angularYVel;
     private float verticalVelocity;
+    private float cameraSensetivity;
 
     private bool usingJetpack;
     private bool landed;
     private bool jumping;
     private GameObject[] groundChecks;
 
-    // Public functions
-    //public void KnockBack()
-    //{
-    //    controller.Move(Vector3.back * damageKnockback);
-    //}
+    // properties
+    public float CameraSensetivty { get => cameraSensetivity; 
+                                    set => cameraSensetivity = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +100,9 @@ public class PlayerMovement : MonoBehaviour
         usingJetpack = false;
         jumping = false;
         movementVector = Vector3.zero;
+
+        // set camera sensetivity
+        cameraSensetivity = PlayerPrefs.GetFloat("CameraSensetivity", 0);
     }
 
     // Update is called once per frame
@@ -118,11 +120,17 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateFaceDirection()
     {
-        rotateY += Input.GetAxis("Camera Horizontal") * horizontalRotationSpeed;
+        angularYVel = Input.GetAxis("Camera Horizontal") * horizontalRotationSpeed * (cameraSensetivity+0.5f);
+        rotateY += angularYVel;
 
-        if(Input.GetAxis("Camera Vertical") > 0 && rotateX > -verticalRotationLimit ||
+        if (Input.GetAxis("Camera Vertical") > 0 && rotateX > -verticalRotationLimit ||
            Input.GetAxis("Camera Vertical") < 0 && rotateX < verticalRotationLimit)
-            rotateX += -Input.GetAxis("Camera Vertical") * verticalRotationSpeed;       
+        {
+            angularXVel = -Input.GetAxis("Camera Vertical") * verticalRotationSpeed * (cameraSensetivity+0.5f);
+            rotateX += angularXVel;
+        }
+
+        //Debug.Log("Horizontal Rotation Speed: " + angularYVel + "\nVertical Rotation Speed: " + angularXVel);
 
         // rotate player
         transform.rotation = Quaternion.Euler(0, rotateY, 0);

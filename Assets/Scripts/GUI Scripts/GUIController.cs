@@ -34,6 +34,7 @@ public class GUIController : MonoBehaviour
 
     [Header("Game State information")]
     public GameObject pauseMenu;
+    public GameObject optionsMenu;
     public GameObject quitButton;
     public GameObject gameOverText;
     public GameObject winText;
@@ -87,6 +88,21 @@ public class GUIController : MonoBehaviour
 
         if (pauseMenu.activeInHierarchy)
             StartCoroutine(HighlighQuitButton());
+    }
+
+    public void ToggleOptionsMenu()
+    {
+        if(pauseMenu.activeInHierarchy && !optionsMenu.activeInHierarchy)
+        {
+            pauseMenu.SetActive(false);
+            optionsMenu.SetActive(true);
+        }
+        else
+        {
+            optionsMenu.SetActive(false);
+            pauseMenu.SetActive(true);            
+        }
+
     }
 
     #region public coroutines

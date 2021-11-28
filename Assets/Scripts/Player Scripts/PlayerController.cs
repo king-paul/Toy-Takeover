@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private float currentHealth = 100;
     private float currentArmour = 0;
     private float currentFuel = 0;
-    private bool hitFloor;
+    private bool hitFloor;    
 
     private GameManager game;
     private WeaponController weapon;
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         audio = GetComponent<PlayerSound>();
         weapons[weaponNum].SetActive(true);
-        playerParticles = transform.Find("ParticleSystems");
+        playerParticles = transform.Find("ParticleSystems");        
     }
 
     // Update is called once per frame
