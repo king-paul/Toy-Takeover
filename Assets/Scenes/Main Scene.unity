@@ -41809,6 +41809,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4509671751473109739, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519807037139541780, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+      propertyPath: m_text
+      value: "Congratulations! \nYou fought off the enemy toys"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
 --- !u!1 &1881900708 stripped
