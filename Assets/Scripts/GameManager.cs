@@ -168,8 +168,14 @@ public class GameManager : MonoBehaviour
         if(spawnEnemies && waveNumber <= waves.Length && state == GameState.Running)
             UpdateEnemySpawns();
 
-        if (Input.GetButtonDown("Cancel"))        
-            TogglePause();
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (!gui.optionsMenu.activeInHierarchy)
+                TogglePause();
+            else
+                gui.ToggleOptionsMenu();
+        }
+            
 
         // turn music on and off
         if ((state == GameState.Loss || state == GameState.Win) && musicSource.isPlaying)
