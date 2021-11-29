@@ -15172,7 +15172,7 @@ AudioSource:
   m_GameObject: {fileID: 685466834}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7876925560779082157, guid: d74a42cb712d1514b8abfbeb69dbaaf5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 267422e5688310849b68d513c863b563, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
@@ -32654,7 +32654,7 @@ PrefabInstance:
     - target: {fileID: 1513658134, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 7876925560779082157, guid: d74a42cb712d1514b8abfbeb69dbaaf5, type: 2}
+      objectReference: {fileID: 1095790181896709802, guid: d74a42cb712d1514b8abfbeb69dbaaf5, type: 2}
     - target: {fileID: 604101679903821004, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.29

@@ -57,7 +57,9 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 8627082a40989184c872a3f92d331472
   m_Children:
+  - {fileID: 1095790181896709802}
   - {fileID: 1103479482768059794}
+  - {fileID: 7876925560779082157}
   m_Volume: bd8bc56040ac19541900c8fa2a78b0d5
   m_Pitch: 6b18022822f4f11408ec71954a6ef4e5
   m_Send: 00000000000000000000000000000000
@@ -102,8 +104,7 @@ AudioMixerGroupController:
   m_Name: SoundEffects
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 79cceb2810b013a42bc48960fa60f600
-  m_Children:
-  - {fileID: 7876925560779082157}
+  m_Children: []
   m_Volume: 9e183abfc747bbf43ab68fba234b4b73
   m_Pitch: 655ec553bbcb553498736eb5dace3854
   m_Send: 00000000000000000000000000000000
@@ -122,8 +123,7 @@ AudioMixerGroupController:
   m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: b25433f85816a104b83004788b79de37
-  m_Children:
-  - {fileID: 1095790181896709802}
+  m_Children: []
   m_Volume: 8749ce473d931a940848ca81c2130e8e
   m_Pitch: 993c80fd0db32f144a53253b26dcb104
   m_Send: 00000000000000000000000000000000
