@@ -29,8 +29,11 @@ public class DollyCartEnemy : MonoBehaviour
 
     private void Update()
     {
-        if ((!alive || game.State != GameState.Running) && dollyCart.isActiveAndEnabled)
-            dollyCart.enabled = false;            
+        if (game.State != GameState.Running && game.State != GameState.Paused 
+            && dollyCart.isActiveAndEnabled)
+            dollyCart.enabled = false;
+        else if (game.State == GameState.Running && !dollyCart.isActiveAndEnabled)
+            dollyCart.enabled = true;
     }
 
     // destroys the enemy when colliding with the player
@@ -44,8 +47,7 @@ public class DollyCartEnemy : MonoBehaviour
 
             if (destroyOnCollision)
             {
-                game.PlayRandomSound(enemyAudio.deadSounds, 1);                
-                alive = false;
+                game.PlayRandomSound(enemyAudio.deadSounds, 1);
 
                 //Vector3 spawnPos = new Vector3(other.transform.position.x, other.transform.position.y,
                 //    other.transform.position.z + other.transform.forward.z * 50);
