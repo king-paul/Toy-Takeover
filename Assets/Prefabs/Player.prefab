@@ -829,7 +829,8 @@ MonoBehaviour:
   runSpeed: 10
   jumpPower: 7
   gravity: 14
-  damageKnockback: 2
+  knockbackForce: 2
+  distanceFromGround: 1.2
   verticalRotationSpeed: 0.4
   horizontalRotationSpeed: 2
   verticalRotationLimit: 90
@@ -1658,18 +1659,6 @@ PrefabInstance:
     - target: {fileID: 2611560221065614889, guid: 5ac488226e375504693bd94b716917d8, type: 3}
       propertyPath: m_Layer
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825922307937954791, guid: 5ac488226e375504693bd94b716917d8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.377
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825922307937954791, guid: 5ac488226e375504693bd94b716917d8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.56533
-      objectReference: {fileID: 0}
-    - target: {fileID: 2825922307937954791, guid: 5ac488226e375504693bd94b716917d8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.93
       objectReference: {fileID: 0}
     - target: {fileID: 2825922307937954791, guid: 5ac488226e375504693bd94b716917d8, type: 3}
       propertyPath: m_LocalRotation.x
