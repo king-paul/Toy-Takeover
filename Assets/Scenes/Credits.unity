@@ -699,8 +699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -137}
-  m_SizeDelta: {x: 770.99, y: 206.6}
+  m_AnchoredPosition: {x: 0, y: -91}
+  m_SizeDelta: {x: 770.99, y: 248.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &140594615
 MonoBehaviour:
@@ -731,10 +731,10 @@ MonoBehaviour:
     Time Travellin' Nancy by Shane Ivers - silvermansound.com\r\n\r\nSound effects
     sourced from:\r\nSoundsnap\r\nhurt2.wav and hurt3.wav by thecheeseman on Freesound.org
     \r\n\r\nFonts:\r\nDigitalism by Cameron Woodward\r\nSketchtica by Millieri Comunicaci\xF3\n\nSoftware:\r\nUnity
-    Technologies\nAudacity\nAutodesk, Inc (Maya)\nAdobe Substance 3D\nMicrosoft (Visual
-    Studio)\ndotPDN LLC (Paint.NET)\n\r\n\nSpecial Thanks:\r\nsteve (Audacity Forums)
-    - Audacity bitcrusher plugin\r\nThe Unity community\nEveryone who playtested\r\nThanks
-    to you, for playing!\r"
+    Technologies\nAudacity\nAutodesk, Inc (Maya)\nAdobe (Substance 3D, Photoshop)\nMicrosoft
+    (Visual Studio)\ndotPDN LLC (Paint.NET)\nGit\nGitHub, Inc\nAxosoft, LLC (GitKraken)\n\r\n\nSpecial
+    Thanks:\r\nsteve (Audacity Forums) - Audacity bitcrusher plugin\r\nThe Unity
+    community\nEveryone who playtested\r\nThanks to you, for playing!\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5401,7 +5401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 47}
+  m_AnchoredPosition: {x: 0, y: 110.29993}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025504088
@@ -10527,7 +10527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 238.60002}
+  m_AnchoredPosition: {x: 0, y: 301.89996}
   m_SizeDelta: {x: 256, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046836036
