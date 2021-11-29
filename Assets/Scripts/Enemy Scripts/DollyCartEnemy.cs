@@ -10,12 +10,13 @@ public class DollyCartEnemy : MonoBehaviour
     [Tooltip("Determines if the enemy will destroy itself upon collison with the player")]
     [SerializeField]
     bool destroyOnCollision = true;
-    public GameObject destructionParticles;
+    public ParticleSystem destructionParticles;
 
-    //EnemyController enemy;
+    // private variables    
     CinemachineDollyCart dollyCart;
     EnemySound enemyAudio;
     GameManager game;
+    bool alive;
 
     private void Start()
     {
@@ -23,12 +24,13 @@ public class DollyCartEnemy : MonoBehaviour
         dollyCart = GetComponentInParent<CinemachineDollyCart>();
         enemyAudio = GetComponent<EnemySound>();
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        alive = true;
     }
 
     private void Update()
     {
-        if (game.State != GameState.Running && dollyCart.isActiveAndEnabled)
-            dollyCart.enabled = false;
+        if ((!alive || game.State != GameState.Running) && dollyCart.isActiveAndEnabled)
+            dollyCart.enabled = false;            
     }
 
     // destroys the enemy when colliding with the player
@@ -40,16 +42,30 @@ public class DollyCartEnemy : MonoBehaviour
             var player = other.gameObject.GetComponent<PlayerController>();
             player.TakeDamage(collisionDamage);
 
-            game.PlayRandomSound(enemyAudio.deadSounds, 1);
-
             if (destroyOnCollision)
+            {
+                game.PlayRandomSound(enemyAudio.deadSounds, 1);                
+                alive = false;
+
+                //Vector3 spawnPos = new Vector3(other.transform.position.x, other.transform.position.y,
+                //    other.transform.position.z + other.transform.forward.z * 50);
+
+                //Debug.Log("Player Position: " + other.transform.position + ", Particles position: " + spawnPos);
+
+                Instantiate(destructionParticles, transform.position, transform.rotation);
                 GameObject.Destroy(this.gameObject);
+            }
+            else
+            {
+                enemyAudio.PlaySound(enemyAudio.attackSounds, false);
+            }
         }
         
     }
 
     public void ApplyHit()
     {
-        enemyAudio.PlaySound(enemyAudio.damageSounds, false);
+        enemyAudio.PlaySound(enemyAudio.damageSounds, false);        
     }
+
 }
