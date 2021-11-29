@@ -157,7 +157,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 3
-  m_Speed: 8
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -445,8 +445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useVisionCone: 1
-  viewDistance: 100
-  viewAngle: 45
+  viewDistance: 200
+  viewAngle: 50
   followWhenInRange: 1
   minDistanceFromPlayer: 20
   nextWaypoint: {fileID: 0}
@@ -466,9 +466,9 @@ MonoBehaviour:
   gun: {fileID: 1092207982186743846}
   gunEnd: {fileID: 7474806691942004169}
   projectilePrefab: {fileID: 626429588367930485, guid: 0d0ac5ef9b30a71448142ca7c4026ae7, type: 3}
-  viewDistance: 30
-  viewAngle: 45
-  turnSpeed: 10
+  viewDistance: 100
+  viewAngle: 100
+  turnSpeed: 20
   firingParticles: {fileID: 714371291435359376}
 --- !u!114 &-1036609915704547817
 MonoBehaviour:
