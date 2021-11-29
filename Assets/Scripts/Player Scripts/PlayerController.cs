@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         audio = GetComponent<PlayerSound>();
         weapons[weaponNum].SetActive(true);
+        weapon = weapons[weaponNum].GetComponent<WeaponController>();
         playerParticles = transform.Find("ParticleSystems");        
     }
 
@@ -143,6 +144,23 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = spawnPoint.rotation;
                 GetComponent<CharacterController>().enabled = true;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "KillZone" && !hitFloor)
+        {
+            TakeDamage(fallOffDamage);
+            hitFloor = true;
+            animator.SetTrigger("PlayerTakesDamage");
+
+            Invoke("ResetHit", 0.5f); // prevents more than one collision
+
+            GetComponent<CharacterController>().enabled = false;
+            transform.position = spawnPoint.position;
+            transform.rotation = spawnPoint.rotation;
+            GetComponent<CharacterController>().enabled = true;            
         }
     }
 

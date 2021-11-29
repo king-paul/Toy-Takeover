@@ -164,8 +164,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("Movement Vector: " + movementVector);
 
         //if(CollidingAboveEnemy())        
-            //controller.Move(Vector3.back * knockbackForce);
-        
+            //controller.Move(Vector3.back * knockbackForce);        
     }
 
     void UpdateVerticalPosition()
@@ -260,7 +259,8 @@ public class PlayerMovement : MonoBehaviour
         {            
             Transform castingPoint = groundCheck.transform;
 
-            if (Physics.Raycast(castingPoint.position, Vector3.down, out hit))
+            int layerMask = 1 << LayerMask.NameToLayer("Level");
+            if (Physics.Raycast(castingPoint.position, Vector3.down, out hit, distanceFromGround, layerMask))
             {
                 distance = transform.position.y - hit.point.y;
 
@@ -297,7 +297,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         // check if player hit the grond
-        if (!landed && IsOnGround())
+        if (!landed && IsOnGround() && transform.position.y > hit.transform.position.y)
         {
             //Debug.Log("Player hit something");
             audio.PlaySound(audio.playerLanding, 0.5f);
