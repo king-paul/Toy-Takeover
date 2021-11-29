@@ -54,6 +54,11 @@ public class MeleeEnemyAI : MonoBehaviour
 
         if (controller.State == EnemyState.Attack)
         {
+            // turn to face player
+            Vector3 targetPos = new Vector3(player.transform.position.x, transform.position.y, 
+                player.transform.position.z);
+            transform.LookAt(targetPos);
+
             if (controller.Distance > attackRange)
             {
                 controller.ChangeState(EnemyState.Follow);

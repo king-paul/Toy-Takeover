@@ -259,6 +259,8 @@ public class PlayerMovement : MonoBehaviour
         {            
             Transform castingPoint = groundCheck.transform;
 
+            Debug.DrawRay(castingPoint.position, Vector3.down * 5, Color.red);
+
             int layerMask = 1 << LayerMask.NameToLayer("Level");
             if (Physics.Raycast(castingPoint.position, Vector3.down, out hit, distanceFromGround, layerMask))
             {
@@ -275,9 +277,9 @@ public class PlayerMovement : MonoBehaviour
                     return true;                   
                 }
 
-                Debug.DrawLine(castingPoint.position,
-                new Vector3(castingPoint.position.x, hit.transform.position.y, castingPoint.position.z),
-                  Color.red);
+                //Debug.DrawLine(castingPoint.position,
+                //new Vector3(castingPoint.position.x, hit.transform.position.y, castingPoint.position.z),
+                  //Color.red);
 
                 //Debug.Log("Distance from ground: " + distance);
             }
