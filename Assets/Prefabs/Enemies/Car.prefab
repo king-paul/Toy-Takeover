@@ -513,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionDamage: 35
   destroyOnCollision: 1
-  destructionParticles: {fileID: 5240212159180022540, guid: c4f7c9baa4795674aaf2f7471694eede, type: 3}
+  destructionParticles: {fileID: 6922833897873740936, guid: 15193ce942af0e549968283c72007be7, type: 3}
 --- !u!114 &4819375934043842456
 MonoBehaviour:
   m_ObjectHideFlags: 0

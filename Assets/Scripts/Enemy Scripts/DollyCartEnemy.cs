@@ -10,7 +10,7 @@ public class DollyCartEnemy : MonoBehaviour
     [Tooltip("Determines if the enemy will destroy itself upon collison with the player")]
     [SerializeField]
     bool destroyOnCollision = true;
-    public ParticleSystem destructionParticles;
+    public GameObject destructionParticles;
 
     // private variables    
     CinemachineDollyCart dollyCart;
