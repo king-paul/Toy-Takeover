@@ -533,10 +533,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ca9179b371f599b4bb4ad0a185582df4, type: 3}
   - {fileID: 8300000, guid: 6b05ee06d106e8c4db2cfa7492403af2, type: 3}
   deadSounds:
-  - {fileID: 8300000, guid: 1539dec00abbd654a90d09f88f12378c, type: 3}
-  - {fileID: 8300000, guid: 06f96e5e985edcb479c8fe7b74e8247e, type: 3}
-  - {fileID: 8300000, guid: 781548a341264c149adce72ed6e8119a, type: 3}
-  - {fileID: 8300000, guid: eea34e67123a53947b7ac27776f93af1, type: 3}
   - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
 --- !u!1 &8712733715437968266
 GameObject:
