@@ -124,7 +124,8 @@ public class GameOptions : MonoBehaviour
 
     public void ToggleMotionBlur()
     {
-        
+        GameManager game = GameObject.Find("GameManager").GetComponent<GameManager>();
+        game.MotionBlur = motionBlur.isOn;
     }
     #endregion
 

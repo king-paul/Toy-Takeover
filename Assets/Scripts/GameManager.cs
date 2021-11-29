@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public enum GameState { Standby, Running, Paused, Win, Loss};
 
@@ -23,11 +25,15 @@ public class GameManager : MonoBehaviour
     [Tooltip("Place enemy wave scriptable objects here")]
     public EnemyWave[] waves;
 
+    [Header("Cameras")]
+    public GameObject firstPersonCamera;
+
     GameState state;
     GUIController gui;
     Transform enemiesTransform;
     AudioSource musicSource, soundSource;
     PlayerSound playerAudio;
+    Volume cameraVolume;
 
     // gui variables
     private float barWidth;
@@ -65,6 +71,24 @@ public class GameManager : MonoBehaviour
                 return totalTimeMins + ":0" + totalTimeSeconds;
             else
                 return totalTimeMins + ":" + totalTimeSeconds;
+        }
+    }
+
+    // Motion blur toggle property
+    public bool MotionBlur
+    {
+        get
+        {
+            MotionBlur motionBlur;
+            cameraVolume.profile.TryGet<MotionBlur>(out motionBlur);
+            return motionBlur.active;            
+        }
+
+        set
+        {
+            MotionBlur motionBlur;
+            cameraVolume.profile.TryGet<MotionBlur>(out motionBlur);
+            motionBlur.active = value;
         }
     }
 
@@ -112,6 +136,17 @@ public class GameManager : MonoBehaviour
         soundSource = GetComponents<AudioSource>()[1];
         playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();        
         waveTime = 0;
+
+        // set mtion blue setting
+        cameraVolume = firstPersonCamera.GetComponents<Volume>()[1];
+        MotionBlur motionBlur;
+        cameraVolume.profile.TryGet<MotionBlur>(out motionBlur);
+
+        float blurOn = PlayerPrefs.GetInt("MotionBlur", 1);
+        if(blurOn == 1)
+            motionBlur.active = true;
+        if(blurOn == 0)
+            motionBlur.active = false;
     }
 
     private void Start()
@@ -133,8 +168,14 @@ public class GameManager : MonoBehaviour
         if(spawnEnemies && waveNumber <= waves.Length && state == GameState.Running)
             UpdateEnemySpawns();
 
-        if (Input.GetButtonDown("Cancel"))        
-            TogglePause();
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (!gui.optionsMenu.activeInHierarchy)
+                TogglePause();
+            else
+                gui.ToggleOptionsMenu();
+        }
+            
 
         // turn music on and off
         if ((state == GameState.Loss || state == GameState.Win) && musicSource.isPlaying)
