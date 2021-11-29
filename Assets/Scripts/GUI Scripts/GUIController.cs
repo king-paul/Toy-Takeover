@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GUIController : MonoBehaviour
@@ -103,6 +104,12 @@ public class GUIController : MonoBehaviour
             pauseMenu.SetActive(true);            
         }
 
+    }
+
+    // changes unit scene when a button is clicked
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
     #region public coroutines
