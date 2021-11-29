@@ -201,8 +201,8 @@ public class PatrolEnemyAI : MonoBehaviour
 
             nextWaypoint = waypoints[waypoint];
 
-            Debug.Log("Agent " + this.gameObject.GetInstanceID() + " has reached waypoint: " + curWaypoint +
-                      "\nand will now move to waypoint " + nextWaypoint);
+            //Debug.Log("Agent " + this.gameObject.GetInstanceID() + " has reached waypoint: " + curWaypoint +
+                      //"\nand will now move to waypoint " + nextWaypoint);
             agent.SetDestination(nextWaypoint.position);
         }
 

@@ -42,9 +42,15 @@ public class ProjectileController : MonoBehaviour
         else if(other.gameObject.CompareTag("Enemy"))
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
+            DollyCartEnemy dollyEnemy = other.GetComponent<DollyCartEnemy>();
 
-            if(enemy.State != EnemyState.Dead)
+            if (enemy != null && enemy.State != EnemyState.Dead)
                 enemy.TakeDamage(damage, true);
+            else if(dollyEnemy != null)
+            {
+                dollyEnemy.ApplyHit();
+            }
+                
         }
 
         // check for Ignore Raycast layer or ViewModel layer

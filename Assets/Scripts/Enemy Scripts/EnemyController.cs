@@ -8,7 +8,7 @@ public enum EnemyState { Idle, Patrol, Follow, Aim, Attack, Damage, Dead };
 public class EnemyController : MonoBehaviour
 {
     // public variables
-    //public Color hitColor = Color.red;
+    [HideInInspector]
     public EnemyState initialState;
 
     [Header("Damage Particles")]

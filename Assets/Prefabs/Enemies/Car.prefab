@@ -310,7 +310,6 @@ GameObject:
   - component: {fileID: 6988174573132303476}
   - component: {fileID: 1120207613}
   - component: {fileID: -6839595495458533141}
-  - component: {fileID: 7008889368304603674}
   - component: {fileID: -7489867347767036787}
   - component: {fileID: 4819375934043842456}
   m_Layer: 10
@@ -523,29 +522,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7008889368304603674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7008889368304603673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6345d208c5d8c43a6fadd58ca100f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialState: 0
-  damageParticles: {fileID: 0}
-  deathParticles: {fileID: 0}
-  maxHealth: 30
-  collisionDamage: 35
-  framesPerDamage: 5
-  movementSpeed: 1
-  attackSpeed: 1
-  damageSpeed: 1
-  deathSpeed: 1
-  enviromentalHazard: 1
 --- !u!114 &-7489867347767036787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42fe43b85a000de4a9d0fe26304cf05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnCollision: 1
+  destructionParticles: {fileID: 0}
 --- !u!114 &4819375934043842456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,17 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709e4749bd7f58743a3a7bede89c0c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSounds:
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
-  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
+  attackSounds: []
   damageSounds:
   - {fileID: 8300000, guid: 1454172f7860e624489f1e25fbdf7197, type: 3}
   - {fileID: 8300000, guid: 1454172f7860e624489f1e25fbdf7197, type: 3}
@@ -591,6 +559,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 06f96e5e985edcb479c8fe7b74e8247e, type: 3}
   - {fileID: 8300000, guid: 781548a341264c149adce72ed6e8119a, type: 3}
   - {fileID: 8300000, guid: eea34e67123a53947b7ac27776f93af1, type: 3}
+  - {fileID: 8300000, guid: 8dd61c17449a8af448024b5f62772b0d, type: 3}
 --- !u!1 &8712733715437968266
 GameObject:
   m_ObjectHideFlags: 0

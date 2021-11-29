@@ -149,14 +149,16 @@ public class WeaponController : MonoBehaviour
         if(obj.tag == "Enemy")
         {
             EnemyController enemy = obj.GetComponent<EnemyController>();
+            DollyCartEnemy dollyEnemy = obj.GetComponent<DollyCartEnemy>();
 
-            if (Time.time > nextFire && enemy.State != EnemyState.Dead)
+            if (enemy != null && Time.time > nextFire && enemy.State != EnemyState.Dead)
             {
                 enemy.TakeDamage(weaponObject.damagePerHit, false);
-
                 /*Debug.Log("The raycast has hit an enemy and dealt " + 
                     weaponObject.damagePerHit + " damage");*/
             }
+            else if (dollyEnemy != null)
+                dollyEnemy.ApplyHit();
         }
 
     }

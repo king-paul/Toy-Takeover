@@ -174,15 +174,14 @@ public class GameManager : MonoBehaviour
                 TogglePause();
             else
                 gui.ToggleOptionsMenu();
-        }
-            
+        }            
 
         // turn music on and off
         if ((state == GameState.Loss || state == GameState.Win) && musicSource.isPlaying)
         {
             musicSource.Stop();
         }
-        else if (!musicSource.isPlaying)
+        else if (!musicSource.isPlaying && state == GameState.Running)
             musicSource.Play();
 
         waveTime = Time.timeSinceLevelLoad - previousElapsedTime;
