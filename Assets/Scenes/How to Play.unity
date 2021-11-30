@@ -3007,6 +3007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controls
       objectReference: {fileID: 0}
+    - target: {fileID: 225147660185988770, guid: 84f9dd6c94e9f1644a1d49712242fa4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.05
+      objectReference: {fileID: 0}
     - target: {fileID: 225147660198970924, guid: 84f9dd6c94e9f1644a1d49712242fa4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3015,6 +3019,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1701334428}
+    - target: {fileID: 225147660449994100, guid: 84f9dd6c94e9f1644a1d49712242fa4c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 17.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 225147660449994100, guid: 84f9dd6c94e9f1644a1d49712242fa4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 225147660461635318, guid: 84f9dd6c94e9f1644a1d49712242fa4c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 68c4ca822bfd673479b03a2d25b361a8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84f9dd6c94e9f1644a1d49712242fa4c, type: 3}
 --- !u!1001 &5176402428015286688
@@ -3024,6 +3040,77 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 372377922}
     m_Modifications:
+    - target: {fileID: 5176402427510827387, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -52.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402427591582729, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402427647397300, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -19.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402427676877839, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -69.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402427694046489, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_Text
+      value: "THE BASICS:\r\nTimmy\u2019s parents have bought him new toys. Fakes,
+        knock offs, copies, impersonators. Fight back, save your batteries, soldier.\r\n\nThere
+        are 6 waves total. Each wave gets progressively more difficult as you go
+        on, as the enemies become more plentiful. But hang in there, and you\u2019ll
+        reach the end eventually!\n\r\nTo survive these waves, you've been given
+        3 weapons and a Jetpack. There are a total of 2 enemies and 1 environmental
+        hazard to look out for, and you'll also find useful items throughout the
+        play area. Keep reading to learn more!\r\n\r\n\r\n\r\nWEAPONS:\r\nYou\u2019ve
+        been given 3 weapons, each using the highest grade plastic the toybox has
+        to offer!\r\n\r\nCrossbow:\r\nThis high power weapon may seem slow, \r\nbut
+        can pack quite the punch if you \r\ncan land a shot with it!\r\n\r\nSplash!
+        Water Blaster:\r\nThis automatic blaster will shoot continuous shots of water
+        at your targets, and though its\r\nmid-tier damage rate may make it seem\r\nless
+        reliable than other weapons, it can \r\nbe an excellent tool for taking out
+        waves\r\nof enemies\r!\n\r\nLaser Gun:\r\nDon\u2019t let its low damage fool
+        you, this\r\nweapon is great for dealing with enemies \r\nat a long distance,
+        its high ammo\r\ncapacity makes it a reliable and strong \r\ntool in the
+        right situation!\r\n\r\n\r\nJETPACK:\r\nYou\u2019ve been equipped with a
+        jetpack, one of the highest power accessories in the toybox! This will let
+        you fly in the air, and even let you glide down safely. \r\nHowever, keep
+        in mind that you\u2019ll need to\r\nkeep the jetpack fueled up! If you run
+        out\r\nof fuel, you won\u2019t be able to use the\r\njetpack until you replenish
+        your tank, so\r\nkeep on the lookout!\r\n\r\n\r\nENEMIES:\r\n\r\nGrunt:\r\nThey
+        may seem weak individually, but as\r\na team, they can prove to be quite
+        a\r\nhandful! These toys will follow you on sight\r\nand will attack you
+        with their crowbar.\r\n\r\nRobot:\r\nThe biggest of the bunch, these will
+        aim\r\nand fire their weapon at you on sight.\r\nKeep an ear out for these,
+        you do not\r\nwant to get hit by one of their bullets!\r\n\r\n\nENVIRONMENTAL
+        HAZARD:\r\n\r\nCar:\r\nWhile moving your way around the play area, keep on
+        the lookout for these speedy obstacles! They\u2019ll travel around a set
+        track, and will deal some\nserious damage on impact! These\ndon\u2019t count
+        towards the number of\nenemies in a wave, will always \nrespawn, and also
+        cannot be destroyed! Keep on the lookout, they have a tendency to creep up
+        on you!\r\n\n\r\nPICKUPS:\r\nAt the beginning of each wave, you\u2019ll get
+        a fresh set of pickups that you will be able to find all around the play
+        area.\r\n\r\nHealth:\r\nIf your battery health is running low, don\u2019t\r\nworry!
+        You can find more battery health\r\naround the play area!\r\n\r\nArmour:\r\nThese
+        will give you a little bit of extra\r\nstrength. Great if you need an extra
+        \r\nboost!\r\n\r\nJetpack fuel:\r\nRefills half of your jetpack fuel.\r\n\r\nAmmo:\r\nSeparate
+        ammo for each of your weapons!\r\n\r\n\r\n\r\n\r\n\r\nWRAPPING UP:\r\nBut
+        that\u2019s not all! On top of all that, there is also a timer, which will
+        keep track of how long it takes you to complete all the waves. Once you\u2019ve
+        completed all the waves, take note of your time and try and beat it, see
+        how fast you can go, and most importantly\u2026 Have fun!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402427965220196, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -52.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402428053238304, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5176402428423006009, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
       propertyPath: m_Name
       value: GameplayInfo
@@ -3072,6 +3159,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5176402428437341930, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402428606293910, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402428619775020, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402428682285589, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402428687961134, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 33.94
+      objectReference: {fileID: 0}
     - target: {fileID: 5176402428692256952, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3080,6 +3187,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1701334428}
+    - target: {fileID: 5176402428692776698, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40.9
+      objectReference: {fileID: 0}
     - target: {fileID: 5176402428844976620, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -3091,6 +3202,26 @@ PrefabInstance:
     - target: {fileID: 5176402428844976620, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402428991622192, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402429005083393, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402429005083393, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 42.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402429388413731, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -52.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176402429541067429, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4222eec137f81734cabf05938eb63ec1, type: 3}
