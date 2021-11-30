@@ -54,22 +54,42 @@ MonoBehaviour:
     timePeriod: 19
     hasSpawned: 0
   - enemy: 1
-    spawnPoint: 3
+    spawnPoint: 0
     timePeriod: 20
     hasSpawned: 0
   - enemy: 1
-    spawnPoint: 4
-    timePeriod: 21
-    hasSpawned: 0
-  - enemy: 1
-    spawnPoint: 5
+    spawnPoint: 1
     timePeriod: 22
     hasSpawned: 0
   - enemy: 1
-    spawnPoint: 0
-    timePeriod: 23
+    spawnPoint: 2
+    timePeriod: 24
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 3
+    timePeriod: 26
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 4
+    timePeriod: 28
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 5
+    timePeriod: 30
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 4
+    timePeriod: 32
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 3
+    timePeriod: 34
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 2
+    timePeriod: 36
     hasSpawned: 0
   - enemy: 1
     spawnPoint: 1
-    timePeriod: 24
+    timePeriod: 38
     hasSpawned: 0

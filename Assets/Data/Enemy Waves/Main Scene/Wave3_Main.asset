@@ -33,3 +33,7 @@ MonoBehaviour:
     spawnPoint: 0
     timePeriod: 10
     hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 5
+    timePeriod: 10
+    hasSpawned: 0

@@ -109,3 +109,35 @@ MonoBehaviour:
     spawnPoint: 3
     timePeriod: 33
     hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 4
+    timePeriod: 34
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 5
+    timePeriod: 35
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 4
+    timePeriod: 36
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 3
+    timePeriod: 37
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 2
+    timePeriod: 38
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 1
+    timePeriod: 39
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 0
+    timePeriod: 40
+    hasSpawned: 0
+  - enemy: 1
+    spawnPoint: 1
+    timePeriod: 41
+    hasSpawned: 0
