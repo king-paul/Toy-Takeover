@@ -37,7 +37,6 @@ public class GUIController : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject optionsMenu;
     public GameObject quitButton;
-    public GameObject gameOverText;
     public GameObject winText;
     public GameObject endGameButtons;
 
@@ -46,6 +45,11 @@ public class GUIController : MonoBehaviour
     public float pickupMessageTime = 0.5f;
     public TextMeshProUGUI runOutText;
     public float runOutMessageTime = 0.5f;
+
+    [Header("Game Over Display")]
+    public GameObject gameOverPanel;
+    public TextMeshProUGUI waveCompleted;
+    public TextMeshProUGUI totalTime;
 
     GameManager game;
     PlayerController player;    
@@ -142,9 +146,12 @@ public class GUIController : MonoBehaviour
 
     public void ShowGameOver()
     {
-        gameOverText.SetActive(true);
+        gameOverPanel.SetActive(true);
         endGameButtons.SetActive(true);
         HUD.SetActive(false);
+
+        waveCompleted.text = (game.WaveNumber-1).ToString();
+        totalTime.text = game.TotalTime;
     }
 
     public void ShowLevelComplete()
