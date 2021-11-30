@@ -8,7 +8,7 @@ public class ProjectileController : MonoBehaviour
 
     private Rigidbody rigidBody;
     private float boundary = 30;
-    private GameObject firer;
+    public GameObject firer;
 
     // properties
     //public float Damage { get => damage; set => damage = value; }

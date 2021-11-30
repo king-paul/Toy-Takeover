@@ -127,7 +127,7 @@ public class RangedEnemyAI : MonoBehaviour
         var projectile = Instantiate(projectilePrefab, gunEnd.position, gun.rotation);
         //firingParticles.Pause();        
 
-        projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
+        projectile.GetComponent<ProjectileController>().Firer = transform.gameObject;
         audio.PlaySound(audio.attackSounds, true);
     }
 
