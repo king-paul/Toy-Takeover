@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -22,11 +23,14 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemies;
     [Tooltip("Contains the enemy spawnpoint game objects located in the hierarchy")]
     public Transform[] spawnPoints;
+
+    [Header("Cars and Dolly Carts")]
     [Tooltip("Drag the dolly carts into these to make the cars respawn")]
-    public Transform[] carSpawnPoints;
+    public Transform[] dollyCarts;
     [Tooltip("The amount of seconds it takes for a car to respawn after being destroyed")]
     [SerializeField][Range(1, 30)]
     float carRespawnTime = 5f;
+    public bool spawnAtOriginalPosition = true;
 
     [Header("Enemy Waves")]
     [Tooltip("Place enemy wave scriptable objects here")]
@@ -159,9 +163,11 @@ public class GameManager : MonoBehaviour
 
         // Initialise car spawner list
         carSpawners = new List<CarSpawner>();
-        foreach(Transform spawnPoint in carSpawnPoints)
+        foreach(Transform dollyTransform in dollyCarts)
         {
-            CarSpawner spawner = new CarSpawner(spawnPoint, 0, false );
+            var dollyCart = dollyTransform.GetComponent<CinemachineDollyCart>();            
+            CarSpawner spawner = new CarSpawner(dollyTransform, dollyCart.m_Position);
+
             carSpawners.Add(spawner);
         }
     }
@@ -181,7 +187,7 @@ public class GameManager : MonoBehaviour
             // spawn cars and pass spawnpoint as a reference
             foreach (CarSpawner spawner in carSpawners)
             {
-                var carObject = spawner.spawnPoint.GetChild(0);
+                var carObject = spawner.dollyCart.GetChild(0);
                     //Instantiate(enemies[2], spawner.spawnPoint);
                 var carEnemy = carObject.GetComponent<DollyCartEnemy>();
                 //carEnemy.SpawnPoint = spawner.spawnPoint;
@@ -302,27 +308,35 @@ public class GameManager : MonoBehaviour
             if(spawner.respawning)
             {
                 spawner.spawnTimeElapsed += Time.deltaTime;
-                Debug.Log("Respawn Timer: " + spawner.spawnTimeElapsed);
+                //Debug.Log("Respawn Timer: " + spawner.spawnTimeElapsed);
 
                 if(spawner.spawnTimeElapsed >= carRespawnTime)
                 {
                     //Debug.Log("Respawning Car...");                    
-                    var carObject = Instantiate(enemies[2], spawner.spawnPoint);
+                    var carObject = Instantiate(enemies[2], spawner.dollyCart);
                     var carEnemy = carObject.GetComponent<DollyCartEnemy>();
-                    carEnemy.SpawnPoint = spawner.spawnPoint;
+                    carEnemy.SpawnPoint = spawner.dollyCart;
                     carEnemy.SetSpawner(spawner);
 
                     spawner.Reset();
+
+                    var dollyCart = spawner.dollyCart.GetComponent<CinemachineDollyCart>();                    
+                    dollyCart.m_Speed = 20;
                 }
             }
+
         }
 
     }
 
-    public void RespawnCar(Transform spawnPoint)
+    public void ResetDollyCart(CarSpawner spawner)
     {
-        CarSpawner spawner = carSpawners.Find(x => x.spawnPoint = spawnPoint);
-        spawner.respawning = true;     
+       var dollyCart = spawner.dollyCart.GetComponent<CinemachineDollyCart>();
+
+       dollyCart.m_Position = spawner.position;
+       dollyCart.m_Speed = 0;
+
+       spawner.respawning = true; // starts respawn timer
     }
 
     public void StartNextWave()

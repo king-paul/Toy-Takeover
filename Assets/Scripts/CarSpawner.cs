@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CarSpawner
 {
-    public Transform spawnPoint;
+    public Transform dollyCart;
     public float spawnTimeElapsed;
     public bool respawning;
+    public float position;
 
-    public CarSpawner(Transform spawnPoint, float spawnTimeElapsed, bool respawning)
+    public CarSpawner(Transform dollyCart, float position)
     {
-        this.spawnPoint = spawnPoint;
-        this.spawnTimeElapsed = spawnTimeElapsed;
-        this.respawning = respawning;
+        this.dollyCart = dollyCart;
+        this.position = position;
+        spawnTimeElapsed = 0;
+        respawning = false;
     }
 
     public void Reset()

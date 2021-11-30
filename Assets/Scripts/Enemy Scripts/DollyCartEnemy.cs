@@ -22,10 +22,7 @@ public class DollyCartEnemy : MonoBehaviour
 
     // properties
     public Transform SpawnPoint { set => spawnPoint = value; }
-    public void SetSpawner(CarSpawner spawner)
-    {
-        this.spawner = spawner;
-    }
+    public void SetSpawner(CarSpawner spawner) { this.spawner = spawner; }
 
     private void Start()
     {
@@ -64,9 +61,12 @@ public class DollyCartEnemy : MonoBehaviour
                 //Debug.Log("Player Position: " + other.transform.position + ", Particles position: " + spawnPos);
 
                 Instantiate(destructionParticles, transform.position, transform.rotation);
-                //game.RespawnCar(spawnPoint);
-                spawner.respawning = true;
-                GameObject.Destroy(this.gameObject);     
+                if (game.spawnAtOriginalPosition)
+                    game.ResetDollyCart(spawner);
+                else
+                    spawner.respawning = true;
+                
+                GameObject.Destroy(this.gameObject);                 
             }
             else
             {
@@ -80,5 +80,6 @@ public class DollyCartEnemy : MonoBehaviour
     {
         enemyAudio.PlaySound(enemyAudio.damageSounds, false);        
     }
+
 
 }
