@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Laser Gun
   m_EditorClassIdentifier: 
   maxAmmo: 250
-  startingAmmo: 250
+  startingAmmo: 100
   damagePerHit: 2
   laserMaterial: {fileID: 0}
   laserRange: 50
