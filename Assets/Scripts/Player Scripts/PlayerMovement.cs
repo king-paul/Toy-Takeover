@@ -192,18 +192,21 @@ public class PlayerMovement : MonoBehaviour
                 if(!jetpackEmission.isPlaying)
                     jetpackEmission.Play();
             }
-            else if (IsOnGround() && !jumping)// otherwise jump if on ground
+            else if (IsOnGround() && !jumping)
             {                
                 audio.StopPlaying(1); // stop playing footsteps sound
 
                 if(!audio.isPlaying(0))
                     audio.PlaySound(audio.jetpackRunout);
-                //Debug.Log("Jumping");                
+                            
             }
             else if(!jumping)
             {
                 audio.PlaySound(audio.jetpackRunout);
                 jumping = true;
+
+                if(jetpackEmission.isPlaying)
+                    jetpackEmission.Stop();
                 //Debug.Log("Out of jetpack fuel");
             }
 
@@ -229,6 +232,7 @@ public class PlayerMovement : MonoBehaviour
         if ((Input.GetButtonUp("Jump") || Input.GetButtonUp("Jetpack") || Input.GetAxis("Jetpack") == 0) 
             && usingJetpack)
         {
+            jetpackEmission.Stop();
             verticalVelocity = -weight;
         }
 

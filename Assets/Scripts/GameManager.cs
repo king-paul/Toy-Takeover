@@ -243,6 +243,7 @@ public class GameManager : MonoBehaviour
     {
         if (state == GameState.Running)
         {
+            playerAudio.StopAllSounds();
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             state = GameState.Paused;
