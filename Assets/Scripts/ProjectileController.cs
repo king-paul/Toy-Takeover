@@ -5,14 +5,13 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour
 {
     public float travelSpeed = 1000;
-    float damage = 20f;
 
     private Rigidbody rigidBody;
     private float boundary = 30;
     private GameObject firer;
 
     // properties
-    public float Damage { get => damage; set => damage = value; }
+    //public float Damage { get => damage; set => damage = value; }
     public GameObject Firer { set => firer = value; }
 
     // Start is called before the first frame update
@@ -35,7 +34,9 @@ public class ProjectileController : MonoBehaviour
             if (other.gameObject != firer)
             {
                 PlayerController player = other.GetComponent<PlayerController>();
-                player.TakeDamage(damage);
+                var enemy = firer.GetComponent<EnemyController>();                
+
+                player.TakeDamage(enemy.DamageDealt);
             }
         }
         // projectile hits an enemy
@@ -43,10 +44,13 @@ public class ProjectileController : MonoBehaviour
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
             DollyCartEnemy dollyEnemy = other.GetComponent<DollyCartEnemy>();
+            PlayerController player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
 
             if (enemy != null && enemy.State != EnemyState.Dead)
-                enemy.TakeDamage(damage, true);
-            else if(dollyEnemy != null)
+            {
+                enemy.TakeDamage(player.CurrentWeapon.damagePerHit, true);
+            }
+            else if (dollyEnemy != null)
             {
                 dollyEnemy.ApplyHit();
             }

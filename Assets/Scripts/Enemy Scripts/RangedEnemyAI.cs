@@ -29,8 +29,7 @@ public class RangedEnemyAI : MonoBehaviour
     Vector3 directionToTarget;
     Vector3 shootDirection;
 
-    private bool firing;
-    private float timer;
+
     private float distanceToTarget;
 
     GameManager game;
@@ -46,7 +45,6 @@ public class RangedEnemyAI : MonoBehaviour
         controller = GetComponent<EnemyController>();
         audio = GetComponent<EnemySound>();
         player = GameObject.FindWithTag("Player").transform;
-        timer = 0;
         shootDirection = transform.forward;
         game = GameObject.Find("GameManager").GetComponent<GameManager>();
     }

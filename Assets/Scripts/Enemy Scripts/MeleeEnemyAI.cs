@@ -20,9 +20,6 @@ public class MeleeEnemyAI : MonoBehaviour
     EnemySound audio;
     PlayerController player;
 
-    [SerializeField]
-    float damagePerAttack = 5f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +67,7 @@ public class MeleeEnemyAI : MonoBehaviour
     public void AttackPlayer()
     {
         audio.PlaySound(audio.attackSounds, true);
-        player.TakeDamage(damagePerAttack);
+        player.TakeDamage(controller.DamageDealt);
     }
 
 }

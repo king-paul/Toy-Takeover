@@ -715,6 +715,7 @@ MonoBehaviour:
   damageParticles: {fileID: 390033888642418726, guid: ec43f113bbab8904ebb472673aa61ec6, type: 3}
   deathParticles: {fileID: 8612663155036046339, guid: e7d0b622b67a4ee4592f1b593d3be00d, type: 3}
   maxHealth: 30
+  damagePerAttack: 5
   collisionDamage: 1
   framesPerDamage: 5
   movementSpeed: 1
@@ -755,7 +756,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 2.1
   attackRate: 1.5
-  damagePerAttack: 5
 --- !u!114 &1548243902737486723
 MonoBehaviour:
   m_ObjectHideFlags: 0

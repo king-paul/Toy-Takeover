@@ -66,6 +66,8 @@ public class PlayerController : MonoBehaviour
         }
     }
     public float Armour { get => currentArmour; }
+    public Weapon CurrentWeapon { get => weapon.weaponObject; }
+
     #endregion
 
     #region Unity functions

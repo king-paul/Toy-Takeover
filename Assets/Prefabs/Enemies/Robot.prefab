@@ -425,6 +425,7 @@ MonoBehaviour:
   damageParticles: {fileID: 2192772104946133490, guid: 7b0d1ae9d88921640a029ca96dae5f7d, type: 3}
   deathParticles: {fileID: 585584894909195365, guid: 3b420bcebe7b9384d883031d7dacd290, type: 3}
   maxHealth: 60
+  damagePerAttack: 20
   collisionDamage: 5
   framesPerDamage: 5
   movementSpeed: 1

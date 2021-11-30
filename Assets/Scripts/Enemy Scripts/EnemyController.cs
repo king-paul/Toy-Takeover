@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     float maxHealth = 30;
     float curHealth;
+    [SerializeField]
+    float damagePerAttack = 10;
 
     // collision damage
     [Header("Collision damage")]
@@ -52,6 +54,8 @@ public class EnemyController : MonoBehaviour
     // properties and public functions
     public EnemyState State { get => state; set => state = value; }
     public float Distance { get => (player.position - transform.position).magnitude; }
+    public float DamageDealt { get => damagePerAttack; }
+
     public void TakeDamage(float amount, bool interruptSound){ 
 
         curHealth -= amount; // reduces health
