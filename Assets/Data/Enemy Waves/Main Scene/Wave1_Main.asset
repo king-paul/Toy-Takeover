@@ -21,3 +21,11 @@ MonoBehaviour:
     spawnPoint: 1
     timePeriod: 5
     hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 2
+    timePeriod: 15
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 3
+    timePeriod: 15
+    hasSpawned: 1

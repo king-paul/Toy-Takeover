@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAmmo: 100
   startingAmmo: 20
-  damagePerHit: 10
+  damagePerHit: 20
   projectilePrefab: {fileID: 1504274845912228500, guid: 91000e50a737ae849ba0e0106bcc1440, type: 3}
   rapidFire: 0
   shotDelayTime: 0.25
