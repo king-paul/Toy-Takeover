@@ -6246,6 +6246,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8532745113222507712, guid: 77ce195dbeec19945a88f79f081bb7d3, type: 3}
   m_PrefabInstance: {fileID: 301726897}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &302087245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2157416526184723491, guid: 05396ad4e81d4d444bfe84a853001cf4, type: 3}
+  m_PrefabInstance: {fileID: 1504753592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302754195
 GameObject:
   m_ObjectHideFlags: 0
@@ -23537,6 +23542,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064078597}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1064490417 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2157416526053859533, guid: 05396ad4e81d4d444bfe84a853001cf4, type: 3}
+  m_PrefabInstance: {fileID: 1504753592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1064625566
 GameObject:
   m_ObjectHideFlags: 0
@@ -25115,6 +25125,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162492296}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1162776913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2157416525507216987, guid: 05396ad4e81d4d444bfe84a853001cf4, type: 3}
+  m_PrefabInstance: {fileID: 1504753592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1163000545
 Mesh:
   m_ObjectHideFlags: 0
@@ -25608,6 +25623,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1175493810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2157416526087069153, guid: 05396ad4e81d4d444bfe84a853001cf4, type: 3}
+  m_PrefabInstance: {fileID: 1504753592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1182529155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33184,6 +33204,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: fuelBar
       value: 
       objectReference: {fileID: 0}
@@ -33595,6 +33619,38 @@ PrefabInstance:
       propertyPath: enableCheats
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1162776913}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 302087245}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1895688059}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1064490417}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1175493810}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 2087895493}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 1802907892}
+    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: carSpawnPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 2057243597}
     - target: {fileID: 887026423723030598, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: patrolRoutes.Array.size
       value: 16
@@ -40239,6 +40295,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9223299118036593054, guid: b78ca6834cf38a9449792b7aeac3e14d, type: 3}
   m_PrefabInstance: {fileID: 1802305062}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1802907892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2157416525331035723, guid: 05396ad4e81d4d444bfe84a853001cf4, type: 3}
+  m_PrefabInstance: {fileID: 1504753592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1806229339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42902,6 +42963,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894629562}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1895688059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2157416525123626355, guid: 05396ad4e81d4d444bfe84a853001cf4, type: 3}
+  m_PrefabInstance: {fileID: 1504753592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1901675266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47353,6 +47419,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7960242122458365907, guid: 55c54023cb33ce04fb4231e9a52fa168, type: 3}
   m_PrefabInstance: {fileID: 2053886735}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2057243597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2157416525661731430, guid: 05396ad4e81d4d444bfe84a853001cf4, type: 3}
+  m_PrefabInstance: {fileID: 1504753592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2060853360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48267,6 +48338,11 @@ PrefabInstance:
       objectReference: {fileID: 1338300451}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d9703840e7853469ff7fa9ba69ee95, type: 3}
+--- !u!4 &2087895493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2157416524512540545, guid: 05396ad4e81d4d444bfe84a853001cf4, type: 3}
+  m_PrefabInstance: {fileID: 1504753592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2090866624
 GameObject:
   m_ObjectHideFlags: 0
