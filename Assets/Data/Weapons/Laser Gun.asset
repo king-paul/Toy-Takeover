@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0dddb8583874924bb2f776fbfbbf937, type: 3}
   m_Name: Laser Gun
   m_EditorClassIdentifier: 
-  maxAmmo: 500
-  startingAmmo: 500
+  maxAmmo: 250
+  startingAmmo: 250
   damagePerHit: 2
   laserMaterial: {fileID: 0}
   laserRange: 50

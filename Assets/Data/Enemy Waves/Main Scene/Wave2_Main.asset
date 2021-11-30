@@ -17,3 +17,19 @@ MonoBehaviour:
     spawnPoint: 0
     timePeriod: 7
     hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 0
+    timePeriod: 10
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 1
+    timePeriod: 11
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 2
+    timePeriod: 12
+    hasSpawned: 1
+  - enemy: 0
+    spawnPoint: 3
+    timePeriod: 13
+    hasSpawned: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed82ff51f49f2049bd175b20814a840, type: 3}
   m_Name: Crossbow
   m_EditorClassIdentifier: 
-  maxAmmo: 100
+  maxAmmo: 50
   startingAmmo: 20
   damagePerHit: 20
   projectilePrefab: {fileID: 1504274845912228500, guid: 91000e50a737ae849ba0e0106bcc1440, type: 3}
