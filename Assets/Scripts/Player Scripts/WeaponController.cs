@@ -20,6 +20,7 @@ public class WeaponController : MonoBehaviour
     private GameManager game;
     private int curAmmo;
     private PlayerSound playerAudio;
+    private Animator animator;
     #endregion
 
     // public functions and properties
@@ -44,6 +45,7 @@ public class WeaponController : MonoBehaviour
         fpsCam = GetComponentInParent<Camera>();        
         playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
         curAmmo = weaponObject.startingAmmo;
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -88,6 +90,9 @@ public class WeaponController : MonoBehaviour
 
         if (curAmmo > 0)
         {
+            if(animator != null)
+                animator.SetTrigger("Fire");
+
             var projectile = Instantiate(weapon.projectilePrefab, firingPoint.position, firingPoint.rotation);
             // set the object who fired the projectile
             projectile.GetComponent<ProjectileController>().Firer = transform.root.gameObject;
@@ -110,6 +115,9 @@ public class WeaponController : MonoBehaviour
 
         if (FirePressed() && curAmmo > 0)
         {
+            if (animator != null)
+                animator.SetTrigger("Fire");
+
             FireRaycast();
 
             if (Time.time > nextFire)
