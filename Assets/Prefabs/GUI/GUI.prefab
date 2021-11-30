@@ -2650,9 +2650,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 2258644427293271283}
+        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
+        m_MethodName: GameQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3805,9 +3805,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 2258644427293271283}
+        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
+        m_MethodName: OpenLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6405,6 +6405,7 @@ GameObject:
   - component: {fileID: 5438913963225825680}
   - component: {fileID: 7171494204218576043}
   - component: {fileID: 2052199952}
+  - component: {fileID: 2258644427293271283}
   m_Layer: 5
   m_Name: GUI
   m_TagString: Untagged
@@ -6525,6 +6526,18 @@ MonoBehaviour:
   vSync: {fileID: 48393528}
   motionBlur: {fileID: 135884008}
   sensetivitySlider: {fileID: 1498313065}
+--- !u!114 &2258644427293271283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017377993309085370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646315f7d135f5b498986b359f401ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2329184817472917563
 GameObject:
   m_ObjectHideFlags: 0
@@ -12022,9 +12035,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 2258644427293271283}
+        m_TargetAssemblyTypeName: Menu_Script, Assembly-CSharp
+        m_MethodName: OpenLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
