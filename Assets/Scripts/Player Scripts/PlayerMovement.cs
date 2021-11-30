@@ -179,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
 
         // get jetpack input from player
         if (Input.GetButtonDown("Jetpack") || Input.GetAxis("Jetpack") != 0)
-        {            
+        {
             // if there is jetpack fuel left, use the jetpack
             if (player.Fuel > 0f)
             {
@@ -198,17 +198,17 @@ public class PlayerMovement : MonoBehaviour
 
                 if(!audio.isPlaying(0))
                     audio.PlaySound(audio.jetpackRunout);
-                            
-            }
-            else if(!jumping)
-            {
-                audio.PlaySound(audio.jetpackRunout);
-                jumping = true;
+                
+                StartCoroutine(game.ShowMessage("Jetpack tank Empty"));
 
-                if(jetpackEmission.isPlaying)
-                    jetpackEmission.Stop();
-                //Debug.Log("Out of jetpack fuel");
-            }
+                if (!IsOnGround())
+                {
+                    jumping = true;
+                    if (jetpackEmission.isPlaying)
+                        jetpackEmission.Stop();
+                }
+
+            }            
 
             landed = false;
         }

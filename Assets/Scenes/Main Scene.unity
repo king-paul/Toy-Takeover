@@ -8955,6 +8955,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402572749}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &402585017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 997190891900083877, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+  m_PrefabInstance: {fileID: 1881900707}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &403243430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33185,6 +33196,14 @@ PrefabInstance:
       propertyPath: optionsMenu
       value: 
       objectReference: {fileID: 1934774091}
+    - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: runOutText
+      value: 
+      objectReference: {fileID: 402585017}
+    - target: {fileID: 1447529048, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
+      propertyPath: runOutMessageTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1513658134, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -42716,6 +42735,10 @@ PrefabInstance:
       value: 1850.99
       objectReference: {fileID: 0}
     - target: {fileID: 4509671751473109739, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830631993632549304, guid: ed393a2180dfa3a419302f58c17d7629, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

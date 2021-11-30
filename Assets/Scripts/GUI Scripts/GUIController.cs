@@ -44,6 +44,8 @@ public class GUIController : MonoBehaviour
     [Header("Messages")]
     public TextMeshProUGUI pickupText;
     public float pickupMessageTime = 0.5f;
+    public TextMeshProUGUI runOutText;
+    public float runOutMessageTime = 0.5f;
 
     GameManager game;
     PlayerController player;    

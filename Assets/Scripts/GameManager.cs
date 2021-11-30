@@ -381,4 +381,12 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public IEnumerator ShowMessage(string message)
+    {
+        gui.runOutText.gameObject.SetActive(true);
+        gui.runOutText.text = message;
+        yield return new WaitForSeconds(gui.runOutMessageTime);
+        gui.runOutText.gameObject.SetActive(false);
+    }
+
 }
