@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statChanged: 3
-  increaseAmount: 50
+  increaseAmount: 30
   pickupSound: {fileID: 8300000, guid: b3cf6b1964b78ba45b9471af7619ef8c, type: 3}
   alreadyFullSound: {fileID: 8300000, guid: d2b83e655456ab942b6c9d4d52185905, type: 3}
   pickupMessage: Crossbow Ammo
