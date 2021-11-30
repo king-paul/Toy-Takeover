@@ -33792,10 +33792,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1143736358}
     - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
-      propertyPath: enableCheats
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 604101679903821007, guid: cf06ff661df701041bbf1da2481475a2, type: 3}
       propertyPath: dollyCarts.Array.data[0]
       value: 
       objectReference: {fileID: 658149331}
