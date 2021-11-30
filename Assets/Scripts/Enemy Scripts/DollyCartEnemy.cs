@@ -16,7 +16,16 @@ public class DollyCartEnemy : MonoBehaviour
     CinemachineDollyCart dollyCart;
     EnemySound enemyAudio;
     GameManager game;
+    Transform spawnPoint;
+    CarSpawner spawner;
     bool alive;
+
+    // properties
+    public Transform SpawnPoint { set => spawnPoint = value; }
+    public void SetSpawner(CarSpawner spawner)
+    {
+        this.spawner = spawner;
+    }
 
     private void Start()
     {
@@ -55,7 +64,9 @@ public class DollyCartEnemy : MonoBehaviour
                 //Debug.Log("Player Position: " + other.transform.position + ", Particles position: " + spawnPos);
 
                 Instantiate(destructionParticles, transform.position, transform.rotation);
-                GameObject.Destroy(this.gameObject);
+                //game.RespawnCar(spawnPoint);
+                spawner.respawning = true;
+                GameObject.Destroy(this.gameObject);     
             }
             else
             {

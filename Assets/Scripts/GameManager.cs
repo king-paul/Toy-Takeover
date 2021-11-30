@@ -22,6 +22,13 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemies;
     [Tooltip("Contains the enemy spawnpoint game objects located in the hierarchy")]
     public Transform[] spawnPoints;
+    [Tooltip("Drag the dolly carts into these to make the cars respawn")]
+    public Transform[] carSpawnPoints;
+    [Tooltip("The amount of seconds it takes for a car to respawn after being destroyed")]
+    [SerializeField][Range(1, 30)]
+    float carRespawnTime = 5f;
+
+    [Header("Enemy Waves")]
     [Tooltip("Place enemy wave scriptable objects here")]
     public EnemyWave[] waves;
 
@@ -34,12 +41,13 @@ public class GameManager : MonoBehaviour
     AudioSource musicSource, soundSource;
     PlayerSound playerAudio;
     Volume cameraVolume;
+    List<CarSpawner> carSpawners;
 
     // gui variables
     private float barWidth;
     float MAX_WIDTH;    
     float waveTime = 0f;
-    float previousElapsedTime = 0f;
+    float previousElapsedTime = 0f;    
 
     private int waveNumber = 1;
     private int enemiesLeft = 0;
@@ -124,6 +132,7 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    #region Unity Functions
     // Start is called before the first frame update
     void Awake()
     {
@@ -147,6 +156,14 @@ public class GameManager : MonoBehaviour
             motionBlur.active = true;
         if(blurOn == 0)
             motionBlur.active = false;
+
+        // Initialise car spawner list
+        carSpawners = new List<CarSpawner>();
+        foreach(Transform spawnPoint in carSpawnPoints)
+        {
+            CarSpawner spawner = new CarSpawner(spawnPoint, 0, false );
+            carSpawners.Add(spawner);
+        }
     }
 
     private void Start()
@@ -156,8 +173,21 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(gui.ShowWaveStartText());
             enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
+
+            // spawn wave enemies
             foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
                 spawn.hasSpawned = false;
+
+            // spawn cars and pass spawnpoint as a reference
+            foreach (CarSpawner spawner in carSpawners)
+            {
+                var carObject = spawner.spawnPoint.GetChild(0);
+                    //Instantiate(enemies[2], spawner.spawnPoint);
+                var carEnemy = carObject.GetComponent<DollyCartEnemy>();
+                //carEnemy.SpawnPoint = spawner.spawnPoint;
+                carEnemy.SetSpawner(spawner);
+            }
+
         }
 
     }
@@ -201,6 +231,7 @@ public class GameManager : MonoBehaviour
             enemiesLeft = 0;
         }
     }
+    #endregion
 
     public void TogglePause()
     {
@@ -239,6 +270,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        // Spawn enemies in the wave when the time period has been reached
         foreach (EnemySpawn spawn in waves[waveNumber-1].enemiesInWave)
         {
             GameObject enemy = enemies[(int)spawn.enemy];
@@ -264,6 +296,33 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // Respawn cars in the scene
+        foreach(CarSpawner spawner in carSpawners)
+        {
+            if(spawner.respawning)
+            {
+                spawner.spawnTimeElapsed += Time.deltaTime;
+                Debug.Log("Respawn Timer: " + spawner.spawnTimeElapsed);
+
+                if(spawner.spawnTimeElapsed >= carRespawnTime)
+                {
+                    //Debug.Log("Respawning Car...");                    
+                    var carObject = Instantiate(enemies[2], spawner.spawnPoint);
+                    var carEnemy = carObject.GetComponent<DollyCartEnemy>();
+                    carEnemy.SpawnPoint = spawner.spawnPoint;
+                    carEnemy.SetSpawner(spawner);
+
+                    spawner.Reset();
+                }
+            }
+        }
+
+    }
+
+    public void RespawnCar(Transform spawnPoint)
+    {
+        CarSpawner spawner = carSpawners.Find(x => x.spawnPoint = spawnPoint);
+        spawner.respawning = true;     
     }
 
     public void StartNextWave()
@@ -285,11 +344,11 @@ public class GameManager : MonoBehaviour
         else
         {
             waveNumber++;
-
             StartCoroutine(gui.ShowWaveStartText());
 
             SpawnItemPickups(); // spawn the next set of item pickups
             enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
+
             // reset hasSpawned values
             foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
                 spawn.hasSpawned = false;
