@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
         }
 
         AudioClip randomSound = clips[randomNum];
-        Debug.Log("Playing Enemy Sound: " + randomSound);
+        //Debug.Log("Playing Enemy Sound: " + randomSound);
         soundSource.PlayOneShot(randomSound, volume);
     }
     #endregion
