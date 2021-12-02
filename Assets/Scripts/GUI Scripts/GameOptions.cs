@@ -1,13 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class GameOptions : MonoBehaviour
 {
+    // variable declaration
+    [Header("Tabs and panes")]
+    public Button startTab;
+    public GameObject audioOptions, videoOptions;
+
     [Header("Audio Mixers")]
-    [Header("Audio Settings")]    
+    [Header("Audio Settings")]
     public AudioMixer mixer;
     public AudioMixerGroup master, music, soundEffects, Ambience;
     [Header("Volume Sliders")]
@@ -24,19 +31,25 @@ public class GameOptions : MonoBehaviour
     public float defaultAmbienceVolume = 0.75f;
 
     [Header("Video Settings")]
+    public TMP_Dropdown screenMode;
+    public TMP_Dropdown screenResolution;
+    public TMP_Dropdown graphicsQuality;
     public Toggle vSync;
     public Toggle motionBlur;
 
     [Header("Camera Settings")]
     public Slider sensetivitySlider;
 
+    // private variables
     private float dB;
-
     private float cameraSensetivity = 1;
+    private Resolution[] resolutions;
 
     // Start is called before the first frame update
     void Start()
     {
+        resolutions = Screen.resolutions;
+
         //if (PlayerPrefs.HasKey("MasterVolume"))
         //    Debug.Log("Player Prefs has Key : MasterVolume Value = " +
         //        PlayerPrefs.GetFloat("MasterVolume"));
@@ -50,7 +63,7 @@ public class GameOptions : MonoBehaviour
         //    Debug.Log("Player Prefs has Key : AmbienceVolume Value = " +
         //        PlayerPrefs.GetFloat("AmbienceVolume"));
 
-        // Set default volumes
+        // Set audio volumes
         dB = Mathf.Log10(PlayerPrefs.GetFloat("MasterVolume")) * 20;
         mixer.SetFloat("Master", dB);
         dB = Mathf.Log10(PlayerPrefs.GetFloat("MusicVolume")) * 20;
@@ -59,10 +72,32 @@ public class GameOptions : MonoBehaviour
         mixer.SetFloat("SoundEffects", dB);
         dB = Mathf.Log10(PlayerPrefs.GetFloat("AmbienceVolume")) * 20;
         mixer.SetFloat("Ambience", dB);
+
+        // set video settings
+        Screen.fullScreenMode = (FullScreenMode) PlayerPrefs.GetInt("ScreenMode", 0);
+
+        int resIndex = PlayerPrefs.GetInt("ScreenResolution", Array.IndexOf(resolutions, Screen.currentResolution));
+        Screen.SetResolution(resolutions[resIndex].width, resolutions[resIndex].height, Screen.fullScreenMode);
+
+        QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality", 0), true);
+        QualitySettings.vSyncCount = PlayerPrefs.GetInt("VSync", 1);         
+
+        // Set resolutions dropdown  
+        List<string> resolutionText = new List<string>();
+        foreach (var resolution in resolutions)
+        {
+            resolutionText.Add(resolution.width + " x " + resolution.height);            
+            //Debug.Log(resolution.ToString());
+        }
+        screenResolution.AddOptions(resolutionText);        
     }
 
     public void InitGUI()
     {
+        // set default selected tab
+        startTab.Select();
+        startTab.onClick.Invoke();
+
         // set volume sliders
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", defaultMasterVolume);
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", defaultMusicVolume);
@@ -84,7 +119,26 @@ public class GameOptions : MonoBehaviour
 
         // set camera sensetivity slider
         sensetivitySlider.value = PlayerPrefs.GetFloat("CameraSensetivity", 1);
+
+        // set drop down boxes
+        screenMode.SetValueWithoutNotify((int)Screen.fullScreenMode);
+        screenResolution.SetValueWithoutNotify(Array.IndexOf(resolutions, Screen.currentResolution));
+        graphicsQuality.SetValueWithoutNotify(QualitySettings.GetQualityLevel());
     }
+
+    #region tab controls
+    public void OpenAudioOptions()
+    {
+        audioOptions.SetActive(true);
+        videoOptions.SetActive(false);
+    }
+
+    public void OpenVideoOptions()
+    {
+        audioOptions.SetActive(false);
+        videoOptions.SetActive(true);
+    }
+    #endregion
 
     #region volume Controls
     public void SetMasterVolume()
@@ -114,6 +168,22 @@ public class GameOptions : MonoBehaviour
     #endregion
 
     #region video options
+    public void SetScreenMode()
+    {
+        Screen.fullScreenMode = (FullScreenMode)screenMode.value;
+    }
+
+    public void SetScreenResolution()
+    {
+        Screen.SetResolution(resolutions[screenResolution.value].width,
+        resolutions[screenResolution.value].height, (FullScreenMode)screenMode.value);        
+    }
+
+    public void SetGraphicsQuality()
+    {
+        QualitySettings.SetQualityLevel(graphicsQuality.value, true);
+    }
+
     public void ToggleVSync()
     {
         if (QualitySettings.vSyncCount == 1)
@@ -150,8 +220,16 @@ public class GameOptions : MonoBehaviour
         PlayerPrefs.SetFloat("SoundEffectsVolume", soundFxSlider.value);
 
         // save video settings
-        PlayerPrefs.SetInt("VSync", QualitySettings.vSyncCount);
-        if(motionBlur.isOn)
+        PlayerPrefs.SetInt("ScreenMode", screenMode.value);
+        PlayerPrefs.SetInt("ScreenResolution", screenResolution.value);
+        PlayerPrefs.SetInt("Quality", graphicsQuality.value);
+
+        if(vSync.isOn)
+            PlayerPrefs.SetInt("VSync", 1);
+        else
+            PlayerPrefs.SetInt("VSync", 0);
+
+        if (motionBlur.isOn)
             PlayerPrefs.SetInt("MotionBlur", 1);
         else
             PlayerPrefs.SetInt("MotionBlur", 0);
