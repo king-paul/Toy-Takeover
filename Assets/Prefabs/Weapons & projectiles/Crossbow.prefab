@@ -68,6 +68,7 @@ MonoBehaviour:
   emissionEffect: {fileID: 0}
   fireSounds:
   - {fileID: 8300000, guid: 1072057c08b80dc48897edf990a233be, type: 3}
+  outOfAmmoSound: {fileID: 8300000, guid: d2b83e655456ab942b6c9d4d52185905, type: 3}
 --- !u!1001 &2843976279619868648
 PrefabInstance:
   m_ObjectHideFlags: 0

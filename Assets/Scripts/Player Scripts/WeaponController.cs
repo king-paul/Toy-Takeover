@@ -11,11 +11,13 @@ public class WeaponController : MonoBehaviour
 
     [Header("Sound Effects")]
     public AudioClip[] fireSounds;
+    public AudioClip outOfAmmoSound;
 
     private Camera fpsCam;
     private RaycastHit hit;
     private float nextFire;
     private bool fired = false;
+    private bool playedRunoutSound = false;
 
     private GameManager game;
     private int curAmmo;
@@ -71,12 +73,29 @@ public class WeaponController : MonoBehaviour
             {                
                 FireProjectileWeapon();
             }
+
         }
 
         // handle laser weapon
         if (weaponObject.GetType() == typeof(LaserWeapon))
         {
             FireLaserWeapon();
+        }
+
+        // out of ammo notification
+        if (FirePressed() && curAmmo <= 0)
+        {
+            game.SetRunoutMessage(true);
+            if (!playedRunoutSound)
+            {
+                game.PlaySoundOnce(outOfAmmoSound);
+                playedRunoutSound = true;
+            }
+        }
+        else
+        {
+            game.SetRunoutMessage(false);
+            playedRunoutSound = false;
         }
 
     }
@@ -107,6 +126,7 @@ public class WeaponController : MonoBehaviour
             playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)]);
             curAmmo--;
         }
+
     }
 
     void FireLaserWeapon()
@@ -126,12 +146,14 @@ public class WeaponController : MonoBehaviour
                 nextFire = Time.time + weapon.shotDelay;
                 playerAudio.PlaySound(fireSounds[Random.Range(0, fireSounds.Length - 1)], 2, true);
             }
+            
         }
         else
         {
             //emissionEffectLine.enabled = false;
             emissionEffect.SetActive(false);
             playerAudio.StopPlaying(2);
+            game.SetRunoutMessage(false);
         }
     }
 

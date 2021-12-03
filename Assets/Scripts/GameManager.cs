@@ -13,6 +13,7 @@ public enum GameState { Standby, Running, Paused, Win, Loss};
 [RequireComponent(typeof(GUIController))]
 public class GameManager : MonoBehaviour
 {
+    #region variable declaration
     [Header("Debug Cheats")]
     public bool enableCheats = false;
     public KeyCode waveSkipKey = KeyCode.F2;
@@ -57,8 +58,9 @@ public class GameManager : MonoBehaviour
     private int enemiesLeft = 0;
     private int enemiesSpawned = 0;
     private int enemiesInScene = 0;
+    #endregion
 
-    #region public properties and functions
+    #region properties
     public GameState State { get => state; set => state = value; }
     public int EnemiesLeft { get => enemiesLeft; set => enemiesLeft = value; }
     public int WaveNumber { get => waveNumber; }
@@ -103,7 +105,112 @@ public class GameManager : MonoBehaviour
             motionBlur.active = value;
         }
     }
+    #endregion
 
+    #region Unity Functions
+    // Start is called before the first frame update
+    void Awake()
+    {
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        gui = GetComponent<GUIController>();
+        state = GameState.Running;
+        enemiesTransform = GameObject.Find("Enemies").transform;
+        musicSource = GetComponents<AudioSource>()[0];
+        soundSource = GetComponents<AudioSource>()[1];
+        playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
+        waveTime = 0;
+
+        // set mtion blue setting
+        cameraVolume = firstPersonCamera.GetComponents<Volume>()[1];
+        MotionBlur motionBlur;
+        cameraVolume.profile.TryGet<MotionBlur>(out motionBlur);
+
+        float blurOn = PlayerPrefs.GetInt("MotionBlur", 1);
+        if (blurOn == 1)
+            motionBlur.active = true;
+        if (blurOn == 0)
+            motionBlur.active = false;
+
+        // Initialise car spawner list
+        carSpawners = new List<CarSpawner>();
+        foreach (Transform dollyTransform in dollyCarts)
+        {
+            var dollyCart = dollyTransform.GetComponent<CinemachineDollyCart>();
+            CarSpawner spawner = new CarSpawner(dollyTransform, dollyCart.m_Position);
+
+            carSpawners.Add(spawner);
+        }
+    }
+
+    private void Start()
+    {
+        SpawnItemPickups();
+        if (spawnEnemies)
+        {
+            StartCoroutine(gui.ShowWaveStartText());
+            enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
+
+            // spawn wave enemies
+            foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
+                spawn.hasSpawned = false;
+
+            // spawn cars and pass spawnpoint as a reference
+            foreach (CarSpawner spawner in carSpawners)
+            {
+                var carObject = spawner.dollyCart.GetChild(0);
+                //Instantiate(enemies[2], spawner.spawnPoint);
+                var carEnemy = carObject.GetComponent<DollyCartEnemy>();
+                //carEnemy.SpawnPoint = spawner.spawnPoint;
+                carEnemy.SetSpawner(spawner);
+            }
+
+        }
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (spawnEnemies && waveNumber <= waves.Length && state == GameState.Running)
+            UpdateEnemySpawns();
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            if (!gui.optionsMenu.activeInHierarchy)
+                TogglePause();
+            else
+                gui.ToggleOptionsMenu();
+        }
+
+        // turn music on and off
+        if ((state == GameState.Loss || state == GameState.Win) && musicSource.isPlaying)
+        {
+            musicSource.Stop();
+        }
+        else if (!musicSource.isPlaying && state == GameState.Running)
+            musicSource.Play();
+
+        waveTime = Time.timeSinceLevelLoad - previousElapsedTime;
+
+        // wave skipping key
+        if (enableCheats && Input.GetKeyDown(waveSkipKey))
+        {
+            GameObject[] enemySpawns = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach (GameObject enemy in enemySpawns)
+            {
+                GameObject.Destroy(enemy);
+                KillEnemy();
+            }
+
+            enemiesSpawned = waves[waveNumber - 1].enemiesInWave.Length;
+            enemiesLeft = 0;
+        }
+    }
+    #endregion
+
+    #region public functions
     public void KillEnemy() {
         enemiesInScene--;
         enemiesLeft--;  
@@ -122,6 +229,12 @@ public class GameManager : MonoBehaviour
         soundSource.PlayOneShot(clip, volume);
     }
 
+    public void PlaySoundOnce(AudioClip clip)
+    {
+        if(!soundSource.isPlaying && clip != null)
+            soundSource.PlayOneShot(clip);
+    }
+
     public void PlayRandomSound(AudioClip[] clips, float volume)
     {
         int randomNum = Random.Range(0, clips.Length);
@@ -134,111 +247,23 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Playing Enemy Sound: " + randomSound);
         soundSource.PlayOneShot(randomSound, volume);
     }
-    #endregion
 
-    #region Unity Functions
-    // Start is called before the first frame update
-    void Awake()
+    public void SetRunoutMessage(bool visble)
     {
-        Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
-        gui = GetComponent<GUIController>();
-        state = GameState.Running;
-        enemiesTransform = GameObject.Find("Enemies").transform;
-        musicSource = GetComponents<AudioSource>()[0];
-        soundSource = GetComponents<AudioSource>()[1];
-        playerAudio = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();        
-        waveTime = 0;
-
-        // set mtion blue setting
-        cameraVolume = firstPersonCamera.GetComponents<Volume>()[1];
-        MotionBlur motionBlur;
-        cameraVolume.profile.TryGet<MotionBlur>(out motionBlur);
-
-        float blurOn = PlayerPrefs.GetInt("MotionBlur", 1);
-        if(blurOn == 1)
-            motionBlur.active = true;
-        if(blurOn == 0)
-            motionBlur.active = false;
-
-        // Initialise car spawner list
-        carSpawners = new List<CarSpawner>();
-        foreach(Transform dollyTransform in dollyCarts)
-        {
-            var dollyCart = dollyTransform.GetComponent<CinemachineDollyCart>();            
-            CarSpawner spawner = new CarSpawner(dollyTransform, dollyCart.m_Position);
-
-            carSpawners.Add(spawner);
-        }
+        gui.runOutText.text = "Out Of Ammo";
+        gui.runOutText.gameObject.SetActive(visble);        
     }
 
-    private void Start()
-    {        
-        SpawnItemPickups();
-        if (spawnEnemies)
-        {
-            StartCoroutine(gui.ShowWaveStartText());
-            enemiesLeft = waves[waveNumber - 1].enemiesInWave.Length;
-
-            // spawn wave enemies
-            foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
-                spawn.hasSpawned = false;
-
-            // spawn cars and pass spawnpoint as a reference
-            foreach (CarSpawner spawner in carSpawners)
-            {
-                var carObject = spawner.dollyCart.GetChild(0);
-                    //Instantiate(enemies[2], spawner.spawnPoint);
-                var carEnemy = carObject.GetComponent<DollyCartEnemy>();
-                //carEnemy.SpawnPoint = spawner.spawnPoint;
-                carEnemy.SetSpawner(spawner);
-            }
-
-        }
-
-    }
-
-    // Update is called once per frame
-    void Update()
+    public IEnumerator ShowMessage(string message)
     {
-        if(spawnEnemies && waveNumber <= waves.Length && state == GameState.Running)
-            UpdateEnemySpawns();
-
-        if (Input.GetButtonDown("Cancel"))
-        {
-            if (!gui.optionsMenu.activeInHierarchy)
-                TogglePause();
-            else
-                gui.ToggleOptionsMenu();
-        }            
-
-        // turn music on and off
-        if ((state == GameState.Loss || state == GameState.Win) && musicSource.isPlaying)
-        {
-            musicSource.Stop();
-        }
-        else if (!musicSource.isPlaying && state == GameState.Running)
-            musicSource.Play();
-
-        waveTime = Time.timeSinceLevelLoad - previousElapsedTime;
-
-        // wave skipping key
-        if(enableCheats && Input.GetKeyDown(waveSkipKey))
-        {
-            GameObject[] enemySpawns = GameObject.FindGameObjectsWithTag("Enemy");
-
-            foreach(GameObject enemy in enemySpawns)
-            {
-                GameObject.Destroy(enemy);
-                KillEnemy();
-            }
-
-            enemiesSpawned = waves[waveNumber - 1].enemiesInWave.Length;
-            enemiesLeft = 0;
-        }
+        gui.runOutText.gameObject.SetActive(true);
+        gui.runOutText.text = message;
+        yield return new WaitForSeconds(gui.runOutMessageTime);
+        gui.runOutText.gameObject.SetActive(false);
     }
     #endregion
 
+    #region private functions
     public void TogglePause()
     {
         if (state == GameState.Running)
@@ -368,6 +393,7 @@ public class GameManager : MonoBehaviour
             foreach (EnemySpawn spawn in waves[waveNumber - 1].enemiesInWave)
                 spawn.hasSpawned = false;
         }
+
     }
 
     void SpawnItemPickups()
@@ -380,13 +406,5 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
-    public IEnumerator ShowMessage(string message)
-    {
-        gui.runOutText.gameObject.SetActive(true);
-        gui.runOutText.text = message;
-        yield return new WaitForSeconds(gui.runOutMessageTime);
-        gui.runOutText.gameObject.SetActive(false);
-    }
-
+    #endregion
 }

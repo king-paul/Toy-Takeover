@@ -54,6 +54,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6c6fb2ccc3f51064d949a0f6d757f382, type: 3}
   - {fileID: 8300000, guid: d112eb573db563843818fceca9a872e1, type: 3}
   - {fileID: 8300000, guid: 8a663a214a08f944eaeee186a45f359d, type: 3}
+  outOfAmmoSound: {fileID: 8300000, guid: d2b83e655456ab942b6c9d4d52185905, type: 3}
 --- !u!1001 &2117030323538776087
 PrefabInstance:
   m_ObjectHideFlags: 0
