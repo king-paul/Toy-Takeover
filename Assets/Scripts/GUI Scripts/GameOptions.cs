@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class GameOptions : MonoBehaviour
@@ -75,10 +76,6 @@ public class GameOptions : MonoBehaviour
 
         // set video settings
         Screen.fullScreenMode = (FullScreenMode) PlayerPrefs.GetInt("ScreenMode", 0);
-
-        int resIndex = PlayerPrefs.GetInt("ScreenResolution", Array.IndexOf(resolutions, Screen.currentResolution));
-        Screen.SetResolution(resolutions[resIndex].width, resolutions[resIndex].height, Screen.fullScreenMode);
-
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality", 0), true);
         QualitySettings.vSyncCount = PlayerPrefs.GetInt("VSync", 1);         
 
@@ -89,7 +86,11 @@ public class GameOptions : MonoBehaviour
             resolutionText.Add(resolution.width + " x " + resolution.height);            
             //Debug.Log(resolution.ToString());
         }
-        screenResolution.AddOptions(resolutionText);        
+        screenResolution.AddOptions(resolutionText);
+
+        // set screen resolution
+        int resIndex = PlayerPrefs.GetInt("ScreenResolution", Array.IndexOf(resolutions, Screen.currentResolution));
+        Screen.SetResolution(resolutions[resIndex].width, resolutions[resIndex].height, Screen.fullScreenMode);
     }
 
     public void InitGUI()
