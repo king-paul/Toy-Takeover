@@ -21,7 +21,7 @@ QualitySettings:
     skinWeights: 2
     textureQuality: 0
     anisotropicTextures: 0
-    antiAliasing: 0
+    antiAliasing: 4
     softParticles: 0
     softVegetation: 0
     realtimeReflectionProbes: 0
@@ -40,7 +40,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: c6eaa4a4126de684195d0fb455058737, type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: 378d0d33521f3e74e882c895feedcc37, type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Medium
