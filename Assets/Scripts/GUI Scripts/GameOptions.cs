@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using static TMPro.TMP_Dropdown;
 
 public class GameOptions : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class GameOptions : MonoBehaviour
     [Header("Audio Mixers")]
     [Header("Audio Settings")]
     public AudioMixer mixer;
-    public AudioMixerGroup master, music, soundEffects, Ambience;
     [Header("Volume Sliders")]
     public Slider masterSlider;
     public Slider soundFxSlider, musicSlider, ambienceSlider;
@@ -35,7 +35,7 @@ public class GameOptions : MonoBehaviour
     public TMP_Dropdown screenMode;
     public TMP_Dropdown screenResolution;
     public TMP_Dropdown graphicsQuality;
-    public Toggle vSync;
+    public TMP_Dropdown vSyncCount;
     public Toggle motionBlur;
 
     [Header("Camera Settings")]
@@ -45,24 +45,13 @@ public class GameOptions : MonoBehaviour
     private float dB;
     private float cameraSensetivity = 1;
     private Resolution[] resolutions;
+    GameManager game;
 
     // Start is called before the first frame update
     void Start()
     {
         resolutions = Screen.resolutions;
-
-        //if (PlayerPrefs.HasKey("MasterVolume"))
-        //    Debug.Log("Player Prefs has Key : MasterVolume Value = " +
-        //        PlayerPrefs.GetFloat("MasterVolume"));
-        //if (PlayerPrefs.HasKey("MusicVolume"))
-        //    Debug.Log("Player Prefs has Key : MusicVolume Value = " +
-        //        PlayerPrefs.GetFloat("MusicVolume"));
-        //if (PlayerPrefs.HasKey("SoundEffectsVolume"))
-        //    Debug.Log("Player Prefs has Key : SoundEffectsVolume Value = " +
-        //        PlayerPrefs.GetFloat("SoundEffectsVolume"));
-        //if (PlayerPrefs.HasKey("AmbienceVolume"))
-        //    Debug.Log("Player Prefs has Key : AmbienceVolume Value = " +
-        //        PlayerPrefs.GetFloat("AmbienceVolume"));
+        game = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         // Set audio volumes
         dB = Mathf.Log10(PlayerPrefs.GetFloat("MasterVolume")) * 20;
@@ -77,20 +66,43 @@ public class GameOptions : MonoBehaviour
         // set video settings
         Screen.fullScreenMode = (FullScreenMode) PlayerPrefs.GetInt("ScreenMode", 0);
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality", 0), true);
-        QualitySettings.vSyncCount = PlayerPrefs.GetInt("VSync", 1);         
+        QualitySettings.vSyncCount = PlayerPrefs.GetInt("VSync", 1);
 
-        // Set resolutions dropdown  
+        // set screen resolution
+        int width = PlayerPrefs.GetInt("ScreenWidth", Screen.currentResolution.width);
+        int height = PlayerPrefs.GetInt("ScreenHeight", Screen.currentResolution.height);
+
+        foreach (Resolution res in resolutions)
+        {
+            if(res.width == width && res.height == height)
+            {
+                Screen.SetResolution(res.width, res.height, Screen.fullScreenMode);
+                break;
+            }
+
+        }
+
+        // Set mition blur when in game
+        if(game != null)
+        {
+            int motionBlurOn = PlayerPrefs.GetInt("MotionBlur", 0);
+
+            if (motionBlurOn == 1)
+                game.MotionBlur = true;
+            else if (motionBlurOn == 0)
+                game.MotionBlur = false;
+        }
+
+        // populate the screen resolutions dropdown  
         List<string> resolutionText = new List<string>();
         foreach (var resolution in resolutions)
         {
-            resolutionText.Add(resolution.width + " x " + resolution.height);            
+            //resolutionText.Add(resolution.width + " x " + resolution.height);
             //Debug.Log(resolution.ToString());
+            screenResolution.options.Add(new OptionData(resolution.width + " x " + resolution.height));
         }
-        screenResolution.AddOptions(resolutionText);
+        //screenResolution.AddOptions(resolutionText);
 
-        // set screen resolution
-        int resIndex = PlayerPrefs.GetInt("ScreenResolution", Array.IndexOf(resolutions, Screen.currentResolution));
-        Screen.SetResolution(resolutions[resIndex].width, resolutions[resIndex].height, Screen.fullScreenMode);
     }
 
     public void InitGUI()
@@ -105,26 +117,49 @@ public class GameOptions : MonoBehaviour
         soundFxSlider.value = PlayerPrefs.GetFloat("SoundEffectsVolume", defaultSoundFXVolume);
         ambienceSlider.value = PlayerPrefs.GetFloat("AmbienceVolume", defaultAmbienceVolume);
 
-        // set checkboxes
-        int vSyncValue = PlayerPrefs.GetInt("VSync", 1);
-        if(vSyncValue == 0)
-            vSync.isOn = false;
-        else
-            vSync.isOn = true;
-
-        int motionBlurValue = PlayerPrefs.GetInt("MotionBlur", 1);
-        if (motionBlurValue == 0)
-            motionBlur.isOn = false;
-        else
-            motionBlur.isOn = true;
-
         // set camera sensetivity slider
         sensetivitySlider.value = PlayerPrefs.GetFloat("CameraSensetivity", 1);
 
         // set drop down boxes
-        screenMode.SetValueWithoutNotify((int)Screen.fullScreenMode);
-        screenResolution.SetValueWithoutNotify(Array.IndexOf(resolutions, Screen.currentResolution));
-        graphicsQuality.SetValueWithoutNotify(QualitySettings.GetQualityLevel());
+        screenMode.SetValueWithoutNotify(PlayerPrefs.GetInt("ScreenMode", 0));
+        //screenResolution.SetValueWithoutNotify(Array.IndexOf(resolutions, Screen.currentResolution));
+
+        // set the seleted screen resolution        
+        int width = PlayerPrefs.GetInt("ScreenWidth", Screen.currentResolution.width);
+        int height = PlayerPrefs.GetInt("ScreenHeight", Screen.currentResolution.height);
+        try
+        {
+            foreach (Resolution res in resolutions)
+            {
+                if (res.width == width && res.height == height)
+                {
+                    screenResolution.SetValueWithoutNotify(Array.IndexOf(resolutions, res));
+                    break;
+                }
+
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e.Message);
+        }
+
+        graphicsQuality.SetValueWithoutNotify(PlayerPrefs.GetInt("Quality", 2));
+        vSyncCount.SetValueWithoutNotify(PlayerPrefs.GetInt("VSync", 1));
+
+        // set motion blur checkbox
+        try
+        {
+            int motionBlurValue = PlayerPrefs.GetInt("MotionBlur", 1);
+            if (motionBlurValue == 0)
+                motionBlur.isOn = false;
+            else
+                motionBlur.isOn = true;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e.Message);
+        }
     }
 
     #region tab controls
@@ -174,10 +209,10 @@ public class GameOptions : MonoBehaviour
         Screen.fullScreenMode = (FullScreenMode)screenMode.value;
     }
 
-    public void SetScreenResolution()
+    public void SetScreenResolution() 
     {
         Screen.SetResolution(resolutions[screenResolution.value].width,
-        resolutions[screenResolution.value].height, (FullScreenMode)screenMode.value);        
+        resolutions[screenResolution.value].height, (FullScreenMode)screenMode.value);
     }
 
     public void SetGraphicsQuality()
@@ -185,18 +220,15 @@ public class GameOptions : MonoBehaviour
         QualitySettings.SetQualityLevel(graphicsQuality.value, true);
     }
 
-    public void ToggleVSync()
+    public void SetVSyncCount()
     {
-        if (QualitySettings.vSyncCount == 1)
-            QualitySettings.vSyncCount = 0;
-        else
-            QualitySettings.vSyncCount = 1;
+        QualitySettings.vSyncCount = vSyncCount.value;
     }
 
-    public void ToggleMotionBlur()
+    public void ToggleMotionBlur(bool inMainScene)
     {
-        GameManager game = GameObject.Find("GameManager").GetComponent<GameManager>();
-        game.MotionBlur = motionBlur.isOn;
+        if(inMainScene && game != null)
+            game.MotionBlur = motionBlur.isOn;
     }
     #endregion
 
@@ -222,13 +254,10 @@ public class GameOptions : MonoBehaviour
 
         // save video settings
         PlayerPrefs.SetInt("ScreenMode", screenMode.value);
-        PlayerPrefs.SetInt("ScreenResolution", screenResolution.value);
+        PlayerPrefs.SetInt("ScreenWidth", resolutions[screenResolution.value].width);
+        PlayerPrefs.SetInt("ScreenHeight", resolutions[screenResolution.value].height);
         PlayerPrefs.SetInt("Quality", graphicsQuality.value);
-
-        if(vSync.isOn)
-            PlayerPrefs.SetInt("VSync", 1);
-        else
-            PlayerPrefs.SetInt("VSync", 0);
+        PlayerPrefs.SetInt("VSync", vSyncCount.value);
 
         if (motionBlur.isOn)
             PlayerPrefs.SetInt("MotionBlur", 1);
@@ -236,9 +265,7 @@ public class GameOptions : MonoBehaviour
             PlayerPrefs.SetInt("MotionBlur", 0);
 
         // save controls settings
-        PlayerPrefs.SetFloat("CameraSensetivity", cameraSensetivity);
-
-        Debug.Log("Options have been saved.");
+        PlayerPrefs.SetFloat("CameraSensetivity", cameraSensetivity);        
     }
 
 }

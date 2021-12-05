@@ -11,6 +11,12 @@ public class MenuController : MonoBehaviour
     public GameObject mainMenu;
     public GameObject optionsScreen;
 
+    private void Start()
+    {
+        mainMenu.SetActive(true);
+        optionsScreen.SetActive(false);
+    }
+
     public void Update()
     {
         if (Input.GetButtonDown("Cancel"))
@@ -40,7 +46,7 @@ public class MenuController : MonoBehaviour
         mainMenu.SetActive(false);
         optionsScreen.SetActive(true);
 
-        GetComponent<GameOptions>().InitGUI();
+        GetComponentInChildren<GameOptions>().InitGUI();
     }
 
     public void GoToMainMenu()
